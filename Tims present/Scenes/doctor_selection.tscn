@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=3 uid="uid://d3cxxhwrxcvau"]
+
+[ext_resource type="Script" path="res://script/DoctorSelection.gd" id="1_xq3cl"]
+[ext_resource type="Texture2D" uid="uid://c31ux5k28sj7f" path="res://Assets/textbox/MainMenuBG_2.jpg" id="2_phup2"]
+[ext_resource type="Texture2D" uid="uid://v2bs0v0puh55" path="res://Assets/pick patient/Group.png" id="3_tkdv7"]
+[ext_resource type="Texture2D" uid="uid://cvrigdh8nwv77" path="res://Assets/pick patient/Group 2.png" id="4_bkkhm"]
+[ext_resource type="Texture2D" uid="uid://dlyf5ecafjpxh" path="res://Assets/pick patient/Group 3.png" id="5_thh6g"]
+[ext_resource type="Texture2D" uid="uid://yuyga3obqe73" path="res://Assets/pick patient/Group 4.png" id="6_klrog"]
+[ext_resource type="Texture2D" uid="uid://cef4st4avtl5u" path="res://Assets/pick patient/Group 5.png" id="7_q4jc4"]
+[ext_resource type="Texture2D" uid="uid://xssw6xbc6xig" path="res://Assets/Doctor Graphics/Male Doctor/Doctors_Design Female.png" id="8_evtvq"]
+[ext_resource type="Texture2D" uid="uid://dpc8v2r27wmms" path="res://Assets/Doctor Graphics/Male Doctor/Doctors_Design Male.png" id="9_3qho7"]
+
+[sub_resource type="Animation" id="Animation_7ufjg"]
+resource_name = "Fade_IN"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.482967, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p8as6"]
+resource_name = "Fade_OUT"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nrdut"]
+_data = {
+"Fade_IN": SubResource("Animation_7ufjg"),
+"Fade_OUT": SubResource("Animation_p8as6")
+}
+
+[node name="doctor_selection" type="Node2D"]
+script = ExtResource("1_xq3cl")
+
+[node name="MainMenuBg2" type="Sprite2D" parent="."]
+position = Vector2(574, 321)
+scale = Vector2(0.589583, 0.581481)
+texture = ExtResource("2_phup2")
+
+[node name="Group" type="Sprite2D" parent="."]
+position = Vector2(574, 341)
+scale = Vector2(1.02743, 1.34444)
+texture = ExtResource("3_tkdv7")
+
+[node name="Group4" type="Sprite2D" parent="."]
+position = Vector2(404, 171)
+texture = ExtResource("6_klrog")
+
+[node name="Group5" type="Sprite2D" parent="."]
+position = Vector2(708, 170)
+texture = ExtResource("7_q4jc4")
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nrdut")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -122.0
+offset_top = -40.0
+offset_right = 1205.0
+offset_bottom = 935.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Male" type="TextureButton" parent="."]
+offset_left = 274.0
+offset_top = 204.0
+offset_right = 519.0
+offset_bottom = 521.0
+texture_normal = ExtResource("4_bkkhm")
+stretch_mode = 0
+
+[node name="DoctorsDesignMale" type="Sprite2D" parent="Male"]
+position = Vector2(133, 170)
+scale = Vector2(0.556604, 0.422292)
+texture = ExtResource("9_3qho7")
+
+[node name="Female" type="TextureButton" parent="."]
+offset_left = 602.0
+offset_top = 202.0
+offset_right = 845.0
+offset_bottom = 533.0
+texture_normal = ExtResource("5_thh6g")
+stretch_mode = 0
+
+[node name="DoctorsDesignFemale" type="Sprite2D" parent="Female"]
+position = Vector2(123, 182)
+scale = Vector2(0.471698, 0.408333)
+texture = ExtResource("8_evtvq")
+
+[connection signal="pressed" from="Male" to="." method="_on_male_pressed"]

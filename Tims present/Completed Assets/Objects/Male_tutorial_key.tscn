@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci6shybwtsuag"]
+
+[ext_resource type="Script" path="res://script/Male_tutorial_key.gd" id="1_al6ag"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="2_qt74t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1goic"]
+radius = 100.0
+height = 200.0
+
+[node name="Male Tutorial Key" type="StaticBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_al6ag")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_qt74t")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_1goic")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

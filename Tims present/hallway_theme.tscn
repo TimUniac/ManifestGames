@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://begd8a3p8pp3c"]
+
+[ext_resource type="AudioStream" uid="uid://bjkwoluu10rl7" path="res://Assets/Music/HallwayTheme11:16/HallwayTheme.mp3" id="1_g2dih"]
+
+[node name="HallwayTheme" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_g2dih")
+volume_db = -1.429
+pitch_scale = 0.91
+autoplay = true
+bus = &"Music"

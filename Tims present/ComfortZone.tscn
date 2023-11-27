@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtc7rkquqsofp"]
+
+[ext_resource type="Texture2D" uid="uid://c8kmlogpgmue4" path="res://Assets/textbox/Comfortbox.png" id="1_aqw7k"]
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+offset_left = 2.0
+offset_right = 302.0
+offset_bottom = 75.0
+value = 6.0
+texture_under = ExtResource("1_aqw7k")
