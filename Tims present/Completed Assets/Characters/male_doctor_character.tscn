@@ -290,8 +290,6 @@ visibility_layer = 3
 position = Vector2(2, -5.5)
 shape = SubResource("RectangleShape2D_2dp7l")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 
 [node name="Footfalls" parent="." instance=ExtResource("4_cjbn6")]

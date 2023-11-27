@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://fg6yvyhk3vim"]
+[gd_scene load_steps=9 format=3 uid="uid://fg6yvyhk3vim"]
 
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="1_mc8sc"]
 [ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Completed Assets/Characters/male_doctor_character.tscn" id="3_ks15k"]
 [ext_resource type="PackedScene" uid="uid://dpxj1b1pl2cc7" path="res://Assets/Inventory/InvItems/journal.tscn" id="4_2vika"]
 [ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Assets/Inventory/InvItems/seraphina's_guitar.tscn" id="5_ml60l"]
+[ext_resource type="PackedScene" uid="uid://dkidusndwlvxm" path="res://Scenes/game_timer.tscn" id="6_tamkd"]
 [ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Assets/Inventory/InvItems/yarn.tscn" id="6_uonga"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
@@ -6782,6 +6783,12 @@ limit_left = -91
 limit_top = 107
 limit_right = 1071
 limit_bottom = 802
+
+[node name="GameTimer" parent="." instance=ExtResource("6_tamkd")]
+offset_left = -10.0
+offset_top = 117.0
+offset_right = -10.0
+offset_bottom = 117.0
 
 [node name="Journal" parent="." instance=ExtResource("4_2vika")]
 position = Vector2(635, 601)
