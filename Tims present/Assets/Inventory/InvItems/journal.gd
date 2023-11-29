@@ -3,6 +3,7 @@ extends Area2D
 var player = null
 	
 @export var item: InvItem
+
 	
 func use():
 	pass

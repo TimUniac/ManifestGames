@@ -53,13 +53,6 @@ position = Vector2(575, 324.25)
 scale = Vector2(0.596354, 0.597685)
 texture = ExtResource("2_h454c")
 
-[node name="New" type="TextureButton" parent="."]
-offset_left = 145.0
-offset_top = 307.0
-offset_right = 287.0
-offset_bottom = 409.0
-texture_normal = ExtResource("3_pa3dx")
-
 [node name="Exit" type="TextureButton" parent="."]
 offset_left = 991.0
 offset_top = 528.0
@@ -73,6 +66,13 @@ offset_top = 27.0
 offset_right = 1138.0
 offset_bottom = 89.0
 texture_normal = ExtResource("6_bee41")
+
+[node name="new" type="TextureButton" parent="."]
+offset_left = 139.0
+offset_top = 282.0
+offset_right = 281.0
+offset_bottom = 384.0
+texture_normal = ExtResource("3_pa3dx")
 
 [node name="GameTitleYellow" type="Sprite2D" parent="."]
 position = Vector2(239, 94)
@@ -94,13 +94,15 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -143.0
-offset_right = 1184.0
-offset_bottom = 975.0
+offset_left = -117.0
+offset_top = -22.0
+offset_right = 1210.0
+offset_bottom = 953.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="New" to="." method="_on_new_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="new" to="." method="_on_new_pressed"]
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

@@ -5,9 +5,9 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 
-var startTime = 60
+var startTime = 15
 var seconds = startTime
-var minutes = 1
+var minutes = 0
 
 
 func _on_timer_timeout():

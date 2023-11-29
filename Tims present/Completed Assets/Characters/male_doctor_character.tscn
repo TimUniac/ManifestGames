@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://n0d0h7pyngnl"]
+[gd_scene load_steps=38 format=3 uid="uid://n0d0h7pyngnl"]
 
 [ext_resource type="Texture2D" uid="uid://cfsya3s6yww4w" path="res://Assets/Doctor Graphics/Doctors_Top_Down (1).svg" id="1_55s4w"]
 [ext_resource type="Script" path="res://script/male_doctor_character.gd" id="1_lvjtk"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bhney226lp5hp" path="res://Doctors_Top_Down_Idle (2).svg" id="3_os7yl"]
 [ext_resource type="PackedScene" uid="uid://o8pckgrevhaq" path="res://Footsteps.tscn" id="4_cjbn6"]
 [ext_resource type="AudioStream" uid="uid://h7bolfl48e5t" path="res://Assets/SFX/Hit_1.wav" id="5_8mbdk"]
-[ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Assets/Inventory/inv_UI.tscn" id="5_wpw2i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86676"]
 atlas = ExtResource("1_55s4w")
@@ -272,12 +271,6 @@ func _process(delta):
 collision_layer = 3
 script = ExtResource("1_lvjtk")
 inv = ExtResource("2_8y136")
-
-[node name="Inv_Ui" parent="." instance=ExtResource("5_wpw2i")]
-offset_left = -136.0
-offset_top = -194.0
-offset_right = -119.0
-offset_bottom = -194.0
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -3)
