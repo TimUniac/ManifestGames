@@ -9,7 +9,6 @@ func use():
 func _on_body_entered(body):
 	if body.has_method("player"):
 		player = body
-		playercollect()
 		await get_tree().create_timer(0.1).timeout
 		self.queue_free()
 		

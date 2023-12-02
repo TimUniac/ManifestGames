@@ -1,9 +1,7 @@
 extends Area2D
 
 var player = null
-	
 @export var item: InvItem
-
 
 
 func _on_body_entered(body):
@@ -15,3 +13,5 @@ func _on_body_entered(body):
 		
 func playercollect():
 	player.collect(item)
+
+

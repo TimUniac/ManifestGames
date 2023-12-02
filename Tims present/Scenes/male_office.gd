@@ -20,3 +20,6 @@ func _on_dialogic_signal(argument:String):
 
 func _on_office_theme_finished():
 	get_tree().change_scene_to_file("res://In progress/seraphina_bedroom_male.tscn")
+	
+func clear_inv():
+	get_tree().call_group("inv", "queue_free")

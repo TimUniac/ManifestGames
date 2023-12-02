@@ -7,7 +7,7 @@ func _ready():
 
 var startTime = 60
 var seconds = startTime
-var minutes = 1
+var minutes = 0
 
 
 func _on_timer_timeout():
