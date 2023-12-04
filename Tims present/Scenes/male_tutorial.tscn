@@ -4513,14 +4513,6 @@ sources/0 = SubResource("TileSetAtlasSource_rh7bu")
 sources/4 = SubResource("TileSetAtlasSource_otq7v")
 
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2qefn"]
-atlas = ExtResource("4_6qbrx")
-region = Rect2(108, 0, 213, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3moip"]
-atlas = ExtResource("4_6qbrx")
-region = Rect2(434, 0, 213, 250)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_05csq"]
 animations = [{
 "frames": [{
