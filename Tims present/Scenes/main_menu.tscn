@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=10 format=3 uid="uid://cto2derdbrie"]
-
+[gd_scene load_steps=12 format=3 uid="uid://cto2derdbrie"]
 
 [ext_resource type="Script" path="res://script/main_menu.gd" id="1_ht8lj"]
 [ext_resource type="Texture2D" uid="uid://dibwvlg8qwq1o" path="res://Assets/Menu Buttons/MainMenuBG_2.jpg" id="2_h454c"]
@@ -71,6 +69,3 @@ script = ExtResource("10_fy41l")
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="new" to="." method="_on_new_pressed"]
-
-[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
-
