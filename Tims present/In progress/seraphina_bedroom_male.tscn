@@ -7878,7 +7878,7 @@ position = Vector2(925, 683)
 position = Vector2(320, 318)
 
 [node name="Yarn" parent="." instance=ExtResource("6_uonga")]
-position = Vector2(1020, 385)
+position = Vector2(801, 466)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("3_ks15k")]
 position = Vector2(78, 668)

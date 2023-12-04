@@ -8,11 +8,11 @@ class_name DialogicNode_NameLabel
 @export var use_character_color := true
 
 func _ready():
-	add_to_group('dialogic_name_label')
-	if hide_when_empty:
-		name_label_root.visible = false
-	text = ""
-	
+	#add_to_group('dialogic_name_label')
+	#if hide_when_empty:
+		# name_label_root.visible = false
+	# text = ""
+	pass
 func _set(property, what):
 	if property == 'text' and typeof(what) == TYPE_STRING:
 		text = what

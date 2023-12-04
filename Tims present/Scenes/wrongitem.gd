@@ -20,11 +20,4 @@ func _input(InputEvent):
 		print ("input")
 		
 	if inReach and collect:
-		playercollect()
-		queue_free()
-		print("body")
-
-func playercollect():
-	if player:
-		player.collect(item)
-		print("player")
+		
