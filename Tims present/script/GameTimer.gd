@@ -1,13 +1,9 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 var startTime = 60
 var seconds = startTime
-var minutes = 1
+var minutes = 0
 
 
 func _on_timer_timeout():
@@ -24,8 +20,10 @@ func game_time():
 			$Label.text = str(minutes) + ":" +str(seconds)
 		else:
 			$Timer.stop()
+			$Transitioner.fadeout()
+			await($Transitioner.finished)
 			get_tree().change_scene_to_file("res://In progress/doctors_office_male_chapter 1.tscn")
-	#change to chapter 2 when that sceen is created
+
 
 
 

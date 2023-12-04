@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cto2derdbrie"]
+[gd_scene load_steps=10 format=3 uid="uid://cto2derdbrie"]
 
 [ext_resource type="Script" path="res://script/main_menu.gd" id="1_ht8lj"]
 [ext_resource type="Texture2D" uid="uid://dibwvlg8qwq1o" path="res://Assets/Menu Buttons/MainMenuBG_2.jpg" id="2_h454c"]
@@ -7,43 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bxrgg12smcxjg" path="res://Assets/Menu Buttons/setting.png" id="6_bee41"]
 [ext_resource type="Texture2D" uid="uid://p1igb1km6we7" path="res://Assets/Menu Buttons/GameTitleYellow.png" id="7_60duo"]
 [ext_resource type="Texture2D" uid="uid://clj27mh471uma" path="res://Assets/Doctor Graphics/Doctors_Design.png" id="8_qt5nc"]
+[ext_resource type="PackedScene" uid="uid://bf32yx24dvetm" path="res://Scenes/transitions.tscn" id="9_3dlsw"]
 [ext_resource type="AudioStream" uid="uid://dw4vt5mfjfr0t" path="res://Assets/Music/DownWithTheSickness-LobbyMix.wav" id="9_aegsy"]
-
-[sub_resource type="Animation" id="Animation_7ufjg"]
-resource_name = "Fade_IN"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(0.482967, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_p8as6"]
-resource_name = "Fade_OUT"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nrdut"]
-_data = {
-"Fade_IN": SubResource("Animation_7ufjg"),
-"Fade_OUT": SubResource("Animation_p8as6")
-}
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_ht8lj")
@@ -88,21 +53,12 @@ texture = ExtResource("8_qt5nc")
 stream = ExtResource("9_aegsy")
 autoplay = true
 
-[node name="Transition" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_nrdut")
-}
-
-[node name="ColorRect" type="ColorRect" parent="Transition"]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-offset_left = -117.0
-offset_top = -22.0
-offset_right = 1210.0
-offset_bottom = 953.0
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
+[node name="Transitioner" parent="." instance=ExtResource("9_3dlsw")]
+offset_left = 626.0
+offset_top = 300.0
+offset_right = 626.0
+offset_bottom = 300.0
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="new" to="." method="_on_new_pressed"]
-[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

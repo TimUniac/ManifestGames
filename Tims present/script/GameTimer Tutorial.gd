@@ -24,6 +24,8 @@ func game_time():
 			$Label.text = str(minutes) + ":" +str(seconds)
 		else:
 			$Timer.stop()
+			$"../Transitioner".fadeout()
+			await($"../Transitioner".finished)
 			get_tree().change_scene_to_file("res://Scenes/male_office.tscn")
 	#change to chapter 2 when that sceen is created
 

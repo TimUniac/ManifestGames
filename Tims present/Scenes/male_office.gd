@@ -6,7 +6,7 @@ extends Node2D
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	audio_stream_player.playing = true
-	
+
 
 	
 	var new_dialog = Dialogic.start('FirstSession')
@@ -20,3 +20,4 @@ func _on_dialogic_signal(argument:String):
 
 func _on_office_theme_finished():
 	get_tree().change_scene_to_file("res://In progress/seraphina_bedroom_male.tscn")
+
