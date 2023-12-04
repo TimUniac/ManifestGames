@@ -1,9 +1,9 @@
 extends Node
 
-@onready var transition = $Transition
+
 
 func _ready():
-	transition.play("fade_IN")
+	$Transitioner.fadein()
 	
 
 
@@ -13,8 +13,12 @@ func _ready():
 
 
 func _on_texture_button_pressed():
+	$Transitioner.fadeout()
+	await($Transitioner.finished)
 	get_tree().change_scene_to_file("res://Completed Assets/Scenes/main_menu.tscn")
 
 
 func _on_male_pressed():
+	$Transitioner.fadeout()
+	await($Transitioner.finished)
 	get_tree().change_scene_to_file("res://Scenes/male_tutorial.tscn")

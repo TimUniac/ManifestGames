@@ -5,7 +5,7 @@ func _ready():
 	$TextureButton.visible = false
 	$Journal1Entry.visible = false
 
-var is_opened = true
+var is_opened = false
 
 func close():
 	$Journal1Entry.visible = false

@@ -1,12 +1,14 @@
-[gd_scene load_steps=22 format=3 uid="uid://dha0npl7pndxg"]
+[gd_scene load_steps=28 format=3 uid="uid://dha0npl7pndxg"]
 
 [ext_resource type="Texture2D" uid="uid://dhxcsg5i25wir" path="res://Assets/Texture assets/Brain Background.jpg" id="1_opna0"]
 [ext_resource type="Texture2D" uid="uid://cotmkegnfuff1" path="res://Assets/tilesets(kill me).svg" id="2_17qi5"]
 [ext_resource type="Texture2D" uid="uid://nua24645oqwd" path="res://Assets/textbox/Tutorial Instructions (1).png" id="3_sxyok"]
 [ext_resource type="Texture2D" uid="uid://h7tj4blqq8vc" path="res://Assets/Texture assets/Door.svg" id="4_6qbrx"]
 [ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Completed Assets/Characters/male_doctor_character.tscn" id="6_bcakg"]
+[ext_resource type="Script" path="res://Assets/Inventory/Inventory.gd" id="6_t6rrl"]
 [ext_resource type="PackedScene" uid="uid://ci6shybwtsuag" path="res://Completed Assets/Objects/Male_tutorial_key.tscn" id="7_j0ddo"]
 [ext_resource type="Script" path="res://script/GameTimer Tutorial.gd" id="7_jk4b5"]
+[ext_resource type="Script" path="res://inv_slot.gd" id="7_xn8gl"]
 [ext_resource type="PackedScene" uid="uid://dt2jvkd5d15hd" path="res://Scenes/orb.tscn" id="8_sobqw"]
 [ext_resource type="PackedScene" uid="uid://begd8a3p8pp3c" path="res://hallway_theme.tscn" id="9_3ky3s"]
 [ext_resource type="PackedScene" uid="uid://bf32yx24dvetm" path="res://Scenes/transitions.tscn" id="9_7l30h"]
@@ -4536,6 +4538,23 @@ size = Vector2(23.9167, 29.7195)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sikak"]
 size = Vector2(45.8461, 54.496)
 
+[sub_resource type="Resource" id="Resource_lvhq7"]
+script = ExtResource("7_xn8gl")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_8l4mp"]
+script = ExtResource("7_xn8gl")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_5ties"]
+script = ExtResource("7_xn8gl")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_c0suk"]
+resource_local_to_scene = true
+script = ExtResource("6_t6rrl")
+slots = Array[ExtResource("7_xn8gl")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
+
 [node name="Tutorial" type="Node2D"]
 
 [node name="BrainBackground" type="Sprite2D" parent="."]
@@ -4578,6 +4597,7 @@ shape = SubResource("RectangleShape2D_sikak")
 [node name="Male Doctor Character" parent="." instance=ExtResource("6_bcakg")]
 position = Vector2(198, 162)
 scale = Vector2(0.42, 0.42)
+inv = SubResource("Resource_c0suk")
 
 [node name="Camera2D" type="Camera2D" parent="Male Doctor Character"]
 position = Vector2(0, -26.1905)
