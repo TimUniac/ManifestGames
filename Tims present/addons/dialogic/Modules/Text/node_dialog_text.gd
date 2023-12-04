@@ -36,8 +36,8 @@ func _ready() -> void:
 
 	bbcode_enabled = true
 	if start_hidden:
-		textbox_root.hide()
-	text = ""
+		#textbox_root.hide()
+	#text = ""
 
 
 # this is called by the DialogicGameHandler to set text

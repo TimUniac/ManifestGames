@@ -1,9 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://dha0npl7pndxg"]
+
+[gd_scene load_steps=15 format=3 uid="uid://dha0npl7pndxg"]
 
 [ext_resource type="Texture2D" uid="uid://dhxcsg5i25wir" path="res://Assets/Texture assets/Brain Background.jpg" id="1_opna0"]
 [ext_resource type="Texture2D" uid="uid://cotmkegnfuff1" path="res://Assets/tilesets(kill me).svg" id="2_17qi5"]
-[ext_resource type="Texture2D" uid="uid://nua24645oqwd" path="res://Assets/textbox/Tutorial Instructions (1).png" id="3_sxyok"]
-[ext_resource type="Texture2D" uid="uid://h7tj4blqq8vc" path="res://Assets/Texture assets/Door.svg" id="4_6qbrx"]
+
 [ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Completed Assets/Characters/male_doctor_character.tscn" id="6_bcakg"]
 [ext_resource type="Script" path="res://Assets/Inventory/Inventory.gd" id="6_t6rrl"]
 [ext_resource type="PackedScene" uid="uid://ci6shybwtsuag" path="res://Completed Assets/Objects/Male_tutorial_key.tscn" id="7_j0ddo"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://8i5nqr8iw0bq" path="res://Scenes/game_timer tutorial.tscn" id="9_qkc0w"]
 [ext_resource type="PackedScene" uid="uid://beilwc5msif53" path="res://Scenes/male_office.tscn" id="10_kcq0q"]
 [ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Assets/Inventory/inv_UI.tscn" id="11_alp0j"]
+[ext_resource type="PackedScene" uid="uid://cv1q6f48nfdei" path="res://Scenes/wrongitem.tscn" id="12_ti2mx"]
+[ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Assets/Inventory/InvItems/yarn.tscn" id="13_wx1cp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rh7bu"]
 texture = ExtResource("2_17qi5")
@@ -4510,6 +4512,7 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_rh7bu")
 sources/4 = SubResource("TileSetAtlasSource_otq7v")
 
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2qefn"]
 atlas = ExtResource("4_6qbrx")
 region = Rect2(108, 0, 213, 250)
@@ -4594,6 +4597,7 @@ position = Vector2(2.10858, 11.8317)
 position = Vector2(4.6389, -29.1849)
 shape = SubResource("RectangleShape2D_sikak")
 
+
 [node name="Male Doctor Character" parent="." instance=ExtResource("6_bcakg")]
 position = Vector2(198, 162)
 scale = Vector2(0.42, 0.42)
@@ -4630,7 +4634,13 @@ scale = Vector2(1.11372, 1.25416)
 script = ExtResource("7_jk4b5")
 
 [node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("11_alp0j")]
-offset_left = 872.0
-offset_top = 514.0
-offset_right = -88.0
-offset_bottom = -59.0
+offset_left = 223.0
+offset_top = 189.0
+offset_right = -737.0
+offset_bottom = -384.0
+
+[node name="WrongItem" parent="." instance=ExtResource("12_ti2mx")]
+position = Vector2(452, 104)
+
+[node name="Yarn" parent="." instance=ExtResource("13_wx1cp")]
+position = Vector2(106, 116)
