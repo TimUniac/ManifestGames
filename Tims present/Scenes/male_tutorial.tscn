@@ -4551,10 +4551,10 @@ scale = Vector2(1.11372, 1.25416)
 script = ExtResource("7_jk4b5")
 
 [node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("11_alp0j")]
-offset_left = 872.0
-offset_top = 514.0
-offset_right = -88.0
-offset_bottom = -59.0
+offset_left = 223.0
+offset_top = 189.0
+offset_right = -737.0
+offset_bottom = -384.0
 
 [node name="WrongItem" parent="." instance=ExtResource("12_ti2mx")]
 position = Vector2(452, 104)
