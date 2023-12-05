@@ -23,6 +23,17 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 layout/styles={
+"Brain": {
+"export_overrides": {
+"box_modulate": "Color(1, 0.607843, 1, 0.54902)",
+"italic_font": "\"res://Assets/Fonts/HARRINGT.TTF\"",
+"name_label_enabled": "false",
+"name_label_use_character_color": "false",
+"normal_font": "\"res://Assets/Fonts/Britannic Bold Regular.ttf\"",
+"text_size": "20.0"
+},
+"layout": "res://addons/dialogic/Modules/DefaultLayouts/TextBubble/DialogicTextBubbleLayout.tscn"
+},
 "Office": {
 "export_overrides": {
 "bold_font": "\"res://Assets/Fonts/HARRINGT.TTF\"",

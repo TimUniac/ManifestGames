@@ -15,7 +15,7 @@ func _on_body_entered(body):
 		inReach = true
 
 func _input(InputEvent):
-	if Input.is_action_just_pressed("aquire") and inReach:
+	if Input.is_action_just_pressed("Pickup") and inReach:
 		collect = true
 		print ("input")
 		

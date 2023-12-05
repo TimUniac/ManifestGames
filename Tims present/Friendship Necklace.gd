@@ -1,17 +1,30 @@
 extends Area2D
 
-var player = null
 @export var item: InvItem
+var player = null
+var collect = false 
+var inReach = false
 
+func _process(delta):
+	pass
+	
 
 func _on_body_entered(body):
 	if body.has_method("player"):
 		player = body
-		playercollect()
-		await get_tree().create_timer(0.1).timeout
-		self.queue_free()
+		inReach = true
+
+func _input(InputEvent):
+	if Input.is_action_just_pressed("Pickup") and inReach:
+		collect = true
+		print ("input")
 		
+	if inReach and collect:
+		playercollect()
+		queue_free()
+		print("body")
+
 func playercollect():
-	player.collect(item)
-
-
+	if player:
+		player.collect(item)
+		print("player")
