@@ -2,17 +2,34 @@ extends CharacterBody2D
 
 const Speed: float = 300.0
 var current_dir = "none"
-
+var freeze = false
 @export var inv : Inv
 @onready var anim = $Sprite2D
 
 
+
 func _ready():
 	$Sprite2D.play("front_idle")
-
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+func _process(delta):
+	pass
+		
 func _physics_process(_delta):
-	player_movement()
+	if freeze == false:
+		player_movement()
 
+
+	
+		
+func _on_dialogic_signal(argument:String):
+	if argument == "1":
+		freeze
+		print("frozen")
+
+	if argument == "unFreeze":
+		freeze = false
+		print("unfrozen")
+		
 
 
 	
@@ -48,7 +65,7 @@ func player_movement():
 		velocity.x = 0
 		velocity.y = 0
 		
-	move_and_slide()	
+		move_and_slide()	
 	
 func play_anim(movement):
 	var dir = current_dir

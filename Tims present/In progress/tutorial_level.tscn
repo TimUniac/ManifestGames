@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=23 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_eu1u8"]
 [ext_resource type="Texture2D" uid="uid://dwdcc62y16dky" path="res://Assets/Furniture 2.svg" id="3_hd0gv"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://cq7yjwdx2gisb" path="res://Assets/Music/ThemeJazzDigital.mp3" id="12_bsmja"]
 [ext_resource type="AudioStream" uid="uid://b0fa5hki573om" path="res://Assets/VO/Tutorial/VO_Dr_Tut_That Session.mp3" id="13_4c6jg"]
 [ext_resource type="Script" path="res://In progress/TutorialVO.gd" id="14_i4uyg"]
+[ext_resource type="PackedScene" uid="uid://cv1q6f48nfdei" path="res://Scenes/wrongitem.tscn" id="15_12ydx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_eu1u8")
@@ -7858,7 +7859,7 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_htss2"]
+[sub_resource type="Resource" id="Resource_cy38w"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7917,7 +7918,7 @@ position = Vector2(801, 466)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_htss2")
+inv = SubResource("Resource_cy38w")
 
 [node name="Glasses" parent="." instance=ExtResource("8_iauun")]
 position = Vector2(475, 305)
@@ -7944,3 +7945,6 @@ autoplay = true
 stream = ExtResource("13_4c6jg")
 volume_db = -12.18
 script = ExtResource("14_i4uyg")
+
+[node name="WrongItem" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(443, 537)

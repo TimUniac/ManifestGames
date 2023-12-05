@@ -2,8 +2,8 @@ extends Area2D
 
 @export var item: InvItem
 var player = null
-var collect = false 
-var inReach = false
+
+@export var inReach = false
 
 func _process(delta):
 	pass
@@ -15,9 +15,8 @@ func _on_body_entered(body):
 		inReach = true
 
 func _input(InputEvent):
-	if Input.is_action_just_pressed("aquire") and inReach:
-		collect = true
-		print ("input")
-		
-	if inReach and collect:
-		
+	if Input.is_action_just_pressed("Pickup") and inReach:
+		for child in get_children():
+			if child.has_method("play_random_sound"):
+				child.play_random_sound()
+

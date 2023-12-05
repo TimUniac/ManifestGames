@@ -1,3 +1,6 @@
 [style name="Brain"]
 [signal arg="1"]
 Doctor: That session went longer than I intended. I only have a few minutes to clean up and gather what I need for my next patient.
+[signal arg="unFreeze"]
+[clear time="1.0" text="false"]
+[end_timeline]
