@@ -35,9 +35,12 @@ func _ready() -> void:
 	add_to_group('dialogic_dialog_text')
 
 	bbcode_enabled = true
+	if textbox_root == null:
+		textbox_root = self
+
 	if start_hidden:
-		#textbox_root.hide()
-	#text = ""
+		textbox_root.hide()
+	text = ""
 
 
 # this is called by the DialogicGameHandler to set text

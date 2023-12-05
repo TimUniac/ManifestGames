@@ -7858,7 +7858,7 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_4f21e"]
+[sub_resource type="Resource" id="Resource_htss2"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7917,7 +7917,7 @@ position = Vector2(801, 466)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_4f21e")
+inv = SubResource("Resource_htss2")
 
 [node name="Glasses" parent="." instance=ExtResource("8_iauun")]
 position = Vector2(475, 305)
@@ -7942,5 +7942,5 @@ autoplay = true
 
 [node name="TutorialVO" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_4c6jg")
-volume_db = -9.369
+volume_db = -12.18
 script = ExtResource("14_i4uyg")

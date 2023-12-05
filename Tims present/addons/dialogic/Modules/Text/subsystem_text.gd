@@ -11,6 +11,13 @@ signal animation_textbox_new_text
 signal animation_textbox_show
 signal animation_textbox_hide
 
+
+# forwards of the dialog_text signals of all present dialog_text nodes
+signal meta_hover_ended(meta:Variant)
+signal meta_hover_started(meta:Variant)
+signal meta_clicked(meta:Variant)
+
+
 # used to color names without searching for all characters each time
 var character_colors := {}
 var color_regex := RegEx.new()
@@ -69,14 +76,14 @@ func load_game_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
 func parse_text(text:String, type:int=TextTypes.DIALOG_TEXT, variables:= true, glossary:= true, modifiers:= true, effects:= true, color_names:= true) -> String:
 	if variables and dialogic.has_subsystem('VAR'):
 		text = dialogic.VAR.parse_variables(text)
-	if glossary and dialogic.has_subsystem('Glossary'):
-		text = dialogic.Glossary.parse_glossary(text)
 	if modifiers:
 		text = parse_text_modifiers(text, type)
 	if effects:
 		text = parse_text_effects(text)
 	if color_names:
 		text = color_names(text)
+	if glossary and dialogic.has_subsystem('Glossary'):
+		text = dialogic.Glossary.parse_glossary(text)
 	return text
 
 
@@ -85,6 +92,7 @@ func parse_text(text:String, type:int=TextTypes.DIALOG_TEXT, variables:= true, g
 ## If additional is true, the previous text will be kept.
 func update_dialog_text(text:String, instant:bool= false, additional:= false) -> String:
 	update_text_speed()
+	connect_meta_signals()
 
 	if text.is_empty():
 		await hide_text_boxes(instant)
@@ -134,11 +142,12 @@ func update_name_label(character:DialogicCharacter) -> void:
 	for name_label in get_tree().get_nodes_in_group('dialogic_name_label'):
 
 		if character:
+			var translated_display_name := character.get_display_name_translated()
 
 			if dialogic.has_subsystem('VAR'):
-				name_label.text = dialogic.VAR.parse_variables(character.display_name)
+				name_label.text = dialogic.VAR.parse_variables(translated_display_name)
 			else:
-				name_label.text = character.display_name
+				name_label.text = translated_display_name
 
 			if !'use_character_color' in name_label or name_label.use_character_color:
 				name_label.self_modulate = character.color
@@ -339,9 +348,22 @@ func post_install():
 	Dialogic.Settings.connect_to_change('text_speed', _update_user_speed)
 
 
-
 func _update_user_speed(user_speed:float) -> void:
 	update_text_speed(_pure_letter_speed, _letter_speed_absolute)
+
+
+func connect_meta_signals() -> void:
+	for text_node in get_tree().get_nodes_in_group('dialogic_dialog_text'):
+		if not text_node.meta_clicked.is_connected(emit_meta_signal):
+			text_node.meta_clicked.connect(emit_meta_signal.bind("meta_clicked"))
+		if not text_node.meta_hover_started.is_connected(emit_meta_signal):
+			text_node.meta_hover_started.connect(emit_meta_signal.bind("meta_hover_started"))
+		if not text_node.meta_hover_ended.is_connected(emit_meta_signal):
+			text_node.meta_hover_ended.connect(emit_meta_signal.bind("meta_hover_ended"))
+
+
+func emit_meta_signal(meta:Variant, sig:String) -> void:
+	emit_signal(sig, meta)
 
 
 func color_names(text:String) -> String:
@@ -363,15 +385,20 @@ func collect_character_names() -> void:
 		return
 
 	character_colors = {}
+
 	for dch_path in DialogicUtil.list_resources_of_type('.dch'):
-		var dch := (load(dch_path) as DialogicCharacter)
+		var character := (load(dch_path) as DialogicCharacter)
 
-		if dch.display_name:
-			character_colors[dch.display_name] = dch.color
+		if character.display_name:
+			character_colors[character.display_name] = character.color
 
-		for nickname in dch.nicknames:
+		for nickname in character.get_nicknames_translated():
+
 			if nickname.strip_edges():
-				character_colors[nickname.strip_edges()] = dch.color
+				character_colors[nickname.strip_edges()] = character.color
+
+	if Dialogic.has_subsystem('Glossary'):
+		Dialogic.Glossary.color_overrides.merge(character_colors, true)
 
 	color_regex.compile('(?<=\\W|^)(?<name>'+str(character_colors.keys()).trim_prefix('["').trim_suffix('"]').replace('", "', '|')+')(?=\\W|$)')
 
