@@ -1,21 +1,27 @@
-[gd_scene load_steps=24 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=30 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://In progress/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_eu1u8"]
 [ext_resource type="Texture2D" uid="uid://dwdcc62y16dky" path="res://Assets/Furniture 2.svg" id="3_hd0gv"]
 [ext_resource type="PackedScene" uid="uid://dkidusndwlvxm" path="res://Scenes/game_timer.tscn" id="4_8ey0n"]
-[ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Assets/Inventory/InvItems/seraphina's_guitar.tscn" id="5_87t60"]
-[ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Assets/Inventory/InvItems/yarn.tscn" id="6_taj6i"]
+[ext_resource type="Script" path="res://In progress/Floor.gd" id="4_rc06q"]
 [ext_resource type="Script" path="res://Assets/Inventory/Inventory.gd" id="7_1nb6r"]
 [ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Completed Assets/Characters/male_doctor_character.tscn" id="7_r3vgi"]
 [ext_resource type="Script" path="res://inv_slot.gd" id="8_d6ed8"]
-[ext_resource type="PackedScene" uid="uid://7rbqvxmnnf8w" path="res://Assets/Inventory/InvItems/friendship_necklace.tscn" id="8_iauun"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/journal_read.tscn" id="9_nomwv"]
 [ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Assets/Inventory/inv_UI.tscn" id="11_3hx8x"]
 [ext_resource type="AudioStream" uid="uid://cq7yjwdx2gisb" path="res://Assets/Music/ThemeJazzDigital.mp3" id="12_bsmja"]
 [ext_resource type="AudioStream" uid="uid://b0fa5hki573om" path="res://Assets/VO/Tutorial/VO_Dr_Tut_That Session.mp3" id="13_4c6jg"]
 [ext_resource type="Script" path="res://In progress/TutorialVO.gd" id="14_i4uyg"]
 [ext_resource type="PackedScene" uid="uid://cv1q6f48nfdei" path="res://Scenes/wrongitem.tscn" id="15_12ydx"]
+[ext_resource type="PackedScene" uid="uid://epfhudo6gl0d" path="res://item.tscn" id="17_6ratl"]
+[ext_resource type="Texture2D" uid="uid://cd7e5k1bri6dh" path="res://Assets/Texture assets/TempTutorialAssets/TempDesk.png" id="17_mxxvg"]
+[ext_resource type="Texture2D" uid="uid://cnxd7wdi4q130" path="res://Assets/Texture assets/TempTutorialAssets/bookshelf.png" id="17_p8m2g"]
+[ext_resource type="Texture2D" uid="uid://hikvlopmyau4" path="res://Assets/Texture assets/TempTutorialAssets/3110890-200Glassews.png" id="18_ckjma"]
+[ext_resource type="Texture2D" uid="uid://bnrxaoq6hjt3r" path="res://Assets/Texture assets/TempTutorialAssets/TempLamp.png" id="18_e1e58"]
+[ext_resource type="Texture2D" uid="uid://0021lu74frh4" path="res://Assets/Texture assets/TempTutorialAssets/TempChair.png" id="19_ug1be"]
+[ext_resource type="Texture2D" uid="uid://cd0cw8a8le6g2" path="res://Assets/Texture assets/TempTutorialAssets/Pen.png" id="20_5ixwv"]
+[ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="21_ourv3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_eu1u8")
@@ -7860,7 +7866,7 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_yhoas"]
+[sub_resource type="Resource" id="Resource_xybnk"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7891,6 +7897,7 @@ offset_top = -27.0
 offset_right = 943.0
 offset_bottom = 420.0
 color = Color(0.0627451, 0.121569, 0.133333, 1)
+script = ExtResource("4_rc06q")
 
 [node name="Walls" type="ColorRect" parent="TileMap"]
 offset_left = -290.0
@@ -7912,18 +7919,9 @@ offset_top = 102.0
 offset_right = -33.0
 offset_bottom = 102.0
 
-[node name="Pen" parent="." instance=ExtResource("5_87t60")]
-position = Vector2(320, 318)
-
-[node name="Files" parent="." instance=ExtResource("6_taj6i")]
-position = Vector2(801, 466)
-
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_yhoas")
-
-[node name="Glasses" parent="." instance=ExtResource("8_iauun")]
-position = Vector2(475, 305)
+inv = SubResource("Resource_xybnk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -7948,5 +7946,50 @@ stream = ExtResource("13_4c6jg")
 volume_db = -12.18
 script = ExtResource("14_i4uyg")
 
-[node name="WrongItem" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(443, 537)
+[node name="Desk" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(967, 344)
+sprite_texture = ExtResource("17_mxxvg")
+sprite_scale = Vector2(3, 3)
+
+[node name="Lamp" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(693, 333)
+sprite_texture = ExtResource("18_e1e58")
+
+[node name="Chair" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(603, 407)
+sprite_texture = ExtResource("19_ug1be")
+
+[node name="BookShelf" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(2, 333)
+sprite_texture = ExtResource("17_p8m2g")
+sprite_scale = Vector2(0.25, 0.25)
+
+[node name="BookShelf2" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(382, 327)
+sprite_texture = ExtResource("17_p8m2g")
+sprite_scale = Vector2(0.25, 0.25)
+
+[node name="BookShelf3" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(250, 328)
+sprite_texture = ExtResource("17_p8m2g")
+sprite_scale = Vector2(0.25, 0.25)
+
+[node name="BookShelf4" parent="." instance=ExtResource("15_12ydx")]
+position = Vector2(127, 332)
+sprite_texture = ExtResource("17_p8m2g")
+sprite_scale = Vector2(0.25, 0.25)
+
+[node name="Glasses" parent="." instance=ExtResource("17_6ratl")]
+position = Vector2(953, 281)
+sprite_texture = ExtResource("18_ckjma")
+sprite_scale = Vector2(0.5, 0.5)
+
+[node name="Pen" parent="." instance=ExtResource("17_6ratl")]
+position = Vector2(871, 561)
+sprite_texture = ExtResource("20_5ixwv")
+sprite_scale = Vector2(0.09, 0.09)
+
+[node name="Files" parent="." instance=ExtResource("17_6ratl")]
+position = Vector2(382, 511)
+sprite_texture = ExtResource("21_ourv3")
+sprite_scale = Vector2(0.09, 0.09)

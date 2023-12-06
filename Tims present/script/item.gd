@@ -4,9 +4,15 @@ extends Area2D
 var player = null
 var collect = false 
 var inReach = false
+@export var sprite_texture: Texture
+@export var sprite_scale: Vector2 = Vector2(1, 1)
+func _ready():
+	var sprite: Sprite2D = $Sprite2D
 
-func _process(delta):
-	pass
+	# Set the texture if provided in the inspector
+	if sprite_texture != null:
+		sprite.texture = sprite_texture
+	sprite.scale = sprite_scale
 	
 
 func _on_body_entered(body):

@@ -16,3 +16,5 @@ shape = SubResource("CircleShape2D_5386s")
 
 [node name="RightVO" type="AudioStreamPlayer" parent="."]
 script = ExtResource("2_4lwvk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var Speed: float = 300.0
 var current_dir = "none"
-
+@export var collected_items: int = 0
 @export var inv : Inv
 @onready var anim = $Sprite2D
 
@@ -84,5 +84,11 @@ func player():
 	pass
 	
 func collect(item):
+	collected_items += 1
 	inv.insert(item)
+	print("Item collected!")
+	if collected_items == 3:
+		get_tree().change_scene_to_file("res://Scenes/male_office.tscn")
 	
+	
+

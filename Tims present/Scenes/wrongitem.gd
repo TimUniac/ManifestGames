@@ -5,6 +5,17 @@ var player = null
 
 @export var inReach = false
 
+@export var sprite_texture: Texture
+@export var sprite_scale: Vector2 = Vector2(1, 1)
+func _ready():
+	# Access the Sprite2D child
+	var sprite: Sprite2D = $Sprite2D
+
+	# Set the texture if provided in the inspector
+	if sprite_texture != null:
+		sprite.texture = sprite_texture
+	sprite.scale = sprite_scale
+
 func _process(delta):
 	pass
 	

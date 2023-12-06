@@ -6,6 +6,7 @@ var seconds = startTime
 var minutes = 0
 
 
+
 func _on_timer_timeout():
 	game_time()
 	
@@ -22,7 +23,7 @@ func game_time():
 			$Timer.stop()
 			$Transitioner.fadeout()
 			await($Transitioner.finished)
-			get_tree().change_scene_to_file("res://In progress/doctors_office_male_chapter 1.tscn")
+			get_tree().change_scene_to_file("res://Scenes/male_office.tscn")
 
 
 

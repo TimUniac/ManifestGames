@@ -50,8 +50,8 @@ layout/styles={
 "layout": "res://Scenes/OfficeStyle.tscn"
 }
 }
-layout/default_style="Office"
-layout/style_list=[]
+layout/default_style="res://Brain.tres"
+layout/style_list=["res://Brain.tres", "res://Office.tres", "res://Assets/Fonts/TempBrain.tres"]
 variables={}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -69,7 +69,7 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/input_action="Pickup"
-text/autoadvance_enabled=true
+text/autoadvance_enabled=false
 text/autopauses={}
 text/autoadvance_fixed_delay=0.0
 
