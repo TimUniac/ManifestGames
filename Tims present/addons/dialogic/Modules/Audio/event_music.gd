@@ -55,7 +55,7 @@ func get_shortcode_parameters() -> Dictionary:
 		#param_name : property_info
 		"path"		: {"property": "file_path", 	"default": ""},
 		"fade"		: {"property": "fade_length", 	"default": 0},
-		"volume"	: {"property": "volume", 		"default": -10},
+		"volume"	: {"property": "volume", 		"default": 0},
 		"bus"		: {"property": "audio_bus", 	"default": "Master", 
 						"suggestions": get_bus_suggestions},
 		"loop"		: {"property": "loop", 			"default": true},

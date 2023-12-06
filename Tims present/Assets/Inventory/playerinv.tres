@@ -16,5 +16,6 @@ script = ExtResource("2_104yy")
 amount = 0
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("2_07jfl")
 slots = Array[ExtResource("2_104yy")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])

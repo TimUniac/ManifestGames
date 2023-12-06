@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0fa5hki573om"
+path="res://.godot/imported/VO_Dr_Tut_That Session.mp3-0a0591a6414b9e0856aec4f112d9a542.mp3str"
+
+[deps]
+
+source_file="res://Assets/VO/Tutorial/VO_Dr_Tut_That Session.mp3"
+dest_files=["res://.godot/imported/VO_Dr_Tut_That Session.mp3-0a0591a6414b9e0856aec4f112d9a542.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

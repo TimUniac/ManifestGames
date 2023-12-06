@@ -1,6 +1,6 @@
 extends Control
 
-class_name transitioner 
+#class_name transitioner 
 
 @export var scene_switch_anim : String = "fadeout"
 @export var scene_to_load : PackedScene
