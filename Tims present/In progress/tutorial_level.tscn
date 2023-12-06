@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=24 format=3 uid="uid://dutq5ntye7wf5"]
 
+[ext_resource type="Script" path="res://In progress/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_eu1u8"]
 [ext_resource type="Texture2D" uid="uid://dwdcc62y16dky" path="res://Assets/Furniture 2.svg" id="3_hd0gv"]
 [ext_resource type="PackedScene" uid="uid://dkidusndwlvxm" path="res://Scenes/game_timer.tscn" id="4_8ey0n"]
@@ -7859,13 +7860,14 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_cy38w"]
+[sub_resource type="Resource" id="Resource_yhoas"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
 
 [node name="Tutorial" type="Node2D"]
 position = Vector2(0, -4)
+script = ExtResource("1_ye8l3")
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -2
@@ -7918,7 +7920,7 @@ position = Vector2(801, 466)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_cy38w")
+inv = SubResource("Resource_yhoas")
 
 [node name="Glasses" parent="." instance=ExtResource("8_iauun")]
 position = Vector2(475, 305)

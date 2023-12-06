@@ -1,4 +1,5 @@
 [style name="Brain"]
+[wait time="1.5"]
 [signal arg="1"]
 Doctor: That session went longer than I intended. I only have a few minutes to clean up and gather what I need for my next patient.
 [signal arg="unFreeze"]
