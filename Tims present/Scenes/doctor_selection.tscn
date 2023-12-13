@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3cxxhwrxcvau"]
+[gd_scene load_steps=10 format=3 uid="uid://d3cxxhwrxcvau"]
 
 [ext_resource type="Script" path="res://script/DoctorSelection.gd" id="1_xq3cl"]
 [ext_resource type="Texture2D" uid="uid://c31ux5k28sj7f" path="res://Assets/textbox/MainMenuBG_2.jpg" id="2_phup2"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cef4st4avtl5u" path="res://Assets/pick patient/Group 5.png" id="7_q4jc4"]
 [ext_resource type="Texture2D" uid="uid://xssw6xbc6xig" path="res://Assets/Doctor Graphics/Male Doctor/Doctors_Design Female.png" id="8_evtvq"]
 [ext_resource type="Texture2D" uid="uid://dpc8v2r27wmms" path="res://Assets/Doctor Graphics/Male Doctor/Doctors_Design Male.png" id="9_3qho7"]
-[ext_resource type="PackedScene" uid="uid://bf32yx24dvetm" path="res://Scenes/transitions.tscn" id="10_dkgof"]
 
 [node name="doctor_selection" type="Node2D"]
 script = ExtResource("1_xq3cl")
@@ -57,11 +56,5 @@ stretch_mode = 0
 position = Vector2(123, 182)
 scale = Vector2(0.471698, 0.408333)
 texture = ExtResource("8_evtvq")
-
-[node name="Transitioner" parent="." instance=ExtResource("10_dkgof")]
-offset_left = 591.0
-offset_top = 345.0
-offset_right = 591.0
-offset_bottom = 345.0
 
 [connection signal="pressed" from="Male" to="." method="_on_male_pressed"]

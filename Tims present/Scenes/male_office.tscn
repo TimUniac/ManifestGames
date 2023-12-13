@@ -7,5 +7,3 @@
 script = ExtResource("1_nffih")
 
 [node name="OfficeTheme" parent="." instance=ExtResource("2_nq8mp")]
-
-[connection signal="finished" from="OfficeTheme" to="." method="_on_office_theme_finished"]
