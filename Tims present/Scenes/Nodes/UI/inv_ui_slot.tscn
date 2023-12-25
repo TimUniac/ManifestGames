@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://drnapavjc6m34"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/inv_ui_slot.gd" id="1_6gwl5"]
+[ext_resource type="Texture2D" uid="uid://yhhctojlnk8k" path="res://Assets/Inventory/InvGraphics/Rectangle 2.png" id="1_7trim"]
+
+[node name="inv_UI_Slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(56, 56)
+offset_right = 56.0
+offset_bottom = 56.0
+script = ExtResource("1_6gwl5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.592, 0.578947)
+texture = ExtResource("1_7trim")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 0
+offset_right = 56.0
+offset_bottom = 55.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Item_Display" type="Sprite2D" parent="CenterContainer/Panel"]
+scale = Vector2(0.3, 0.3)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://beilwc5msif53"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/male_office.gd" id="1_ps5gl"]
+[ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_nq8mp"]
+
+[node name="Male Office" type="Node2D"]
+script = ExtResource("1_ps5gl")
+
+[node name="OfficeTheme" parent="." instance=ExtResource("2_nq8mp")]

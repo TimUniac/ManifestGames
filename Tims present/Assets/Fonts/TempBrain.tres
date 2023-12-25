@@ -24,7 +24,9 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_16tkx"]
 script = ExtResource("2_cwysp")
 scene = ExtResource("4_yvh12")
-overrides = {}
+overrides = {
+"next_indicator_texture": "\"res://Assets/Texture assets/Orbs.png\""
+}
 
 [sub_resource type="Resource" id="Resource_qryhw"]
 script = ExtResource("2_cwysp")

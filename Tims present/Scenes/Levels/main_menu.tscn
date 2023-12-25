@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://cto2derdbrie"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/main_menu.gd" id="1_rdafq"]
+[ext_resource type="Texture2D" uid="uid://dibwvlg8qwq1o" path="res://Assets/Menu Buttons/MainMenuBG_2.jpg" id="2_h454c"]
+[ext_resource type="Texture2D" uid="uid://das5q6q7x1kt6" path="res://Assets/Menu Buttons/new.png" id="3_pa3dx"]
+[ext_resource type="Texture2D" uid="uid://d1l6hogdld5uf" path="res://Assets/Menu Buttons/exit.png" id="4_m1h8n"]
+[ext_resource type="Texture2D" uid="uid://bxrgg12smcxjg" path="res://Assets/Menu Buttons/setting.png" id="6_bee41"]
+[ext_resource type="AudioStream" uid="uid://dw4vt5mfjfr0t" path="res://Assets/Sound/Music/DownWithTheSickness-LobbyMix.wav" id="7_1j422"]
+[ext_resource type="Texture2D" uid="uid://p1igb1km6we7" path="res://Assets/Menu Buttons/GameTitleYellow.png" id="7_60duo"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="7_m0wob"]
+[ext_resource type="Script" path="res://Scenes/Nodes/Audio/Clicks.gd" id="10_8k7ah"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jnq6r"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_rdafq")
+
+[node name="MainMenuBg2" type="Sprite2D" parent="."]
+position = Vector2(575, 324.25)
+scale = Vector2(0.596354, 0.597685)
+texture = ExtResource("2_h454c")
+
+[node name="Exit" type="TextureButton" parent="."]
+offset_left = 991.0
+offset_top = 528.0
+offset_right = 1133.0
+offset_bottom = 630.0
+texture_normal = ExtResource("4_m1h8n")
+
+[node name="Setting" type="TextureButton" parent="."]
+offset_left = 1076.0
+offset_top = 27.0
+offset_right = 1138.0
+offset_bottom = 89.0
+texture_normal = ExtResource("6_bee41")
+
+[node name="new" type="TextureButton" parent="."]
+offset_left = 139.0
+offset_top = 282.0
+offset_right = 281.0
+offset_bottom = 384.0
+texture_normal = ExtResource("3_pa3dx")
+
+[node name="GameTitleYellow" type="Sprite2D" parent="."]
+position = Vector2(239, 94)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_60duo")
+
+[node name="DoctorsDesign" type="Sprite2D" parent="."]
+position = Vector2(942, 328)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_jnq6r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_1j422")
+volume_db = -15.0
+autoplay = true
+
+[node name="Clicks" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_m0wob")
+script = ExtResource("10_8k7ah")
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Exit" to="Clicks" method="_on_exit_pressed"]
+[connection signal="pressed" from="Setting" to="Clicks" method="_on_setting_pressed"]
+[connection signal="pressed" from="new" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="new" to="Clicks" method="_on_new_pressed"]

@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://buwug316abpic"]
-
-[ext_resource type="AudioStream" uid="uid://brsg2u1ptvv4b" path="res://Assets/Music/Music_OfficeThemeJazz_1126.mp3" id="1_ycp4c"]
-[ext_resource type="Script" path="res://Scenes/OfficeTheme.gd" id="2_f38yx"]
-
-[node name="OfficeTheme" type="AudioStreamPlayer"]
-stream = ExtResource("1_ycp4c")
-volume_db = -15.0
-script = ExtResource("2_f38yx")
