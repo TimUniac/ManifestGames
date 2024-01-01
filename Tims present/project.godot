@@ -22,7 +22,6 @@ buses/default_bus_layout="res://Assets/Sound/default_bus_layout.tres"
 [autoload]
 
 global="*res://script/global.gd"
-Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 
 [dialogic]
 
@@ -80,10 +79,6 @@ text/autoadvance_fixed_delay=0.0
 [display]
 
 window/stretch/mode="viewport"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [input]
 

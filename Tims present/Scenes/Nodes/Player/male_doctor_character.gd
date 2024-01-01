@@ -9,15 +9,10 @@ var current_dir = "none"
 
 func _ready():
 	$Sprite2D.play("front_idle")
-	Dialogic.signal_event.connect(_on_dialogic_signal)
 func _physics_process(_delta):
 	player_movement()
 
-func _on_dialogic_signal(argument:String):
-	if argument == "1":
-		Speed = 0
-	elif argument == "unFreeze":
-		Speed = 300
+
 	
 func player_movement(): 
 	if Input.is_action_pressed("right"):
