@@ -250,7 +250,7 @@ size = Vector2(84, 152)
 radius = 57.0
 height = 180.0
 
-[node name="Female_Doctor_Character" type="CharacterBody2D"]
+[node name="Female_Doctor_Character" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_7a3qn")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
