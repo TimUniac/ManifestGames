@@ -13,9 +13,6 @@ func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
-func _on_interact(): 
-	sprite.flip_h = true if interaction_area.get_overlapping_bodies()[0].global_position.x < global_position.x else f 
-	 
 func _physics_process(_delta):
 	player_movement()
 

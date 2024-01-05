@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://84d0ghv75mkp"]
+[gd_scene load_steps=6 format=3 uid="uid://84d0ghv75mkp"]
 
 [ext_resource type="Script" path="res://Assets/Inventory/InvItems/seraphina's_guitar.gd" id="1_t346v"]
 [ext_resource type="Resource" uid="uid://ml38164mbo1j" path="res://Assets/Inventory/InvItems/Items/Guitar.tres" id="2_nj67k"]
 [ext_resource type="Texture2D" uid="uid://dkam36im3mixt" path="res://Assets/Inventory/InvItems/Guitar.png" id="2_ylg4l"]
+[ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="4_pp2ob"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbpr"]
 radius = 86.0
@@ -17,7 +18,10 @@ position = Vector2(0, 1)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_ylg4l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Interaction Area" parent="." instance=ExtResource("4_pp2ob")]
+action_name = "toggle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(0, 1)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_hrbpr")
