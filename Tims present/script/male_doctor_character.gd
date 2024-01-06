@@ -2,10 +2,12 @@ extends CharacterBody2D
 
 var Speed: float = 300.0
 var current_dir = "none"
+var push_force = 80.0
 @export var collected_items: int = 0
 @export var inv : Inv
 @onready var anim = $Sprite2D
 @onready var interaction_area: InteractionArea = $"Interaction Area"
+
 
 
 func _ready():
@@ -15,6 +17,10 @@ func _ready():
 	
 func _physics_process(_delta):
 	player_movement()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
 func _on_dialogic_signal(argument:String):
 	if argument == "1":
