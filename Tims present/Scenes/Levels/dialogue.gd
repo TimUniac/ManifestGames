@@ -1,50 +1,42 @@
 extends TextureRect
 
-@export var dialoguePath = ""
-@export var textSpeed : float = 0.05
+@export var textSpeed: float = 0.05
 
-
-var dialogue
-
+var dialogue: Array
 var phraseNum = 0
 var finished = false
 
 func _ready():
 	$Timer.wait_time = textSpeed
-	dialogue = getDialogue()
-	assert(dialogue, "Dialogue not Found")
 	nextPhrase()
-	
-	
+
 func getDialogue() -> Array:
-	var f = File.new()
-	assert(f.file_exists(dialoguePath),"File path does not exist")
-	
-	f.open(dialoguePath, File.READ)
-	var json = f.get_as_text()
-	
-	var output = parse_json(json)
-	
-	if typeof(output) == TYPE_ARRAY:
-		return output
+	var file = FileAccess.open("res://Assets/TemplateDialogue.json", FileAccess.READ)
+	if FileAccess.open("res://Assets/TemplateDialogue.json", FileAccess.READ):
+		print("Failed to open file.")
+	return []
+
+	var json_data = file.get_as_text()
+	file.close()
+
+	var json = JSON.new()
+	var result = json.parse(json_data)
+	if result.error == OK:
+		return result.result
 	else:
-		return[]
-		
+		print("Failed to parse JSON: ", result.error)
+		return []
+
 func nextPhrase() -> void:
-	if phraseNum >= len(dialogue):
+	if phraseNum >= dialogue.size():
 		queue_free()
 		return
-		
-	finished = false
-	
+
 	$Name.bbcode_text = dialogue[phraseNum]["Name"]
 	$Text.bbcode_text = dialogue[phraseNum]["Text"]
-	
 	$Text.visible_characters = 0
-	
-	while $Text.visible_characters < len($Text.text):
+	phraseNum += 1
+
+	while $Text.visible_characters < $Text.bbcode_text.length():
 		$Text.visible_characters += 1
-		
-		$Timer.start()
 		await $Timer.timeout
-	

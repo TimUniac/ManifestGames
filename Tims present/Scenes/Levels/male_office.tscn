@@ -25,6 +25,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="OfficeBackgroundNight" type="TextureRect" parent="BG/Control"]
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("3_le2qj")
@@ -40,6 +41,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="DoctorPortrait" type="TextureRect" parent="DP/Control"]
+layout_mode = 0
 offset_left = 11786.7
 offset_top = 3306.67
 offset_right = 15286.7
@@ -57,6 +59,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SeraphinaPortrait" type="TextureRect" parent="SP/Control"]
+layout_mode = 0
 offset_left = 30.0
 offset_top = 1210.0
 offset_right = 3530.0
@@ -96,6 +99,8 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="Text/Control/TextureRect"]
 
 [node name="Polygon2D" type="Polygon2D" parent="Text"]
 texture = ExtResource("8_v4t3a")
