@@ -1,20 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://beilwc5msif53"]
+[gd_scene load_steps=8 format=3 uid="uid://beilwc5msif53"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/male_office.gd" id="1_ps5gl"]
-[ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_nq8mp"]
-[ext_resource type="Texture2D" uid="uid://0wc6xtwcvfg4" path="res://Assets/Texture assets/OfficeNight.png" id="3_le2qj"]
-[ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_3gx28"]
-[ext_resource type="Texture2D" uid="uid://cmpcakv18sr4b" path="res://Assets/Seraphina/seraphina_ptrait.png" id="5_rnf0v"]
-[ext_resource type="Texture2D" uid="uid://8wl2v5yik66h" path="res://Assets/textbox/text box 1.png" id="6_ftbfv"]
-[ext_resource type="Script" path="res://Scenes/Levels/dialogue.gd" id="7_mvqra"]
-[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="8_v4t3a"]
+[ext_resource type="Script" path="res://Scenes/Levels/male_office.gd" id="1_dfxg7"]
+[ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_3svbl"]
+[ext_resource type="Texture2D" uid="uid://0wc6xtwcvfg4" path="res://Assets/Texture assets/OfficeNight.png" id="3_oku4j"]
+[ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_xu34y"]
+[ext_resource type="Texture2D" uid="uid://cmpcakv18sr4b" path="res://Assets/Seraphina/seraphina_ptrait.png" id="5_4wf84"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="6_nu3b3"]
+[ext_resource type="PackedScene" uid="uid://btw83gk603ebb" path="res://Scenes/Nodes/UI/dialogueUI.tscn" id="7_qsch1"]
 
 [node name="Male Office" type="Node2D"]
-script = ExtResource("1_ps5gl")
+script = ExtResource("1_dfxg7")
 
-[node name="OfficeTheme" parent="." instance=ExtResource("2_nq8mp")]
+[node name="OfficeTheme" parent="." instance=ExtResource("2_3svbl")]
 
 [node name="BG" type="CanvasLayer" parent="."]
+layer = -1
 scale = Vector2(0.6, 0.6)
 transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
 
@@ -28,7 +28,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("3_le2qj")
+texture = ExtResource("3_oku4j")
 
 [node name="DP" type="CanvasLayer" parent="."]
 scale = Vector2(0.075, 0.075)
@@ -46,7 +46,7 @@ offset_left = 11786.7
 offset_top = 3306.67
 offset_right = 15286.7
 offset_bottom = 8556.67
-texture = ExtResource("4_3gx28")
+texture = ExtResource("4_xu34y")
 
 [node name="SP" type="CanvasLayer" parent="."]
 scale = Vector2(0.1, 0.1)
@@ -64,43 +64,14 @@ offset_left = 30.0
 offset_top = 1210.0
 offset_right = 3530.0
 offset_bottom = 6460.0
-texture = ExtResource("5_rnf0v")
+texture = ExtResource("5_4wf84")
 
 [node name="Text" type="CanvasLayer" parent="."]
+layer = 2
 offset = Vector2(350, 350)
 transform = Transform2D(1, 0, 0, 1, 350, 350)
 
-[node name="Control" type="Control" parent="Text"]
-layout_mode = 3
-anchor_left = 0.227
-anchor_top = 0.386
-anchor_right = 0.227
-anchor_bottom = 0.386
-offset_left = -261.504
-offset_top = -250.128
-offset_right = 262.496
-offset_bottom = -0.128005
-
-[node name="TextureRect" type="TextureRect" parent="Text/Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.002
-anchor_bottom = 1.0
-offset_right = -0.048049
-texture = ExtResource("6_ftbfv")
-script = ExtResource("7_mvqra")
-
-[node name="Name" type="RichTextLabel" parent="Text/Control/TextureRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Text" type="RichTextLabel" parent="Text/Control/TextureRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Timer" type="Timer" parent="Text/Control/TextureRect"]
-
 [node name="Polygon2D" type="Polygon2D" parent="Text"]
-texture = ExtResource("8_v4t3a")
+texture = ExtResource("6_nu3b3")
+
+[node name="TextureRect" parent="." instance=ExtResource("7_qsch1")]

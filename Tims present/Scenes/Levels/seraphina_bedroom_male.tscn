@@ -1,18 +1,18 @@
 [gd_scene load_steps=15 format=3 uid="uid://fg6yvyhk3vim"]
 
-[ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="1_mc8sc"]
-[ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_t484i"]
-[ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="2_mvxau"]
-[ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="3_ks15k"]
-[ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_ml60l"]
-[ext_resource type="PackedScene" uid="uid://dkidusndwlvxm" path="res://Scenes/Nodes/UI/game_timer.tscn" id="6_tamkd"]
-[ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_uonga"]
-[ext_resource type="PackedScene" uid="uid://7rbqvxmnnf8w" path="res://Scenes/Nodes/UI/Items/friendship_necklace.tscn" id="8_i1f33"]
-[ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Scenes/Nodes/UI/inv_UI.tscn" id="9_qxxjy"]
-[ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="10_qh538"]
+[ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_irs5c"]
+[ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_75aad"]
+[ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_s68sl"]
+[ext_resource type="PackedScene" uid="uid://dkidusndwlvxm" path="res://Scenes/Nodes/UI/game_timer.tscn" id="4_7hjed"]
+[ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_u2p0v"]
+[ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_yns5c"]
+[ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="7_u7idh"]
+[ext_resource type="PackedScene" uid="uid://7rbqvxmnnf8w" path="res://Scenes/Nodes/UI/Items/friendship_necklace.tscn" id="8_pvleg"]
+[ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="9_elh5l"]
+[ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Scenes/Nodes/UI/inv_UI.tscn" id="10_vlsd3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
-texture = ExtResource("1_mc8sc")
+texture = ExtResource("2_75aad")
 4:3/0 = 0
 4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:3/0/physics_layer_0/angular_velocity = 0.0
@@ -6761,7 +6761,7 @@ texture = ExtResource("1_mc8sc")
 76:46/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwuyi"]
-texture = ExtResource("2_mvxau")
+texture = ExtResource("3_s68sl")
 25:10/0 = 0
 25:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 25:10/0/physics_layer_0/angular_velocity = 0.0
@@ -7842,12 +7842,12 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0h3d2")
 sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 
-[sub_resource type="Resource" id="Resource_mym57"]
+[sub_resource type="Resource" id="Resource_accss"]
 resource_local_to_scene = true
 
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
 position = Vector2(0, -4)
-script = ExtResource("1_t484i")
+script = ExtResource("1_irs5c")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(116, 325)
@@ -7870,32 +7870,32 @@ limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
-[node name="GameTimer" parent="Camera2D" instance=ExtResource("6_tamkd")]
+[node name="GameTimer" parent="Camera2D" instance=ExtResource("4_7hjed")]
 offset_left = -33.0
 offset_top = 102.0
 offset_right = -33.0
 offset_bottom = 102.0
 
-[node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_ml60l")]
+[node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_u2p0v")]
 position = Vector2(320, 318)
 
-[node name="Yarn" parent="." instance=ExtResource("6_uonga")]
+[node name="Yarn" parent="." instance=ExtResource("6_yns5c")]
 position = Vector2(801, 466)
 
-[node name="Male Doctor Character" parent="." instance=ExtResource("3_ks15k")]
+[node name="Male Doctor Character" parent="." instance=ExtResource("7_u7idh")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_mym57")
+inv = SubResource("Resource_accss")
 
-[node name="Friendship Necklace" parent="." instance=ExtResource("8_i1f33")]
+[node name="Friendship Necklace" parent="." instance=ExtResource("8_pvleg")]
 position = Vector2(475, 305)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Journal Read" parent="CanvasLayer" instance=ExtResource("10_qh538")]
+[node name="Journal Read" parent="CanvasLayer" instance=ExtResource("9_elh5l")]
 offset_top = -10.0
 offset_bottom = -10.0
 
-[node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("9_qxxjy")]
+[node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("10_vlsd3")]
 offset_left = 15.0
 offset_top = 517.0
 offset_right = -945.0

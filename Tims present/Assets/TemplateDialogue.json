@@ -1,4 +1,12 @@
 [
-    {"Name": "CharacterName", "Emotion": "", "Text": "Put dialogue here"},
-    {"Name": "CharacterName", "Emotion": "", "Text": "Put dialogue here"}
+	{
+		"characterName": "Character A",
+		"portrait": "res://portraits/character_a.png",
+		"dialogue": "Hello, this is a sample dialogue."
+	},
+	{
+		"characterName": "Character B",
+		"portrait": "res://portraits/character_b.png",
+		"dialogue": "This is another dialogue sample."
+	}
 ]
