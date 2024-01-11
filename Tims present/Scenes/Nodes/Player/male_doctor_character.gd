@@ -2,15 +2,28 @@ extends CharacterBody2D
 
 var Speed: float = 300.0
 var current_dir = "none"
+var push_force = 80.0
 @export var collected_items: int = 0
 @export var inv : Inv
 @onready var anim = $Sprite2D
+@onready var interaction_area: InteractionArea = $"Interaction Area"
+
 
 
 func _ready():
 	$Sprite2D.play("front_idle")
+<<<<<<< HEAD:Tims present/Scenes/Nodes/Player/male_doctor_character.gd
+=======
+	interaction_area.interact = Callable(self, "_on_interact")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	
+>>>>>>> origin/Popups-&-Object-Movement:Tims present/script/male_doctor_character.gd
 func _physics_process(_delta):
 	player_movement()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
 
 	
