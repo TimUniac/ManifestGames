@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://871q0vurw1j0"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/inv_UI.gd" id="1_xqyxg"]
-[ext_resource type="Texture2D" uid="uid://yhhctojlnk8k" path="res://Assets/Inventory/InvGraphics/Rectangle 2.png" id="2_8xpcb"]
 [ext_resource type="PackedScene" uid="uid://drnapavjc6m34" path="res://Scenes/Nodes/UI/inv_ui_slot.tscn" id="3_vjucg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uj42e"]
+load_path = "res://.godot/imported/Rectangle 2.png-37227aac68fa602f126b3ea8a2172018.ctex"
 
 [node name="Inv_Ui" type="Control"]
 layout_mode = 3
@@ -20,7 +22,7 @@ script = ExtResource("1_xqyxg")
 layout_mode = 0
 offset_right = 191.0
 offset_bottom = 73.0
-texture = ExtResource("2_8xpcb")
+texture = SubResource("CompressedTexture2D_uj42e")
 patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8

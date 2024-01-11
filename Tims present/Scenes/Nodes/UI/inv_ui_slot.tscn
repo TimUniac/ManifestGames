@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://drnapavjc6m34"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/inv_ui_slot.gd" id="1_6gwl5"]
-[ext_resource type="Texture2D" uid="uid://yhhctojlnk8k" path="res://Assets/Inventory/InvGraphics/Rectangle 2.png" id="1_7trim"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uj42e"]
+load_path = "res://.godot/imported/Rectangle 2.png-37227aac68fa602f126b3ea8a2172018.ctex"
 
 [node name="inv_UI_Slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -12,7 +14,7 @@ script = ExtResource("1_6gwl5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.592, 0.578947)
-texture = ExtResource("1_7trim")
+texture = SubResource("CompressedTexture2D_uj42e")
 centered = false
 
 [node name="CenterContainer" type="CenterContainer" parent="."]

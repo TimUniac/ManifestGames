@@ -7866,7 +7866,7 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_eh6iq"]
+[sub_resource type="Resource" id="Resource_f43tu"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7933,7 +7933,7 @@ offset_bottom = 102.0
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_eh6iq")
+inv = SubResource("Resource_f43tu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
