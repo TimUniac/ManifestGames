@@ -1,16 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://84d0ghv75mkp"]
+[gd_scene load_steps=6 format=3 uid="uid://84d0ghv75mkp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.gd" id="1_t346v"]
-[ext_resource type="Script" path="res://Scenes/Nodes/UI/inventory_item.gd" id="2_1sm63"]
+[ext_resource type="Resource" uid="uid://b26yv3buw423h" path="res://Scenes/Nodes/UI/Items/Guitar.tres" id="2_oxy0f"]
 [ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="4_crsvo"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2cs2q"]
-load_path = "res://.godot/imported/Guitar.png-6d822a78b42f26f931345e86b7efa022.ctex"
-
-[sub_resource type="Resource" id="Resource_yisjo"]
-script = ExtResource("2_1sm63")
-name = "Seraphinas Guitar"
-texture = SubResource("CompressedTexture2D_2cs2q")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_trge5"]
 load_path = "res://.godot/imported/Guitar.png-4fa995d63f039b6830cb559e8a0d8d90.ctex"
@@ -21,7 +13,7 @@ height = 340.0
 
 [node name="Seraphina\'s Guitar" type="Area2D"]
 script = ExtResource("1_t346v")
-item = SubResource("Resource_yisjo")
+item = ExtResource("2_oxy0f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 1)
@@ -29,6 +21,7 @@ scale = Vector2(0.8, 0.8)
 texture = SubResource("CompressedTexture2D_trge5")
 
 [node name="Interaction Area" parent="." instance=ExtResource("4_crsvo")]
+action_name = "interact"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(0, 1)

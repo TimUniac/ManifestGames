@@ -7845,7 +7845,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0h3d2")
 sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 
-[sub_resource type="Resource" id="Resource_qhr31"]
+[sub_resource type="Resource" id="Resource_7j3a7"]
 resource_local_to_scene = true
 
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
@@ -7890,11 +7890,11 @@ offset_bottom = 102.0
 position = Vector2(320, 318)
 
 [node name="Yarn" parent="." instance=ExtResource("6_yns5c")]
-position = Vector2(801, 466)
+position = Vector2(1021, 414)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_u7idh")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_qhr31")
+inv = SubResource("Resource_7j3a7")
 
 [node name="Friendship Necklace" parent="." instance=ExtResource("8_pvleg")]
 position = Vector2(475, 305)

@@ -1,16 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://7rbqvxmnnf8w"]
+[gd_scene load_steps=6 format=3 uid="uid://7rbqvxmnnf8w"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Friendship Necklace.gd" id="1_t1o1o"]
-[ext_resource type="Script" path="res://Scenes/Nodes/UI/inventory_item.gd" id="2_f727q"]
+[ext_resource type="Resource" uid="uid://4u1usvcmvaur" path="res://Scenes/Nodes/UI/Items/necklace.tres" id="2_yajx2"]
 [ext_resource type="PackedScene" uid="uid://c832f75iniexh" path="res://Interactions/Interaction Area/Pickup area.tscn" id="4_t4ixu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ec8l"]
 load_path = "res://.godot/imported/SeraphinaNecklace.png-c5da2e00ab56633acc3c5071c1f17e47.ctex"
-
-[sub_resource type="Resource" id="Resource_nu7hn"]
-script = ExtResource("2_f727q")
-name = "Friendship necklace"
-texture = SubResource("CompressedTexture2D_3ec8l")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3iiu"]
 radius = 30.0
@@ -18,7 +13,7 @@ height = 60.0
 
 [node name="Friendship Necklace" type="Area2D"]
 script = ExtResource("1_t1o1o")
-item = SubResource("Resource_nu7hn")
+item = ExtResource("2_yajx2")
 
 [node name="SeraphinaNecklace" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)

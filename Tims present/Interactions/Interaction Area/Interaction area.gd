@@ -2,7 +2,7 @@ extends Area2D
 
 
 @export var action_name: String = "interact"
-@onready var interaction_label = $interaction_label
+@onready var interaction_label = $Panel
 
 func _ready():
 	interaction_label.visible = false
