@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://7rbqvxmnnf8w"]
+[gd_scene load_steps=6 format=3 uid="uid://7rbqvxmnnf8w"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Friendship Necklace.gd" id="1_t1o1o"]
 [ext_resource type="Resource" uid="uid://bcottfe21g8ln" path="res://Assets/Inventory/Items/friendship necklace.tres" id="2_sh0s3"]
 [ext_resource type="Texture2D" uid="uid://dt7etysjmgc0r" path="res://Assets/Inventory/Items/SeraphinaNecklace.png" id="2_wsw78"]
+[ext_resource type="PackedScene" uid="uid://c832f75iniexh" path="res://Interactions/Interaction Area/Pickup area.tscn" id="4_t4ixu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3iiu"]
 radius = 30.0
@@ -16,7 +17,9 @@ item = ExtResource("2_sh0s3")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_wsw78")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Pickup Area" parent="." instance=ExtResource("4_t4ixu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup Area"]
 shape = SubResource("CapsuleShape2D_i3iiu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

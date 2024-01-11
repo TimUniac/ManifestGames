@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://fg6yvyhk3vim"]
+[gd_scene load_steps=16 format=3 uid="uid://fg6yvyhk3vim"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_irs5c"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_75aad"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://7rbqvxmnnf8w" path="res://Scenes/Nodes/UI/Items/friendship_necklace.tscn" id="8_pvleg"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="9_elh5l"]
 [ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Scenes/Nodes/UI/inv_UI.tscn" id="10_vlsd3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
+size = Vector2(225, 107)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_75aad")
@@ -7842,12 +7845,19 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0h3d2")
 sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 
-[sub_resource type="Resource" id="Resource_accss"]
+[sub_resource type="Resource" id="Resource_mmcch"]
 resource_local_to_scene = true
 
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
 position = Vector2(0, -4)
 script = ExtResource("1_irs5c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(747, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(102.5, 43.5)
+shape = SubResource("RectangleShape2D_twda4")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(116, 325)
@@ -7884,7 +7894,7 @@ position = Vector2(801, 466)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_u7idh")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_accss")
+inv = SubResource("Resource_mmcch")
 
 [node name="Friendship Necklace" parent="." instance=ExtResource("8_pvleg")]
 position = Vector2(475, 305)
@@ -7892,8 +7902,8 @@ position = Vector2(475, 305)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("9_elh5l")]
-offset_top = -10.0
-offset_bottom = -10.0
+offset_left = 5.0
+offset_right = 5.0
 
 [node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("10_vlsd3")]
 offset_left = 15.0

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8aeqw3ip5n48"]
+
+[ext_resource type="Script" path="res://Interactions/Interaction Area/Interaction area.gd" id="1_vlcy3"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_hyfdl"]
+
+[node name="Interaction Area" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_vlcy3")
+
+[node name="interaction_label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_top = -50.0
+offset_right = 81.0
+offset_bottom = -4.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_hyfdl")
+text = "[E] To Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -79,9 +79,10 @@ func player():
 	pass
 	
 func collect(item):
-	collected_items += 1
-	inv.insert(item)
-	print("Item collected!")
+	if Input.is_action_just_pressed("Pickup"):
+		collected_items += 1
+		inv.insert(item)
+		print("Item collected!")
 	if collected_items == 3:
 		get_tree().change_scene_to_file("res://Scenes/male_office.tscn")
 	
