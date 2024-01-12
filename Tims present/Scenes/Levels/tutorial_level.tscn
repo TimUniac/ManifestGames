@@ -7866,13 +7866,13 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_f43tu"]
+[sub_resource type="Resource" id="Resource_jghu4"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_en8ce"]
-size = Vector2(168, 85)
+size = Vector2(168, 115.825)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ycspa"]
 radius = 33.3766
@@ -7881,7 +7881,7 @@ radius = 33.3766
 radius = 35.2278
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3c4kb"]
-size = Vector2(563, 70)
+size = Vector2(571, 70)
 
 [node name="Tutorial" type="Node2D"]
 position = Vector2(0, -4)
@@ -7933,7 +7933,7 @@ offset_bottom = 102.0
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_f43tu")
+inv = SubResource("Resource_jghu4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -7959,49 +7959,55 @@ volume_db = -12.18
 script = ExtResource("14_i4uyg")
 
 [node name="Desk" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(967, 344)
+position = Vector2(966.98, 305.175)
 sprite_texture = ExtResource("17_mxxvg")
 sprite_scale = Vector2(3, 3)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Desk"]
-position = Vector2(5, -7.5)
+position = Vector2(5, 7.91251)
 shape = SubResource("RectangleShape2D_en8ce")
 
 [node name="Lamp" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(693, 333)
+z_index = 1
+position = Vector2(693, 390)
 sprite_texture = ExtResource("18_e1e58")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Lamp"]
 shape = SubResource("CircleShape2D_ycspa")
 
 [node name="Chair" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(603, 407)
+z_index = 1
+position = Vector2(603, 450)
 sprite_texture = ExtResource("19_ug1be")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Chair"]
 shape = SubResource("CircleShape2D_5jkr3")
 
 [node name="BookShelf" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(2, 333)
+z_index = -1
+position = Vector2(2, 300)
 sprite_texture = ExtResource("17_p8m2g")
 sprite_scale = Vector2(0.25, 0.25)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="BookShelf"]
-position = Vector2(203.5, -1)
+position = Vector2(207.5, -1)
 shape = SubResource("RectangleShape2D_3c4kb")
 
 [node name="BookShelf2" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(382, 327)
+z_index = -1
+position = Vector2(382, 300)
 sprite_texture = ExtResource("17_p8m2g")
 sprite_scale = Vector2(0.25, 0.25)
 
 [node name="BookShelf3" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(250, 328)
+z_index = -1
+position = Vector2(250, 300)
 sprite_texture = ExtResource("17_p8m2g")
 sprite_scale = Vector2(0.25, 0.25)
 
 [node name="BookShelf4" parent="." instance=ExtResource("15_12ydx")]
-position = Vector2(127, 332)
+z_index = -1
+position = Vector2(127, 300)
 sprite_texture = ExtResource("17_p8m2g")
 sprite_scale = Vector2(0.25, 0.25)
 
