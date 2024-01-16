@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var Speed: float = 300.0
 var current_dir = "none"
-var push_force = 80.0
+
 @export var collected_items: int = 0
 @export var inv : Inv
 @onready var anim = $Sprite2D

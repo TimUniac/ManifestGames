@@ -21,7 +21,6 @@ scale = Vector2(0.8, 0.8)
 texture = SubResource("CompressedTexture2D_trge5")
 
 [node name="Interaction Area" parent="." instance=ExtResource("4_crsvo")]
-action_name = "interact"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
 position = Vector2(0, 1)
