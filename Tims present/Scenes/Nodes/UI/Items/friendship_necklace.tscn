@@ -17,9 +17,9 @@ item = ExtResource("2_yajx2")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_127ux")
 
-[node name="Pickup Area" parent="." instance=ExtResource("4_t4ixu")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup Area"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_i3iiu")
+
+[node name="Pickup Area" parent="." instance=ExtResource("4_t4ixu")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

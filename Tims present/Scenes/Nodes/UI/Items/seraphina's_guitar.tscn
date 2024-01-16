@@ -18,11 +18,11 @@ position = Vector2(0, 1)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_ptuud")
 
-[node name="Interaction Area" parent="." instance=ExtResource("4_crsvo")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_hrbpr")
+
+[node name="Interaction Area" parent="." instance=ExtResource("4_crsvo")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

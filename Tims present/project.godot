@@ -19,10 +19,6 @@ config/icon="res://Doctor Graphics/icon.svg"
 
 buses/default_bus_layout="res://Assets/Sound/default_bus_layout.tres"
 
-[autoload]
-
-global="*res://script/global.gd"
-
 [dialogic]
 
 layout/styles={

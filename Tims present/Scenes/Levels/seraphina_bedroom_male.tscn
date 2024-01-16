@@ -1,9 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://fg6yvyhk3vim"]
+[gd_scene load_steps=18 format=3 uid="uid://fg6yvyhk3vim"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_irs5c"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_75aad"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_s68sl"]
-[ext_resource type="PackedScene" uid="uid://dkidusndwlvxm" path="res://Scenes/Nodes/UI/game_timer.tscn" id="4_7hjed"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_bu8mm"]
 [ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_u2p0v"]
 [ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_yns5c"]
@@ -7856,7 +7855,7 @@ sources/0 = SubResource("TileSetAtlasSource_0h3d2")
 sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 sources/2 = SubResource("TileSetAtlasSource_bu02x")
 
-[sub_resource type="Resource" id="Resource_o8434"]
+[sub_resource type="Resource" id="Resource_be8xp"]
 resource_local_to_scene = true
 
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
@@ -7891,12 +7890,6 @@ limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
-[node name="GameTimer" parent="Camera2D" instance=ExtResource("4_7hjed")]
-offset_left = -33.0
-offset_top = 102.0
-offset_right = -33.0
-offset_bottom = 102.0
-
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_u2p0v")]
 position = Vector2(320, 318)
 
@@ -7914,10 +7907,9 @@ offset_bottom = -2.0
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_u7idh")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_o8434")
+inv = SubResource("Resource_be8xp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("9_elh5l")]
 offset_left = 5.0

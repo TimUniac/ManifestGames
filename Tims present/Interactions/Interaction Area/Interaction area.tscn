@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8aeqw3ip5n48"]
+[gd_scene load_steps=4 format=3 uid="uid://c8aeqw3ip5n48"]
 
 [ext_resource type="Script" path="res://Interactions/Interaction Area/Interaction area.gd" id="1_vlcy3"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_hyfdl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iyrrn"]
+radius = 80.0062
 
 [node name="Interaction Area" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_vlcy3")
+
+[node name="INteraction AREA" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iyrrn")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -63.0

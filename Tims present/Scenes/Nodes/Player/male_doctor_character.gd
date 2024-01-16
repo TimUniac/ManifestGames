@@ -6,7 +6,6 @@ var current_dir = "none"
 @export var collected_items: int = 0
 @export var inv : Inv
 @onready var anim = $Sprite2D
-@onready var interaction_area: InteractionArea = $"Interaction Area"
 
 
 
