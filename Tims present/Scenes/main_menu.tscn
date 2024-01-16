@@ -1,0 +1,137 @@
+[gd_scene load_steps=20 format=3 uid="uid://cj07lmxspcvhe"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/main_menu.gd" id="1_fmsfi"]
+[ext_resource type="Texture2D" path="res://Assets/Menu Buttons/Revised Menu Assets/MainMenu - Bg - Jan 10th.jpg" id="2_6wvn1"]
+[ext_resource type="AudioStream" path="res://Assets/Sound/Music/DownWithTheSickness-LobbyMix.wav" id="3_o12at"]
+[ext_resource type="AudioStream" path="res://Assets/Sound/SFX/Click.wav" id="4_1e3nq"]
+[ext_resource type="Script" path="res://Scenes/Nodes/Audio/Clicks.gd" id="5_jk223"]
+[ext_resource type="Texture2D" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_exit.png" id="6_rhtlc"]
+[ext_resource type="Texture2D" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_settings.png" id="7_cybjv"]
+[ext_resource type="Texture2D" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_Play.png" id="8_e80ne"]
+[ext_resource type="Texture2D" path="res://Assets/Menu Buttons/Revised Menu Assets/GameTitleAnimated.svg" id="9_1yd7t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtpev"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 0, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct04q"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 50, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uynwt"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 100, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynpd8"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 150, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqpwx"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 200, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy44v"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 250, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkje8"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 300, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2xd5"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 350, 220, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bbwn"]
+atlas = ExtResource("9_1yd7t")
+region = Rect2(0, 400, 220, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_flac3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtpev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct04q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uynwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynpd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqpwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy44v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkje8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2xd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bbwn")
+}],
+"loop": true,
+"name": &"Title",
+"speed": 5.0
+}]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_fmsfi")
+
+[node name="MainMenuBg2" type="Sprite2D" parent="."]
+position = Vector2(578, 323)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("2_6wvn1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_o12at")
+volume_db = -15.0
+autoplay = true
+
+[node name="Clicks" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1e3nq")
+script = ExtResource("5_jk223")
+
+[node name="Exit" type="TextureButton" parent="."]
+offset_left = 188.0
+offset_top = 440.0
+offset_right = 680.0
+offset_bottom = 639.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_rhtlc")
+
+[node name="Setting" type="TextureButton" parent="."]
+offset_left = 188.0
+offset_top = 320.0
+offset_right = 680.0
+offset_bottom = 519.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_cybjv")
+
+[node name="new" type="TextureButton" parent="."]
+offset_left = 188.0
+offset_top = 200.0
+offset_right = 680.0
+offset_bottom = 399.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_e80ne")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(309, 133.5)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_flac3")
+animation = &"Title"
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Exit" to="Clicks" method="_on_exit_pressed"]
+[connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="Setting" to="Clicks" method="_on_setting_pressed"]
+[connection signal="pressed" from="new" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="new" to="Clicks" method="_on_new_pressed"]
