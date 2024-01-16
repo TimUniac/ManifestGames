@@ -7,8 +7,10 @@ func _input(event):
 	if event is InputEventKey and event.pressed and !event.echo:
 		if event.keycode == KEY_1:
 			_append_number_to_code(1)
+			#PLAY G Chord
 		elif event.keycode == KEY_2:
 			_append_number_to_code(2)
+			#PLAY
 		elif event.keycode == KEY_3:
 			_append_number_to_code(3)
 		elif event.keycode == KEY_4:
@@ -38,6 +40,7 @@ func _append_number_to_code(number):
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
 		print("Code Correct!")
+		#PLAY SONG
 		# Add more feedback here
 	else:
 		print("Incorrect Code")
