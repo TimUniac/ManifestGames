@@ -1,0 +1,145 @@
+[gd_scene load_steps=4 format=3 uid="uid://xox3s1h15gac"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="2_8a0qp"]
+[ext_resource type="Texture2D" uid="uid://dggqha6h62mel" path="res://Assets/Texture assets/Background_OfficeNightBlur_1126.png" id="2_ogyyc"]
+
+[node name="GuitarGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1156.0
+offset_bottom = 651.0
+script = ExtResource("1_qw654")
+
+[node name="SequenceInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 488.0
+alignment = 1
+max_length = 1
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+right_icon = ExtResource("2_8a0qp")
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Button1" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = -0.154
+offset_right = -0.400002
+offset_bottom = -0.136013
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+text = "1"
+icon = ExtResource("2_ogyyc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 113.846
+offset_right = 113.6
+offset_bottom = -0.136013
+text = "2"
+
+[node name="Button3" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 228.846
+offset_top = -1.0
+offset_right = 228.6
+offset_bottom = -1.13601
+text = "3"
+
+[node name="Button4" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 343.846
+offset_top = -1.0
+offset_right = 343.6
+offset_bottom = -1.13601
+text = "4"
+
+[node name="Button5" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 458.846
+offset_right = 458.6
+offset_bottom = -0.136013
+text = "5"
+
+[node name="Button6" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 575.846
+offset_right = 575.6
+offset_bottom = -0.136013
+text = "6"
+
+[node name="Button7" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 690.846
+offset_top = 1.0
+offset_right = 690.6
+offset_bottom = 0.863987
+text = "7"
+
+[node name="Button8" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 805.846
+offset_top = 1.0
+offset_right = 805.6
+offset_bottom = 0.863987
+text = "8
+"
+
+[node name="Button9" type="Button" parent="SequenceInput"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.0
+anchor_right = 0.1
+anchor_bottom = 1.322
+offset_left = 919.846
+offset_top = -1.0
+offset_right = 919.6
+offset_bottom = -1.13601
+text = "9
+"
