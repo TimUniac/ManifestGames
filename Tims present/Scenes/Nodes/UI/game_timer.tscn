@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkidusndwlvxm"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/GameTimer.gd" id="1_ycrp3"]
-[ext_resource type="Texture2D" uid="uid://yhhctojlnk8k" path="res://Assets/Inventory/InvGraphics/Rectangle 2.png" id="2_7l8cw"]
+[ext_resource type="Texture2D" uid="uid://5nrmr8qxy0e" path="res://Assets/Texture assets/Rectangle 2.png" id="2_7l8cw"]
 [ext_resource type="PackedScene" uid="uid://dwlt6oxgsh117" path="res://Scenes/Nodes/UI/Items/transistions.tscn" id="3_i1yww"]
 
 [node name="GameTimer" type="Control"]
@@ -31,10 +31,5 @@ theme_override_font_sizes/font_size = 27
 horizontal_alignment = 1
 
 [node name="Transitioner" parent="." instance=ExtResource("3_i1yww")]
-layout_mode = 1
-offset_left = -1.0
-offset_top = -2.0
-offset_right = -1.0
-offset_bottom = -2.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

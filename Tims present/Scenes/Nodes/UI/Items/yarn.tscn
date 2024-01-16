@@ -2,10 +2,8 @@
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Yarn.gd" id="1_fxm0r"]
 [ext_resource type="Resource" uid="uid://dlic0nrjrh3ss" path="res://Scenes/Nodes/UI/Items/Yarn.tres" id="2_km3it"]
+[ext_resource type="Texture2D" uid="uid://w5x528qeslku" path="res://Scenes/Nodes/UI/Items/Yarn.png" id="3_487tx"]
 [ext_resource type="PackedScene" uid="uid://c832f75iniexh" path="res://Interactions/Interaction Area/Pickup area.tscn" id="3_oqd54"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5n0uc"]
-load_path = "res://.godot/imported/Yarn.png-85912df08dffd49e3042740cc1671ffc.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtogl"]
 radius = 142.225
@@ -18,7 +16,7 @@ script = ExtResource("1_fxm0r")
 item = ExtResource("2_km3it")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("CompressedTexture2D_5n0uc")
+texture = ExtResource("3_487tx")
 
 [node name="Pickup Area" parent="." instance=ExtResource("3_oqd54")]
 

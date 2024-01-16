@@ -80,6 +80,10 @@ func play_anim(movement):
 			anim.play("Forward_March")
 		elif movement == 0:
 			anim.play("front_idle")
+	
+	if dir == "Pickup":
+		player()
+		
 func player():
 	pass
 	

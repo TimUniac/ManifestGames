@@ -2,10 +2,8 @@
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.gd" id="1_t346v"]
 [ext_resource type="Resource" uid="uid://b26yv3buw423h" path="res://Scenes/Nodes/UI/Items/Guitar.tres" id="2_oxy0f"]
+[ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="3_ptuud"]
 [ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="4_crsvo"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_trge5"]
-load_path = "res://.godot/imported/Guitar.png-4fa995d63f039b6830cb559e8a0d8d90.ctex"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbpr"]
 radius = 86.0
@@ -18,7 +16,7 @@ item = ExtResource("2_oxy0f")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 1)
 scale = Vector2(0.8, 0.8)
-texture = SubResource("CompressedTexture2D_trge5")
+texture = ExtResource("3_ptuud")
 
 [node name="Interaction Area" parent="." instance=ExtResource("4_crsvo")]
 
