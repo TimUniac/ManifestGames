@@ -7855,7 +7855,7 @@ sources/0 = SubResource("TileSetAtlasSource_0h3d2")
 sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 sources/2 = SubResource("TileSetAtlasSource_bu02x")
 
-[sub_resource type="Resource" id="Resource_be8xp"]
+[sub_resource type="Resource" id="Resource_lp5oe"]
 resource_local_to_scene = true
 
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
@@ -7907,7 +7907,7 @@ offset_bottom = -2.0
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_u7idh")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_be8xp")
+inv = SubResource("Resource_lp5oe")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

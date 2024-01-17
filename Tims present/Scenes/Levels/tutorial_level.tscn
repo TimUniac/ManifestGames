@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://0021lu74frh4" path="res://Assets/Texture assets/TempTutorialAssets/TempChair.png" id="19_ug1be"]
 [ext_resource type="Resource" uid="uid://blcfhbyo48t6e" path="res://Scenes/Nodes/UI/Items/Glass.tres" id="19_yvdf7"]
 [ext_resource type="Texture2D" uid="uid://cd0cw8a8le6g2" path="res://Assets/Texture assets/TempTutorialAssets/Pen.png" id="20_5ixwv"]
-[ext_resource type="PackedScene" path="res://Interactions/Interaction Area/Pickup area.tscn" id="20_acqqc"]
+[ext_resource type="PackedScene" uid="uid://b8dbnnqqx0ccm" path="res://Interactions/Interaction Area/Pickup area.tscn" id="20_acqqc"]
 [ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="21_ourv3"]
 [ext_resource type="Resource" uid="uid://db6lll15404np" path="res://Scenes/Nodes/UI/Items/pen.tres" id="22_4s2a6"]
 [ext_resource type="Resource" uid="uid://dj3clabogc25o" path="res://Scenes/Nodes/UI/Items/filefolder.tres" id="22_5o3bc"]
@@ -7855,7 +7855,7 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_cuii7"]
+[sub_resource type="Resource" id="Resource_pikfh"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7916,7 +7916,7 @@ limit_bottom = 802
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(152, 586)
-inv = SubResource("Resource_cuii7")
+inv = SubResource("Resource_pikfh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
