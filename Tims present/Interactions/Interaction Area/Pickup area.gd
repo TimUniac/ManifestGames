@@ -1,7 +1,7 @@
 extends Area2D
 
 class_name InteractionArea
-
+@export var item: InvItem
 @export var action_name: String = "interact"
 @onready var pickup_label = $pickup_label
 

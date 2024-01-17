@@ -21,8 +21,10 @@ buses/default_bus_layout="res://Assets/Sound/default_bus_layout.tres"
 
 [autoload]
 
+
 global="*res://script/global.gd"
 inventory="*res://Scenes/Nodes/UI/Inventory.gd"
+
 
 [dialogic]
 

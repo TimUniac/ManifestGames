@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8aeqw3ip5n48"]
+[gd_scene load_steps=4 format=3 uid="uid://16dgrmyyyqdu"]
 
-[ext_resource type="Script" path="res://Interactions/Interaction Area/Interaction area.gd" id="1_vlcy3"]
-[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_hyfdl"]
+[ext_resource type="Script" path="res://Interactions/Interaction Area/Interaction area.gd" id="1_pdhb2"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_x3jma"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iyrrn"]
 radius = 80.0062
@@ -9,7 +9,7 @@ radius = 80.0062
 [node name="Interaction Area" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_vlcy3")
+script = ExtResource("1_pdhb2")
 
 [node name="INteraction AREA" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_iyrrn")
@@ -30,7 +30,7 @@ offset_top = -1.0
 offset_right = 81.0
 offset_bottom = 45.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_hyfdl")
+theme_override_fonts/font = ExtResource("2_x3jma")
 text = "[E] To Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
