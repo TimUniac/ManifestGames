@@ -19,6 +19,10 @@ config/icon="res://Doctor Graphics/icon.svg"
 
 buses/default_bus_layout="res://Assets/Sound/default_bus_layout.tres"
 
+[autoload]
+
+GlobalWorldEnvironment="*res://Scenes/Nodes/world_environment.tscn"
+
 [dialogic]
 
 layout/styles={
