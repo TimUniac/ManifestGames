@@ -1,30 +1,38 @@
 extends Area2D
 
-@export var item: InvItem
-var player = null
-var collect = false 
-var inReach = false
 
-func _process(delta):
-	pass
-	
+@export var action_name: String = "interact"
+@onready var interaction_label = $Panel
+
+@export var item: InvItem
+@onready var interaction_area = $"Interaction Area"
+@onready var sprite = $Sprite2D
+var player = null
+var inrange = false
+
+func _ready():
+	interaction_label.visible = false
+
 
 func _on_body_entered(body):
 	if body.has_method("player"):
+		interaction_label.visible = true
+		inrange = true
 		player = body
-		inReach = true
-
-func _input(InputEvent):
-	if Input.is_action_just_pressed("Pickup") and inReach:
-		collect = true
-		print ("input")
+		print("hi there")
 		
-	if inReach and collect:
+func _on_body_exited(body):
+	interaction_label.visible = false
+	inrange = false
+
+func _process(delta):
+	if inrange and Input.is_action_just_pressed("Pickup"):
 		playercollect()
 		queue_free()
-		print("body")
+
+		
+		
 
 func playercollect():
-	if player:
-		player.collect(item)
-		print("player")
+	player.collect(item)
+	print("player")

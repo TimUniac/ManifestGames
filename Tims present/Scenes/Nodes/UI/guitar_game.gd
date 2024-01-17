@@ -1,6 +1,6 @@
 extends Control
 
-var secret_code = "1234"
+var secret_code = "6415"
 var entered_code = ""
 
 func _input(event):
