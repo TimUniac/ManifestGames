@@ -21,7 +21,10 @@ buses/default_bus_layout="res://Assets/Sound/default_bus_layout.tres"
 
 [autoload]
 
-GlobalWorldEnvironment="*res://Scenes/Nodes/world_environment.tscn"
+
+global="*res://script/global.gd"
+inventory="*res://Scenes/Nodes/UI/Inventory.gd"
+
 
 [dialogic]
 
@@ -151,7 +154,3 @@ Pickup={
 2d_render/layer_1="world"
 2d_render/layer_2="player"
 2d_render/layer_3="object"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"

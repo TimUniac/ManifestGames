@@ -96,6 +96,7 @@ autoplay = true
 
 [node name="Clicks" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_dlnu4")
+volume_db = 11.243
 script = ExtResource("9_fp3l5")
 
 [node name="Exit" type="TextureButton" parent="."]
