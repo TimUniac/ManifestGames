@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cj07lmxspcvhe"]
+[gd_scene load_steps=23 format=3 uid="uid://cj07lmxspcvhe"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/main_menu.gd" id="1_fmsfi"]
 [ext_resource type="Texture2D" uid="uid://cxqabbm44tvdo" path="res://Assets/Menu Buttons/Revised Menu Assets/MainMenu - Bg - Jan 10th.jpg" id="2_6wvn1"]
@@ -7,8 +7,11 @@
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/Clicks.gd" id="5_jk223"]
 [ext_resource type="Texture2D" uid="uid://3ro286u6tm68" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_exit.png" id="6_rhtlc"]
 [ext_resource type="Texture2D" uid="uid://crnslnf5j5lvh" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_settings.png" id="7_cybjv"]
+[ext_resource type="Texture2D" uid="uid://blg0exos37r2x" path="res://Assets/Menu Buttons/ExitButton_v2.png" id="7_kiwqc"]
 [ext_resource type="Texture2D" uid="uid://bdia1ros4k7rm" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_Play.png" id="8_e80ne"]
 [ext_resource type="Texture2D" uid="uid://di2ujkwm6e0os" path="res://Assets/Menu Buttons/Revised Menu Assets/GameTitleAnimated.svg" id="9_1yd7t"]
+[ext_resource type="Texture2D" uid="uid://bs3c3x5c7irh1" path="res://Assets/Menu Buttons/SettingsButton_v2.png" id="9_5ftl3"]
+[ext_resource type="Texture2D" uid="uid://bsi2klq2k3cd" path="res://Assets/Menu Buttons/PlayButton_v2.png" id="11_nltdt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtpev"]
 atlas = ExtResource("9_1yd7t")
@@ -105,6 +108,7 @@ offset_right = 680.0
 offset_bottom = 639.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_rhtlc")
+texture_pressed = ExtResource("7_kiwqc")
 
 [node name="Setting" type="TextureButton" parent="."]
 offset_left = 188.0
@@ -113,6 +117,7 @@ offset_right = 680.0
 offset_bottom = 519.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("7_cybjv")
+texture_pressed = ExtResource("9_5ftl3")
 
 [node name="new" type="TextureButton" parent="."]
 offset_left = 188.0
@@ -121,6 +126,7 @@ offset_right = 680.0
 offset_bottom = 399.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("8_e80ne")
+texture_pressed = ExtResource("11_nltdt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
