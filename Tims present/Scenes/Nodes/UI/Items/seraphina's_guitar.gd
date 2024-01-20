@@ -9,9 +9,15 @@ extends Area2D
 @onready var sprite = $Sprite2D
 var player = null
 var inrange = false
+var is_opened = false
+
+
+
+
 
 func _ready():
 	interaction_label.visible = false
+	$GuitarGame.visible = false
 
 
 func _on_body_entered(body):
@@ -21,18 +27,25 @@ func _on_body_entered(body):
 		player = body
 		print("hi there")
 		
+		
 func _on_body_exited(body):
 	interaction_label.visible = false
 	inrange = false
 
 func _process(delta):
-	if inrange and Input.is_action_just_pressed("Pickup"):
-		playercollect()
-		queue_free()
+	if inrange and Input.is_action_just_pressed("Interact"):
+		if is_opened:
+			close()
+		else:
+			open()
+func open():
+	$GuitarGame.visible = true
+	is_opened = true		
+func close():
+	$GuitarGame.visible = false
+	is_opened = false
+		
 
 		
 		
 
-func playercollect():
-	player.collect(item)
-	print("player")

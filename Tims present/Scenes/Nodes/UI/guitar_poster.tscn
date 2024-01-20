@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkq7anlswuk6p"]
+[gd_scene load_steps=5 format=3 uid="uid://bkq7anlswuk6p"]
 
 [ext_resource type="Script" path="res://Guitar Poster.gd" id="1_1lx0p"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="2_jj7qr"]
 [ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="3_t0ww6"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="4_qivbv"]
 
 [node name="Guitar Poster" type="Control"]
 layout_mode = 3
@@ -23,5 +24,10 @@ texture = ExtResource("2_jj7qr")
 
 [node name="Interaction Area" parent="." instance=ExtResource("3_t0ww6")]
 position = Vector2(725, 295)
+
+[node name="Orbs" type="Sprite2D" parent="."]
+position = Vector2(639.5, 303.5)
+scale = Vector2(2.00485, 1.77604)
+texture = ExtResource("4_qivbv")
 
 [connection signal="body_entered" from="Interaction Area" to="." method="_on_interaction_area_body_entered"]

@@ -21,10 +21,10 @@ texture = ExtResource("3_uvg7x")
 shape = SubResource("CapsuleShape2D_i3iiu")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = -63.0
-offset_top = -49.0
-offset_right = 63.0
-offset_bottom = -9.0
+offset_left = -81.0
+offset_top = -56.0
+offset_right = 81.0
+offset_bottom = -16.0
 
 [node name="interaction_label" type="Label" parent="Panel"]
 layout_mode = 1
@@ -37,7 +37,7 @@ offset_right = 81.0
 offset_bottom = 45.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_iflju")
-text = "[E] To Interact"
+text = "[P] To Pickup"
 horizontal_alignment = 1
 vertical_alignment = 1
 
