@@ -23,6 +23,7 @@ var total_characters = 0
 var visible_characters = 0
 var is_line_complete = false
 
+
 func _ready():
 	update_dialogue()
 	$Advance.visible = false
@@ -34,7 +35,8 @@ func _process(delta):
 
 	if (Input.is_action_just_released("up")):
 		handle_up()
-
+	
+		
 	# Typewriter effect
 	if visible_characters < total_characters:
 		visible_characters += 1
@@ -63,9 +65,10 @@ func complete_line():
 func next_line():
 	current_line += 1
 	if current_line >= dialogue.size():
-		current_line = 0  # Restart dialogue or hide it
+		current_line = 0  
 	update_dialogue()
-
+	
+	
 func update_dialogue():
 	var current_dialogue = dialogue[current_line]
 	visible_characters = 0
@@ -85,3 +88,6 @@ func update_dialogue():
 
 func update_visible_characters():
 	$Text.visible_characters = visible_characters
+
+func change_scene():
+	get_tree().change_scene_to_file("res://Scenes/Levels/seraphina_bedroom_male.tscn")

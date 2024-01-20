@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dowucnhfpgcos"]
+[gd_scene load_steps=7 format=3 uid="uid://dowucnhfpgcos"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.gd" id="1_ldbsd"]
 [ext_resource type="Resource" uid="uid://b26yv3buw423h" path="res://Scenes/Nodes/UI/Items/Guitar.tres" id="2_1jneh"]
 [ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="3_pktu2"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_godal"]
+[ext_resource type="PackedScene" uid="uid://xox3s1h15gac" path="res://Scenes/Nodes/UI/guitar_game.tscn" id="5_i8e28"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbpr"]
 radius = 86.0
@@ -43,5 +44,13 @@ theme_override_fonts/font = ExtResource("4_godal")
 text = "[E] To Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GuitarGame" parent="." instance=ExtResource("5_i8e28")]
+visibility_layer = 13
+z_index = 9
+offset_left = -323.0
+offset_top = -172.0
+offset_right = 833.0
+offset_bottom = 479.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

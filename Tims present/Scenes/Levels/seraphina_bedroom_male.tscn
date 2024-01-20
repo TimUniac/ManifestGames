@@ -1,11 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=19 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
 [ext_resource type="PackedScene" uid="uid://dowucnhfpgcos" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
-[ext_resource type="PackedScene" uid="uid://xox3s1h15gac" path="res://Scenes/Nodes/UI/guitar_game.tscn" id="6_o4qu4"]
 [ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_saerf"]
 [ext_resource type="PackedScene" uid="uid://7rbqvxmnnf8w" path="res://Scenes/Nodes/UI/Items/friendship_necklace.tscn" id="7_clvhx"]
 [ext_resource type="PackedScene" uid="uid://bkq7anlswuk6p" path="res://Scenes/Nodes/UI/guitar_poster.tscn" id="8_cjstk"]
@@ -7893,9 +7892,6 @@ limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
-[node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
-position = Vector2(320, 318)
-
 [node name="Yarn" parent="." instance=ExtResource("6_saerf")]
 position = Vector2(1021, 414)
 
@@ -7908,17 +7904,14 @@ offset_top = -2.0
 offset_right = -113.0
 offset_bottom = -2.0
 
+[node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
+position = Vector2(320, 318)
+
 [node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
 position = Vector2(75, 630)
 inv = SubResource("Resource_hvwdc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="GuitarGame" parent="CanvasLayer" instance=ExtResource("6_o4qu4")]
-offset_left = -8.0
-offset_top = 4.0
-offset_right = 1148.0
-offset_bottom = 655.0
 
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("10_if3c2")]
 offset_left = 5.0
