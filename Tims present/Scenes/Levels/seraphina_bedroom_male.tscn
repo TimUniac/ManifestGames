@@ -7859,7 +7859,7 @@ amount = 0
 script = ExtResource("9_4sc2i")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_oglsc"]
+[sub_resource type="Resource" id="Resource_cn1hc"]
 resource_local_to_scene = true
 script = ExtResource("8_wo6mf")
 slots = Array[ExtResource("9_4sc2i")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7910,7 +7910,7 @@ position = Vector2(1021, 414)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_u7idh")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_oglsc")
+inv = SubResource("Resource_cn1hc")
 
 [node name="Friendship Necklace" parent="." instance=ExtResource("8_pvleg")]
 position = Vector2(475, 305)
