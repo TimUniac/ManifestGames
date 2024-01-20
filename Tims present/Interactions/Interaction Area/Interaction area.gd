@@ -6,7 +6,7 @@ extends Area2D
 
 func _ready():
 	interaction_label.visible = false
-
+	
 
 func _on_body_entered(body):
 	interaction_label.visible = true

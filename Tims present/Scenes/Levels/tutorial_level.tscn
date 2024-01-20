@@ -1,16 +1,13 @@
-[gd_scene load_steps=34 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=35 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_eu1u8"]
-[ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_hd0gv"]
-[ext_resource type="PackedScene" uid="uid://dkidusndwlvxm" path="res://Scenes/Nodes/UI/game_timer.tscn" id="4_8ey0n"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Floor.gd" id="4_rc06q"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Inventory.gd" id="7_1nb6r"]
 [ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="7_r3vgi"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/inv_slot.gd" id="8_d6ed8"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="9_nomwv"]
 [ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Scenes/Nodes/UI/inv_UI.tscn" id="11_3hx8x"]
-[ext_resource type="AudioStream" uid="uid://cq7yjwdx2gisb" path="res://Assets/Sound/Music/ThemeJazzDigital.mp3" id="12_bsmja"]
 [ext_resource type="AudioStream" uid="uid://b0fa5hki573om" path="res://Assets/Sound/VO/Tutorial/VO_Dr_Tut_That Session.mp3" id="13_4c6jg"]
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/TutorialVO.gd" id="14_i4uyg"]
 [ext_resource type="PackedScene" uid="uid://cv1q6f48nfdei" path="res://Scenes/Nodes/UI/Items/wrongitem.tscn" id="15_12ydx"]
@@ -20,8 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://hikvlopmyau4" path="res://Assets/Texture assets/TempTutorialAssets/3110890-200Glassews.png" id="18_ckjma"]
 [ext_resource type="Texture2D" uid="uid://bnrxaoq6hjt3r" path="res://Assets/Texture assets/TempTutorialAssets/TempLamp.png" id="18_e1e58"]
 [ext_resource type="Texture2D" uid="uid://0021lu74frh4" path="res://Assets/Texture assets/TempTutorialAssets/TempChair.png" id="19_ug1be"]
+[ext_resource type="Resource" uid="uid://blcfhbyo48t6e" path="res://Scenes/Nodes/UI/Items/Glass.tres" id="19_yvdf7"]
 [ext_resource type="Texture2D" uid="uid://cd0cw8a8le6g2" path="res://Assets/Texture assets/TempTutorialAssets/Pen.png" id="20_5ixwv"]
+[ext_resource type="PackedScene" uid="uid://b8dbnnqqx0ccm" path="res://Interactions/Interaction Area/Pickup area.tscn" id="20_acqqc"]
 [ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="21_ourv3"]
+[ext_resource type="Resource" uid="uid://db6lll15404np" path="res://Scenes/Nodes/UI/Items/pen.tres" id="22_4s2a6"]
+[ext_resource type="Resource" uid="uid://dj3clabogc25o" path="res://Scenes/Nodes/UI/Items/filefolder.tres" id="22_5o3bc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_eu1u8")
@@ -6773,7 +6774,6 @@ texture = ExtResource("2_eu1u8")
 74:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.125, -11.875, 10.375, -12.75, 13.375, 13.5, -11.25, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwuyi"]
-texture = ExtResource("3_hd0gv")
 25:10/0 = 0
 25:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 25:10/0/physics_layer_0/angular_velocity = 0.0
@@ -7767,51 +7767,40 @@ texture = ExtResource("3_hd0gv")
 74:59/0 = 0
 74:59/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 74:59/0/physics_layer_0/angular_velocity = 0.0
-9:72/size_in_atlas = Vector2i(16, 12)
 9:72/0 = 0
 9:72/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:72/0/physics_layer_0/angular_velocity = 0.0
 9:72/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:56/size_in_atlas = Vector2i(7, 3)
 9:56/0 = 0
 9:56/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:56/0/physics_layer_0/angular_velocity = 0.0
-40:56/size_in_atlas = Vector2i(5, 4)
 40:56/0 = 0
 40:56/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 40:56/0/physics_layer_0/angular_velocity = 0.0
-50:55/size_in_atlas = Vector2i(5, 5)
 50:55/0 = 0
 50:55/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 50:55/0/physics_layer_0/angular_velocity = 0.0
-54:40/size_in_atlas = Vector2i(7, 5)
 54:40/0 = 0
 54:40/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 54:40/0/physics_layer_0/angular_velocity = 0.0
-65:40/size_in_atlas = Vector2i(5, 5)
 65:40/0 = 0
 65:40/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 65:40/0/physics_layer_0/angular_velocity = 0.0
-65:19/size_in_atlas = Vector2i(5, 7)
 65:19/0 = 0
 65:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 65:19/0/physics_layer_0/angular_velocity = 0.0
-55:20/size_in_atlas = Vector2i(5, 6)
 55:20/0 = 0
 55:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 55:20/0/physics_layer_0/angular_velocity = 0.0
-75:20/size_in_atlas = Vector2i(10, 5)
 75:20/0 = 0
 75:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 75:20/0/physics_layer_0/angular_velocity = 0.0
 77:29/0 = 0
 77:29/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 77:29/0/physics_layer_0/angular_velocity = 0.0
-10:38/size_in_atlas = Vector2i(15, 7)
 10:38/0 = 0
 10:38/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:38/0/physics_layer_0/angular_velocity = 0.0
-36:37/size_in_atlas = Vector2i(13, 8)
 36:37/0 = 0
 36:37/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 36:37/0/physics_layer_0/angular_velocity = 0.0
@@ -7866,7 +7855,9 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
+
 [sub_resource type="Resource" id="Resource_ow8fc"]
+
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7925,15 +7916,11 @@ limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
-[node name="GameTimer" parent="Camera2D" instance=ExtResource("4_8ey0n")]
-offset_left = -33.0
-offset_top = 102.0
-offset_right = -33.0
-offset_bottom = 102.0
-
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(152, 586)
+
 inv = SubResource("Resource_ow8fc")
+
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -7949,7 +7936,6 @@ offset_right = -945.0
 offset_bottom = -55.9999
 
 [node name="TutorialMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_bsmja")
 volume_db = -23.424
 autoplay = true
 
@@ -8027,18 +8013,27 @@ sprite_scale = Vector2(0.25, 0.25)
 [node name="Glasses" parent="." instance=ExtResource("17_6ratl")]
 position = Vector2(906, 312)
 scale = Vector2(0.575, 0.575)
+item = ExtResource("19_yvdf7")
 sprite_texture = ExtResource("18_ckjma")
 sprite_scale = Vector2(0.5, 0.5)
 
+[node name="Pickup Area" parent="Glasses" instance=ExtResource("20_acqqc")]
+
 [node name="Pen" parent="." instance=ExtResource("17_6ratl")]
 position = Vector2(871, 561)
+item = ExtResource("22_4s2a6")
 sprite_texture = ExtResource("20_5ixwv")
 sprite_scale = Vector2(0.09, 0.09)
 
+[node name="Pickup Area" parent="Pen" instance=ExtResource("20_acqqc")]
+
 [node name="Files" parent="." instance=ExtResource("17_6ratl")]
 position = Vector2(382, 511)
+item = ExtResource("22_5o3bc")
 sprite_texture = ExtResource("21_ourv3")
 sprite_scale = Vector2(0.09, 0.09)
+
+[node name="Pickup Area" parent="Files" instance=ExtResource("20_acqqc")]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

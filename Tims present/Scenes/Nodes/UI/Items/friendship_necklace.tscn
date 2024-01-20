@@ -17,6 +17,7 @@ item = ExtResource("2_yajx2")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_127ux")
 
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_i3iiu")
 
@@ -40,5 +41,6 @@ theme_override_fonts/font = ExtResource("4_sa2pv")
 text = "[P] To Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
+
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
