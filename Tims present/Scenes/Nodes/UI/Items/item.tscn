@@ -15,6 +15,7 @@ script = ExtResource("1_pel23")
 shape = SubResource("CircleShape2D_5386s")
 
 [node name="RightVO" type="AudioStreamPlayer" parent="."]
+pitch_scale = 1.97
 script = ExtResource("2_4lwvk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

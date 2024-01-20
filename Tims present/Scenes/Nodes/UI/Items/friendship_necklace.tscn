@@ -1,24 +1,23 @@
 [gd_scene load_steps=6 format=3 uid="uid://7rbqvxmnnf8w"]
 
-[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Friendship Necklace.gd" id="1_t1o1o"]
-[ext_resource type="Resource" uid="uid://4u1usvcmvaur" path="res://Scenes/Nodes/UI/Items/necklace.tres" id="2_yajx2"]
-[ext_resource type="Texture2D" uid="uid://bx8jaqv1ydw36" path="res://Scenes/Nodes/UI/Items/SeraphinaNecklace (1).png" id="3_127ux"]
-[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_sa2pv"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Friendship Necklace.gd" id="1_ftamq"]
+[ext_resource type="Resource" uid="uid://4u1usvcmvaur" path="res://Scenes/Nodes/UI/Items/necklace.tres" id="2_gsyvt"]
+[ext_resource type="Texture2D" uid="uid://bx8jaqv1ydw36" path="res://Scenes/Nodes/UI/Items/SeraphinaNecklace (1).png" id="3_uvg7x"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_iflju"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3iiu"]
-radius = 18.0
-height = 36.0
+radius = 30.0
+height = 60.0
 
 [node name="Friendship Necklace" type="Area2D"]
-script = ExtResource("1_t1o1o")
-item = ExtResource("2_yajx2")
+script = ExtResource("1_ftamq")
+item = ExtResource("2_gsyvt")
 
 [node name="SeraphinaNecklace" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_127ux")
+texture = ExtResource("3_uvg7x")
 
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_i3iiu")
 
 [node name="Panel" type="Panel" parent="."]
@@ -37,10 +36,9 @@ offset_top = -1.0
 offset_right = 81.0
 offset_bottom = 45.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("4_sa2pv")
-text = "[P] To Interact"
+theme_override_fonts/font = ExtResource("4_iflju")
+text = "[E] To Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
-
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

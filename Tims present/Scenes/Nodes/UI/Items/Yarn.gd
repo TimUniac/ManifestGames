@@ -8,7 +8,7 @@ extends Area2D
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 var player = null
-var inReach = false
+var inrange = false
 var collect = false
 
 func _ready():
