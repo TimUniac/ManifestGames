@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://b2xmgf8vntngi"
+path="res://.godot/imported/Rosarivo-Regular 2.ttf-76fc0a5742943fc7c30d4c1f60224a42.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/Rosarivo/Rosarivo-Regular 2.ttf"
+dest_files=["res://.godot/imported/Rosarivo-Regular 2.ttf-76fc0a5742943fc7c30d4c1f60224a42.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

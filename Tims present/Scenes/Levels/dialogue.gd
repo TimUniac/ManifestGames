@@ -48,7 +48,7 @@ func _process(delta):
 func handle_interact():
 	if not is_line_complete:
 		complete_line()
-	elif visible_characters == total_characters:
+	else:
 		next_line()
 		$Advance.visible = false
 
@@ -60,13 +60,15 @@ func handle_up():
 func complete_line():
 	visible_characters = total_characters
 	is_line_complete = true
+	update_visible_characters()
 	$Advance.visible = true
 
 func next_line():
 	current_line += 1
 	if current_line >= dialogue.size():
-		current_line = 0  
-	update_dialogue()
+		change_scene() 
+	else:
+		update_dialogue()
 	
 	
 func update_dialogue():
