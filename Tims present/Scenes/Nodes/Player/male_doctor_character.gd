@@ -4,8 +4,13 @@ var Speed: float = 300.0
 var current_dir = "none"
 
 @export var collected_items: int = 0
-@export var inv : Inv
+
 @onready var anim = $Sprite2D
+
+@onready var item1_ui = $PickupDisplay/Box/Item1
+@onready var item2_ui = $PickupDisplay/Box/Item2
+@onready var item3_ui = $PickupDisplay/Box/Item3
+
 
 
 
@@ -86,8 +91,12 @@ func play_anim(movement):
 func player():
 	pass
 	
-func collect(item):
-		inv.insert(item)
+func collect_item(item_number):
+	match item_number:
+		1: item1_ui.visible = true
+		2: item2_ui.visible = true
+		3: item3_ui.visible = true
+
 		
 	
 	

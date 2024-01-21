@@ -28,11 +28,11 @@ func _on_body_exited(body):
 func _process(delta):
 	if inrange and Input.is_action_just_pressed("Pickup"):
 		playercollect()
-		queue_free()
+		visible = false
 
 		
 		
 
 func playercollect():
-	player.collect(item)
+	player.collect_item(3)
 	print("player")

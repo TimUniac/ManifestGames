@@ -19,6 +19,7 @@ func _on_body_entered(body):
 	if body.has_method("player"):
 		player = body
 		inReach = true
+		body.collect_item(1)
 
 func _input(InputEvent):
 	if Input.is_action_just_pressed("Pickup") and inReach:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=16 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
@@ -9,9 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://7rbqvxmnnf8w" path="res://Scenes/Nodes/UI/Items/friendship_necklace.tscn" id="7_clvhx"]
 [ext_resource type="PackedScene" uid="uid://bkq7anlswuk6p" path="res://Scenes/Nodes/UI/guitar_poster.tscn" id="8_cjstk"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="9_se4q8"]
-[ext_resource type="Script" path="res://Scenes/Nodes/UI/Inventory.gd" id="10_bdv3l"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="10_if3c2"]
-[ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Scenes/Nodes/UI/inv_UI.tscn" id="11_q5wui"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
@@ -7856,10 +7854,6 @@ sources/0 = SubResource("TileSetAtlasSource_0h3d2")
 sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 sources/2 = SubResource("TileSetAtlasSource_bu02x")
 
-[sub_resource type="Resource" id="Resource_hvwdc"]
-script = ExtResource("10_bdv3l")
-slots = Array[Resource("res://Scenes/Nodes/UI/inv_slot.gd")]([])
-
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
 position = Vector2(0, -4)
 script = ExtResource("1_ruhi7")
@@ -7903,24 +7897,18 @@ offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0
 offset_bottom = -2.0
+rotation = -0.0030264
 
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
 position = Vector2(320, 318)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
 position = Vector2(75, 630)
-inv = SubResource("Resource_hvwdc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("10_if3c2")]
 offset_left = 5.0
 offset_right = 5.0
-
-[node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("11_q5wui")]
-offset_left = 15.0
-offset_top = 517.0
-offset_right = -945.0
-offset_bottom = -55.9999
 
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
