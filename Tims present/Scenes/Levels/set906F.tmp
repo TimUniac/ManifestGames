@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgp5lqeeorqco"]
+[gd_scene load_steps=10 format=3 uid="uid://bgp5lqeeorqco"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/setting_scene.gd" id="1_084kn"]
 [ext_resource type="Texture2D" uid="uid://dhxcsg5i25wir" path="res://Assets/Texture assets/Brain Background.jpg" id="1_yyxvq"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://djvl3uj5rca7g" path="res://Assets/Menu Buttons/ui-base-pause.png" id="3_o6kfm"]
 [ext_resource type="FontFile" uid="uid://d2ypkqvh0hmi4" path="res://Assets/Fonts/Britannic Bold Regular.ttf" id="4_3rp5s"]
 [ext_resource type="Texture2D" uid="uid://c50bg7g52t14c" path="res://Assets/Menu Buttons/back1.png" id="5_uqbbm"]
-[ext_resource type="Script" path="res://Scenes/Levels/volume controls.gd" id="6_3l37t"]
+[ext_resource type="Script" path="res://Scenes/SFX volume.gd" id="6_4jfft"]
 [ext_resource type="Script" path="res://Scenes/Levels/Brightness.gd" id="6_5mcof"]
+[ext_resource type="Script" path="res://Scenes/Voice Volume.gd" id="7_tuki2"]
 
 [node name="Setting_Scene" type="Node2D"]
 script = ExtResource("1_084kn")
@@ -54,31 +55,22 @@ theme_override_font_sizes/font_size = 40
 text = "Master Volume :"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 94.0
-offset_top = 454.0
-offset_right = 372.0
-offset_bottom = 515.0
+offset_left = 113.0
+offset_top = 338.0
+offset_right = 391.0
+offset_bottom = 399.0
 theme_override_fonts/font = ExtResource("4_3rp5s")
 theme_override_font_sizes/font_size = 40
 text = "Brightness :"
 
-[node name="Label5" type="Label" parent="."]
-offset_left = 116.0
-offset_top = 336.0
-offset_right = 648.0
-offset_bottom = 380.0
-theme_override_fonts/font = ExtResource("4_3rp5s")
-theme_override_font_sizes/font_size = 40
-text = "Music Volume :"
-
 [node name="Label4" type="Label" parent="."]
-offset_left = 116.0
-offset_top = 281.0
-offset_right = 648.0
-offset_bottom = 325.0
+offset_left = 114.0
+offset_top = 288.0
+offset_right = 646.0
+offset_bottom = 332.0
 theme_override_fonts/font = ExtResource("4_3rp5s")
 theme_override_font_sizes/font_size = 40
-text = "Dialogue Volume :"
+text = "Voice Volume :"
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 115.0
@@ -91,48 +83,35 @@ text = "SFX Volume :"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Music Volume" type="HSlider" parent="CanvasLayer"]
-offset_left = 487.0
-offset_top = 350.0
-offset_right = 957.0
-offset_bottom = 366.0
-min_value = -30.0
-max_value = 0.0
-script = ExtResource("6_3l37t")
-
 [node name="SFX volume" type="HSlider" parent="CanvasLayer"]
-offset_left = 487.0
-offset_top = 257.0
-offset_right = 957.0
-offset_bottom = 273.0
-min_value = -30.0
-max_value = 0.0
-script = ExtResource("6_3l37t")
+offset_left = 485.0
+offset_top = 250.0
+offset_right = 959.0
+offset_bottom = 266.0
+script = ExtResource("6_4jfft")
+bus_name = "sfx"
 
 [node name="Voice Volume" type="HSlider" parent="CanvasLayer"]
-offset_left = 487.0
-offset_top = 305.0
-offset_right = 957.0
-offset_bottom = 321.0
-min_value = -30.0
-max_value = 0.0
-script = ExtResource("6_3l37t")
+offset_left = 485.0
+offset_top = 295.0
+offset_right = 960.0
+offset_bottom = 311.0
+script = ExtResource("7_tuki2")
+bus_name = "Dialogue"
 
 [node name="Master Volume" type="HSlider" parent="CanvasLayer"]
 offset_left = 487.0
 offset_top = 209.0
 offset_right = 957.0
 offset_bottom = 225.0
-min_value = -30.0
-max_value = 0.0
+max_value = 1.0
 step = 0.01
-script = ExtResource("6_3l37t")
 
 [node name="Brightness" type="HSlider" parent="CanvasLayer"]
-offset_left = 486.0
-offset_top = 443.0
-offset_right = 947.0
-offset_bottom = 512.0
+offset_left = 497.0
+offset_top = 317.0
+offset_right = 958.0
+offset_bottom = 386.0
 size_flags_horizontal = 4
 min_value = 0.01
 max_value = 4.0
@@ -147,9 +126,5 @@ offset_right = 1073.0
 offset_bottom = 166.0
 texture_normal = ExtResource("5_uqbbm")
 
-[connection signal="value_changed" from="CanvasLayer/Music Volume" to="CanvasLayer/Music Volume" method="_on_music_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/SFX volume" to="CanvasLayer/SFX volume" method="_on_sfx_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Voice Volume" to="CanvasLayer/Voice Volume" method="_on_voice_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Master Volume" to="CanvasLayer/Master Volume" method="_on_master_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/Brightness" to="CanvasLayer/Brightness" method="_on_value_changed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
