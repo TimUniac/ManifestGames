@@ -1,0 +1,153 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvtnbtwsk1ecd"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/in_game_settings.gd" id="1_aglmf"]
+[ext_resource type="Texture2D" uid="uid://djvl3uj5rca7g" path="res://Assets/Menu Buttons/ui-base-pause.png" id="2_f7gds"]
+[ext_resource type="FontFile" uid="uid://d2ypkqvh0hmi4" path="res://Assets/Fonts/Britannic Bold Regular.ttf" id="3_7c3v7"]
+[ext_resource type="Script" path="res://Scenes/Levels/volume controls.gd" id="4_vkaah"]
+[ext_resource type="Script" path="res://Scenes/Levels/Brightness.gd" id="5_icujw"]
+[ext_resource type="Texture2D" uid="uid://bxrgg12smcxjg" path="res://Assets/Menu Buttons/setting.png" id="6_gi1ie"]
+
+[node name="In_game_settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aglmf")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="SettingsPanel" type="CanvasLayer" parent="CanvasLayer2"]
+
+[node name="Ui-base-pause" type="Sprite2D" parent="CanvasLayer2/SettingsPanel"]
+position = Vector2(575.063, 325.813)
+scale = Vector2(0.388411, 0.357879)
+texture = ExtResource("2_f7gds")
+
+[node name="Panel" type="Panel" parent="CanvasLayer2/SettingsPanel/Ui-base-pause"]
+modulate = Color(0.94902, 0.811765, 1, 1)
+offset_left = -695.302
+offset_top = -681.272
+offset_right = 802.698
+offset_bottom = -484.272
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer2/SettingsPanel/Ui-base-pause"]
+offset_left = -167.511
+offset_top = -675.684
+offset_right = 364.489
+offset_bottom = -472.684
+theme_override_fonts/font = ExtResource("3_7c3v7")
+theme_override_font_sizes/font_size = 150
+text = "Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 116.0
+offset_top = 193.0
+offset_right = 649.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("3_7c3v7")
+theme_override_font_sizes/font_size = 40
+text = "Master Volume :"
+
+[node name="Label" type="Label" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 94.0
+offset_top = 454.0
+offset_right = 372.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("3_7c3v7")
+theme_override_font_sizes/font_size = 40
+text = "Brightness :"
+
+[node name="Label5" type="Label" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 116.0
+offset_top = 336.0
+offset_right = 648.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("3_7c3v7")
+theme_override_font_sizes/font_size = 40
+text = "Music Volume :"
+
+[node name="Label4" type="Label" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 116.0
+offset_top = 281.0
+offset_right = 648.0
+offset_bottom = 325.0
+theme_override_fonts/font = ExtResource("3_7c3v7")
+theme_override_font_sizes/font_size = 40
+text = "Dialogue Volume :"
+
+[node name="Label2" type="Label" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 115.0
+offset_top = 236.0
+offset_right = 647.0
+offset_bottom = 286.0
+theme_override_fonts/font = ExtResource("3_7c3v7")
+theme_override_font_sizes/font_size = 40
+text = "SFX Volume :"
+
+[node name="Music Volume" type="HSlider" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 487.0
+offset_top = 350.0
+offset_right = 957.0
+offset_bottom = 366.0
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("4_vkaah")
+
+[node name="SFX volume" type="HSlider" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 487.0
+offset_top = 257.0
+offset_right = 957.0
+offset_bottom = 273.0
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("4_vkaah")
+
+[node name="Voice Volume" type="HSlider" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 487.0
+offset_top = 305.0
+offset_right = 957.0
+offset_bottom = 321.0
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("4_vkaah")
+
+[node name="Master Volume" type="HSlider" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 487.0
+offset_top = 209.0
+offset_right = 957.0
+offset_bottom = 225.0
+min_value = -30.0
+max_value = 0.0
+step = 0.01
+script = ExtResource("4_vkaah")
+
+[node name="Brightness" type="HSlider" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 486.0
+offset_top = 443.0
+offset_right = 947.0
+offset_bottom = 512.0
+size_flags_horizontal = 4
+min_value = 0.01
+max_value = 4.0
+step = 0.01
+value = 2.0
+script = ExtResource("5_icujw")
+
+[node name="Settings toggle" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1084.0
+offset_top = 4.0
+offset_right = 1146.0
+offset_bottom = 66.0
+texture_normal = ExtResource("6_gi1ie")
+
+[connection signal="value_changed" from="CanvasLayer2/SettingsPanel/Music Volume" to="CanvasLayer2/SettingsPanel/Music Volume" method="_on_music_value_changed"]
+[connection signal="value_changed" from="CanvasLayer2/SettingsPanel/SFX volume" to="CanvasLayer2/SettingsPanel/SFX volume" method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="CanvasLayer2/SettingsPanel/Voice Volume" to="CanvasLayer2/SettingsPanel/Voice Volume" method="_on_voice_value_changed"]
+[connection signal="value_changed" from="CanvasLayer2/SettingsPanel/Master Volume" to="CanvasLayer2/SettingsPanel/Master Volume" method="_on_master_value_changed"]
+[connection signal="value_changed" from="CanvasLayer2/SettingsPanel/Brightness" to="CanvasLayer2/SettingsPanel/Brightness" method="_on_value_changed"]
+[connection signal="pressed" from="Settings toggle" to="." method="_on_settings_toggle_pressed"]

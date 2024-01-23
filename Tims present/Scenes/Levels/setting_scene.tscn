@@ -30,16 +30,16 @@ texture = ExtResource("3_o6kfm")
 
 [node name="Panel" type="Panel" parent="Ui-base-pause"]
 modulate = Color(0.94902, 0.811765, 1, 1)
-offset_left = -677.0
-offset_top = -695.0
-offset_right = 821.0
-offset_bottom = -498.0
+offset_left = -695.302
+offset_top = -681.272
+offset_right = 802.698
+offset_bottom = -484.272
 
 [node name="Label" type="Label" parent="Ui-base-pause"]
-offset_left = -188.0
-offset_top = -676.0
-offset_right = 332.0
-offset_bottom = -473.0
+offset_left = -167.511
+offset_top = -675.684
+offset_right = 364.489
+offset_bottom = -472.684
 theme_override_fonts/font = ExtResource("4_3rp5s")
 theme_override_font_sizes/font_size = 150
 text = "Settings"
