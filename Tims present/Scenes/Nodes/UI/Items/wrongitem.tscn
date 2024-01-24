@@ -22,7 +22,7 @@ contact_monitor = true
 
 [node name="WrongVO" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStream_odbxy")
-volume_db = -10.0
+volume_db = -80.0
 script = ExtResource("3_eioy5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

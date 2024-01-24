@@ -4,16 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://cd0cw8a8le6g2" path="res://Assets/Texture assets/TempTutorialAssets/Pen.png" id="2_6plh4"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_fwjtl"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_i4dwq"]
-radius = 84.5931
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ffrei"]
+radius = 12.7279
+height = 97.5807
 
 [node name="Pen" type="Area2D"]
 script = ExtResource("1_chcgb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_i4dwq")
+rotation = -0.785398
+shape = SubResource("CapsuleShape2D_ffrei")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_6plh4")
 
 [node name="Panel" type="Panel" parent="."]
@@ -33,6 +36,8 @@ offset_top = -1.0
 offset_right = 81.0
 offset_bottom = 45.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_fwjtl")
 theme_override_font_sizes/font_size = 25
 text = "[P] To Pickup"

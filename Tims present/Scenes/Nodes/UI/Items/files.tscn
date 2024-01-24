@@ -4,16 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="2_vd453"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_a4sb1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_i4dwq"]
-radius = 84.5931
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgjqr"]
+size = Vector2(87, 70)
 
 [node name="Files" type="Area2D"]
 script = ExtResource("1_u8nwn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_i4dwq")
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_rgjqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_vd453")
 
 [node name="Panel" type="Panel" parent="."]
@@ -21,20 +23,24 @@ offset_left = -102.0
 offset_top = -64.0
 offset_right = 105.0
 offset_bottom = -24.0
+rotation = 0.00480434
 metadata/_edit_use_anchors_ = true
 
 [node name="interaction_label" type="Label" parent="Panel"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = -1
+anchor_left = -0.620574
+anchor_top = -2.35023
+anchor_right = 1.56783
+anchor_bottom = 2.24977
 offset_left = -78.0
 offset_top = -1.0
 offset_right = 81.0
 offset_bottom = 45.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_a4sb1")
-theme_override_font_sizes/font_size = 25
 text = "[P] To Pickup"
 horizontal_alignment = 1
 vertical_alignment = 1
