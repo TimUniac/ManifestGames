@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=21 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
@@ -16,6 +16,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w8sb"]
+size = Vector2(140, 36)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_s8uak")
@@ -7872,6 +7875,10 @@ position = Vector2(747, 640)
 position = Vector2(102.5, 43.5)
 shape = SubResource("RectangleShape2D_twda4")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-694, 152)
+shape = SubResource("RectangleShape2D_5w8sb")
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(116, 325)
 tile_set = SubResource("TileSet_4kid5")
@@ -7917,6 +7924,7 @@ inv = SubResource("Resource_hvwdc")
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("10_if3c2")]
 offset_left = 5.0
 offset_right = 5.0
+mouse_filter = 2
 
 [node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("11_q5wui")]
 offset_left = 15.0
@@ -7925,7 +7933,6 @@ offset_right = -945.0
 offset_bottom = -55.9999
 
 [node name="In_game_settings" parent="." instance=ExtResource("13_m2fy0")]
-z_index = 1
 z_as_relative = false
 offset_left = -90.0
 offset_top = 111.0
