@@ -7865,6 +7865,7 @@ expand_mode = 1
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]
 z_index = 5
+layout_mode = 0
 offset_left = 700.0
 offset_top = 724.0
 offset_right = 1447.0
