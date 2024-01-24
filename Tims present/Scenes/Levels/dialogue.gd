@@ -65,7 +65,7 @@ func complete_line():
 
 func next_line():
 	current_line += 1
-	if current_line >= dialogue.size():
+	if current_line == dialogue.size():
 		change_scene() 
 	else:
 		update_dialogue()
