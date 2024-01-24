@@ -4,7 +4,7 @@ extends Area2D
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 
-@export var item: InvItem
+
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 var player = null

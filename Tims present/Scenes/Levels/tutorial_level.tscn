@@ -1,25 +1,20 @@
-[gd_scene load_steps=28 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=23 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_eu1u8"]
+[ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="5_rlxad"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="7_r3vgi"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="9_nomwv"]
-[ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Scenes/Nodes/UI/inv_UI.tscn" id="11_3hx8x"]
 [ext_resource type="AudioStream" uid="uid://b0fa5hki573om" path="res://Assets/Sound/VO/Tutorial/VO_Dr_Tut_That Session.mp3" id="13_4c6jg"]
+[ext_resource type="PackedScene" uid="uid://cpkxp8vg2ayj8" path="res://Scenes/Nodes/UI/Items/files.tscn" id="13_hm7ep"]
+[ext_resource type="PackedScene" uid="uid://btp43hutw3i6o" path="res://Scenes/Nodes/UI/Items/glasses.tscn" id="14_4h0r1"]
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/TutorialVO.gd" id="14_i4uyg"]
 [ext_resource type="PackedScene" uid="uid://cv1q6f48nfdei" path="res://Scenes/Nodes/UI/Items/wrongitem.tscn" id="15_12ydx"]
-[ext_resource type="PackedScene" uid="uid://epfhudo6gl0d" path="res://Scenes/Nodes/UI/Items/item.tscn" id="17_6ratl"]
+[ext_resource type="PackedScene" uid="uid://bq1i0a0hfrbdm" path="res://Scenes/Nodes/UI/Items/pen.tscn" id="15_mef17"]
 [ext_resource type="Texture2D" uid="uid://cd7e5k1bri6dh" path="res://Assets/Texture assets/TempTutorialAssets/TempDesk.png" id="17_mxxvg"]
 [ext_resource type="Texture2D" uid="uid://cnxd7wdi4q130" path="res://Assets/Texture assets/TempTutorialAssets/bookshelf.png" id="17_p8m2g"]
-[ext_resource type="Texture2D" uid="uid://hikvlopmyau4" path="res://Assets/Texture assets/TempTutorialAssets/3110890-200Glassews.png" id="18_ckjma"]
 [ext_resource type="Texture2D" uid="uid://bnrxaoq6hjt3r" path="res://Assets/Texture assets/TempTutorialAssets/TempLamp.png" id="18_e1e58"]
 [ext_resource type="Texture2D" uid="uid://0021lu74frh4" path="res://Assets/Texture assets/TempTutorialAssets/TempChair.png" id="19_ug1be"]
-[ext_resource type="Resource" uid="uid://blcfhbyo48t6e" path="res://Scenes/Nodes/UI/Items/Glass.tres" id="19_yvdf7"]
-[ext_resource type="Texture2D" uid="uid://cd0cw8a8le6g2" path="res://Assets/Texture assets/TempTutorialAssets/Pen.png" id="20_5ixwv"]
-[ext_resource type="PackedScene" uid="uid://b8dbnnqqx0ccm" path="res://Interactions/Interaction Area/Pickup area.tscn" id="20_acqqc"]
-[ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="21_ourv3"]
-[ext_resource type="Resource" uid="uid://db6lll15404np" path="res://Scenes/Nodes/UI/Items/pen.tres" id="22_4s2a6"]
-[ext_resource type="Resource" uid="uid://dj3clabogc25o" path="res://Scenes/Nodes/UI/Items/filefolder.tres" id="22_5o3bc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_eu1u8")
@@ -7881,6 +7876,19 @@ limit_bottom = 802
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(152, 586)
 
+[node name="Files" parent="." instance=ExtResource("13_hm7ep")]
+z_index = 2
+position = Vector2(300, 300)
+scale = Vector2(0.15, 0.15)
+
+[node name="Glasses" parent="." instance=ExtResource("14_4h0r1")]
+position = Vector2(950, 350)
+scale = Vector2(0.5, 0.5)
+
+[node name="Pen" parent="." instance=ExtResource("15_mef17")]
+position = Vector2(800, 500)
+scale = Vector2(0.1, 0.1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
@@ -7888,11 +7896,8 @@ visible = false
 offset_top = -10.0
 offset_bottom = -10.0
 
-[node name="Inv_Ui" parent="CanvasLayer" instance=ExtResource("11_3hx8x")]
-offset_left = 15.0
-offset_top = 517.0
-offset_right = -945.0
-offset_bottom = -55.9999
+[node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("5_rlxad")]
+position = Vector2(10, 500)
 
 [node name="TutorialMusic" type="AudioStreamPlayer" parent="."]
 volume_db = -23.424
@@ -7968,36 +7973,3 @@ z_index = -1
 position = Vector2(127, 300)
 sprite_texture = ExtResource("17_p8m2g")
 sprite_scale = Vector2(0.25, 0.25)
-
-[node name="Glasses" parent="." instance=ExtResource("17_6ratl")]
-position = Vector2(906, 312)
-scale = Vector2(0.575, 0.575)
-item = ExtResource("19_yvdf7")
-sprite_texture = ExtResource("18_ckjma")
-sprite_scale = Vector2(0.5, 0.5)
-
-[node name="Pickup Area" parent="Glasses" instance=ExtResource("20_acqqc")]
-
-[node name="Pen" parent="." instance=ExtResource("17_6ratl")]
-position = Vector2(871, 561)
-item = ExtResource("22_4s2a6")
-sprite_texture = ExtResource("20_5ixwv")
-sprite_scale = Vector2(0.09, 0.09)
-
-[node name="Pickup Area" parent="Pen" instance=ExtResource("20_acqqc")]
-
-[node name="Files" parent="." instance=ExtResource("17_6ratl")]
-position = Vector2(382, 511)
-item = ExtResource("22_5o3bc")
-sprite_texture = ExtResource("21_ourv3")
-sprite_scale = Vector2(0.09, 0.09)
-
-[node name="Pickup Area" parent="Files" instance=ExtResource("20_acqqc")]
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="Inv_Ui" parent="CanvasLayer2" instance=ExtResource("11_3hx8x")]
-offset_left = 15.0
-offset_top = 517.0
-offset_right = -945.0
-offset_bottom = -55.9999
