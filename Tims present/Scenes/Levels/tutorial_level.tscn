@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=27 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_eu1u8"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cnxd7wdi4q130" path="res://Assets/Texture assets/TempTutorialAssets/bookshelf.png" id="17_p8m2g"]
 [ext_resource type="Texture2D" uid="uid://bi2bsa65wmd6y" path="res://Assets/textbox/Task Bar/points.png" id="17_x0ym1"]
 [ext_resource type="Texture2D" uid="uid://bnrxaoq6hjt3r" path="res://Assets/Texture assets/TempTutorialAssets/TempLamp.png" id="18_e1e58"]
+[ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
 [ext_resource type="Texture2D" uid="uid://0021lu74frh4" path="res://Assets/Texture assets/TempTutorialAssets/TempChair.png" id="19_ug1be"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
@@ -8030,3 +8031,9 @@ offset_top = 230.0
 offset_right = 370.0
 offset_bottom = 253.0
 text = "[O] to hide"
+
+[node name="In_game_settings" parent="." instance=ExtResource("19_4r33g")]
+offset_left = -91.0
+offset_top = 111.0
+offset_right = -91.0
+offset_bottom = 111.0
