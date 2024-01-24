@@ -40,6 +40,12 @@ func _append_number_to_code(number):
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
 		print("Code Correct!")
+		var parent_node = get_parent()
+		if parent_node and parent_node.has_method("playercollect"):
+			parent_node.playercollect()
+			parent_node.close()
+		else:
+			print("Parent node doesn't have the 'playercollect' method.")
 		#PLAY SONG
 		# Add more feedback here
 	else:

@@ -7851,6 +7851,21 @@ size = Vector2(532.5, 70)
 position = Vector2(0, -4)
 script = ExtResource("1_ye8l3")
 
+[node name="FinishText" type="RichTextLabel" parent="."]
+z_index = 5
+offset_left = 179.0
+offset_top = 157.0
+offset_right = 817.0
+offset_bottom = 654.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 51
+theme_override_font_sizes/bold_font_size = 56
+bbcode_enabled = true
+text = "You have collected all of the items needed to begin your next therapy session. 
+[b]Press 'R'[/b] to return to the concious world and meet your new patient. "
+fit_content = true
+
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -2
 position = Vector2(116, 325)

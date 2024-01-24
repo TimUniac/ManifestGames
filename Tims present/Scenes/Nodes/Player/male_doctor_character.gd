@@ -3,7 +3,7 @@ extends CharacterBody2D
 var Speed: float = 300.0
 var current_dir = "none"
 
-@export var collected_items: int = 0
+
 
 @onready var anim = $Sprite2D
 
@@ -26,7 +26,8 @@ func _ready():
 
 func _physics_process(_delta):
 	player_movement()
-	
+	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
+		call_change_scene()
 
 
 	
@@ -104,6 +105,13 @@ func collect_item(item_number):
 		2: item2_ui.visible = true
 		3: item3_ui.visible = true
 
+func call_change_scene():
+	print ("NEXT!!!!")
+	var root_node = get_tree().get_root().get_node("root")
+	if root_node and root_node.has_method("change_scene"):
+		root_node.change_scene()
+	else:
+		print("Root node doesn't have the 'change_scene' method.")
 		
 	
 	
