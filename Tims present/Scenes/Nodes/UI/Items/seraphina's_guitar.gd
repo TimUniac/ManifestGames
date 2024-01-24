@@ -11,10 +11,6 @@ var player = null
 var inrange = false
 var is_opened = false
 
-
-
-
-
 func _ready():
 	interaction_label.visible = false
 	$GuitarGame.visible = false

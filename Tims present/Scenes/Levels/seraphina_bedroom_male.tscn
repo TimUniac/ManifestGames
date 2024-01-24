@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=18 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bkq7anlswuk6p" path="res://Scenes/Nodes/UI/guitar_poster.tscn" id="8_cjstk"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="9_se4q8"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="10_if3c2"]
+[ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="12_mu1tk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
@@ -7916,5 +7917,11 @@ offset_left = -1.0
 offset_top = 6.0
 offset_right = -1.0
 offset_bottom = 6.0
+
+[node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
+offset_left = -1.0
+offset_top = 14.0
+offset_right = -1.0
+offset_bottom = 14.0
 
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
