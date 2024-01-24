@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://00mqe2vdsyto"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/PickupDisplay.gd" id="1_v0486"]
+[ext_resource type="Texture2D" uid="uid://5nrmr8qxy0e" path="res://Assets/Texture assets/Rectangle 2.png" id="2_jmw2w"]
+[ext_resource type="Texture2D" uid="uid://w5x528qeslku" path="res://Scenes/Nodes/UI/Items/Yarn.png" id="3_j3umg"]
+[ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="4_oer8a"]
+[ext_resource type="Texture2D" uid="uid://bx8jaqv1ydw36" path="res://Scenes/Nodes/UI/Items/SeraphinaNecklace (1).png" id="5_ta5gl"]
+
+[node name="PickupDisplay" type="Node2D"]
+script = ExtResource("1_v0486")
+
+[node name="Box" type="TextureRect" parent="."]
+offset_right = 380.0
+offset_bottom = 152.0
+texture = ExtResource("2_jmw2w")
+
+[node name="Item1" type="Sprite2D" parent="Box"]
+position = Vector2(58, 74)
+texture = ExtResource("3_j3umg")
+
+[node name="Item2" type="Sprite2D" parent="Box"]
+position = Vector2(173, 82)
+scale = Vector2(0.781046, 0.781046)
+texture = ExtResource("4_oer8a")
+
+[node name="Item3" type="Sprite2D" parent="Box"]
+position = Vector2(302, 81)
+texture = ExtResource("5_ta5gl")

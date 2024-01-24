@@ -45,7 +45,10 @@ func close():
 	$GuitarGame.visible = false
 	is_opened = false
 		
-
+ 
+func playercollect():
+	player.collect_item(2)
+	print("player")
 		
 		
 

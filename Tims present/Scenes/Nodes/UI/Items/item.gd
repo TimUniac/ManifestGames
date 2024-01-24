@@ -1,36 +1,41 @@
 extends Area2D
 
-@export var item: InvItem
-var player = null
-var collect = false 
-var inReach = false
-@export var sprite_texture: Texture
-@export var sprite_scale: Vector2 = Vector2(1, 1)
-func _ready():
-	var sprite: Sprite2D = $Sprite2D
 
-	# Set the texture if provided in the inspector
-	if sprite_texture != null:
-		sprite.texture = sprite_texture
-	sprite.scale = sprite_scale
-	
+@export var action_name: String = "interact"
+@onready var interaction_label = $Panel
+
+@export var item: InvItem
+@onready var interaction_area = $"Interaction Area"
+@onready var sprite = $Sprite2D
+var player = null
+var inrange = false
+var collect = false
+
+func _ready():
+	interaction_label.visible = false
+
+
 
 func _on_body_entered(body):
 	if body.has_method("player"):
+		interaction_label.visible = true
+		inrange = true
 		player = body
-		inReach = true
-
-func _input(InputEvent):
-	if Input.is_action_just_pressed("Pickup") and inReach:
-		collect = true
-		print ("input")
+		print("hi there")
 		
-	if inReach and collect:
+func _on_body_exited(body):
+	interaction_label.visible = false
+	inrange = false
+
+func _process(delta):
+	if inrange and Input.is_action_just_pressed("Pickup"):
 		playercollect()
-		queue_free()
-		print("body")
+		visible = false
+
+		
+		
 
 func playercollect():
-	if player:
-		player.collect(item)
-		print("player")
+	player.collect_item(1)
+	print("player")
+

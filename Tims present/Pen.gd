@@ -4,14 +4,16 @@ extends Area2D
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 
-@export var item: InvItem
+
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 var player = null
 var inrange = false
+var collect = false
 
 func _ready():
 	interaction_label.visible = false
+
 
 
 func _on_body_entered(body):
@@ -36,3 +38,4 @@ func _process(delta):
 func playercollect():
 	player.collect_item(3)
 	print("player")
+
