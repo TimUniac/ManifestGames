@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bocjss0845ib5"]
+[gd_scene load_steps=6 format=3 uid="uid://00mqe2vdsyto"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/PickupDisplay.gd" id="1_v0486"]
 [ext_resource type="Texture2D" uid="uid://5nrmr8qxy0e" path="res://Assets/Texture assets/Rectangle 2.png" id="2_jmw2w"]

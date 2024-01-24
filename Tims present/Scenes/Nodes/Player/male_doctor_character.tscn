@@ -1,7 +1,6 @@
-[gd_scene load_steps=40 format=3 uid="uid://dq3bajgkuxyh1"]
+[gd_scene load_steps=39 format=3 uid="uid://dq3bajgkuxyh1"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/Player/male_doctor_character.gd" id="1_ic5fy"]
-[ext_resource type="PackedScene" uid="uid://bocjss0845ib5" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_ay3sl"]
 [ext_resource type="Texture2D" uid="uid://vhxnombsawdl" path="res://Assets/Doctor Graphics/Male Doctor/back/Doctors_Top_Down (1) (2).png" id="3_7eb66"]
 [ext_resource type="Texture2D" uid="uid://dtv4woafbvs2w" path="res://Assets/Doctor Graphics/Male Doctor/forward/Doctors_Top_Down (1) (1).png" id="4_073xc"]
 [ext_resource type="Texture2D" uid="uid://cgee8s17mxot0" path="res://Assets/Doctor Graphics/Male Doctor/SpriteSheets/Doctors_Top_Down_Idle (2).svg" id="5_s0m6b"]
@@ -256,8 +255,6 @@ height = 146.0
 [node name="Male Doctor Character" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_ic5fy")
-
-[node name="PickupDisplay" parent="." instance=ExtResource("2_ay3sl")]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.499998, -1.07288e-06)

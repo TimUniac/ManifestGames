@@ -1,16 +1,24 @@
 [gd_scene load_steps=5 format=3 uid="uid://xox3s1h15gac"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
-[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="2_8a0qp"]
+[ext_resource type="Texture2D" path="res://Assets/Texture assets/GuitarGame/Guitar_Game_UI.svg" id="2_ap226"]
 [ext_resource type="FontFile" uid="uid://d2ypkqvh0hmi4" path="res://Assets/Fonts/Britannic Bold Regular.ttf" id="2_glurk"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="2_o5paw"]
 
 [node name="GuitarGame" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1156.0
-offset_bottom = 651.0
+offset_right = 1391.0
+offset_bottom = 550.0
 script = ExtResource("1_qw654")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -85.0
+offset_right = 1436.0
+offset_bottom = 615.0
+texture = ExtResource("2_ap226")
 
 [node name="Clue" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -29,10 +37,10 @@ scroll_active = false
 
 [node name="SequenceInput" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 1155.0
-offset_bottom = 489.0
+offset_left = 164.0
+offset_top = 369.0
+offset_right = 1086.0
+offset_bottom = 460.0
 theme_override_fonts/font = ExtResource("2_o5paw")
 theme_override_font_sizes/font_size = 76
 placeholder_text = "Input Seqence and Press Enter"
@@ -43,6 +51,5 @@ virtual_keyboard_enabled = false
 shortcut_keys_enabled = false
 middle_mouse_paste_enabled = false
 selecting_enabled = false
-right_icon = ExtResource("2_8a0qp")
 caret_blink = true
 caret_force_displayed = true

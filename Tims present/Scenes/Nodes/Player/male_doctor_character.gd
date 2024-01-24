@@ -7,15 +7,22 @@ var current_dir = "none"
 
 @onready var anim = $Sprite2D
 
-@onready var item1_ui = $PickupDisplay/Box/Item1
-@onready var item2_ui = $PickupDisplay/Box/Item2
-@onready var item3_ui = $PickupDisplay/Box/Item3
+
+@onready var pickup_display = $"../CanvasLayer/PickupDisplay"
+@onready var item1_ui = pickup_display.get_node("Box/Item1")
+@onready var item2_ui = pickup_display.get_node("Box/Item2")
+@onready var item3_ui = pickup_display.get_node("Box/Item3")
 
 
 
 
 func _ready():
+	
 	$Sprite2D.play("front_idle")
+	print(pickup_display)  # Should not be null
+	print(item1_ui)  # Should not be null
+	print(item2_ui)  # Should not be null
+	print(item3_ui)  # Should not be null
 
 func _physics_process(_delta):
 	player_movement()

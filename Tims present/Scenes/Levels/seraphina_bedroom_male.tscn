@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=17 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
+[ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
-[ext_resource type="PackedScene" uid="uid://dowucnhfpgcos" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
+[ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
 [ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_saerf"]
 [ext_resource type="PackedScene" uid="uid://7rbqvxmnnf8w" path="res://Scenes/Nodes/UI/Items/friendship_necklace.tscn" id="7_clvhx"]
 [ext_resource type="PackedScene" uid="uid://bkq7anlswuk6p" path="res://Scenes/Nodes/UI/guitar_poster.tscn" id="8_cjstk"]
@@ -7907,8 +7908,13 @@ position = Vector2(75, 630)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
+position = Vector2(10, 500)
+
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("10_if3c2")]
-offset_left = 5.0
-offset_right = 5.0
+offset_left = -1.0
+offset_top = 6.0
+offset_right = -1.0
+offset_bottom = 6.0
 
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
