@@ -16,7 +16,7 @@ var dialogue = [
 	{"speaker": "Doc", "line": "I can assure you that we can solve your problem."},
 	{"speaker": "Sera", "line": "Yes, I am open to anything. I just don’t want to feel like this anymore."},
 	{"speaker": "Doc", "line": "Okay, Seraphina, I would like you to get into a position you are most comfortable in, whether that is lying down or simply lying back."}, 
-	{"speaker": "Doc", "line": "I need you to close your eyes and imagine a place where you feel the most comfortable. Really focus on this place and your feelings. Remember, remember, remember,"}]
+	{"speaker": "Doc", "line": "I need you to close your eyes and imagine a place where you feel the most comfortable. Really focus on this place and your feelings. Remember, remember,"}]
 
 var current_line = 0
 var total_characters = 0
@@ -32,7 +32,8 @@ func _ready():
 func _process(delta):
 	if (Input.is_action_just_released("Interact")):
 		handle_interact()
-
+	if (Input.is_action_just_released("jump")):
+		handle_interact()
 	if (Input.is_action_just_released("up")):
 		handle_up()
 	
@@ -65,7 +66,7 @@ func complete_line():
 
 func next_line():
 	current_line += 1
-	if current_line == dialogue.size():
+	if current_line >= dialogue.size():
 		change_scene() 
 	else:
 		update_dialogue()

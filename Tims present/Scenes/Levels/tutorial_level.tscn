@@ -7933,6 +7933,7 @@ bus = &"Music"
 [node name="TutorialVO" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_4c6jg")
 volume_db = -80.0
+bus = &"Dialogue"
 script = ExtResource("14_i4uyg")
 
 [node name="Desk" parent="." instance=ExtResource("15_12ydx")]
@@ -8011,10 +8012,10 @@ expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Objectives"]
 layout_mode = 0
-offset_left = 105.0
-offset_top = 147.0
-offset_right = 366.0
-offset_bottom = 258.0
+offset_left = 106.0
+offset_top = 140.0
+offset_right = 367.0
+offset_bottom = 251.0
 text = "Find Patient Files
 Find Glasses
 FInd Favourite Pen"

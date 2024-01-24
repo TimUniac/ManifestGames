@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl1710oyetj6h"]
+[gd_scene load_steps=6 format=3 uid="uid://cl1710oyetj6h"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/JournalRead.gd" id="1_45ewt"]
 [ext_resource type="Texture2D" uid="uid://000kdtegf1b0" path="res://Assets/Journal.png" id="2_4mvgt"]
+[ext_resource type="Texture2D" uid="uid://dqvgegajo36xi" path="res://Assets/Journal 2.png" id="2_73dqi"]
 [ext_resource type="Texture2D" uid="uid://du5ymnxgsl63y" path="res://Assets/textbox/Journal 1 entry.png" id="3_5lsn4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw7kn"]
@@ -16,14 +17,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_45ewt")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="Sprite2D" parent="."]
+position = Vector2(1097, 595)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_73dqi")
+
+[node name="Panel" type="Panel" parent="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.256
+anchor_bottom = 0.388
+offset_left = -66.6666
+offset_top = 23.3334
+offset_right = 58.3654
+offset_bottom = 23.3694
+
+[node name="Label" type="Label" parent="TextureButton/Panel"]
 layout_mode = 0
-offset_left = 1018.0
-offset_top = 502.0
-offset_right = 1132.0
-offset_bottom = 631.0
-texture_normal = ExtResource("2_4mvgt")
-stretch_mode = 0
+offset_left = 11.6666
+offset_top = 8.33331
+offset_right = 136.667
+offset_bottom = 34.3333
+text = "Press [J] to read "
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 331)
@@ -44,5 +58,4 @@ shape = SubResource("RectangleShape2D_cw7kn")
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_4mvgt")
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="body_entered" from="Journal2" to="." method="_on_journal_2_body_entered"]
