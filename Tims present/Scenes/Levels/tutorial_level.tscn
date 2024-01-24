@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=36 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_eu1u8"]
@@ -23,6 +23,7 @@
 [ext_resource type="Resource" uid="uid://db6lll15404np" path="res://Scenes/Nodes/UI/Items/pen.tres" id="22_4s2a6"]
 [ext_resource type="Resource" uid="uid://dj3clabogc25o" path="res://Scenes/Nodes/UI/Items/filefolder.tres" id="22_5o3bc"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="23_ab0wg"]
+[ext_resource type="PackedScene" uid="uid://b0ryunqlsmaby" path="res://Scenes/Nodes/UI/objective_list_tutorial.tscn" id="24_4l5wm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_eu1u8")
@@ -7855,7 +7856,7 @@ amount = 0
 script = ExtResource("8_d6ed8")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_sdetf"]
+[sub_resource type="Resource" id="Resource_0cson"]
 resource_local_to_scene = true
 script = ExtResource("7_1nb6r")
 slots = Array[ExtResource("8_d6ed8")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
@@ -7900,7 +7901,7 @@ limit_bottom = 802
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 position = Vector2(152, 586)
-inv = SubResource("Resource_sdetf")
+inv = SubResource("Resource_0cson")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -8028,3 +8029,8 @@ offset_left = -91.0
 offset_top = 111.0
 offset_right = -91.0
 offset_bottom = 111.0
+
+[node name="Objective list" parent="In_game_settings" instance=ExtResource("24_4l5wm")]
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0

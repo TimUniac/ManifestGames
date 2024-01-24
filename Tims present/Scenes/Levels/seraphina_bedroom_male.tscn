@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=22 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="10_if3c2"]
 [ext_resource type="PackedScene" uid="uid://871q0vurw1j0" path="res://Scenes/Nodes/UI/inv_UI.tscn" id="11_q5wui"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="13_m2fy0"]
+[ext_resource type="PackedScene" uid="uid://bjqkkjm30bcxu" path="res://Scenes/Nodes/UI/objective_list.tscn" id="14_kr6si"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
@@ -7938,5 +7939,11 @@ offset_left = -90.0
 offset_top = 111.0
 offset_right = -90.0
 offset_bottom = 111.0
+
+[node name="Objective list" parent="." instance=ExtResource("14_kr6si")]
+offset_left = -91.0
+offset_top = 112.0
+offset_right = -91.0
+offset_bottom = 112.0
 
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
