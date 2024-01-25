@@ -249,8 +249,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lutv1"]
-radius = 28.0
-height = 146.0
+radius = 25.0
+height = 98.0
 
 [node name="Male Doctor Character" type="CharacterBody2D"]
 collision_layer = 3
@@ -265,6 +265,7 @@ animation = &"side_march"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
 visibility_layer = 3
+position = Vector2(-7, 28)
 shape = SubResource("CapsuleShape2D_lutv1")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]

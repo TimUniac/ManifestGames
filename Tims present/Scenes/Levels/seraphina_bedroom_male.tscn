@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=22 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
@@ -15,6 +15,18 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m45hp"]
+size = Vector2(668, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps56l"]
+size = Vector2(240, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddebc"]
+size = Vector2(87, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llr8k"]
+size = Vector2(238, 68)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_s8uak")
@@ -7867,6 +7879,22 @@ position = Vector2(747, 640)
 position = Vector2(102.5, 43.5)
 shape = SubResource("RectangleShape2D_twda4")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-610, 166)
+shape = SubResource("RectangleShape2D_m45hp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(161, -306.5)
+shape = SubResource("RectangleShape2D_ps56l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(273.5, -266.5)
+shape = SubResource("RectangleShape2D_ddebc")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-706, -316)
+shape = SubResource("RectangleShape2D_llr8k")
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(116, 325)
 tile_set = SubResource("TileSet_4kid5")
@@ -7918,11 +7946,13 @@ offset_left = -1.0
 offset_top = 6.0
 offset_right = -1.0
 offset_bottom = 6.0
+mouse_filter = 2
 
 [node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
 offset_left = -1.0
 offset_top = 14.0
 offset_right = -1.0
 offset_bottom = 14.0
+mouse_filter = 2
 
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
