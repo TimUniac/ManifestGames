@@ -48,9 +48,9 @@ vertical_alignment = 1
 [node name="GuitarGame" parent="." instance=ExtResource("5_i8e28")]
 visibility_layer = 13
 z_index = 9
-offset_left = -323.0
-offset_top = -172.0
-offset_right = 833.0
-offset_bottom = 479.0
+offset_left = -383.0
+offset_top = -96.0
+offset_right = 185.0
+offset_bottom = 249.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
