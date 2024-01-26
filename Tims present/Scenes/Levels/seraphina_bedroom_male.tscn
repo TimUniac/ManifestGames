@@ -7949,10 +7949,10 @@ offset_bottom = 6.0
 mouse_filter = 2
 
 [node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
-offset_left = -1.0
-offset_top = 14.0
-offset_right = -1.0
-offset_bottom = 14.0
+offset_left = -7.0
+offset_top = 28.0
+offset_right = -7.0
+offset_bottom = 28.0
 mouse_filter = 2
 
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
