@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bq1i0a0hfrbdm" path="res://Scenes/Nodes/UI/Items/pen.tscn" id="15_mef17"]
 [ext_resource type="Texture2D" uid="uid://cfmvadk1vxcsc" path="res://Assets/textbox/Task Bar/base.png" id="16_4cif2"]
 [ext_resource type="Texture2D" uid="uid://cd7e5k1bri6dh" path="res://Assets/Texture assets/TempTutorialAssets/TempDesk.png" id="17_mxxvg"]
-[ext_resource type="Texture2D" uid="uid://cnxd7wdi4q130" path="res://Assets/Texture assets/TempTutorialAssets/bookshelf.png" id="17_p8m2g"]
 [ext_resource type="Texture2D" uid="uid://bi2bsa65wmd6y" path="res://Assets/textbox/Task Bar/points.png" id="17_x0ym1"]
 [ext_resource type="Texture2D" uid="uid://bnrxaoq6hjt3r" path="res://Assets/Texture assets/TempTutorialAssets/TempLamp.png" id="18_e1e58"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
@@ -87,8 +86,11 @@ radius = 18.0278
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jkr3"]
 radius = 35.2278
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3c4kb"]
-size = Vector2(532.5, 70)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0xfb"]
+size = Vector2(1257, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct82p"]
+size = Vector2(59, 464)
 
 [node name="Tutorial" type="Node2D"]
 position = Vector2(0, -4)
@@ -139,13 +141,13 @@ position = Vector2(152, 586)
 
 [node name="Files" parent="." instance=ExtResource("13_hm7ep")]
 z_index = 2
-position = Vector2(300, 300)
+position = Vector2(467, 434)
 
 [node name="Glasses" parent="." instance=ExtResource("14_4h0r1")]
-position = Vector2(950, 350)
+position = Vector2(-3, 694)
 
 [node name="Pen" parent="." instance=ExtResource("15_mef17")]
-position = Vector2(800, 500)
+position = Vector2(775, 578)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -169,69 +171,39 @@ script = ExtResource("14_i4uyg")
 
 [node name="Desk" parent="." instance=ExtResource("15_12ydx")]
 z_index = -1
-position = Vector2(966.98, 305.175)
+position = Vector2(714, 667)
 sprite_texture = ExtResource("17_mxxvg")
 sprite_scale = Vector2(3, 3)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Desk"]
-position = Vector2(5.02002, -11.175)
+position = Vector2(-189.98, 430.825)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Desk/StaticBody2D"]
-position = Vector2(0, -84)
+position = Vector2(197.98, -423.825)
 shape = SubResource("RectangleShape2D_en8ce")
 
 [node name="Lamp" parent="." instance=ExtResource("15_12ydx")]
 z_index = 1
-position = Vector2(694, 519)
+position = Vector2(429, 672)
 sprite_texture = ExtResource("18_e1e58")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Lamp"]
 position = Vector2(5, 2)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Lamp/StaticBody2D"]
-position = Vector2(-4, -25)
+position = Vector2(-256, 151)
 shape = SubResource("CircleShape2D_ycspa")
 
 [node name="Chair" parent="." instance=ExtResource("15_12ydx")]
 z_index = 1
-position = Vector2(590, 498)
+position = Vector2(927, 645)
 sprite_texture = ExtResource("19_ug1be")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Chair"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Chair/StaticBody2D"]
-position = Vector2(0, 31)
+position = Vector2(-7, 6)
 shape = SubResource("CircleShape2D_5jkr3")
-
-[node name="BookShelf" parent="." instance=ExtResource("15_12ydx")]
-z_index = -1
-position = Vector2(2, 300)
-sprite_texture = ExtResource("17_p8m2g")
-sprite_scale = Vector2(0.25, 0.25)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="BookShelf"]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BookShelf/StaticBody2D"]
-position = Vector2(183.75, -111)
-shape = SubResource("RectangleShape2D_3c4kb")
-
-[node name="BookShelf2" parent="." instance=ExtResource("15_12ydx")]
-z_index = -1
-position = Vector2(382, 300)
-sprite_texture = ExtResource("17_p8m2g")
-sprite_scale = Vector2(0.25, 0.25)
-
-[node name="BookShelf3" parent="." instance=ExtResource("15_12ydx")]
-z_index = -1
-position = Vector2(250, 300)
-sprite_texture = ExtResource("17_p8m2g")
-sprite_scale = Vector2(0.25, 0.25)
-
-[node name="BookShelf4" parent="." instance=ExtResource("15_12ydx")]
-z_index = -1
-position = Vector2(127, 300)
-sprite_texture = ExtResource("17_p8m2g")
-sprite_scale = Vector2(0.25, 0.25)
 
 [node name="Objectives" type="TextureRect" parent="."]
 offset_left = -147.0
@@ -269,3 +241,22 @@ offset_left = -91.0
 offset_top = 111.0
 offset_right = -91.0
 offset_bottom = 111.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(722, 674)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-226, 93.0001)
+shape = SubResource("RectangleShape2D_c0xfb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-252, -358.5)
+shape = SubResource("RectangleShape2D_c0xfb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(371, -147)
+shape = SubResource("RectangleShape2D_ct82p")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-847, -141)
+shape = SubResource("RectangleShape2D_ct82p")
