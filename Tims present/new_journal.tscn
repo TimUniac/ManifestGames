@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://drb6ny7iq5wwi"]
+
+[ext_resource type="Script" path="res://NewJournal.gd" id="1_bere3"]
+
+[node name="NewJournal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bere3")
+
+[node name="Page" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Forward" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Backward" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

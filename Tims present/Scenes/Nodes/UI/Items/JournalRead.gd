@@ -7,15 +7,16 @@ var inRange = false
 
 func _ready():
 	$TextureButton.visible = false
-	$Journal1Entry.visible = false
+	$NewJournal.visible = false
+	
 
 
 
 func close():
-	$Journal1Entry.visible = false
+	$NewJournal.visible = false
 	is_opened = false
 func open():
-	$Journal1Entry.visible = true
+	$NewJournal.visible = true
 	is_opened = true
 
 func _process(delta):

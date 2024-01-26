@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/JournalRead.gd" id="1_45ewt"]
 [ext_resource type="Texture2D" uid="uid://000kdtegf1b0" path="res://Assets/Journal.png" id="2_4mvgt"]
 [ext_resource type="Texture2D" uid="uid://dqvgegajo36xi" path="res://Assets/Journal 2.png" id="2_73dqi"]
-[ext_resource type="Texture2D" uid="uid://du5ymnxgsl63y" path="res://Assets/textbox/Journal 1 entry.png" id="3_5lsn4"]
+[ext_resource type="PackedScene" uid="uid://drb6ny7iq5wwi" path="res://new_journal.tscn" id="4_ln5s1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw7kn"]
 size = Vector2(48, 67)
@@ -13,6 +13,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_45ewt")
@@ -42,11 +46,6 @@ text = "Press [J] to read "
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 331)
 
-[node name="Journal1Entry" type="Sprite2D" parent="."]
-position = Vector2(566, 311)
-scale = Vector2(0.744141, 0.732787)
-texture = ExtResource("3_5lsn4")
-
 [node name="Journal2" type="Area2D" parent="."]
 position = Vector2(1001, 576)
 
@@ -57,5 +56,12 @@ shape = SubResource("RectangleShape2D_cw7kn")
 [node name="Sprite2D2" type="Sprite2D" parent="Journal2"]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_4mvgt")
+
+[node name="NewJournal" parent="." instance=ExtResource("4_ln5s1")]
+offset_left = 152.625
+offset_top = 12.33
+offset_right = 196.625
+offset_bottom = 51.33
+scale = Vector2(0.75, 0.75)
 
 [connection signal="body_entered" from="Journal2" to="." method="_on_journal_2_body_entered"]
