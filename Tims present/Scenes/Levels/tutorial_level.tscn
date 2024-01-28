@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=27 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_wd40v"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="5_rlxad"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="7_r3vgi"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="9_nomwv"]
+[ext_resource type="AudioStream" uid="uid://cq7yjwdx2gisb" path="res://Assets/Sound/Music/ThemeJazzDigital.mp3" id="10_cviwq"]
 [ext_resource type="AudioStream" uid="uid://b0fa5hki573om" path="res://Assets/Sound/VO/Tutorial/VO_Dr_Tut_That Session.mp3" id="13_4c6jg"]
 [ext_resource type="PackedScene" uid="uid://cpkxp8vg2ayj8" path="res://Scenes/Nodes/UI/Items/files.tscn" id="13_hm7ep"]
 [ext_resource type="PackedScene" uid="uid://btp43hutw3i6o" path="res://Scenes/Nodes/UI/Items/glasses.tscn" id="14_4h0r1"]
@@ -159,6 +160,7 @@ offset_bottom = -10.0
 position = Vector2(10, 500)
 
 [node name="TutorialMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_cviwq")
 volume_db = -23.424
 autoplay = true
 bus = &"Music"

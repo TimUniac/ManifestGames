@@ -20,6 +20,9 @@ func _ready():
 	audio_player.stop()
 	music_player.stream = music_start
 	music_player.play()
+	#music_player.connect("finished", Callable(self, "_on_AudioStreamPlayer_finished"))
+#func _on_AudioStreamPlayer_finished():
+#	music_player.play()
 	
 func _input(event):
 	if event is InputEventKey and event.pressed:

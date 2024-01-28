@@ -12,26 +12,27 @@ collision_mask = 2
 script = ExtResource("1_vlcy3")
 
 [node name="INteraction AREA" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_iyrrn")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = -63.0
-offset_top = -49.0
-offset_right = 63.0
-offset_bottom = -9.0
+offset_left = -62.5
+offset_top = -137.54
+offset_right = 63.5
+offset_bottom = -97.54
 
 [node name="interaction_label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -78.0
-offset_top = -1.0
-offset_right = 81.0
-offset_bottom = 45.0
+offset_left = -80.0
+offset_top = -3.0
+offset_right = 79.0
+offset_bottom = 43.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_hyfdl")
-text = "[E] To Interact"
+text = "[L] To Investigate"
 horizontal_alignment = 1
 vertical_alignment = 1
 

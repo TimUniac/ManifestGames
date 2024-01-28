@@ -22,12 +22,10 @@ script = ExtResource("1_1lx0p")
 position = Vector2(726, 216)
 texture = ExtResource("2_jj7qr")
 
-[node name="Interaction Area" parent="." instance=ExtResource("3_t0ww6")]
-position = Vector2(725, 295)
-
 [node name="ChordChart" type="Sprite2D" parent="."]
-position = Vector2(845, 474)
+position = Vector2(977, 501)
 scale = Vector2(0.52443, 0.420655)
 texture = ExtResource("4_kuew2")
 
-[connection signal="body_entered" from="Interaction Area" to="." method="_on_interaction_area_body_entered"]
+[node name="Interaction Area" parent="." instance=ExtResource("3_t0ww6")]
+position = Vector2(733, 284)
