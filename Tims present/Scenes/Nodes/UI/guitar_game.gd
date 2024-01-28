@@ -2,8 +2,38 @@ extends Control
 
 var secret_code = "6415"
 var entered_code = ""
+@onready var music_player = $Room
+@onready var music_start = preload("res://Assets/Sound/Music/seraroom.mp3")
+@onready var music_win = preload("res://Assets/Sound/Music/serawin.mp3")
+@onready var audio_player = $Chords
+@onready var audio_files = {
+	KEY_1: preload("res://Assets/Sound/SFX/Sounds-Guitar/G.wav"),
+	KEY_2: preload("res://Assets/Sound/SFX/Sounds-Guitar/a min.wav"),
+	KEY_3: preload("res://Assets/Sound/SFX/Sounds-Guitar/b min.wav"),
+	KEY_4: preload("res://Assets/Sound/SFX/Sounds-Guitar/C.wav"),
+	KEY_5: preload("res://Assets/Sound/SFX/Sounds-Guitar/D.wav"),
+	KEY_6: preload("res://Assets/Sound/SFX/Sounds-Guitar/e min.wav"),
+	KEY_7: preload("res://Assets/Sound/SFX/Sounds-Guitar/F#.wav")
+}
 
+func _ready():
+	audio_player.stop()
+	music_player.stream = music_start
+	music_player.play()
+	
 func _input(event):
+	if event is InputEventKey and event.pressed:
+		var audio_stream = audio_files.get(event.keycode)
+		print ("gotStream")
+		if audio_stream:
+			print ("stream")
+			if audio_player.is_playing:
+				print ("is it playing?")
+				audio_player.stop()
+				print ("Stop")
+				audio_player.stream = audio_stream
+				audio_player.play()
+				print("play")
 	if event is InputEventKey and event.pressed and !event.echo:
 		if event.keycode == KEY_1:
 			_append_number_to_code(1)
@@ -21,10 +51,6 @@ func _input(event):
 			_append_number_to_code(6)
 		elif event.keycode == KEY_7:
 			_append_number_to_code(7)
-		elif event.keycode == KEY_8:
-			_append_number_to_code(8)
-		elif event.keycode == KEY_9:
-			_append_number_to_code(9)
 			
 		elif event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
 			_on_EnterButton_pressed()
@@ -44,6 +70,9 @@ func _on_EnterButton_pressed():
 		if parent_node and parent_node.has_method("playercollect"):
 			parent_node.playercollect()
 			parent_node.close()
+			$"..".visible = false
+			music_player.stream = music_win
+			music_player.play()
 		else:
 			print("Parent node doesn't have the 'playercollect' method.")
 		#PLAY SONG

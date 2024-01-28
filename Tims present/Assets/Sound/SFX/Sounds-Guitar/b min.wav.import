@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bue3tin1e751r"
+path="res://.godot/imported/b min.wav-5b7a519d4cd0f7c9aac3890a8467614d.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Sounds-Guitar/b min.wav"
+dest_files=["res://.godot/imported/b min.wav-5b7a519d4cd0f7c9aac3890a8467614d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

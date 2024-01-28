@@ -7930,7 +7930,6 @@ position = Vector2(1021, 414)
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
-visible = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0
@@ -7938,14 +7937,12 @@ offset_bottom = -2.0
 rotation = -0.0030264
 
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
-visible = false
 position = Vector2(320, 318)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
 position = Vector2(75, 630)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
 position = Vector2(10, 500)
