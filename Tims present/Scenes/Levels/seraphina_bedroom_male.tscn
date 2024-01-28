@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=23 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
@@ -27,6 +27,9 @@ size = Vector2(87, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llr8k"]
 size = Vector2(238, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as2yl"]
+size = Vector2(70, 67)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_s8uak")
@@ -7895,6 +7898,10 @@ shape = SubResource("RectangleShape2D_ddebc")
 position = Vector2(-706, -316)
 shape = SubResource("RectangleShape2D_llr8k")
 
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(94, -23.5)
+shape = SubResource("RectangleShape2D_as2yl")
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(116, 325)
 tile_set = SubResource("TileSet_4kid5")
@@ -7923,6 +7930,7 @@ position = Vector2(1021, 414)
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
+visible = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0
@@ -7930,12 +7938,14 @@ offset_bottom = -2.0
 rotation = -0.0030264
 
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
+visible = false
 position = Vector2(320, 318)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
 position = Vector2(75, 630)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
 position = Vector2(10, 500)
@@ -7955,4 +7965,5 @@ offset_right = -7.0
 offset_bottom = 28.0
 mouse_filter = 2
 
+[connection signal="body_exited" from="Yarn" to="Yarn" method="_on_body_exited"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
