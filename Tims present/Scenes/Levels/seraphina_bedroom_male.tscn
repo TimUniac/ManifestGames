@@ -7939,20 +7939,17 @@ rotation = -0.0030264
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
 position = Vector2(320, 318)
 
-[node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
-position = Vector2(75, 630)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
 position = Vector2(10, 500)
 
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("10_if3c2")]
-z_index = 3
-offset_left = -1.0
-offset_top = 6.0
-offset_right = -1.0
-offset_bottom = 6.0
+z_as_relative = false
+offset_left = -37.83
+offset_top = 96.82
+offset_right = -525.83
+offset_bottom = 134.82
 mouse_filter = 2
 
 [node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
@@ -7961,6 +7958,9 @@ offset_top = 28.0
 offset_right = -7.0
 offset_bottom = 28.0
 mouse_filter = 2
+
+[node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
+position = Vector2(75, 630)
 
 [connection signal="body_exited" from="Novel" to="Novel" method="_on_body_exited"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]

@@ -17,10 +17,3 @@ func show_initial_speech_bubble():
 func change_scene():
 	print("add more game here!")
 
-func _on_dialogue_trigger():
-	$"Male Doctor Character/SpeechBubble".show_bubble("Your dialogue text here")
-	
-
-
-func _on_dialogue_end():
-	$"Male Doctor Character/SpeechBubble".visible = false
