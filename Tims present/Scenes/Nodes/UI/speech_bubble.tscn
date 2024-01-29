@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://gjtus4y5lsup"]
+
+[ext_resource type="Texture2D" uid="uid://bxtu2ep313yr3" path="res://Assets/textbox/Vector 2.png" id="1_ttvu5"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/speech_bubble.gd" id="1_vbsu2"]
+[ext_resource type="FontFile" uid="uid://b2xmgf8vntngi" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular 2.ttf" id="2_qnyc8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pg23n"]
+texture = ExtResource("1_ttvu5")
+
+[node name="SpeechBubble" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vbsu2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 217.0
+offset_bottom = 170.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_pg23n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 31.0
+offset_right = 200.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_qnyc8")
+theme_override_font_sizes/font_size = 15
+vertical_alignment = 1
+autowrap_mode = 3

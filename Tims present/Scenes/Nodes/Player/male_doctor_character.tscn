@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dq3bajgkuxyh1"]
+[gd_scene load_steps=40 format=3 uid="uid://dq3bajgkuxyh1"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/Player/male_doctor_character.gd" id="1_ic5fy"]
 [ext_resource type="Texture2D" uid="uid://vhxnombsawdl" path="res://Assets/Doctor Graphics/Male Doctor/back/Doctors_Top_Down (1) (2).png" id="3_7eb66"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://btvapeebr4f7" path="res://Assets/Doctor Graphics/Male Doctor/left/Doctors_Top_Down left.png" id="6_qqsds"]
 [ext_resource type="Texture2D" uid="uid://dvgo8k6ywu4oy" path="res://Assets/Doctor Graphics/Male Doctor/right/Doctors_Top_Down (1) (4).png" id="7_y1g2l"]
 [ext_resource type="PackedScene" uid="uid://o8pckgrevhaq" path="res://Scenes/Nodes/Audio/Footsteps.tscn" id="8_p7t5t"]
+[ext_resource type="PackedScene" uid="uid://gjtus4y5lsup" path="res://Scenes/Nodes/UI/speech_bubble.tscn" id="9_baytf"]
 [ext_resource type="Script" path="res://Scenes/Nodes/Player/DialogueBubble.gd" id="9_o2dxv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ka1lo"]
@@ -263,15 +264,24 @@ sprite_frames = SubResource("SpriteFrames_6qe8j")
 animation = &"side_march"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 light_mask = 3
 visibility_layer = 3
 position = Vector2(-7, 28)
 shape = SubResource("CapsuleShape2D_lutv1")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+visible = false
 
 [node name="Footfalls" parent="." instance=ExtResource("8_p7t5t")]
 volume_db = 1.66533e-15
 
 [node name="BubbleMark" type="Marker2D" parent="."]
+position = Vector2(14, -24)
 script = ExtResource("9_o2dxv")
+
+[node name="SpeechBubble" parent="." instance=ExtResource("9_baytf")]
+offset_left = -168.0
+offset_top = -252.0
+offset_right = -128.0
+offset_bottom = -212.0

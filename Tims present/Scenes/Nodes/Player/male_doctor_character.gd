@@ -12,12 +12,12 @@ var current_dir = "none"
 @onready var item1_ui = pickup_display.get_node("Box/Item1")
 @onready var item2_ui = pickup_display.get_node("Box/Item2")
 @onready var item3_ui = pickup_display.get_node("Box/Item3")
-
-
+@onready var SpeechBubble = $SpeechBubble
+@onready var talking = false
 
 
 func _ready():
-	
+
 	$Sprite2D.play("front_idle")
 	print(pickup_display)  # Should not be null
 	print(item1_ui)  # Should not be null
@@ -25,14 +25,27 @@ func _ready():
 	print(item3_ui)  # Should not be null
 
 func _physics_process(_delta):
+	
 	player_movement()
 	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
 		call_change_scene()
-
-
+	
+		
+		
+		
+	if Input.is_action_pressed("jump"):
+		if SpeechBubble.is_visible:
+			SpeechBubble.visible = false
+			talking = false
+			print("not talking")
+			
 	
 func player_movement(): 
-	if Input.is_action_pressed("right"):
+	if talking == true:
+		print ("stop moving")
+		return 
+		print ("move again")
+	elif Input.is_action_pressed("right"):
 		current_dir = "right"
 		play_anim(1)
 		velocity.x = Speed
@@ -115,5 +128,10 @@ func call_change_scene():
 		
 	
 	
-	
+func speak(text):
+	SpeechBubble.show_bubble(text)
+	SpeechBubble.position = Vector2(-150, -250)
+	talking = true
 
+func _on_guitar_interacted(guitarDialogue):
+	speak(guitarDialogue)

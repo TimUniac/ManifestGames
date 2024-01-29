@@ -63,5 +63,5 @@ caret_force_displayed = true
 bus = &"SFX"
 
 [node name="Room" type="AudioStreamPlayer2D" parent="."]
-volume_db = -20.0
+volume_db = -10.162
 bus = &"Music"

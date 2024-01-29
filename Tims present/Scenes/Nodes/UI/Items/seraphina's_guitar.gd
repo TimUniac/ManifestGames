@@ -1,8 +1,9 @@
 extends Area2D
 
-
+signal guitar_interacted(guitarDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
+@onready var doctor = get_parent().get_node("Male Doctor Character")
 
 @export var item: InvItem
 @onready var interaction_area = $"Interaction Area"
@@ -10,6 +11,9 @@ extends Area2D
 var player = null
 var inrange = false
 var is_opened = false
+
+@onready var guitarDialogue: String = "This guitar seems to be important to Seraphina, I wonder if there is a song that would unlock this memory."
+@onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 func _ready():
 	interaction_label.visible = false
@@ -22,7 +26,7 @@ func _on_body_entered(body):
 		inrange = true
 		player = body
 		print("hi there")
-		
+		doctor.speak(guitarDialogue)
 		
 func _on_body_exited(body):
 	interaction_label.visible = false
@@ -34,6 +38,7 @@ func _process(delta):
 			close()
 		else:
 			open()
+			
 func open():
 	$GuitarGame.visible = true
 	is_opened = true		
@@ -47,4 +52,5 @@ func playercollect():
 	print("player")
 		
 		
-
+func guitar():
+	pass
