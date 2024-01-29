@@ -81,6 +81,7 @@ text/autoadvance_fixed_delay=0.0
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]

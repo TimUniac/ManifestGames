@@ -82,4 +82,4 @@ func _on_EnterButton_pressed():
 		entered_code = ""
 		$SequenceInput.clear()
 
-# Rest of your code...
+

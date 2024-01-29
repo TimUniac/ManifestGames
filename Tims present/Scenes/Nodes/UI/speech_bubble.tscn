@@ -20,6 +20,14 @@ offset_right = 217.0
 offset_bottom = 170.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_pg23n")
 
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 111.0
+offset_right = 179.0
+offset_bottom = 134.0
+text = "[space] to close"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 14.0

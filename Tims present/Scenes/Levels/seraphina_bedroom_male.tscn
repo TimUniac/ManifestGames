@@ -7923,7 +7923,7 @@ limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
-[node name="Yarn" parent="." instance=ExtResource("6_saerf")]
+[node name="Novel" parent="." instance=ExtResource("6_saerf")]
 position = Vector2(1021, 414)
 
 [node name="Friendship Necklace" parent="." instance=ExtResource("7_clvhx")]
@@ -7962,5 +7962,5 @@ offset_right = -7.0
 offset_bottom = 28.0
 mouse_filter = 2
 
-[connection signal="body_exited" from="Yarn" to="Yarn" method="_on_body_exited"]
+[connection signal="body_exited" from="Novel" to="Novel" method="_on_body_exited"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]

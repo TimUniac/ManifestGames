@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://7rbqvxmnnf8w"]
+[gd_scene load_steps=7 format=3 uid="uid://7rbqvxmnnf8w"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Friendship Necklace.gd" id="1_ftamq"]
 [ext_resource type="Resource" uid="uid://4u1usvcmvaur" path="res://Scenes/Nodes/UI/Items/necklace.tres" id="2_gsyvt"]
 [ext_resource type="Texture2D" uid="uid://bx8jaqv1ydw36" path="res://Scenes/Nodes/UI/Items/SeraphinaNecklace (1).png" id="3_uvg7x"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_iflju"]
+[ext_resource type="PackedScene" uid="uid://s6mjonaypyfs" path="res://Scenes/Nodes/UI/nacklace_game.tscn" id="5_ryi43"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3iiu"]
 radius = 30.0
@@ -37,9 +38,15 @@ offset_right = 81.0
 offset_bottom = 45.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_iflju")
-text = "[P] To Pickup"
+text = "[E] To Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="NacklaceGame" parent="." instance=ExtResource("5_ryi43")]
+offset_left = -417.0
+offset_top = -7.0
+offset_right = 974.0
+offset_bottom = 543.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

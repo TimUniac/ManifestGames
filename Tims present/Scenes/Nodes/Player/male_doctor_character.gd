@@ -135,3 +135,6 @@ func speak(text):
 
 func _on_guitar_interacted(guitarDialogue):
 	speak(guitarDialogue)
+	
+func _on_necklace_interacted(necklaceDialogue):
+	speak(necklaceDialogue)

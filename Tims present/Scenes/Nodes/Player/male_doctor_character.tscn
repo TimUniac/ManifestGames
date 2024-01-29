@@ -264,14 +264,12 @@ sprite_frames = SubResource("SpriteFrames_6qe8j")
 animation = &"side_march"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 light_mask = 3
 visibility_layer = 3
 position = Vector2(-7, 28)
 shape = SubResource("CapsuleShape2D_lutv1")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-visible = false
 
 [node name="Footfalls" parent="." instance=ExtResource("8_p7t5t")]
 volume_db = 1.66533e-15

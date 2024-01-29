@@ -12,7 +12,7 @@ var player = null
 var inrange = false
 var is_opened = false
 
-@onready var guitarDialogue: String = "This guitar seems to be important to Seraphina, I wonder if there is a song that would unlock this memory."
+@onready var guitarDialogue: String = "This guitar seems to be important, I wonder if a song would unlock it."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 func _ready():
