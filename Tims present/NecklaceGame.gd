@@ -18,12 +18,12 @@ func _input(event):
 			_on_EnterButton_pressed()
 		elif event.keycode == KEY_BACKSPACE and entered_code != "":
 			entered_code = entered_code.substr(0, entered_code.length() - 1)
-			$SequenceInput.text = entered_code
+			$NecklaceSequenceInput.text = entered_code
 
 
 func _append_letter_to_code(letter):
 	entered_code += letter
-	$SequenceInput.text = entered_code
+	$NecklaceSequenceInput.text = entered_code
 
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
@@ -39,6 +39,6 @@ func _on_EnterButton_pressed():
 	else:
 		print("Incorrect Code")
 		entered_code = ""
-		$SequenceInput.clear()
+		$NecklaceSequenceInput.clear()
 
 

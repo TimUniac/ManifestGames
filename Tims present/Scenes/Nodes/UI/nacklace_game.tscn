@@ -39,7 +39,7 @@ text = "Who has the other Half of this Necklace?"
 fit_content = true
 scroll_active = false
 
-[node name="SequenceInput" type="LineEdit" parent="."]
+[node name="NecklaceSequenceInput" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 182.0
 offset_top = 378.0

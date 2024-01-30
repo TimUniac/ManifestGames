@@ -91,6 +91,6 @@ func _on_EnterButton_pressed():
 				audio_player.stream = wrong_answer
 				audio_player.play()
 		
-		$SequenceInput.clear()
+		$GuitarSequenceInput.clear()
 
 
