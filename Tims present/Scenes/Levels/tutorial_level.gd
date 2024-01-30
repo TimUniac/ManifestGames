@@ -1,8 +1,14 @@
 extends Node2D
 @export var collected_items: int = 0
 
+@onready var music = $TutorialMusic
+
 func _ready():
 	$Finish.visible = false
+	var doctor = $"Male Doctor Character"
+	var tutorial = $Files
+	music.stream.loop = true
+	
 func _input(event):
 	item_count()
 	hide_show_objectives()

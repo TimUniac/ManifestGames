@@ -7875,6 +7875,10 @@ sources/2 = SubResource("TileSetAtlasSource_bu02x")
 position = Vector2(0, -4)
 script = ExtResource("1_ruhi7")
 
+[node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
+z_index = 1
+position = Vector2(75, 630)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(747, 640)
 
@@ -7959,9 +7963,6 @@ offset_top = 39.0
 offset_right = -6.0
 offset_bottom = 39.0
 mouse_filter = 2
-
-[node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
-position = Vector2(75, 630)
 
 [connection signal="body_exited" from="Novel" to="Novel" method="_on_body_exited"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]

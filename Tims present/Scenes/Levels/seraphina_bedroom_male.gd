@@ -16,5 +16,5 @@ func show_initial_speech_bubble():
 	
 
 func change_scene():
-	print("add more game here!")
+	get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
 

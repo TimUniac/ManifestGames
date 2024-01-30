@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://1bynpcfe6wn6"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/TutorialGame.gd" id="1_sdyng"]
+[ext_resource type="FontFile" uid="uid://uowgxpsmdfsg" path="res://Assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="2_tawb2"]
+[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_ufs11"]
+
+[node name="TutorialGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -183.0
+offset_top = -209.0
+offset_right = 1208.0
+offset_bottom = 341.0
+script = ExtResource("1_sdyng")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 144.0
+offset_right = 1550.0
+offset_bottom = 844.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 207.0
+offset_right = 684.0
+offset_bottom = 370.0
+
+[node name="Clue" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 492.0
+offset_bottom = 135.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_tawb2")
+theme_override_font_sizes/normal_font_size = 40
+text = "It should be on a post-it somewhere in here."
+fit_content = true
+scroll_active = false
+
+[node name="SequenceInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 378.0
+offset_right = 694.0
+offset_bottom = 435.0
+tooltip_text = "\"I need to find the password to open this memory\""
+theme_override_fonts/font = ExtResource("3_ufs11")
+theme_override_font_sizes/font_size = 41
+placeholder_text = "Input Seqence and Press Enter"
+alignment = 1
+max_length = 9
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 343.0
+offset_right = 683.0
+offset_bottom = 369.0
+text = "Bksp in case of mistake"

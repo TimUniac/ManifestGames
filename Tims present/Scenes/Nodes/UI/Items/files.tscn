@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpkxp8vg2ayj8"]
+[gd_scene load_steps=6 format=3 uid="uid://cpkxp8vg2ayj8"]
 
-[ext_resource type="Script" path="res://Glasses.gd" id="1_u8nwn"]
+[ext_resource type="Script" path="res://tutorialfiles.gd" id="1_poorq"]
 [ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="2_vd453"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_a4sb1"]
+[ext_resource type="PackedScene" uid="uid://1bynpcfe6wn6" path="res://Scenes/Nodes/UI/tutorial_game.tscn" id="4_k4are"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgjqr"]
 size = Vector2(87, 70)
 
 [node name="Files" type="Area2D"]
-script = ExtResource("1_u8nwn")
+script = ExtResource("1_poorq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -2)
@@ -41,10 +42,12 @@ grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_a4sb1")
-text = "[P] To Pickup"
+text = "[E] to interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="TutorialGame" parent="." instance=ExtResource("4_k4are")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="." to="." method="_on_body_exited" flags=18]

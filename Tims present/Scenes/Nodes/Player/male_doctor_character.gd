@@ -120,12 +120,15 @@ func collect_item(item_number):
 
 func call_change_scene():
 	print ("NEXT!!!!")
-	var root_node = get_tree().get_root().get_node("root")
+	var root_viewport = get_tree().get_root()
+
+	var root_node = root_viewport.get_child(0)
+	
 	if root_node and root_node.has_method("change_scene"):
 		root_node.change_scene()
 	else:
 		print("Root node doesn't have the 'change_scene' method.")
-		
+
 	
 	
 func speak(text):
@@ -144,3 +147,6 @@ func _on_journal_interacted(journalDialogue):
 
 func _on_book_interacted(bookDialogue):
 	speak(bookDialogue)
+	
+func _on_tutorial_interacted(tutorialDialogue):
+	speak(tutorialDialogue)

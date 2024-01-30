@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_3svbl"]
 [ext_resource type="Texture2D" uid="uid://0wc6xtwcvfg4" path="res://Assets/Texture assets/OfficeNight.png" id="3_oku4j"]
 [ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_xu34y"]
-[ext_resource type="Texture2D" uid="uid://cmpcakv18sr4b" path="res://Assets/Seraphina/seraphina_ptrait.png" id="5_4wf84"]
+[ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_beln1"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="6_nu3b3"]
 [ext_resource type="PackedScene" uid="uid://btw83gk603ebb" path="res://Scenes/Nodes/UI/dialogueUI.tscn" id="7_qsch1"]
 
@@ -49,6 +49,7 @@ offset_bottom = 8556.67
 texture = ExtResource("4_xu34y")
 
 [node name="SP" type="CanvasLayer" parent="."]
+layer = -1
 scale = Vector2(0.1, 0.1)
 transform = Transform2D(0.1, 0, 0, 0.1, 0, 0)
 
@@ -60,11 +61,12 @@ offset_bottom = 40.0
 
 [node name="SeraphinaPortrait" type="TextureRect" parent="SP/Control"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 1210.0
-offset_right = 3530.0
-offset_bottom = 6460.0
-texture = ExtResource("5_4wf84")
+offset_left = -260.0
+offset_top = 2000.0
+offset_right = 3074.0
+offset_bottom = 4968.0
+scale = Vector2(1.51, 1.51)
+texture = ExtResource("5_beln1")
 
 [node name="Text" type="CanvasLayer" parent="."]
 layer = 2

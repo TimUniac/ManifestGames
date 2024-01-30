@@ -1,22 +1,25 @@
 extends Area2D
 
-signal necklace_interacted(necklaceDialogue)
+signal tutorial_interacted(tutorialDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-@export var item: InvItem
+
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 var player = null
 var inrange = false
+var collect = false
 var is_opened = false
 
-@onready var necklaceDialogue: String = "Hmm, 'ST ENDS'?...oh It's a Best Friends Necklace"
+@onready var tutorialDialogue: String = "These files are new to my memories, I'll need to unlock them."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 func _ready():
 	interaction_label.visible = false
-	$NacklaceGame.visible = false
+	$TutorialGame.visible = false
+
+
 
 func _on_body_entered(body):
 	if body.has_method("player"):
@@ -24,7 +27,7 @@ func _on_body_entered(body):
 		inrange = true
 		player = body
 		print("hi there")
-		doctor.speak(necklaceDialogue)
+		doctor.speak(tutorialDialogue)
 		
 func _on_body_exited(body):
 	interaction_label.visible = false
@@ -36,15 +39,17 @@ func _process(delta):
 			close()
 		else:
 			open()
-
 func open():
-	$NacklaceGame/NecklaceSequenceInput.clear()
-	$NacklaceGame.visible = true
-	is_opened = true		
+	$TutorialGame.visible = true
+	is_opened = true
 func close():
-	$NacklaceGame.visible = false
+	$TutorialGame.visible = false
 	is_opened = false
 
+		
+		
+
 func playercollect():
-	player.collect_item(3)
+	player.collect_item(1)
 	print("player")
+
