@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://p0gv74ti7sqp"]
+[gd_scene load_steps=7 format=3 uid="uid://p0gv74ti7sqp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Yarn.gd" id="1_o1w34"]
 [ext_resource type="Resource" uid="uid://dlic0nrjrh3ss" path="res://Scenes/Nodes/UI/Items/Yarn.tres" id="2_d2jcv"]
 [ext_resource type="Texture2D" uid="uid://w5x528qeslku" path="res://Scenes/Nodes/UI/Items/Yarn.png" id="3_eughe"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_m6rrv"]
+[ext_resource type="PackedScene" uid="uid://pg7de7oiqjg3" path="res://Scenes/Nodes/UI/book_game.tscn" id="5_q7rj5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7kem"]
-radius = 84.5931
+radius = 169.434
 
 [node name="Yarn" type="Area2D"]
 scale = Vector2(0.5, 0.5)
@@ -39,8 +40,14 @@ offset_bottom = 45.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_m6rrv")
 theme_override_font_sizes/font_size = 25
-text = "[P] To Pickup"
+text = "[E] to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BookGame" parent="." instance=ExtResource("5_q7rj5")]
+offset_left = -768.0
+offset_top = -548.0
+offset_right = 623.0
+offset_bottom = 2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

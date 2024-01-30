@@ -20,7 +20,7 @@ grow_vertical = 2
 script = ExtResource("1_45ewt")
 
 [node name="TextureButton" type="Sprite2D" parent="."]
-position = Vector2(84, 561)
+position = Vector2(58, 604)
 texture = ExtResource("2_73dqi")
 
 [node name="Panel" type="Panel" parent="TextureButton"]
@@ -48,10 +48,10 @@ position = Vector2(578, 331)
 [node name="Journal2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Journal2"]
-position = Vector2(188.5, 234.25)
+position = Vector2(98, 326)
 shape = SubResource("RectangleShape2D_cw7kn")
 
-[node name="Panel" type="Panel" parent="Journal2/CollisionShape2D2"]
+[node name="hint" type="Panel" parent="Journal2/CollisionShape2D2"]
 anchors_preset = -1
 anchor_right = 0.256
 anchor_bottom = 0.388
@@ -61,7 +61,7 @@ offset_right = -130.635
 offset_bottom = -204.631
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Journal2/CollisionShape2D2/Panel"]
+[node name="Label" type="Label" parent="Journal2/CollisionShape2D2/hint"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.52761
@@ -76,15 +76,19 @@ text = "Press [J] to read "
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="Journal2"]
-position = Vector2(186, 229)
+position = Vector2(94, 327)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_4mvgt")
 
 [node name="NewJournal" parent="." instance=ExtResource("4_ln5s1")]
-offset_left = 546.0
-offset_top = 5.0
-offset_right = 590.0
-offset_bottom = 44.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.061
+anchor_bottom = 0.045
+offset_left = 520.0
+offset_top = 117.0
+offset_right = 570.728
+offset_bottom = 170.84
 scale = Vector2(0.75, 0.75)
 
 [connection signal="body_entered" from="Journal2" to="." method="_on_journal_2_body_entered"]

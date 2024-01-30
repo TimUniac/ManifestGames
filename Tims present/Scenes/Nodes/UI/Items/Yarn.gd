@@ -10,10 +10,11 @@ extends Area2D
 var player = null
 var inrange = false
 var collect = false
+var is_opened = false
 
 func _ready():
 	interaction_label.visible = false
-
+	$BookGame.visible = false
 
 
 func _on_body_entered(body):
@@ -28,11 +29,19 @@ func _on_body_exited(body):
 	inrange = false
 
 func _process(delta):
-	if inrange and Input.is_action_just_pressed("Pickup"):
-		playercollect()
-		visible = false
+	if inrange and Input.is_action_just_pressed("Interact"):
+		if is_opened:
+			close()
+		else:
+			open()
 
-		
+func open():
+	$BookGame/SequenceInput.clear()
+	$BookGame.visible = true
+	is_opened = true		
+func close():
+	$BookGame.visible = false
+	is_opened = false
 		
 
 func playercollect():

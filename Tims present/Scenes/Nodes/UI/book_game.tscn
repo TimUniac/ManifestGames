@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://s6mjonaypyfs"]
+[gd_scene load_steps=4 format=3 uid="uid://pg7de7oiqjg3"]
 
-[ext_resource type="Script" path="res://NecklaceGame.gd" id="1_t24ej"]
-[ext_resource type="FontFile" uid="uid://uowgxpsmdfsg" path="res://Assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="3_n6oto"]
-[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="4_1ly55"]
+[ext_resource type="Script" path="res://BookGame.gd" id="1_nkguc"]
+[ext_resource type="FontFile" uid="uid://uowgxpsmdfsg" path="res://Assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="2_18mdp"]
+[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_3iupo"]
 
-[node name="NacklaceGame" type="Control"]
+[node name="BookGame" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1391.0
 offset_bottom = 550.0
-script = ExtResource("1_t24ej")
+script = ExtResource("1_nkguc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -33,9 +33,9 @@ offset_right = 492.0
 offset_bottom = 135.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_n6oto")
+theme_override_fonts/normal_font = ExtResource("2_18mdp")
 theme_override_font_sizes/normal_font_size = 40
-text = "Who has the other Half of this Necklace?"
+text = "What book did Seraphina discover?"
 fit_content = true
 scroll_active = false
 
@@ -46,7 +46,7 @@ offset_top = 378.0
 offset_right = 694.0
 offset_bottom = 435.0
 tooltip_text = "\"I need to find the password to open this memory\""
-theme_override_fonts/font = ExtResource("4_1ly55")
+theme_override_fonts/font = ExtResource("3_3iupo")
 theme_override_font_sizes/font_size = 41
 placeholder_text = "Input Seqence and Press Enter"
 alignment = 1

@@ -138,3 +138,6 @@ func _on_guitar_interacted(guitarDialogue):
 	
 func _on_necklace_interacted(necklaceDialogue):
 	speak(necklaceDialogue)
+
+func _on_journal_interacted(journalDialogue):
+	speak(journalDialogue)

@@ -6,6 +6,7 @@ func _ready():
 	var doctor = $"Male Doctor Character"
 	var necklace = $"Friendship Necklace"
 	var book = $Novel
+	var journal = $"CanvasLayer/Journal Read" 
 	print (doctor)
 	print (guitar)
 	
