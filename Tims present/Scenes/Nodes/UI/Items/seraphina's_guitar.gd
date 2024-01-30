@@ -5,7 +5,7 @@ signal guitar_interacted(guitarDialogue)
 @onready var interaction_label = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
-@export var item: InvItem
+#@export var item: InvItem
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 var player = null

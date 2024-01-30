@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var item: InvItem
+#@export var item: InvItem
 var player = null
 
 @export var inReach = false

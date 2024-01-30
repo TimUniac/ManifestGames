@@ -10,11 +10,16 @@ func _ready():
 	print (doctor)
 	print (guitar)
 	
-
+func _process(delta):
+	change_scene()
+	
 func show_initial_speech_bubble():
 	$"Male Doctor Character/SpeechBubble".show_bubble("I need to find and unlock some of her core memories.")
 	
 
 func change_scene():
-	get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
+	if Input.is_action_just_pressed("Next"):
+		$"transitions/transition player".play("Fade_Out")
+		await $"transitions/transition player".animation_finished
+		get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
 

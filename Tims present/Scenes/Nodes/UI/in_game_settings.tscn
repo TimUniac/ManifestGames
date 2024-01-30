@@ -19,7 +19,6 @@ script = ExtResource("1_aglmf")
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="SettingsPanel" type="CanvasLayer" parent="CanvasLayer2"]
-visible = false
 
 [node name="Ui-base-pause" type="Sprite2D" parent="CanvasLayer2/SettingsPanel"]
 position = Vector2(575.063, 325.813)

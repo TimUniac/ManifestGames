@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw4omt4oeisme"]
+[gd_scene load_steps=6 format=3 uid="uid://drqbr02l0m1f8"]
 
 [ext_resource type="Texture2D" uid="uid://btj6lltbjc8k1" path="res://Manifest.webp" id="1_3r8yn"]
 [ext_resource type="Script" path="res://Scenes/Levels/more_game_please.gd" id="1_asg4u"]
 [ext_resource type="Texture2D" uid="uid://3ro286u6tm68" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_exit.png" id="3_wfyra"]
 [ext_resource type="Texture2D" uid="uid://blg0exos37r2x" path="res://Assets/Menu Buttons/ExitButton_v2.png" id="4_dw5qf"]
+[ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="5_665yi"]
 
 [node name="MoreGamePlease" type="Node2D"]
 script = ExtResource("1_asg4u")
@@ -23,6 +24,7 @@ theme_override_font_sizes/normal_font_size = 163
 text = "{INSERT MORE GAME HERE}"
 
 [node name="Exit" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
 offset_left = 853.0
 offset_top = 33.0
 offset_right = 1345.0
@@ -30,5 +32,7 @@ offset_bottom = 232.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_wfyra")
 texture_pressed = ExtResource("4_dw5qf")
+
+[node name="transitions" parent="." instance=ExtResource("5_665yi")]
 
 [connection signal="pressed" from="TextureRect/Exit" to="." method="_on_exit_pressed"]

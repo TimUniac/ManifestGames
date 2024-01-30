@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=24 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="9_se4q8"]
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="10_if3c2"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="12_mu1tk"]
+[ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="13_o7pkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
@@ -7929,7 +7930,6 @@ limit_bottom = 802
 
 [node name="Novel" parent="." instance=ExtResource("6_saerf")]
 position = Vector2(781, 684)
-item = null
 
 [node name="Friendship Necklace" parent="." instance=ExtResource("7_clvhx")]
 position = Vector2(475, 305)
@@ -7963,6 +7963,8 @@ offset_top = 39.0
 offset_right = -6.0
 offset_bottom = 39.0
 mouse_filter = 2
+
+[node name="transitions" parent="." instance=ExtResource("13_o7pkr")]
 
 [connection signal="body_exited" from="Novel" to="Novel" method="_on_body_exited"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]

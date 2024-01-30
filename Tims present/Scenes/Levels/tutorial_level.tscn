@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=29 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_wd40v"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bnrxaoq6hjt3r" path="res://Assets/Texture assets/TempTutorialAssets/TempLamp.png" id="18_e1e58"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
 [ext_resource type="Texture2D" uid="uid://0021lu74frh4" path="res://Assets/Texture assets/TempTutorialAssets/TempChair.png" id="19_ug1be"]
+[ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="21_np8ei"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0q0d"]
 texture = ExtResource("3_ew1j3")
@@ -264,3 +265,5 @@ shape = SubResource("RectangleShape2D_ct82p")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-847, -141)
 shape = SubResource("RectangleShape2D_ct82p")
+
+[node name="transitions" parent="." instance=ExtResource("21_np8ei")]

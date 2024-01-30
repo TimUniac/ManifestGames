@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://7rbqvxmnnf8w"]
+[gd_scene load_steps=6 format=3 uid="uid://7rbqvxmnnf8w"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Friendship Necklace.gd" id="1_ftamq"]
-[ext_resource type="Resource" uid="uid://4u1usvcmvaur" path="res://Scenes/Nodes/UI/Items/necklace.tres" id="2_gsyvt"]
 [ext_resource type="Texture2D" uid="uid://bx8jaqv1ydw36" path="res://Scenes/Nodes/UI/Items/SeraphinaNecklace (1).png" id="3_uvg7x"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_iflju"]
 [ext_resource type="PackedScene" uid="uid://s6mjonaypyfs" path="res://Scenes/Nodes/UI/nacklace_game.tscn" id="5_ryi43"]
@@ -12,7 +11,6 @@ height = 60.0
 
 [node name="Friendship Necklace" type="Area2D"]
 script = ExtResource("1_ftamq")
-item = ExtResource("2_gsyvt")
 
 [node name="SeraphinaNecklace" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://c33eutuje5ls1"]
+[gd_scene load_steps=93 format=3 uid="uid://biy45kjaua02e"]
 
 [ext_resource type="Shader" path="res://Scenes/Nodes/UI/TransitionAnimationChromaKey.gdshader" id="1_0flpf"]
 [ext_resource type="Texture2D" uid="uid://bqa1d6kcxt5iv" path="res://Assets/TransitionAnimation/Comp 1/transistion_00000.png" id="1_7ofvm"]
@@ -378,23 +378,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_ou26c"]
-resource_name = "Transition"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dafky"]
-_data = {
-"Transition": SubResource("Animation_ou26c")
-}
-
 [node name="Transition" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_dk245")
 sprite_frames = SubResource("SpriteFrames_nu6sx")
-frame = 85
-frame_progress = 0.912812
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_dafky")
-}
+frame_progress = 0.853233

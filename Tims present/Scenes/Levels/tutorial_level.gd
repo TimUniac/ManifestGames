@@ -25,6 +25,8 @@ func item_count():
 	
 func change_scene():
 	if Input.is_action_just_pressed("Next"):
+		$"transitions/transition player".play("Fade_Out")
+		await $"transitions/transition player".animation_finished
 		get_tree().change_scene_to_file("res://Scenes/Levels/male_office.tscn")
 
 func hide_show_objectives():
