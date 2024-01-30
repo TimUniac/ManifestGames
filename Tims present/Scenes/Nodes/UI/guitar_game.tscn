@@ -50,7 +50,6 @@ theme_override_fonts/font = ExtResource("2_o5paw")
 theme_override_font_sizes/font_size = 41
 placeholder_text = "Input Seqence and Press Enter"
 alignment = 1
-max_length = 9
 expand_to_text_length = true
 virtual_keyboard_enabled = false
 shortcut_keys_enabled = false
@@ -65,3 +64,11 @@ bus = &"SFX"
 [node name="Room" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.162
 bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 349.0
+offset_right = 772.0
+offset_bottom = 375.0
+text = "Use Numbers 1-7/ Bksp in case of mistake"

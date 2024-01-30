@@ -7946,17 +7946,16 @@ position = Vector2(10, 500)
 
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("10_if3c2")]
 z_as_relative = false
-offset_left = -37.83
-offset_top = 96.82
-offset_right = -525.83
-offset_bottom = 134.82
+offset_left = 0.0
+offset_right = -1152.0
+offset_bottom = -648.0
 mouse_filter = 2
 
 [node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
-offset_left = -7.0
-offset_top = 28.0
-offset_right = -7.0
-offset_bottom = 28.0
+offset_left = -6.0
+offset_top = 39.0
+offset_right = -6.0
+offset_bottom = 39.0
 mouse_filter = 2
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]

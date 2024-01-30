@@ -5,6 +5,7 @@ var entered_code = ""
 @onready var music_player = $Room
 @onready var music_start = preload("res://Assets/Sound/Music/seraroom.mp3")
 @onready var music_win = preload("res://Assets/Sound/Music/serawin.mp3")
+@onready var wrong_answer = preload("res://Assets/Sound/Music/WrongAnswerGuitar.mp3")
 @onready var audio_player = $Chords
 @onready var audio_files = {
 	KEY_1: preload("res://Assets/Sound/SFX/Sounds-Guitar/G.wav"),
@@ -80,6 +81,16 @@ func _on_EnterButton_pressed():
 	else:
 		print("Incorrect Code")
 		entered_code = ""
+		var audio_stream = wrong_answer
+		if audio_stream:
+			print ("stream")
+			if audio_player.is_playing:
+				print ("is it playing?")
+				audio_player.stop()
+				print ("Stop")
+				audio_player.stream = wrong_answer
+				audio_player.play()
+		
 		$SequenceInput.clear()
 
 
