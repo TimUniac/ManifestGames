@@ -141,3 +141,6 @@ func _on_necklace_interacted(necklaceDialogue):
 
 func _on_journal_interacted(journalDialogue):
 	speak(journalDialogue)
+
+func _on_book_interacted(bookDialogue):
+	speak(bookDialogue)

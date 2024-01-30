@@ -57,12 +57,12 @@ func _input(event):
 			_on_EnterButton_pressed()
 		elif event.keycode == KEY_BACKSPACE and entered_code != "":
 			entered_code = entered_code.substr(0, entered_code.length() - 1)
-			$SequenceInput.text = entered_code
+			$GuitarSequenceInput.text = entered_code
 
 
 func _append_number_to_code(number):
 	entered_code += str(number)
-	$SequenceInput.text = entered_code
+	$GuitarSequenceInput.text = entered_code
 
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
