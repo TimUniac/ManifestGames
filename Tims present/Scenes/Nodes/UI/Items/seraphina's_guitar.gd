@@ -41,9 +41,11 @@ func _process(delta):
 			
 func open():
 	$GuitarGame.visible = true
+	doctor.talking = true
 	is_opened = true		
 func close():
 	$GuitarGame.visible = false
+	doctor.talking = false
 	is_opened = false
 		
  

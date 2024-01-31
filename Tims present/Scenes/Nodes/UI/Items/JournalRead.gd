@@ -18,9 +18,11 @@ func _ready():
 
 func close():
 	$NewJournal.visible = false
+	doctor.talking = false
 	is_opened = false
 func open():
 	$NewJournal.visible = true
+	doctor.talking = true
 	is_opened = true
 
 func _process(delta):

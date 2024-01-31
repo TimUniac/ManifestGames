@@ -40,9 +40,11 @@ func _process(delta):
 func open():
 	$NacklaceGame/NecklaceSequenceInput.clear()
 	$NacklaceGame.visible = true
+	doctor.talking = true
 	is_opened = true		
 func close():
 	$NacklaceGame.visible = false
+	doctor.talking = false
 	is_opened = false
 
 func playercollect():

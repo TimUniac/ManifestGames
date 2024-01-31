@@ -7,10 +7,13 @@ signal book_interacted(bookDialogue)
 #@export var item: InvItem
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
+@onready var talking = false
+
 var player = null
 var inrange = false
 var collect = false
 var is_opened = false
+
 
 @onready var bookDialogue: String = "The cover of this book is so damaged I can't read the title."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
@@ -42,9 +45,11 @@ func _process(delta):
 func open():
 	$BookGame/SequenceInput.clear()
 	$BookGame.visible = true
-	is_opened = true		
+	doctor.talking = true
+	is_opened = true	
 func close():
 	$BookGame.visible = false
+	doctor.talking = false
 	is_opened = false
 		
 

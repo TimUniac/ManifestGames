@@ -18,13 +18,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l2fbc")
 
-[node name="SprGuitarChord_svg" type="Sprite2D" parent="."]
+[node name="SmallPostit" type="Sprite2D" parent="."]
 position = Vector2(726, 300)
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("2_ravft")
 
-[node name="ChordChart" type="Sprite2D" parent="."]
-position = Vector2(478.621, 477.056)
+[node name="BigPostit" type="Sprite2D" parent="."]
+position = Vector2(448, 442)
 scale = Vector2(0.615406, 0.517398)
 texture = ExtResource("3_emors")
 
