@@ -48,6 +48,10 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="TutorialGame" parent="." instance=ExtResource("4_k4are")]
+offset_left = -811.0
+offset_top = -684.0
+offset_right = 580.0
+offset_bottom = -134.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="." to="." method="_on_body_exited" flags=18]

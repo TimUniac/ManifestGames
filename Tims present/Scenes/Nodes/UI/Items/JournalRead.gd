@@ -37,7 +37,7 @@ func _process(delta):
 func _on_journal_2_body_entered(body):
 	if body.has_method("player"):
 		player = body
-		doctor.speak(journalDialogue)
+		doctor.speak(journalDialogsue)
 		await get_tree().create_timer(0.3).timeout
 		$TextureButton.visible = true
 		inRange = true
