@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvtnbtwsk1ecd"]
+[gd_scene load_steps=9 format=3 uid="uid://cvtnbtwsk1ecd"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/in_game_settings.gd" id="1_aglmf"]
 [ext_resource type="Texture2D" uid="uid://djvl3uj5rca7g" path="res://Assets/Menu Buttons/ui-base-pause.png" id="2_f7gds"]
 [ext_resource type="FontFile" uid="uid://d2ypkqvh0hmi4" path="res://Assets/Fonts/Britannic Bold Regular.ttf" id="3_7c3v7"]
 [ext_resource type="Script" path="res://Scenes/Levels/volume controls.gd" id="4_vkaah"]
 [ext_resource type="Script" path="res://Scenes/Levels/Brightness.gd" id="5_icujw"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_4kehu"]
 [ext_resource type="Texture2D" uid="uid://bxrgg12smcxjg" path="res://Assets/Menu Buttons/setting.png" id="6_gi1ie"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="7_2fbx1"]
 
 [node name="In_game_settings" type="Control"]
 layout_mode = 3
@@ -137,6 +139,15 @@ step = 0.01
 value = 2.0
 script = ExtResource("5_icujw")
 
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer2/SettingsPanel"]
+offset_left = 945.0
+offset_top = 76.0
+offset_right = 1156.0
+offset_bottom = 211.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_4kehu")
+texture_pressed = ExtResource("7_2fbx1")
+
 [node name="Settings toggle" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 1084.0
@@ -150,4 +161,5 @@ texture_normal = ExtResource("6_gi1ie")
 [connection signal="value_changed" from="CanvasLayer2/SettingsPanel/Voice Volume" to="CanvasLayer2/SettingsPanel/Voice Volume" method="_on_voice_value_changed"]
 [connection signal="value_changed" from="CanvasLayer2/SettingsPanel/Master Volume" to="CanvasLayer2/SettingsPanel/Master Volume" method="_on_master_value_changed"]
 [connection signal="value_changed" from="CanvasLayer2/SettingsPanel/Brightness" to="CanvasLayer2/SettingsPanel/Brightness" method="_on_value_changed"]
+[connection signal="pressed" from="CanvasLayer2/SettingsPanel/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Settings toggle" to="." method="_on_settings_toggle_pressed"]

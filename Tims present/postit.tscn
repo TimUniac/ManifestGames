@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://rlp544kiajnq"]
+[gd_scene load_steps=4 format=3 uid="uid://rlp544kiajnq"]
 
 [ext_resource type="Script" path="res://postit.gd" id="1_l2fbc"]
-[ext_resource type="Texture2D" uid="uid://wmmym0ob8klr" path="res://Assets/Texture assets/OfficePostIt.png" id="2_ravft"]
-[ext_resource type="Texture2D" uid="uid://clj3rtru5vtsn" path="res://Assets/Texture assets/ui_note.svg" id="3_emors"]
+[ext_resource type="Texture2D" uid="uid://ciyk4gvc682k1" path="res://Assets/Ui_recent_feb1/ui_postitnote.png" id="2_x412c"]
 [ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="4_depvb"]
 
 [node name="Postit" type="Control"]
@@ -21,12 +20,12 @@ script = ExtResource("1_l2fbc")
 [node name="SmallPostit" type="Sprite2D" parent="."]
 position = Vector2(726, 300)
 scale = Vector2(0.045, 0.045)
-texture = ExtResource("2_ravft")
+texture = ExtResource("2_x412c")
 
 [node name="BigPostit" type="Sprite2D" parent="."]
 position = Vector2(448, 442)
 scale = Vector2(0.615406, 0.517398)
-texture = ExtResource("3_emors")
+texture = ExtResource("2_x412c")
 
 [node name="Interaction Area" parent="." instance=ExtResource("4_depvb")]
 position = Vector2(719.48, 307.2)

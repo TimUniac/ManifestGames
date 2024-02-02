@@ -3,6 +3,7 @@ extends Control
 var is_opened = false
 @onready var areaLabel = $"Interaction Area"
 @onready var in_range = false
+@onready var doctor = get_parent().get_node("Male Doctor Character")
 func _ready():
 	$BigPostit.visible = false
 	
@@ -22,9 +23,11 @@ func _process(delta):
 	
 func close():
 	$BigPostit.visible = false
+	doctor.talking = false
 	is_opened = false
 func open():
 	$BigPostit.visible = true
+	doctor.talking = true
 	is_opened = true
 
 
