@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://s6mjonaypyfs"]
+[gd_scene load_steps=5 format=3 uid="uid://s6mjonaypyfs"]
 
 [ext_resource type="Script" path="res://NecklaceGame.gd" id="1_t24ej"]
-[ext_resource type="FontFile" uid="uid://uowgxpsmdfsg" path="res://Assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="3_n6oto"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_6t4ud"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_tqdui"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="4_1ly55"]
 
 [node name="NacklaceGame" type="Control"]
@@ -19,25 +20,20 @@ offset_right = 1553.0
 offset_bottom = 759.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 186.0
-offset_top = 207.0
-offset_right = 684.0
-offset_bottom = 370.0
+[node name="Panel" type="Sprite2D" parent="."]
+position = Vector2(435, 238)
+scale = Vector2(1.24455, 0.957346)
+texture = ExtResource("2_6t4ud")
 
-[node name="Clue" type="RichTextLabel" parent="Panel"]
-layout_mode = 0
-offset_top = 19.0
-offset_right = 492.0
-offset_bottom = 135.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_n6oto")
-theme_override_font_sizes/normal_font_size = 40
+[node name="Clue" type="Label" parent="Panel"]
+offset_left = -179.0
+offset_top = -55.0
+offset_right = 185.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("3_tqdui")
+theme_override_font_sizes/font_size = 30
 text = "Who has the other Half of this Necklace?"
-fit_content = true
-scroll_active = false
+autowrap_mode = 2
 
 [node name="NecklaceSequenceInput" type="LineEdit" parent="."]
 layout_mode = 0

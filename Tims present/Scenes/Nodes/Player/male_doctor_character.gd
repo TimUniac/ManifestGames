@@ -13,7 +13,7 @@ var current_dir = "none"
 @onready var item2_ui = pickup_display.get_node("Box/Item2")
 @onready var item3_ui = pickup_display.get_node("Box/Item3")
 @onready var SpeechBubble = $SpeechBubble
-@onready var talking = false
+@onready var talking = true
 
 
 func _ready():

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://1bynpcfe6wn6"]
+[gd_scene load_steps=5 format=3 uid="uid://b6brfnn42kqe6"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/TutorialGame.gd" id="1_sdyng"]
-[ext_resource type="FontFile" uid="uid://uowgxpsmdfsg" path="res://Assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="2_tawb2"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_0lgi0"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_i2l02"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_ufs11"]
 
 [node name="TutorialGame" type="Control"]
@@ -21,25 +22,21 @@ offset_right = 1550.0
 offset_bottom = 844.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 186.0
-offset_top = 207.0
-offset_right = 684.0
-offset_bottom = 370.0
+[node name="Panel" type="Sprite2D" parent="."]
+position = Vector2(438.75, 281.75)
+scale = Vector2(1.05932, 0.518957)
+texture = ExtResource("2_0lgi0")
 
-[node name="Clue" type="RichTextLabel" parent="Panel"]
-layout_mode = 0
-offset_top = 19.0
-offset_right = 492.0
-offset_bottom = 135.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("2_tawb2")
-theme_override_font_sizes/normal_font_size = 40
+[node name="Clue" type="Label" parent="Panel"]
+offset_left = -173.46
+offset_top = -72.742
+offset_right = 187.54
+offset_bottom = 65.258
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_i2l02")
+theme_override_font_sizes/font_size = 30
 text = "It should be on a post-it somewhere in here."
-fit_content = true
-scroll_active = false
+autowrap_mode = 2
 
 [node name="SequenceInput" type="LineEdit" parent="."]
 layout_mode = 0
@@ -67,4 +64,5 @@ offset_left = 502.0
 offset_top = 343.0
 offset_right = 683.0
 offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("3_i2l02")
 text = "Bksp in case of mistake"

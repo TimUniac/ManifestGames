@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://pg7de7oiqjg3"]
+[gd_scene load_steps=5 format=3 uid="uid://bepo0m0r088a4"]
 
 [ext_resource type="Script" path="res://BookGame.gd" id="1_nkguc"]
-[ext_resource type="FontFile" uid="uid://uowgxpsmdfsg" path="res://Assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="2_18mdp"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_xic64"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_2kxd3"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_3iupo"]
 
 [node name="BookGame" type="Control"]
@@ -19,25 +20,21 @@ offset_right = 1553.0
 offset_bottom = 759.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 186.0
-offset_top = 207.0
-offset_right = 684.0
-offset_bottom = 370.0
+[node name="Panel" type="Sprite2D" parent="."]
+position = Vector2(439, 256)
+scale = Vector2(1.24334, 0.78436)
+texture = ExtResource("2_xic64")
 
-[node name="Clue" type="RichTextLabel" parent="Panel"]
-layout_mode = 0
-offset_top = 19.0
-offset_right = 492.0
-offset_bottom = 135.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+[node name="Clue" type="Label" parent="Panel"]
+offset_left = -180.16
+offset_top = -54.8217
+offset_right = 183.84
+offset_bottom = 61.1783
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("2_18mdp")
-theme_override_font_sizes/normal_font_size = 40
+theme_override_fonts/font = ExtResource("3_2kxd3")
+theme_override_font_sizes/font_size = 30
 text = "What book did Seraphina discover?"
-fit_content = true
-scroll_active = false
+autowrap_mode = 2
 
 [node name="SequenceInput" type="LineEdit" parent="."]
 layout_mode = 0
@@ -65,4 +62,5 @@ offset_left = 502.0
 offset_top = 343.0
 offset_right = 683.0
 offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("3_2kxd3")
 text = "Bksp in case of mistake"

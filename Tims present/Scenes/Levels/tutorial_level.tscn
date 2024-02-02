@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=32 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_wd40v"]
@@ -7,14 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="5_rlxad"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="7_r3vgi"]
 [ext_resource type="AudioStream" uid="uid://cq7yjwdx2gisb" path="res://Assets/Sound/Music/ThemeJazzDigital.mp3" id="10_cviwq"]
+[ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="10_tj4jr"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="11_7x82w"]
 [ext_resource type="Script" path="res://Scenes/Levels/TutorialMusic.gd" id="12_pcd4s"]
 [ext_resource type="AudioStream" uid="uid://b0fa5hki573om" path="res://Assets/Sound/VO/Tutorial/VO_Dr_Tut_That Session.mp3" id="13_4c6jg"]
 [ext_resource type="PackedScene" uid="uid://cpkxp8vg2ayj8" path="res://Scenes/Nodes/UI/Items/files.tscn" id="13_hm7ep"]
 [ext_resource type="PackedScene" uid="uid://btp43hutw3i6o" path="res://Scenes/Nodes/UI/Items/glasses.tscn" id="14_4h0r1"]
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/TutorialVO.gd" id="14_i4uyg"]
 [ext_resource type="PackedScene" uid="uid://bq1i0a0hfrbdm" path="res://Scenes/Nodes/UI/Items/pen.tscn" id="15_mef17"]
-[ext_resource type="Texture2D" uid="uid://cfmvadk1vxcsc" path="res://Assets/textbox/Task Bar/base.png" id="16_4cif2"]
-[ext_resource type="Texture2D" uid="uid://bi2bsa65wmd6y" path="res://Assets/textbox/Task Bar/points.png" id="17_x0ym1"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
 [ext_resource type="PackedScene" uid="uid://rlp544kiajnq" path="res://postit.tscn" id="19_68dvt"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="21_np8ei"]
@@ -3445,6 +3445,9 @@ size = Vector2(1257, 41)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ct82p"]
 size = Vector2(59, 464)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cqfn"]
+size = Vector2(43, 24)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmvkw"]
 size = Vector2(153, 153)
 
@@ -3509,7 +3512,6 @@ limit_bottom = 802
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("5_rlxad")]
-visible = false
 position = Vector2(10, 500)
 
 [node name="TutorialMusic" type="AudioStreamPlayer" parent="."]
@@ -3526,27 +3528,13 @@ bus = &"Dialogue"
 script = ExtResource("14_i4uyg")
 
 [node name="Objectives" type="TextureRect" parent="."]
-offset_left = -147.0
-offset_top = 58.0
-offset_right = 324.0
-offset_bottom = 370.0
-texture = ExtResource("16_4cif2")
+offset_left = -73.0
+offset_top = 129.0
+offset_right = 398.0
+offset_bottom = 441.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_tj4jr")
 expand_mode = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Objectives"]
-layout_mode = 0
-offset_left = 106.0
-offset_top = 140.0
-offset_right = 367.0
-offset_bottom = 251.0
-text = "Find Patient Files
-Find Glasses
-FInd Favourite Pen"
-
-[node name="Points" type="Sprite2D" parent="Objectives"]
-position = Vector2(191, 154)
-scale = Vector2(0.187302, 0.179252)
-texture = ExtResource("17_x0ym1")
 
 [node name="oTohide" type="RichTextLabel" parent="Objectives"]
 layout_mode = 0
@@ -3555,6 +3543,36 @@ offset_top = 230.0
 offset_right = 370.0
 offset_bottom = 253.0
 text = "[O] to hide"
+
+[node name="Label" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 81.6667
+offset_top = 208.333
+offset_right = 399.667
+offset_bottom = 253.333
+theme_override_fonts/font = ExtResource("11_7x82w")
+theme_override_font_sizes/font_size = 25
+text = "Find Favourable Pen"
+
+[node name="Label2" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 83.3333
+offset_top = 108.333
+offset_right = 225.333
+offset_bottom = 141.333
+theme_override_fonts/font = ExtResource("11_7x82w")
+theme_override_font_sizes/font_size = 25
+text = "Find Glasses"
+
+[node name="Label3" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 153.333
+offset_right = 269.0
+offset_bottom = 186.333
+theme_override_fonts/font = ExtResource("11_7x82w")
+theme_override_font_sizes/font_size = 25
+text = "Find Patient File"
 
 [node name="In_game_settings" parent="." instance=ExtResource("19_4r33g")]
 offset_left = -91.0
@@ -3580,6 +3598,10 @@ shape = SubResource("RectangleShape2D_ct82p")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-847, -141)
 shape = SubResource("RectangleShape2D_ct82p")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(310.5, -307)
+shape = SubResource("RectangleShape2D_7cqfn")
 
 [node name="transitions" parent="." instance=ExtResource("21_np8ei")]
 

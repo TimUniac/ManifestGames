@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
 [ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="2_11gyi"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="2_o5paw"]
-[ext_resource type="FontFile" uid="uid://uowgxpsmdfsg" path="res://Assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="3_2vugm"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_bvjf5"]
 
 [node name="GuitarGame" type="Control"]
 layout_mode = 3
@@ -23,13 +23,11 @@ texture = ExtResource("2_11gyi")
 
 [node name="Clue" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 155.0
-offset_top = 89.0
-offset_right = 795.0
-offset_bottom = 375.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("3_2vugm")
+offset_left = 217.0
+offset_top = 107.0
+offset_right = 857.0
+offset_bottom = 393.0
+theme_override_fonts/normal_font = ExtResource("3_bvjf5")
 theme_override_font_sizes/normal_font_size = 40
 text = "Just a closeted soul, 
 locked away from your light;
