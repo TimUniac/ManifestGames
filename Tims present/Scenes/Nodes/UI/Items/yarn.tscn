@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://p0gv74ti7sqp"]
+[gd_scene load_steps=6 format=3 uid="uid://p0gv74ti7sqp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Yarn.gd" id="1_o1w34"]
-[ext_resource type="Resource" uid="uid://dlic0nrjrh3ss" path="res://Scenes/Nodes/UI/Items/Yarn.tres" id="2_d2jcv"]
 [ext_resource type="Texture2D" uid="uid://w5x528qeslku" path="res://Scenes/Nodes/UI/Items/Yarn.png" id="3_eughe"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_m6rrv"]
-[ext_resource type="PackedScene" uid="uid://pg7de7oiqjg3" path="res://Scenes/Nodes/UI/book_game.tscn" id="5_q7rj5"]
+[ext_resource type="PackedScene" uid="uid://bepo0m0r088a4" path="res://Scenes/Nodes/UI/book_game.tscn" id="5_q7rj5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7kem"]
 radius = 169.434
@@ -14,7 +13,6 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("1_o1w34")
-item = ExtResource("2_d2jcv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_k7kem")
@@ -44,10 +42,12 @@ text = "[E] to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BookGame" parent="." instance=ExtResource("5_q7rj5")]
-offset_left = -768.0
-offset_top = -548.0
-offset_right = 623.0
-offset_bottom = 2.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BookGame" parent="CanvasLayer" instance=ExtResource("5_q7rj5")]
+offset_left = 52.0
+offset_top = 200.0
+offset_right = 1443.0
+offset_bottom = 750.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

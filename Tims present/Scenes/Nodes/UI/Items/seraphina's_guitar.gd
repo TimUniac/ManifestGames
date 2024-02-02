@@ -17,7 +17,7 @@ var is_opened = false
 
 func _ready():
 	interaction_label.visible = false
-	$GuitarGame.visible = false
+	$CanvasLayer/GuitarGame.visible = false
 
 
 func _on_body_entered(body):
@@ -40,11 +40,11 @@ func _process(delta):
 			open()
 			
 func open():
-	$GuitarGame.visible = true
+	$CanvasLayer/GuitarGame.visible = true
 	doctor.talking = true
 	is_opened = true		
 func close():
-	$GuitarGame.visible = false
+	$CanvasLayer/GuitarGame.visible = false
 	doctor.talking = false
 	is_opened = false
 		

@@ -16,7 +16,7 @@ var is_opened = false
 
 func _ready():
 	interaction_label.visible = false
-	$NacklaceGame.visible = false
+	$CanvasLayer/NacklaceGame.visible = false
 
 func _on_body_entered(body):
 	if body.has_method("player"):
@@ -38,12 +38,12 @@ func _process(delta):
 			open()
 
 func open():
-	$NacklaceGame/NecklaceSequenceInput.clear()
-	$NacklaceGame.visible = true
+	$CanvasLayer/NacklaceGame/NecklaceSequenceInput.clear()
+	$CanvasLayer/NacklaceGame.visible = true
 	doctor.talking = true
 	is_opened = true		
 func close():
-	$NacklaceGame.visible = false
+	$CanvasLayer/NacklaceGame.visible = false
 	doctor.talking = false
 	is_opened = false
 

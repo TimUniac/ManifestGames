@@ -40,11 +40,13 @@ text = "[E] To Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NacklaceGame" parent="." instance=ExtResource("5_ryi43")]
-offset_left = -417.0
-offset_top = -7.0
-offset_right = 974.0
-offset_bottom = 543.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NacklaceGame" parent="CanvasLayer" instance=ExtResource("5_ryi43")]
+offset_left = 156.0
+offset_top = 126.0
+offset_right = 1547.0
+offset_bottom = 676.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
