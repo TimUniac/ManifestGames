@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ffrei"]
 radius = 12.7279
-height = 97.5807
+height = 275.772
 
 [node name="Pen" type="Area2D"]
 script = ExtResource("1_chcgb")
