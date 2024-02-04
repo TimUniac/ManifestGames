@@ -19,10 +19,11 @@ var current_dir = "none"
 func _ready():
 
 	$Sprite2D.play("front_idle")
-	print(pickup_display)  # Should not be null
-	print(item1_ui)  # Should not be null
-	print(item2_ui)  # Should not be null
-	print(item3_ui)  # Should not be null
+	print(pickup_display)  
+	print(item1_ui)  
+	print(item2_ui)  
+	print(item3_ui)  
+	
 
 func _physics_process(_delta):
 	
@@ -111,12 +112,16 @@ func play_anim(movement):
 		
 func player():
 	pass
-	
+
+signal all_items_collected
+
 func collect_item(item_number):
 	match item_number:
 		1: item1_ui.visible = true
 		2: item2_ui.visible = true
 		3: item3_ui.visible = true
+	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
+		emit_signal("all_items_collected")
 
 func call_change_scene():
 	print ("NEXT!!!!")
@@ -150,3 +155,15 @@ func _on_book_interacted(bookDialogue):
 	
 func _on_tutorial_interacted(tutorialDialogue):
 	speak(tutorialDialogue)
+
+
+func _on_pen_item_collected(item_number):
+	collect_item(item_number)
+	
+
+
+func _on_glasses_item_collected(item_number):
+	collect_item(item_number)
+
+func _on_files_item_collected(item_number):
+	collect_item(item_number)

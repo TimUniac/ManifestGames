@@ -35,7 +35,8 @@ func _process(delta):
 		
 		
 
-func playercollect():
-	player.collect_item(3)
-	print("player")
+signal item_collected(item_number)
 
+func playercollect():
+	emit_signal("item_collected", 3)
+	visible = false

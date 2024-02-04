@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq1i0a0hfrbdm"]
 
-[ext_resource type="Script" path="res://Glasses.gd" id="1_chcgb"]
+[ext_resource type="Script" path="res://Pen.gd" id="1_mx4r5"]
 [ext_resource type="Texture2D" uid="uid://cd0cw8a8le6g2" path="res://Assets/Texture assets/TempTutorialAssets/Pen.png" id="2_6plh4"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_fwjtl"]
 
@@ -9,7 +9,7 @@ radius = 12.7279
 height = 275.772
 
 [node name="Pen" type="Area2D"]
-script = ExtResource("1_chcgb")
+script = ExtResource("1_mx4r5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -0.785398

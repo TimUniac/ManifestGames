@@ -1,6 +1,6 @@
 extends Control
 
-var secret_code = "Pu55WO4D"
+var secret_code = "PU55WORD"
 var entered_code = ""
 
 func _ready():

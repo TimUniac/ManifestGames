@@ -3700,3 +3700,8 @@ offset_left = 305.0
 offset_top = 70.0
 offset_right = 305.0
 offset_bottom = 70.0
+
+[connection signal="item_collected" from="Files" to="Male Doctor Character" method="_on_files_item_collected"]
+[connection signal="item_collected" from="Glasses" to="Male Doctor Character" method="_on_glasses_item_collected"]
+[connection signal="item_collected" from="Pen" to="Male Doctor Character" method="_on_pen_item_collected"]
+[connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
