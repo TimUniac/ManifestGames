@@ -26,13 +26,7 @@ func _ready():
 	
 
 func _physics_process(_delta):
-	
 	player_movement()
-	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
-		call_change_scene()
-	
-		
-		
 		
 	if Input.is_action_pressed("jump"):
 		if SpeechBubble.is_visible:
@@ -123,16 +117,6 @@ func collect_item(item_number):
 	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
 		emit_signal("all_items_collected")
 
-func call_change_scene():
-	print ("NEXT!!!!")
-	var root_viewport = get_tree().get_root()
-
-	var root_node = root_viewport.get_child(0)
-	
-	if root_node and root_node.has_method("change_scene"):
-		root_node.change_scene()
-	else:
-		print("Root node doesn't have the 'change_scene' method.")
 
 	
 	
@@ -166,4 +150,15 @@ func _on_glasses_item_collected(item_number):
 	collect_item(item_number)
 
 func _on_files_item_collected(item_number):
+	collect_item(item_number)
+
+
+func _on_seraphinas_guitar_item_collected(item_number):
+	collect_item(item_number)
+
+func _on_novel_item_collected(item_number):
+	collect_item(item_number)
+
+
+func _on_friendship_necklace_item_collected(item_number):
 	collect_item(item_number)

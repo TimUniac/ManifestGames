@@ -279,6 +279,7 @@ position = Vector2(14, -24)
 script = ExtResource("9_o2dxv")
 
 [node name="SpeechBubble" parent="." instance=ExtResource("9_baytf")]
+z_index = 5
 offset_left = -168.0
 offset_top = -252.0
 offset_right = -128.0

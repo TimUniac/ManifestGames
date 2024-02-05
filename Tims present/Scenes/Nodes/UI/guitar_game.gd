@@ -67,10 +67,11 @@ func _append_number_to_code(number):
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
 		print("Code Correct!")
-		var parent_node = get_parent()
-		if parent_node and parent_node.has_method("playercollect"):
-			parent_node.playercollect()
-			parent_node.close()
+		var parent = get_parent()
+		var grandparent = parent.get_parent()
+		if grandparent and grandparent.has_method("playercollect"):
+			grandparent.playercollect()
+			grandparent.close()
 			$"..".visible = false
 			music_player.stream = music_win
 			music_player.play()

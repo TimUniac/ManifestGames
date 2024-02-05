@@ -49,9 +49,11 @@ func close():
 	is_opened = false
 		
  
+signal item_collected(item_number)
+
 func playercollect():
-	player.collect_item(2)
-	print("player")
+	emit_signal("item_collected", 1)
+	visible = false
 		
 		
 func guitar():

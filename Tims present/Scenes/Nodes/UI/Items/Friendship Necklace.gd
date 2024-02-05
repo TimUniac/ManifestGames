@@ -47,6 +47,8 @@ func close():
 	doctor.talking = false
 	is_opened = false
 
+signal item_collected(item_number)
+
 func playercollect():
-	player.collect_item(3)
-	print("player")
+	emit_signal("item_collected", 3)
+	visible = false

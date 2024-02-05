@@ -53,7 +53,9 @@ func close():
 	is_opened = false
 		
 
+signal item_collected(item_number)
+
 func playercollect():
-	player.collect_item(1)
-	print("player")
+	emit_signal("item_collected", 2)
+	visible = false
 

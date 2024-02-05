@@ -9,17 +9,19 @@ func _ready():
 	var journal = $"CanvasLayer/Journal Read" 
 	print (doctor)
 	print (guitar)
-	
-func _process(delta):
-	change_scene()
+	$Finish.visible = false
+
 	
 func show_initial_speech_bubble():
 	$"Male Doctor Character/SpeechBubble".show_bubble("I need to find and unlock some of her core memories.")
 	
 
 func change_scene():
-	if Input.is_action_just_pressed("Next"):
-		$"transitions/transition player".play("Fade_Out")
-		await $"transitions/transition player".animation_finished
-		get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
+	$"transitions/transition player".play("Fade_Out")
+	await $"transitions/transition player".animation_finished
+	get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
 
+
+
+func _on_male_doctor_character_all_items_collected():
+	$Finish.visible = true

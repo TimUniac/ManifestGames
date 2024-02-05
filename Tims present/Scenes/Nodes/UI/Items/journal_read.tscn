@@ -39,7 +39,7 @@ offset_left = 11.6666
 offset_top = 8.33331
 offset_right = 136.667
 offset_bottom = 34.3333
-text = "Press [J] to read "
+text = "Press J to read "
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -72,7 +72,7 @@ offset_left = 11.6666
 offset_top = 8.33331
 offset_right = 136.667
 offset_bottom = 34.3333
-text = "Press [J] to read "
+text = "Press J to read "
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="Journal2"]

@@ -29,3 +29,25 @@ func _input(event):
 					current_page -= 1
 					update_page()
 
+
+
+func _on_forward_pressed():
+	if current_page < pages.size() - 1:
+					current_page += 1
+					update_page()
+					
+
+
+
+func _on_backward_pressed():
+	if current_page > 0:
+					current_page -= 1
+					update_page()
+					
+
+
+
+func _on_close_pressed():
+	var parent = get_parent()
+	parent.close()
+	

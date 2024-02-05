@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=25 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
+[ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_x1t00"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
 [ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
@@ -7876,6 +7877,31 @@ sources/2 = SubResource("TileSetAtlasSource_bu02x")
 position = Vector2(0, -4)
 script = ExtResource("1_ruhi7")
 
+[node name="Finish" type="TextureRect" parent="."]
+z_index = 5
+offset_left = -612.0
+offset_top = -300.0
+offset_right = 3367.0
+offset_bottom = 2640.0
+texture = ExtResource("2_x1t00")
+expand_mode = 1
+
+[node name="FinishText" type="RichTextLabel" parent="Finish"]
+z_index = 5
+layout_mode = 0
+offset_left = 700.0
+offset_top = 724.0
+offset_right = 1447.0
+offset_bottom = 913.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "Now that these memories have been unlocked, Seraphina should be able to remember more about her past. 
+[b]Press 'R'[/b] to return to the concious world. "
+fit_content = true
+
 [node name="Male Doctor Character" parent="." instance=ExtResource("9_se4q8")]
 z_index = 1
 position = Vector2(75, 630)
@@ -7966,5 +7992,9 @@ mouse_filter = 2
 
 [node name="transitions" parent="." instance=ExtResource("13_o7pkr")]
 
+[connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="body_exited" from="Novel" to="Novel" method="_on_body_exited"]
+[connection signal="item_collected" from="Novel" to="Male Doctor Character" method="_on_novel_item_collected"]
+[connection signal="item_collected" from="Friendship Necklace" to="Male Doctor Character" method="_on_friendship_necklace_item_collected"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
+[connection signal="item_collected" from="Seraphina's Guitar" to="Male Doctor Character" method="_on_seraphinas_guitar_item_collected"]
