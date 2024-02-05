@@ -310,6 +310,8 @@ animations = [{
 }]
 
 [node name="transitions" type="CanvasLayer"]
+scale = Vector2(1.675, 1.675)
+transform = Transform2D(1.675, 0, 0, 1.675, 0, 0)
 script = ExtResource("1_c0p0g")
 
 [node name="transition player" type="AnimatedSprite2D" parent="."]
@@ -317,5 +319,14 @@ position = Vector2(577.25, 317.5)
 scale = Vector2(0.707513, 0.608333)
 sprite_frames = SubResource("SpriteFrames_66xwg")
 animation = &"Fade_Out"
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+z_index = 8
+offset = Vector2(88.55, -109.76)
+zoom = Vector2(1.68, 1.68)
+limit_left = -91
+limit_top = 107
+limit_right = 1071
+limit_bottom = 802
 
 [connection signal="animation_finished" from="transition player" to="." method="_on_transition_player_animation_finished"]

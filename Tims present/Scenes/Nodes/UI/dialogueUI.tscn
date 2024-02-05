@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://btw83gk603ebb"]
 
 [ext_resource type="Texture2D" uid="uid://8wl2v5yik66h" path="res://Assets/textbox/text box 1.png" id="1_gkbxh"]
-[ext_resource type="Script" path="res://Scenes/Levels/dialogue.gd" id="2_3il88"]
+[ext_resource type="Script" path="res://Scenes/Levels/dialogueChapterOne.gd" id="2_yf6hr"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_dj4xu"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_qeobo"]
 [ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="5_g066c"]
@@ -63,7 +63,7 @@ offset_top = 410.0
 offset_right = 904.0
 offset_bottom = 621.0
 texture = ExtResource("1_gkbxh")
-script = ExtResource("2_3il88")
+script = ExtResource("2_yf6hr")
 
 [node name="Doc" type="RichTextLabel" parent="."]
 layout_mode = 0

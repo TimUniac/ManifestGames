@@ -1,11 +1,11 @@
 extends Control
 
-var pages = ["res://Assets/AvaJournal.png", "res://Assets/LyricJournal.png","res://Assets/CarmillaJournal1.png","res://Assets/CarmillaJournal2.png"]  # Your page contents
+var pages = ["res://Assets/Texture assets/JournalAva.png", "res://Assets/Texture assets/JournalSong.png","res://Assets/Texture assets/JournalCarmilla.png"]  
 var current_page = 0  # Start with the first page
 
 func _ready():
 	update_page()
-
+	
 func _process(delta):
 	$Backward.disabled = current_page == 0
 	$Forward.disabled = current_page == pages.size() - 1

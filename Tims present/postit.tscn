@@ -18,11 +18,13 @@ grow_vertical = 2
 script = ExtResource("1_l2fbc")
 
 [node name="SmallPostit" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(726, 300)
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("2_x412c")
 
 [node name="BigPostit" type="Sprite2D" parent="."]
+z_index = 4
 position = Vector2(448, 442)
 scale = Vector2(0.615406, 0.517398)
 texture = ExtResource("2_x412c")

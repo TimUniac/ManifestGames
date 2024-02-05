@@ -14,8 +14,9 @@ script = ExtResource("1_bere3")
 
 [node name="Page" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 613.0
+offset_bottom = 795.0
+expand_mode = 5
 
 [node name="Forward" type="Button" parent="."]
 layout_mode = 0

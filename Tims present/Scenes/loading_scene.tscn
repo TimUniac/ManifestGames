@@ -621,4 +621,13 @@ animation = &"Loading"
 autoplay = "Loading"
 speed_scale = 5.0
 
+[node name="Camera2D2" type="Camera2D" parent="."]
+z_index = 8
+offset = Vector2(88.55, -109.76)
+zoom = Vector2(1.65, 1.65)
+limit_left = -91
+limit_top = 107
+limit_right = 1071
+limit_bottom = 802
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

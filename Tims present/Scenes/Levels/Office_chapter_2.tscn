@@ -1,0 +1,126 @@
+[gd_scene load_steps=13 format=3 uid="uid://drajjwyj33rfq"]
+
+[ext_resource type="Texture2D" uid="uid://8wl2v5yik66h" path="res://Assets/textbox/text box 1.png" id="1_4mqr7"]
+[ext_resource type="Script" path="res://dialogueChapter2.gd" id="2_e1axe"]
+[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_njm0r"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_fqhvu"]
+[ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="5_nv68t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m81f"]
+atlas = ExtResource("5_nv68t")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r00y"]
+atlas = ExtResource("5_nv68t")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48uc2"]
+atlas = ExtResource("5_nv68t")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ptra"]
+atlas = ExtResource("5_nv68t")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs2ok"]
+atlas = ExtResource("5_nv68t")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s5nw"]
+atlas = ExtResource("5_nv68t")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqm3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m81f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r00y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48uc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ptra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs2ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s5nw")
+}],
+"loop": true,
+"name": &"advance",
+"speed": 12.0
+}]
+
+[node name="Chapter2" type="TextureRect"]
+z_index = 1
+offset_left = 327.0
+offset_top = 410.0
+offset_right = 904.0
+offset_bottom = 621.0
+texture = ExtResource("1_4mqr7")
+script = ExtResource("2_e1axe")
+
+[node name="Doc" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = -18.0
+offset_right = 583.0
+offset_bottom = 18.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_njm0r")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "
+
+Doctor"
+fit_content = true
+scroll_active = false
+
+[node name="Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 19.0
+offset_right = 526.0
+offset_bottom = 181.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_fqhvu")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+scroll_following = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Sera" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -18.0
+offset_right = 173.0
+offset_bottom = 32.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_njm0r")
+theme_override_font_sizes/normal_font_size = 35
+text = "
+
+Seraphina"
+fit_content = true
+scroll_active = false
+
+[node name="Advance" type="AnimatedSprite2D" parent="."]
+position = Vector2(535, 174)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_uqm3g")
+animation = &"advance"
+autoplay = "advance"

@@ -135,6 +135,15 @@ scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_flac3")
 animation = &"Title"
 
+[node name="Camera2D2" type="Camera2D" parent="."]
+z_index = 8
+offset = Vector2(88.55, -109.76)
+zoom = Vector2(1.65, 1.65)
+limit_left = -91
+limit_top = 107
+limit_right = 1071
+limit_bottom = 802
+
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Exit" to="Clicks" method="_on_exit_pressed"]
 [connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
