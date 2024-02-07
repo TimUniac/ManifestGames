@@ -20,6 +20,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_6plh4")
 
 [node name="Panel" type="Panel" parent="."]
+z_index = 2
 offset_left = -102.0
 offset_top = -64.0
 offset_right = 105.0
@@ -40,7 +41,8 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_fwjtl")
 theme_override_font_sizes/font_size = 25
-text = "[P] To Pickup"
+text = "[E] To Interact
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

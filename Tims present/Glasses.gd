@@ -28,7 +28,7 @@ func _on_body_exited(body):
 	inrange = false
 
 func _process(delta):
-	if inrange and Input.is_action_just_pressed("Pickup"):
+	if inrange and Input.is_action_just_pressed("Interact"):
 		playercollect()
 		visible = false
 
