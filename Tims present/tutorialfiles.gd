@@ -18,6 +18,8 @@ var is_opened = false
 func _ready():
 	interaction_label.visible = false
 	$TutorialGame.visible = false
+	
+
 
 
 
@@ -43,10 +45,12 @@ func open():
 	$TutorialGame.visible = true
 	doctor.talking = true
 	is_opened = true
+	$TutorialGame/SequenceInput.set_process(true)
 func close():
 	$TutorialGame.visible = false
 	doctor.talking = false
 	is_opened = false
+	$TutorialGame/SequenceInput.set_process(false)
 
 		
 		

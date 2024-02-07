@@ -3449,7 +3449,7 @@ size = Vector2(59, 464)
 size = Vector2(43, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmvkw"]
-size = Vector2(153, 79)
+size = Vector2(145.5, 79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kd5yq"]
 size = Vector2(138.5, 59)
@@ -3458,7 +3458,7 @@ size = Vector2(138.5, 59)
 radius = 22.2036
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7o5jx"]
-size = Vector2(41, 181)
+size = Vector2(41, 186.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p37vf"]
 size = Vector2(74, 75)
@@ -3489,6 +3489,7 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
+visible = false
 z_index = 2
 offset_left = -612.0
 offset_top = -354.0
@@ -3555,7 +3556,7 @@ offset_left = 280.0
 offset_top = 230.0
 offset_right = 370.0
 offset_bottom = 253.0
-text = "[O] to hide"
+text = "[Q] to hide"
 
 [node name="Label" type="Label" parent="Objectives"]
 layout_mode = 0
@@ -3631,7 +3632,7 @@ y_sort_enabled = true
 position = Vector2(450, 550)
 tile_set = ExtResource("23_v2q8d")
 format = 2
-layer_0/tile_data = PackedInt32Array(65537, 393216, 17, -65524, 3276800, 35, 196596, 3276800, 13, -655344, 1638400, 10)
+layer_0/tile_data = PackedInt32Array(65537, 393216, 17, -65524, 3276800, 35, -655344, 1638400, 10, 196595, 3276800, 13)
 
 [node name="rug" type="TileMap" parent="Furniture"]
 z_index = -1
@@ -3643,7 +3644,7 @@ layer_0/tile_data = PackedInt32Array(65536, 327680, 35)
 position = Vector2(500, 500)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlueChair"]
-position = Vector2(-238, 93.5)
+position = Vector2(-256.25, 96)
 shape = SubResource("RectangleShape2D_wmvkw")
 
 [node name="YellowChair" type="StaticBody2D" parent="."]
@@ -3662,7 +3663,7 @@ shape = SubResource("CircleShape2D_eg44k")
 [node name="Table" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
-position = Vector2(480, 558)
+position = Vector2(477.25, 558)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7o5jx")
 

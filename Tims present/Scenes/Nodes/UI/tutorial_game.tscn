@@ -52,11 +52,12 @@ alignment = 1
 max_length = 9
 expand_to_text_length = true
 virtual_keyboard_enabled = false
+clear_button_enabled = true
 shortcut_keys_enabled = false
 middle_mouse_paste_enabled = false
 selecting_enabled = false
-caret_blink = true
-caret_force_displayed = true
+draw_control_chars = true
+caret_mid_grapheme = false
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

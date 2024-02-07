@@ -117,6 +117,9 @@ func collect_item(item_number):
 		1: item1_ui.visible = true
 		2: item2_ui.visible = true
 		3: item3_ui.visible = true
+		4: item4_ui.visible = true
+		5: item5_ui.visible = true
+		6: item6_ui.visible = true
 	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
 		emit_signal("all_items_collected")
 	elif item4_ui.visible and item5_ui.visible and item6_ui.visible:

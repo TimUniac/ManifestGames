@@ -250,7 +250,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lutv1"]
-radius = 25.0
+radius = 29.0
 height = 98.0
 
 [node name="Male Doctor Character" type="CharacterBody2D"]

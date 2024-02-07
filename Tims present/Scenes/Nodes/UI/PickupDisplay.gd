@@ -21,9 +21,4 @@ func close():
 	opened = false	
 	
 
-func _process(delta):
-	if Input.is_action_just_pressed("Inventory"):
-		if opened:
-			close()
-		else:
-			open()
+
