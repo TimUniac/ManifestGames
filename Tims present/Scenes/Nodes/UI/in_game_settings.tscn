@@ -35,8 +35,10 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
+visible = false
 
 [node name="SettingsPanel" type="CanvasLayer" parent="Camera2D/CanvasLayer2"]
+visible = false
 
 [node name="Ui-base-pause" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 position = Vector2(575.063, 325.813)

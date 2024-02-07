@@ -3,7 +3,7 @@ extends Control
 
 
 func _ready():
-	$CanvasLayer2/SettingsPanel.visible = false
+	$Camera2D/CanvasLayer2/SettingsPanel.visible = false
 	$"Settings toggle".visible = true
 	
 
@@ -11,11 +11,11 @@ func _ready():
 var opened = false
 
 func close():
-	$CanvasLayer2/SettingsPanel.visible = false
+	$Camera2D/CanvasLayer2/SettingsPanel.visible = false
 	opened = false
 	$"Settings toggle".visible = true
 func open():
-	$CanvasLayer2/SettingsPanel.visible = true
+	$Camera2D/CanvasLayer2/SettingsPanel.visible = true
 	opened = true
 	$"Settings toggle".visible = false
 

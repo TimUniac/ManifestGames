@@ -7,7 +7,10 @@ func _ready():
 	$Box/Item1.visible = false
 	$Box/Item2.visible = false
 	$Box/Item3.visible = false
-
+	$Box/Item4.visible = false
+	$Box/Item5.visible = false
+	$Box/Item6.visible = false
+	
 var opened = false
 func open():
 	$Box.visible = true

@@ -3473,6 +3473,12 @@ metadata/_edit_vertical_guides_ = [-604.0]
 y_sort_enabled = true
 position = Vector2(62, 609)
 
+[node name="Postit" parent="." instance=ExtResource("19_68dvt")]
+offset_left = 305.0
+offset_top = 70.0
+offset_right = 305.0
+offset_bottom = 70.0
+
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 8
 offset = Vector2(2.08165e-12, -17.245)
@@ -3483,7 +3489,6 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
-visible = false
 z_index = 2
 offset_left = -612.0
 offset_top = -354.0
@@ -3697,13 +3702,6 @@ scale = Vector2(0.625, 0.625)
 y_sort_enabled = true
 position = Vector2(469, 561)
 scale = Vector2(0.64, 0.64)
-
-[node name="Postit" parent="." instance=ExtResource("19_68dvt")]
-visible = false
-offset_left = 305.0
-offset_top = 70.0
-offset_right = 305.0
-offset_bottom = 70.0
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Files" to="Male Doctor Character" method="_on_files_item_collected"]

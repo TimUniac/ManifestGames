@@ -53,5 +53,5 @@ func close():
 signal item_collected(item_number)
 
 func playercollect():
-	emit_signal("item_collected", 2)
+	emit_signal("item_collected", 6)
 	visible = false
