@@ -49,5 +49,6 @@ func _on_backward_pressed():
 
 func _on_close_pressed():
 	var parent = get_parent()
-	parent.close()
+	var gramp = parent.get_parent()
+	gramp.close()
 	

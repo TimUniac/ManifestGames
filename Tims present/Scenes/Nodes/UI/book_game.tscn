@@ -33,7 +33,7 @@ offset_bottom = 61.1783
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_2kxd3")
 theme_override_font_sizes/font_size = 30
-text = "What book did Seraphina discover?"
+text = "Who was the author of the book Seraphina found?"
 autowrap_mode = 2
 
 [node name="SequenceInput" type="LineEdit" parent="."]

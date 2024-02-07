@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://p0gv74ti7sqp"]
+[gd_scene load_steps=8 format=3 uid="uid://p0gv74ti7sqp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Yarn.gd" id="1_o1w34"]
 [ext_resource type="Texture2D" uid="uid://diavt4i6p01my" path="res://Assets/Ui_recent_feb1/ui_book.svg.svg" id="2_ogxss"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_m6rrv"]
 [ext_resource type="PackedScene" uid="uid://bepo0m0r088a4" path="res://Scenes/Nodes/UI/book_game.tscn" id="5_q7rj5"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_yca30"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_p26fl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7kem"]
 radius = 169.434
@@ -44,6 +46,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="BookGame" parent="CanvasLayer" instance=ExtResource("5_q7rj5")]
 offset_left = 52.0
@@ -51,4 +54,16 @@ offset_top = 200.0
 offset_right = 1443.0
 offset_bottom = 750.0
 
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/BookGame"]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 192.0
+offset_right = 850.0
+offset_bottom = 327.0
+scale = Vector2(0.16963, 0.312977)
+texture_normal = ExtResource("5_yca30")
+texture_pressed = ExtResource("6_p26fl")
+stretch_mode = 1
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/BookGame/TextureButton" to="." method="_on_texture_button_pressed"]

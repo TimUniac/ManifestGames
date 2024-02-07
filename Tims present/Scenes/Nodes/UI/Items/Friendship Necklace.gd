@@ -52,3 +52,7 @@ signal item_collected(item_number)
 func playercollect():
 	emit_signal("item_collected", 3)
 	visible = false
+
+
+func _on_texture_button_pressed():
+	close()

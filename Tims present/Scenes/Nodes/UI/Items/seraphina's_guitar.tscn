@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://84d0ghv75mkp"]
+[gd_scene load_steps=9 format=3 uid="uid://84d0ghv75mkp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.gd" id="1_ldbsd"]
 [ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="3_pktu2"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/ggfix.gd" id="4_6guia"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_godal"]
 [ext_resource type="PackedScene" uid="uid://xox3s1h15gac" path="res://Scenes/Nodes/UI/guitar_game.tscn" id="5_i8e28"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="6_t2mbt"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="7_hgcja"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbpr"]
 radius = 86.0
@@ -45,6 +47,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("4_6guia")
 
 [node name="GuitarGame" parent="CanvasLayer" instance=ExtResource("5_i8e28")]
@@ -55,4 +58,16 @@ offset_top = 182.0
 offset_right = 734.0
 offset_bottom = 527.0
 
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/GuitarGame"]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 112.0
+offset_right = 944.0
+offset_bottom = 247.0
+scale = Vector2(0.16963, 0.312977)
+texture_normal = ExtResource("6_t2mbt")
+texture_pressed = ExtResource("7_hgcja")
+stretch_mode = 1
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/GuitarGame/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -26,10 +26,10 @@ scale = Vector2(1.24455, 0.957346)
 texture = ExtResource("2_6t4ud")
 
 [node name="Clue" type="Label" parent="Panel"]
-offset_left = -179.0
-offset_top = -55.0
-offset_right = 185.0
-offset_bottom = 61.0
+offset_left = -180.788
+offset_top = -24.0247
+offset_right = 183.212
+offset_bottom = 91.9753
 theme_override_fonts/font = ExtResource("3_tqdui")
 theme_override_font_sizes/font_size = 30
 text = "Who has the other Half of this Necklace?"

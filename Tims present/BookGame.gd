@@ -1,6 +1,6 @@
 extends Control
 
-var secret_code = "CARMILLA"
+var secret_code = "LeFanu"
 var entered_code = ""
 
 
