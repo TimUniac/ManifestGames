@@ -7,7 +7,7 @@ func _ready():
 	pass
 
 func _input(event):
-	if event is InputEventKey and event.pressed and !event.echo and $"..".visible == true:
+	if event is InputEventKey and event.pressed and !event.echo:
 		var key = OS.get_keycode_string(event.keycode).capitalize()
 		if event.keycode != KEY_ENTER and event.keycode != KEY_KP_ENTER and event.keycode != KEY_BACKSPACE:
 			_append_letter_to_code(key)

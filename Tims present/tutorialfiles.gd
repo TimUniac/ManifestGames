@@ -18,6 +18,7 @@ var is_opened = false
 func _ready():
 	interaction_label.visible = false
 	$TutorialGame.visible = false
+	$TutorialGame/SequenceInput.set_process_input(false)
 	
 
 
@@ -40,17 +41,18 @@ func _process(delta):
 		if is_opened:
 			close()
 		else:
+			
 			open()
 func open():
 	$TutorialGame.visible = true
 	doctor.talking = true
 	is_opened = true
-	$TutorialGame/SequenceInput.set_process(true)
+	$TutorialGame/SequenceInput.set_process_input(true)
 func close():
 	$TutorialGame.visible = false
 	doctor.talking = false
 	is_opened = false
-	$TutorialGame/SequenceInput.set_process(false)
+	$TutorialGame/SequenceInput.set_process_input(false)
 
 		
 		
