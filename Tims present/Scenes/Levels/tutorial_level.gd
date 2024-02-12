@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var password = $Files/TutorialGame/SequenceInput 
 @onready var music = $TutorialMusic
 @onready var doctor = $"Male Doctor Character"
 
@@ -9,13 +9,15 @@ func _ready():
 	var tutorial = $Files
 	music.stream.loop = true
 	doctor.talking = false
+	password.set_process(false)
+	$Files/TutorialGame/SequenceInput.set_process_input(false)
 
 func _process(delta):
 	if $Finish.visible == true and Input.is_action_just_pressed("Next"):
 		change_scene()
 	
 func _input(event):
-
+	pass
 	hide_show_objectives()
 	
 

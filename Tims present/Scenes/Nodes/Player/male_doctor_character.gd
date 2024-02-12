@@ -12,6 +12,9 @@ var current_dir = "none"
 @onready var item1_ui = pickup_display.get_node("Box/Item1")
 @onready var item2_ui = pickup_display.get_node("Box/Item2")
 @onready var item3_ui = pickup_display.get_node("Box/Item3")
+@onready var item4_ui = pickup_display.get_node("Box/Item4")
+@onready var item5_ui = pickup_display.get_node("Box/Item5")
+@onready var item6_ui = pickup_display.get_node("Box/Item6")
 @onready var SpeechBubble = $SpeechBubble
 @onready var talking = true
 
@@ -114,7 +117,12 @@ func collect_item(item_number):
 		1: item1_ui.visible = true
 		2: item2_ui.visible = true
 		3: item3_ui.visible = true
+		4: item4_ui.visible = true
+		5: item5_ui.visible = true
+		6: item6_ui.visible = true
 	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
+		emit_signal("all_items_collected")
+	elif item4_ui.visible and item5_ui.visible and item6_ui.visible:
 		emit_signal("all_items_collected")
 
 

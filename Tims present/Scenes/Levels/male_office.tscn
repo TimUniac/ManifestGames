@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Levels/male_office.gd" id="1_dfxg7"]
 [ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_3svbl"]
-[ext_resource type="Texture2D" uid="uid://0wc6xtwcvfg4" path="res://Assets/Texture assets/OfficeNight.png" id="3_oku4j"]
+[ext_resource type="Texture2D" uid="uid://ckhno2bb7hh8v" path="res://Assets/Texture assets/Chapter 1/BG_Office_Night.jpeg" id="3_j2gvj"]
 [ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_xu34y"]
 [ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_beln1"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="6_nu3b3"]
@@ -35,7 +35,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("3_oku4j")
+texture = ExtResource("3_j2gvj")
 
 [node name="DP" type="CanvasLayer" parent="."]
 scale = Vector2(0.125, 0.125)
