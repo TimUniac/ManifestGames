@@ -15,13 +15,13 @@ var is_opened = false
 @onready var tutorialDialogue: String = "These files are new to my memories, I'll need to unlock them."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
+@onready var tutorial_game = $TutorialGame
 func _ready():
 	interaction_label.visible = false
-	
-	
+	tutorial_game.connect("codeCorrect", self, "_on_code_correct")
 
-
-
+func _on_code_correct():
+	playercollect()
 
 func _on_body_entered(body):
 	if body.has_method("player"):
@@ -40,23 +40,21 @@ func _process(delta):
 		if is_opened:
 			close()
 		else:
-			
 			open()
+
 func open():
 	emit_signal("playGame")
 	doctor.talking = true
 	is_opened = true
-	
-func close():
+	var parent = get_parent()
 
+func close():
 	doctor.talking = false
 	is_opened = false
-	
 
-		
-		
 signal item_collected(item_number)
 signal playGame
+
 func playercollect():
 	emit_signal("item_collected", 6)
 	visible = false

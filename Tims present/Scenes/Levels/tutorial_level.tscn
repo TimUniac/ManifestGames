@@ -3693,6 +3693,7 @@ shape = SubResource("RectangleShape2D_p37vf")
 z_index = 1
 y_sort_enabled = true
 position = Vector2(957, 650)
+action_name = null
 
 [node name="Glasses" parent="." instance=ExtResource("14_4h0r1")]
 y_sort_enabled = true

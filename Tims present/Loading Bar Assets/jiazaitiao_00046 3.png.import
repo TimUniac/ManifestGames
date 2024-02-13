@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c1eb2wlyjmjli"
+path="res://.godot/imported/jiazaitiao_00046 3.png-6a6aa279c16f886a33b724455fa60b27.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Loading Bar Assets/jiazaitiao_00046 3.png"
+dest_files=["res://.godot/imported/jiazaitiao_00046 3.png-6a6aa279c16f886a33b724455fa60b27.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
