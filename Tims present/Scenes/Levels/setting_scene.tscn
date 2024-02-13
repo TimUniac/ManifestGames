@@ -1,0 +1,208 @@
+[gd_scene load_steps=16 format=3 uid="uid://bgp5lqeeorqco"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/setting_scene.gd" id="1_084kn"]
+[ext_resource type="Texture2D" uid="uid://dhxcsg5i25wir" path="res://Assets/Texture assets/Brain Background.jpg" id="1_yyxvq"]
+[ext_resource type="Texture2D" uid="uid://5nrmr8qxy0e" path="res://Assets/Texture assets/Rectangle 2.png" id="2_4lg7g"]
+[ext_resource type="Texture2D" uid="uid://rndjdmf3owjl" path="res://Assets/Ui_recent_feb1/ui_setting_menu_base.png" id="4_qtxj1"]
+[ext_resource type="Script" path="res://Scenes/Levels/volume controls.gd" id="6_3l37t"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="7_pxmkw"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="8_u0dct"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="9_beos3"]
+[ext_resource type="Texture2D" uid="uid://buxvmcyl6gnho" path="res://Assets/Ui_recent_feb1/ui_aswd_key_a.png" id="10_wicd0"]
+[ext_resource type="Texture2D" uid="uid://cjtjeok4g6442" path="res://Assets/Ui_recent_feb1/ui_aswd_key_d.png" id="11_v7iiv"]
+[ext_resource type="Texture2D" uid="uid://db6o6p67vdosu" path="res://Assets/Ui_recent_feb1/ui_aswd_key_s.png" id="12_uk2uj"]
+[ext_resource type="Texture2D" uid="uid://betsyttkbc0bh" path="res://Assets/Ui_recent_feb1/ui_aswd_key_w.png" id="13_vumjb"]
+[ext_resource type="Texture2D" uid="uid://bovda3ijx1lt1" path="res://Assets/Ui_recent_feb1/ui_inventory_icon.png" id="14_1hodw"]
+[ext_resource type="Texture2D" uid="uid://dm3y5df6urjhq" path="res://Assets/Ui_recent_feb1/ui_objectives_icon.png" id="15_o1sbk"]
+[ext_resource type="Texture2D" uid="uid://r6ecmr5dk06t" path="res://Assets/Ui_recent_feb1/ui_pickup_icon.png" id="16_hlj2u"]
+
+[node name="Setting_Scene" type="Node2D"]
+position = Vector2(10, -7)
+script = ExtResource("1_084kn")
+
+[node name="BrainBackground" type="Sprite2D" parent="."]
+modulate = Color(0.54902, 0.54902, 0.360784, 1)
+position = Vector2(572, 335.499)
+scale = Vector2(1.44, 1.43333)
+texture = ExtResource("1_yyxvq")
+
+[node name="Rectangle2" type="Sprite2D" parent="."]
+position = Vector2(579, 342.999)
+scale = Vector2(9.96316, 5.3)
+texture = ExtResource("2_4lg7g")
+
+[node name="Ui-base-pause" type="Sprite2D" parent="."]
+position = Vector2(569.063, 338.812)
+scale = Vector2(0.388411, 0.357879)
+texture = ExtResource("4_qtxj1")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 242.999
+offset_right = 677.0
+offset_bottom = 293.999
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 40
+text = "Master Volume :"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 385.999
+offset_right = 676.0
+offset_bottom = 436.999
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 40
+text = "Music Volume :"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 330.999
+offset_right = 676.0
+offset_bottom = 381.999
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 40
+text = "Dialogue Volume :"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 143.0
+offset_top = 285.999
+offset_right = 675.0
+offset_bottom = 336.999
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 40
+text = "SFX Volume :"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Music Volume" type="HSlider" parent="CanvasLayer"]
+offset_left = 515.0
+offset_top = 399.999
+offset_right = 985.0
+offset_bottom = 415.999
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("6_3l37t")
+
+[node name="SFX volume" type="HSlider" parent="CanvasLayer"]
+offset_left = 515.0
+offset_top = 306.999
+offset_right = 985.0
+offset_bottom = 322.999
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("6_3l37t")
+
+[node name="Voice Volume" type="HSlider" parent="CanvasLayer"]
+offset_left = 515.0
+offset_top = 354.999
+offset_right = 985.0
+offset_bottom = 370.999
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("6_3l37t")
+
+[node name="Master Volume" type="HSlider" parent="CanvasLayer"]
+offset_left = 515.0
+offset_top = 258.999
+offset_right = 985.0
+offset_bottom = 274.999
+min_value = -30.0
+max_value = 0.0
+step = 0.01
+script = ExtResource("6_3l37t")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 935.0
+offset_top = 84.9993
+offset_right = 1146.0
+offset_bottom = 219.999
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("7_pxmkw")
+texture_pressed = ExtResource("8_u0dct")
+
+[node name="Controls" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 489.999
+offset_right = 382.0
+offset_bottom = 550.999
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 40
+text = "Controls"
+
+[node name="Sprite2D" type="Sprite2D" parent="Controls"]
+position = Vector2(160.2, 94)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_wicd0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Controls"]
+position = Vector2(317.2, 94)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_v7iiv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Controls"]
+position = Vector2(237.2, 94)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_uk2uj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Controls"]
+position = Vector2(237.2, 37)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_vumjb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Controls"]
+position = Vector2(488.2, 35)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_1hodw")
+
+[node name="Label" type="Label" parent="Controls/Sprite2D5"]
+offset_left = 142.667
+offset_top = -66.6667
+offset_right = 577.667
+offset_bottom = 56.3333
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 100
+text = "Inventory"
+
+[node name="Sprite2D6" type="Sprite2D" parent="Controls"]
+position = Vector2(488.2, 92)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_o1sbk")
+
+[node name="Label2" type="Label" parent="Controls/Sprite2D6"]
+offset_left = 142.667
+offset_top = -83.3334
+offset_right = 577.667
+offset_bottom = 39.6666
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 100
+text = "Objective"
+
+[node name="Sprite2D7" type="Sprite2D" parent="Controls"]
+position = Vector2(752.2, 37)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("16_hlj2u")
+
+[node name="Label3" type="Label" parent="Controls/Sprite2D7"]
+offset_left = 166.0
+offset_top = -60.0
+offset_right = 601.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 100
+text = "Pick Up"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(562, 328)
+scale = Vector2(0.176082, 0.100029)
+zoom = Vector2(1.7, 1.7)
+
+[connection signal="value_changed" from="CanvasLayer/Music Volume" to="CanvasLayer/Music Volume" method="_on_music_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/SFX volume" to="CanvasLayer/SFX volume" method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Voice Volume" to="CanvasLayer/Voice Volume" method="_on_voice_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Master Volume" to="CanvasLayer/Master Volume" method="_on_master_value_changed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

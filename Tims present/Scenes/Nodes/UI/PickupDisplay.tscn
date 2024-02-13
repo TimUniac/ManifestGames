@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://00mqe2vdsyto"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/PickupDisplay.gd" id="1_v0486"]
+[ext_resource type="Texture2D" uid="uid://5nrmr8qxy0e" path="res://Assets/Texture assets/Rectangle 2.png" id="2_jmw2w"]
+[ext_resource type="Texture2D" uid="uid://diavt4i6p01my" path="res://Assets/Ui_recent_feb1/ui_book.svg.svg" id="3_3etva"]
+[ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="4_oer8a"]
+[ext_resource type="Texture2D" uid="uid://bx8jaqv1ydw36" path="res://Scenes/Nodes/UI/Items/SeraphinaNecklace (1).png" id="5_ta5gl"]
+[ext_resource type="Texture2D" uid="uid://cd0cw8a8le6g2" path="res://Assets/Texture assets/TempTutorialAssets/Pen.png" id="6_utvcg"]
+[ext_resource type="Texture2D" uid="uid://hikvlopmyau4" path="res://Assets/Texture assets/TempTutorialAssets/3110890-200Glassews.png" id="7_jb2ib"]
+[ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="8_3j3lh"]
+
+[node name="PickupDisplay" type="Node2D"]
+script = ExtResource("1_v0486")
+
+[node name="Box" type="TextureRect" parent="."]
+offset_right = 380.0
+offset_bottom = 152.0
+texture = ExtResource("2_jmw2w")
+
+[node name="Item1" type="Sprite2D" parent="Box"]
+position = Vector2(58, 74)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("3_3etva")
+
+[node name="Item2" type="Sprite2D" parent="Box"]
+position = Vector2(173, 82)
+scale = Vector2(0.781046, 0.781046)
+texture = ExtResource("4_oer8a")
+
+[node name="Item3" type="Sprite2D" parent="Box"]
+position = Vector2(302, 81)
+texture = ExtResource("5_ta5gl")
+
+[node name="Item4" type="Sprite2D" parent="Box"]
+position = Vector2(63.325, 81)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("6_utvcg")
+
+[node name="Item5" type="Sprite2D" parent="Box"]
+position = Vector2(182.385, 81)
+scale = Vector2(0.695, 0.695)
+texture = ExtResource("7_jb2ib")
+
+[node name="Item6" type="Sprite2D" parent="Box"]
+position = Vector2(312.965, 81)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("8_3j3lh")

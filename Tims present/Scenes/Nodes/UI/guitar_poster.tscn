@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkq7anlswuk6p"]
+
+[ext_resource type="Script" path="res://Guitar Poster.gd" id="1_1lx0p"]
+[ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="2_jj7qr"]
+[ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="3_t0ww6"]
+[ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="4_kuew2"]
+
+[node name="Guitar Poster" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -284.0
+offset_right = -1.0
+offset_bottom = -284.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1lx0p")
+
+[node name="SprGuitarChord_svg" type="Sprite2D" parent="."]
+position = Vector2(726, 216)
+texture = ExtResource("2_jj7qr")
+
+[node name="ChordChart" type="Sprite2D" parent="."]
+position = Vector2(977, 501)
+scale = Vector2(0.52443, 0.420655)
+texture = ExtResource("4_kuew2")
+
+[node name="Interaction Area" parent="." instance=ExtResource("3_t0ww6")]
+position = Vector2(733, 284)

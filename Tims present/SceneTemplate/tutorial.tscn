@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c67bb28ddt6lt"]
+[gd_scene load_steps=22 format=3 uid="uid://c67bb28ddt6lt"]
 
 [ext_resource type="Texture2D" uid="uid://dhxcsg5i25wir" path="res://Assets/Texture assets/Brain Background.jpg" id="1_xxiyb"]
 [ext_resource type="Texture2D" uid="uid://dp8blhoeqybsy" path="res://Assets/Texture assets/Revised tileset.svg" id="2_crpj4"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://h7tj4blqq8vc" path="res://Assets/Texture assets/Door.svg" id="3_0omv3"]
 [ext_resource type="PackedScene" uid="uid://d2jt8j3kq157j" path="res://Completed Assets/Objects/Female Tutorial Key.tscn" id="4_u5asl"]
 [ext_resource type="PackedScene" uid="uid://bnqcu8rmr2rxs" path="res://Completed Assets/Characters/memory_ememies.tscn" id="6_rryix"]
+[ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Assets/Inventory/InvItems/seraphina's_guitar.tscn" id="7_dy875"]
+[ext_resource type="PackedScene" uid="uid://n0d0h7pyngnl" path="res://Completed Assets/Characters/male_doctor_character.tscn" id="8_lfw6f"]
+[ext_resource type="Script" path="res://Assets/Inventory/Inventory.gd" id="9_tr1nn"]
+[ext_resource type="Script" path="res://inv_slot.gd" id="10_haip6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwep0"]
 texture = ExtResource("2_crpj4")
@@ -7260,6 +7264,23 @@ size = Vector2(23.9167, 29.7195)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sikak"]
 size = Vector2(45.8461, 54.496)
 
+[sub_resource type="Resource" id="Resource_lvhq7"]
+script = ExtResource("10_haip6")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_8l4mp"]
+script = ExtResource("10_haip6")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_5ties"]
+script = ExtResource("10_haip6")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_dau2k"]
+resource_local_to_scene = true
+script = ExtResource("9_tr1nn")
+slots = Array[ExtResource("10_haip6")]([SubResource("Resource_lvhq7"), SubResource("Resource_8l4mp"), SubResource("Resource_5ties")])
+
 [node name="Tutorial" type="Node2D"]
 
 [node name="BrainBackground" type="Sprite2D" parent="."]
@@ -7307,6 +7328,15 @@ scale = Vector2(0.1, 0.1)
 [node name="Memory Ememies" parent="." instance=ExtResource("6_rryix")]
 position = Vector2(927, 227)
 scale = Vector2(0.3, 0.3)
+
+[node name="Seraphina\'s Guitar" parent="." instance=ExtResource("7_dy875")]
+position = Vector2(207, 240)
+
+[node name="Male Doctor Character" parent="." instance=ExtResource("8_lfw6f")]
+position = Vector2(360, 232)
+collision_layer = 1
+collision_mask = 2
+inv = SubResource("Resource_dau2k")
 
 [connection signal="body_shape_entered" from="StaticBody2D" to="Tutorial Key" method="_on_static_body_2d_body_shape_entered"]
 [connection signal="animation_changed" from="StaticBody2D/AnimatedSprite2D" to="Tutorial Key" method="_on_animated_sprite_2d_animation_changed"]

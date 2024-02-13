@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://84d0ghv75mkp"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.gd" id="1_ldbsd"]
+[ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="3_pktu2"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/ggfix.gd" id="4_6guia"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_godal"]
+[ext_resource type="PackedScene" uid="uid://xox3s1h15gac" path="res://Scenes/Nodes/UI/guitar_game.tscn" id="5_i8e28"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="6_t2mbt"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="7_hgcja"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbpr"]
+radius = 86.0
+height = 340.0
+
+[node name="Seraphina\'s Guitar" type="Area2D"]
+script = ExtResource("1_ldbsd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_pktu2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_hrbpr")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -63.0
+offset_top = -49.0
+offset_right = 63.0
+offset_bottom = -9.0
+
+[node name="interaction_label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_top = -1.0
+offset_right = 81.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_godal")
+text = "[E] To Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("4_6guia")
+
+[node name="GuitarGame" parent="CanvasLayer" instance=ExtResource("5_i8e28")]
+visibility_layer = 13
+z_index = 9
+offset_left = 166.0
+offset_top = 182.0
+offset_right = 734.0
+offset_bottom = 527.0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/GuitarGame"]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 112.0
+offset_right = 944.0
+offset_bottom = 247.0
+scale = Vector2(0.16963, 0.312977)
+texture_normal = ExtResource("6_t2mbt")
+texture_pressed = ExtResource("7_hgcja")
+stretch_mode = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/GuitarGame/TextureButton" to="." method="_on_texture_button_pressed"]

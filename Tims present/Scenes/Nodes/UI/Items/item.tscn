@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://epfhudo6gl0d"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/item.gd" id="1_pel23"]
+[ext_resource type="Script" path="res://Scenes/Nodes/Audio/RightVO.gd" id="2_4lwvk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5386s"]
+radius = 57.0351
+
+[node name="RightItem" type="Area2D"]
+script = ExtResource("1_pel23")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5386s")
+
+[node name="RightVO" type="AudioStreamPlayer" parent="."]
+pitch_scale = 1.97
+script = ExtResource("2_4lwvk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://bgp5lqeeorqco"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/setting_scene.gd" id="1_084kn"]
+[ext_resource type="Texture2D" uid="uid://dhxcsg5i25wir" path="res://Assets/Texture assets/Brain Background.jpg" id="1_yyxvq"]
+[ext_resource type="Texture2D" uid="uid://5nrmr8qxy0e" path="res://Assets/Texture assets/Rectangle 2.png" id="2_4lg7g"]
+[ext_resource type="Texture2D" uid="uid://djvl3uj5rca7g" path="res://Assets/Menu Buttons/ui-base-pause.png" id="3_o6kfm"]
+[ext_resource type="FontFile" uid="uid://d2ypkqvh0hmi4" path="res://Assets/Fonts/Britannic Bold Regular.ttf" id="4_3rp5s"]
+[ext_resource type="Texture2D" uid="uid://c50bg7g52t14c" path="res://Assets/Menu Buttons/back1.png" id="5_uqbbm"]
+[ext_resource type="Script" path="res://Scenes/SFX volume.gd" id="6_4jfft"]
+[ext_resource type="Script" path="res://Scenes/Levels/Brightness.gd" id="6_5mcof"]
+[ext_resource type="Script" path="res://Scenes/Voice Volume.gd" id="7_tuki2"]
+
+[node name="Setting_Scene" type="Node2D"]
+script = ExtResource("1_084kn")
+
+[node name="BrainBackground" type="Sprite2D" parent="."]
+modulate = Color(0.54902, 0.54902, 0.360784, 1)
+position = Vector2(578, 322.5)
+scale = Vector2(1.44, 1.43333)
+texture = ExtResource("1_yyxvq")
+
+[node name="Rectangle2" type="Sprite2D" parent="."]
+position = Vector2(585, 330)
+scale = Vector2(9.96316, 5.3)
+texture = ExtResource("2_4lg7g")
+
+[node name="Ui-base-pause" type="Sprite2D" parent="."]
+position = Vector2(575.063, 325.813)
+scale = Vector2(0.388411, 0.357879)
+texture = ExtResource("3_o6kfm")
+
+[node name="Panel" type="Panel" parent="Ui-base-pause"]
+modulate = Color(0.94902, 0.811765, 1, 1)
+offset_left = -677.0
+offset_top = -695.0
+offset_right = 821.0
+offset_bottom = -498.0
+
+[node name="Label" type="Label" parent="Ui-base-pause"]
+offset_left = -188.0
+offset_top = -676.0
+offset_right = 332.0
+offset_bottom = -473.0
+theme_override_fonts/font = ExtResource("4_3rp5s")
+theme_override_font_sizes/font_size = 150
+text = "Settings"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 116.0
+offset_top = 193.0
+offset_right = 649.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("4_3rp5s")
+theme_override_font_sizes/font_size = 40
+text = "Master Volume :"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 113.0
+offset_top = 338.0
+offset_right = 391.0
+offset_bottom = 399.0
+theme_override_fonts/font = ExtResource("4_3rp5s")
+theme_override_font_sizes/font_size = 40
+text = "Brightness :"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 114.0
+offset_top = 288.0
+offset_right = 646.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("4_3rp5s")
+theme_override_font_sizes/font_size = 40
+text = "Voice Volume :"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 115.0
+offset_top = 236.0
+offset_right = 647.0
+offset_bottom = 286.0
+theme_override_fonts/font = ExtResource("4_3rp5s")
+theme_override_font_sizes/font_size = 40
+text = "SFX Volume :"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SFX volume" type="HSlider" parent="CanvasLayer"]
+offset_left = 485.0
+offset_top = 250.0
+offset_right = 959.0
+offset_bottom = 266.0
+script = ExtResource("6_4jfft")
+bus_name = "sfx"
+
+[node name="Voice Volume" type="HSlider" parent="CanvasLayer"]
+offset_left = 485.0
+offset_top = 295.0
+offset_right = 960.0
+offset_bottom = 311.0
+script = ExtResource("7_tuki2")
+bus_name = "Dialogue"
+
+[node name="Master Volume" type="HSlider" parent="CanvasLayer"]
+offset_left = 487.0
+offset_top = 209.0
+offset_right = 957.0
+offset_bottom = 225.0
+max_value = 1.0
+step = 0.01
+
+[node name="Brightness" type="HSlider" parent="CanvasLayer"]
+offset_left = 497.0
+offset_top = 317.0
+offset_right = 958.0
+offset_bottom = 386.0
+size_flags_horizontal = 4
+min_value = 0.01
+max_value = 4.0
+step = 0.01
+value = 2.0
+script = ExtResource("6_5mcof")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 931.0
+offset_top = 64.0
+offset_right = 1073.0
+offset_bottom = 166.0
+texture_normal = ExtResource("5_uqbbm")
+
+[connection signal="value_changed" from="CanvasLayer/Brightness" to="CanvasLayer/Brightness" method="_on_value_changed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

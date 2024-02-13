@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://o8pckgrevhaq"]
+
+[ext_resource type="AudioStream" uid="uid://kqae0ieutcf2" path="res://Assets/Sound/SFX/SquishyFootfalls.5.wav" id="1_sadec"]
+[ext_resource type="Script" path="res://Scenes/Nodes/Audio/Footsteps.gd" id="2_wuyqm"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_sadec")
+volume_db = -20.379
+autoplay = true
+script = ExtResource("2_wuyqm")

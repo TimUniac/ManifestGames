@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://xox3s1h15gac"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
+[ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="2_11gyi"]
+[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="2_o5paw"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_bvjf5"]
+
+[node name="GuitarGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1391.0
+offset_bottom = 550.0
+script = ExtResource("1_qw654")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 59.0
+offset_right = 1553.0
+offset_bottom = 759.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_11gyi")
+
+[node name="Clue" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 107.0
+offset_right = 857.0
+offset_bottom = 393.0
+theme_override_fonts/normal_font = ExtResource("3_bvjf5")
+theme_override_font_sizes/normal_font_size = 40
+text = "Just a closeted soul, 
+locked away from your light;
+
+in the still of the night, 
+I cry, I fight."
+fit_content = true
+scroll_active = false
+
+[node name="GuitarSequenceInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 378.0
+offset_right = 694.0
+offset_bottom = 435.0
+tooltip_text = "\"I need to find the password to open this memory\""
+theme_override_fonts/font = ExtResource("2_o5paw")
+theme_override_font_sizes/font_size = 41
+placeholder_text = "Input Seqence and Press Enter"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Chords" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="Room" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.162
+bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 349.0
+offset_right = 772.0
+offset_bottom = 375.0
+text = "Use Numbers 1-7/ Bksp in case of mistake"
