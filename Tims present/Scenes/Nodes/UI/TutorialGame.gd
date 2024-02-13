@@ -4,7 +4,7 @@ var secret_code = "P455W04D"
 var entered_code = ""
 
 func _ready():
-	pass
+	$"..".visible = true
 
 func _input(event):
 	if event is InputEventKey and event.pressed and !event.echo:
@@ -35,3 +35,8 @@ func _on_EnterButton_pressed():
 		print("Incorrect Code")
 		entered_code = ""
 		$SequenceInput.clear()
+
+
+func _on_close_pressed():
+	var parent = get_parent()
+	parent.closeFiles()
