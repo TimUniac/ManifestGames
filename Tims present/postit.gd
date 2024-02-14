@@ -31,3 +31,7 @@ func open():
 	is_opened = true
 
 
+
+
+func _on_close_pressed():
+	close()

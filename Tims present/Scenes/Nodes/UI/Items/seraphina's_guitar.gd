@@ -58,3 +58,7 @@ func playercollect():
 		
 func guitar():
 	pass
+
+
+func _on_texture_button_pressed():
+	close()

@@ -1,26 +1,21 @@
 extends Node2D
 
-@onready var password = $Files/TutorialGame/SequenceInput 
+
 @onready var music = $TutorialMusic
 @onready var doctor = $"Male Doctor Character"
 
+
 func _ready():
 	$Finish.visible = false
-	var tutorial = $Files
 	music.stream.loop = true
-	doctor.talking = false
-	
 	
 
-func _process(delta):
+func _process(_delta):
 	if $Finish.visible == true and Input.is_action_just_pressed("Next"):
 		change_scene()
 	
-func _input(event):
-	pass
-	hide_show_objectives()
-	
-
+func _input(_event):
+		hide_show_objectives()
 
 func change_scene():
 	$"transitions/transition player".play("Fade_Out")
@@ -29,11 +24,8 @@ func change_scene():
 
 func hide_show_objectives():
 	if Input.is_action_just_pressed("Objective"):
-		if $Objectives.visible == true:
-			$Objectives.visible = false
-		elif $Objectives.visible == false:
-			$Objectives.visible = true
-
+		$Objectives.visible = !$Objectives.visible
 
 func _on_male_doctor_character_all_items_collected():
-		$Finish.visible = true
+	$Finish.visible = true
+	print ("all tutorial items collected")

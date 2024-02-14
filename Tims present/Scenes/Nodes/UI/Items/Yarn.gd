@@ -59,3 +59,7 @@ func playercollect():
 	emit_signal("item_collected", 2)
 	visible = false
 
+
+
+func _on_texture_button_pressed():
+	close()

@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=26 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
-[ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_x1t00"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_5adpj"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
 [ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
@@ -7888,24 +7889,27 @@ limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
 z_index = 5
-offset_left = -612.0
-offset_top = -300.0
-offset_right = 3367.0
-offset_bottom = 2640.0
-texture = ExtResource("2_x1t00")
+offset_left = 185.0
+offset_top = 246.0
+offset_right = 6925.0
+offset_bottom = 2736.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_31iq0")
 expand_mode = 1
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]
 z_index = 5
 layout_mode = 0
-offset_left = 700.0
-offset_top = 724.0
-offset_right = 1447.0
-offset_bottom = 913.0
+offset_left = 950.0
+offset_top = 620.0
+offset_right = 6190.0
+offset_bottom = 1988.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 35
+theme_override_fonts/normal_font = ExtResource("3_5adpj")
+theme_override_fonts/bold_font = ExtResource("3_5adpj")
+theme_override_font_sizes/normal_font_size = 250
+theme_override_font_sizes/bold_font_size = 260
 bbcode_enabled = true
 text = "Now that these memories have been unlocked, Seraphina should be able to remember more about her past. 
 [b]Press 'R'[/b] to return to the concious world. "
@@ -7964,6 +7968,7 @@ scale = Vector2(0.7, 0.7)
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
+visible = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0
@@ -7982,6 +7987,7 @@ offset_bottom = 12.0
 mouse_filter = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
 position = Vector2(10, 100)

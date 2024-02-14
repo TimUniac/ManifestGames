@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://rlp544kiajnq"]
+[gd_scene load_steps=6 format=3 uid="uid://rlp544kiajnq"]
 
 [ext_resource type="Script" path="res://postit.gd" id="1_l2fbc"]
 [ext_resource type="Texture2D" uid="uid://ciyk4gvc682k1" path="res://Assets/Ui_recent_feb1/ui_postitnote.png" id="2_x412c"]
 [ext_resource type="Texture2D" uid="uid://clj3rtru5vtsn" path="res://Assets/Texture assets/ui_note.svg" id="3_7a7cx"]
 [ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="4_depvb"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="4_tfsrh"]
 
 [node name="Postit" type="Control"]
 layout_mode = 3
@@ -29,6 +30,17 @@ position = Vector2(448, 442)
 scale = Vector2(0.615406, 0.517398)
 texture = ExtResource("3_7a7cx")
 
+[node name="Close" type="Button" parent="BigPostit"]
+offset_left = -161.0
+offset_top = -108.0
+offset_right = 58.0
+offset_bottom = 35.0
+scale = Vector2(0.285, 0.47)
+icon = ExtResource("4_tfsrh")
+
 [node name="Interaction Area" parent="." instance=ExtResource("4_depvb")]
+z_index = 2
 position = Vector2(719.48, 307.2)
 scale = Vector2(0.535, 0.535)
+
+[connection signal="pressed" from="BigPostit/Close" to="." method="_on_close_pressed"]

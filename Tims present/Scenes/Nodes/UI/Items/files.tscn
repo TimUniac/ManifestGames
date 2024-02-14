@@ -1,14 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpkxp8vg2ayj8"]
+[gd_scene load_steps=5 format=3 uid="uid://cpkxp8vg2ayj8"]
 
 [ext_resource type="Script" path="res://tutorialfiles.gd" id="1_poorq"]
 [ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="2_vd453"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_a4sb1"]
-[ext_resource type="PackedScene" uid="uid://b6brfnn42kqe6" path="res://Scenes/Nodes/UI/tutorial_game.tscn" id="4_k4are"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgjqr"]
 size = Vector2(87, 70)
 
 [node name="Files" type="Area2D"]
+position = Vector2(1809.57, 1042.35)
 script = ExtResource("1_poorq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -47,12 +47,6 @@ text = "[E] to interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="TutorialGame" parent="." instance=ExtResource("4_k4are")]
-offset_left = -1364.0
-offset_top = -667.0
-offset_right = 27.0
-offset_bottom = -117.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="." to="." method="_on_body_exited" flags=18]

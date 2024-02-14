@@ -3489,7 +3489,6 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
-visible = false
 z_index = 2
 offset_left = -612.0
 offset_top = -354.0
@@ -3692,7 +3691,7 @@ shape = SubResource("RectangleShape2D_p37vf")
 [node name="Files" parent="." instance=ExtResource("13_hm7ep")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(987, 642)
+position = Vector2(957, 650)
 
 [node name="Glasses" parent="." instance=ExtResource("14_4h0r1")]
 y_sort_enabled = true
@@ -3706,5 +3705,6 @@ scale = Vector2(0.64, 0.64)
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Files" to="Male Doctor Character" method="_on_files_item_collected"]
+[connection signal="playGame" from="Files" to="." method="_on_files_play_game"]
 [connection signal="item_collected" from="Glasses" to="Male Doctor Character" method="_on_glasses_item_collected"]
 [connection signal="item_collected" from="Pen" to="Male Doctor Character" method="_on_pen_item_collected"]

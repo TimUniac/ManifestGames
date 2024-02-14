@@ -25,20 +25,31 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aglmf")
 
+[node name="Settings toggle" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1803.0
+offset_top = 25.0
+offset_right = 2014.0
+offset_bottom = 185.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("14_ccsou")
+texture_pressed = ExtResource("15_1voqf")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 8
-offset = Vector2(141.875, -71.655)
-zoom = Vector2(1.83, 1.83)
+offset = Vector2(2.08165e-12, -17.245)
+zoom = Vector2(1.65, 1.65)
 limit_left = -91
 limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
-visible = false
 
 [node name="SettingsPanel" type="CanvasLayer" parent="Camera2D/CanvasLayer2"]
 visible = false
+scale = Vector2(1.652, 1.652)
+transform = Transform2D(1.652, 0, 0, 1.652, 0, 0)
 
 [node name="Ui-base-pause" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 position = Vector2(575.063, 325.813)
@@ -53,6 +64,7 @@ offset_bottom = 280.0
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 40
 text = "Master Volume :"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 92.0
@@ -62,6 +74,7 @@ offset_bottom = 536.0
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 40
 text = "Controls"
+metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel/Label"]
 position = Vector2(160.2, 94)
@@ -96,6 +109,7 @@ offset_bottom = 56.3333
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 100
 text = "Inventory"
+metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D6" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel/Label"]
 position = Vector2(488.2, 92)
@@ -110,6 +124,7 @@ offset_bottom = 39.6666
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 100
 text = "Objective"
+metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D7" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel/Label"]
 position = Vector2(752.2, 37)
@@ -124,6 +139,7 @@ offset_bottom = 63.0
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 100
 text = "Pick Up"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label5" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 155.0
@@ -133,6 +149,7 @@ offset_bottom = 423.0
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 40
 text = "Music Volume :"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 155.0
@@ -142,6 +159,7 @@ offset_bottom = 368.0
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 40
 text = "Dialogue Volume :"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 154.0
@@ -151,6 +169,7 @@ offset_bottom = 323.0
 theme_override_fonts/font = ExtResource("3_a1onk")
 theme_override_font_sizes/font_size = 40
 text = "SFX Volume :"
+metadata/_edit_use_anchors_ = true
 
 [node name="Music Volume" type="HSlider" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 526.0
@@ -160,6 +179,7 @@ offset_bottom = 402.0
 min_value = -30.0
 max_value = 0.0
 script = ExtResource("4_vkaah")
+metadata/_edit_use_anchors_ = true
 
 [node name="SFX volume" type="HSlider" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 526.0
@@ -169,6 +189,7 @@ offset_bottom = 309.0
 min_value = -30.0
 max_value = 0.0
 script = ExtResource("4_vkaah")
+metadata/_edit_use_anchors_ = true
 
 [node name="Voice Volume" type="HSlider" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 526.0
@@ -178,6 +199,7 @@ offset_bottom = 357.0
 min_value = -30.0
 max_value = 0.0
 script = ExtResource("4_vkaah")
+metadata/_edit_use_anchors_ = true
 
 [node name="Master Volume" type="HSlider" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 526.0
@@ -188,6 +210,7 @@ min_value = -30.0
 max_value = 0.0
 step = 0.01
 script = ExtResource("4_vkaah")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton" type="TextureButton" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 945.0
@@ -197,20 +220,11 @@ offset_bottom = 211.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_4kehu")
 texture_pressed = ExtResource("7_2fbx1")
+metadata/_edit_use_anchors_ = true
 
-[node name="Settings toggle" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 1803.0
-offset_top = 25.0
-offset_right = 2014.0
-offset_bottom = 185.0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("14_ccsou")
-texture_pressed = ExtResource("15_1voqf")
-
+[connection signal="pressed" from="Settings toggle" to="." method="_on_settings_toggle_pressed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/Music Volume" to="Camera2D/CanvasLayer2/SettingsPanel/Music Volume" method="_on_music_value_changed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/SFX volume" to="Camera2D/CanvasLayer2/SettingsPanel/SFX volume" method="_on_sfx_value_changed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/Voice Volume" to="Camera2D/CanvasLayer2/SettingsPanel/Voice Volume" method="_on_voice_value_changed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/Master Volume" to="Camera2D/CanvasLayer2/SettingsPanel/Master Volume" method="_on_master_value_changed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer2/SettingsPanel/TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="Settings toggle" to="." method="_on_settings_toggle_pressed"]

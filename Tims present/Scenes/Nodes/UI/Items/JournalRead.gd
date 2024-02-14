@@ -11,17 +11,17 @@ var inRange = false
 
 func _ready():
 	$TextureButton.visible = false
-	$NewJournal.visible = false
+	$CanvasLayer/NewJournal.visible = false
 	$Journal2/CollisionShape2D2/hint.visible = false
 
 
 
 func close():
-	$NewJournal.visible = false
+	$CanvasLayer/NewJournal.visible = false
 	doctor.talking = false
 	is_opened = false
 func open():
-	$NewJournal.visible = true
+	$CanvasLayer/NewJournal.visible = true
 	doctor.talking = true
 	is_opened = true
 
