@@ -6,43 +6,69 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_bvjf5"]
 
 [node name="GuitarGame" type="Control"]
+z_index = 2
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1391.0
-offset_bottom = 550.0
+anchor_left = -0.374
+anchor_top = -0.252
+anchor_right = -0.374
+anchor_bottom = -0.252
+offset_left = -452.92
+offset_top = -231.84
+offset_right = 719.08
+offset_bottom = 271.16
 script = ExtResource("1_qw654")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 59.0
-offset_right = 1553.0
-offset_bottom = 759.0
-scale = Vector2(0.5, 0.5)
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.109
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.825
+offset_top = -70.547
+offset_right = 266.175
+offset_bottom = 163.28
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_11gyi")
 
 [node name="Clue" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 217.0
-offset_top = 107.0
-offset_right = 857.0
-offset_bottom = 393.0
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.185
+anchor_top = 0.105
+anchor_right = 0.976
+anchor_bottom = 0.487
+offset_left = 0.179993
+offset_top = 0.244999
+offset_right = 0.12793
+offset_bottom = 0.0989838
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("3_bvjf5")
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 37
 text = "Just a closeted soul, 
 locked away from your light;
-
 in the still of the night, 
 I cry, I fight."
 fit_content = true
 scroll_active = false
 
 [node name="GuitarSequenceInput" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 182.0
-offset_top = 378.0
-offset_right = 694.0
-offset_bottom = 435.0
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.155
+anchor_top = 0.91
+anchor_right = 0.592
+anchor_bottom = 1.0
+offset_left = 0.339996
+offset_top = 0.184998
+offset_right = 0.175964
+offset_bottom = 11.9149
 tooltip_text = "\"I need to find the password to open this memory\""
 theme_override_fonts/font = ExtResource("2_o5paw")
 theme_override_font_sizes/font_size = 41
@@ -53,8 +79,7 @@ virtual_keyboard_enabled = false
 shortcut_keys_enabled = false
 middle_mouse_paste_enabled = false
 selecting_enabled = false
-caret_blink = true
-caret_force_displayed = true
+caret_mid_grapheme = false
 
 [node name="Chords" type="AudioStreamPlayer2D" parent="."]
 bus = &"SFX"
@@ -64,9 +89,17 @@ volume_db = -10.162
 bus = &"Music"
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 449.0
-offset_top = 349.0
-offset_right = 772.0
-offset_bottom = 375.0
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.59
+anchor_top = 0.934
+anchor_right = 0.866
+anchor_bottom = 0.986
+offset_left = 0.519958
+offset_top = 0.197968
+offset_right = 0.0483398
+offset_bottom = 0.0421448
+grow_horizontal = 2
+grow_vertical = 2
 text = "Use Numbers 1-7/ Bksp in case of mistake"

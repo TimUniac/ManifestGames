@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpkxp8vg2ayj8"]
 
 [ext_resource type="Script" path="res://tutorialfiles.gd" id="1_poorq"]
-[ext_resource type="Texture2D" uid="uid://doj303ltyjh6d" path="res://Assets/Texture assets/TempTutorialAssets/FileFolders.png" id="2_vd453"]
+[ext_resource type="Texture2D" uid="uid://dexyyqht1ndwc" path="res://Assets/Texture assets/TutorialAssets/spr_doctor_office_folders.svg.svg" id="2_brnnc"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_a4sb1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgjqr"]
@@ -16,8 +16,7 @@ position = Vector2(0.5, -2)
 shape = SubResource("RectangleShape2D_rgjqr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_vd453")
+texture = ExtResource("2_brnnc")
 
 [node name="Panel" type="Panel" parent="."]
 z_index = 2

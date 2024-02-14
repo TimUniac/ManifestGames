@@ -24,7 +24,8 @@ func _append_letter_to_code(letter):
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
 		print("Code Correct!")
-		emit_signal("codeCorrect")
+		var parent = get_parent()
+		parent.playercollect()
 		$"..".visible = false
 	else:
 		print("Incorrect Code")
