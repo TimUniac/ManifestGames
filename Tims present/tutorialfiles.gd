@@ -15,10 +15,13 @@ var is_opened = false
 @onready var tutorialDialogue: String = "These files are new to my memories, I'll need to unlock them."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
-@onready var tutorial_game = $TutorialGame
+
+
+var gameFiles = null
+
 func _ready():
 	interaction_label.visible = false
-	tutorial_game.connect("codeCorrect", self, "_on_code_correct")
+
 
 func _on_code_correct():
 	playercollect()
@@ -31,11 +34,11 @@ func _on_body_entered(body):
 		print("hi there")
 		doctor.speak(tutorialDialogue)
 		
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	interaction_label.visible = false
 	inrange = false
 
-func _process(delta):
+func _process(_delta):
 	if inrange and Input.is_action_just_pressed("Interact"):
 		if is_opened:
 			close()
@@ -43,18 +46,29 @@ func _process(delta):
 			open()
 
 func open():
-	emit_signal("playGame")
+	if gameFiles == null:
+		var tutorial_game_scene = preload("res://Scenes/Nodes/UI/tutorial_game.tscn").instantiate()
+		
+		gameFiles = tutorial_game_scene
+		add_child(gameFiles)
+		print_tree()
 	doctor.talking = true
-	is_opened = true
-	var parent = get_parent()
+	is_opened = true 
+
 
 func close():
+	if gameFiles != null:
+		remove_child(gameFiles)
+		gameFiles.queue_free()
+		gameFiles = null
 	doctor.talking = false
 	is_opened = false
 
-signal item_collected(item_number)
+signal item_collected
 signal playGame
 
 func playercollect():
-	emit_signal("item_collected", 6)
+	emit_signal("item_collected")
 	visible = false
+
+

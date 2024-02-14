@@ -6,29 +6,27 @@ var current_dir = "none"
 
 
 @onready var anim = $Sprite2D
+var pen = false
+var glasses = false
+var files = false
+var guitar = false
+var necklace = false
+var book = false
 
 
-@onready var pickup_display = $"../CanvasLayer/PickupDisplay"
-@onready var item1_ui = pickup_display.get_node("Box/Item1")
-@onready var item2_ui = pickup_display.get_node("Box/Item2")
-@onready var item3_ui = pickup_display.get_node("Box/Item3")
-@onready var item4_ui = pickup_display.get_node("Box/Item4")
-@onready var item5_ui = pickup_display.get_node("Box/Item5")
-@onready var item6_ui = pickup_display.get_node("Box/Item6")
 @onready var SpeechBubble = $SpeechBubble
-@onready var talking = true
 
+var talking = false
+signal all_items_collected
 
 func _ready():
-
-	$Sprite2D.play("front_idle")
-	print(pickup_display)  
-	print(item1_ui)  
-	print(item2_ui)  
-	print(item3_ui)  
 	
+	$Sprite2D.play("front_idle")
 
+	
 func _physics_process(_delta):
+	
+	check_done()
 	player_movement()
 		
 	if Input.is_action_pressed("jump"):
@@ -40,7 +38,7 @@ func _physics_process(_delta):
 	
 func player_movement(): 
 	if talking == true:
-		print ("stop moving")
+		
 		return 
 		print ("move again")
 	elif Input.is_action_pressed("right"):
@@ -75,7 +73,13 @@ func player_movement():
 		velocity.y = 0
 		
 	move_and_slide()	
-	
+
+func check_done():
+	if guitar == true and necklace == true and book == true:
+		emit_signal("all_items_collected")
+	elif pen == true and glasses == true and files == true:
+		emit_signal("all_items_collected")
+		
 func play_anim(movement):
 	var dir = current_dir
 	var anim = $Sprite2D
@@ -110,20 +114,9 @@ func play_anim(movement):
 func player():
 	pass
 
-signal all_items_collected
 
-func collect_item(item_number):
-	match item_number:
-		1: item1_ui.visible = true
-		2: item2_ui.visible = true
-		3: item3_ui.visible = true
-		4: item4_ui.visible = true
-		5: item5_ui.visible = true
-		6: item6_ui.visible = true
-	if item1_ui.visible and item2_ui.visible and item3_ui.visible:
-		emit_signal("all_items_collected")
-	elif item4_ui.visible and item5_ui.visible and item6_ui.visible:
-		emit_signal("all_items_collected")
+
+
 
 
 	
@@ -149,24 +142,34 @@ func _on_tutorial_interacted(tutorialDialogue):
 	speak(tutorialDialogue)
 
 
-func _on_pen_item_collected(item_number):
-	collect_item(item_number)
+func _on_pen_item_collected():
+	
+	pen = true
+	print ("Pen")
+	
 	
 
 
-func _on_glasses_item_collected(item_number):
-	collect_item(item_number)
+func _on_glasses_item_collected():
+	
+	glasses = true
+	print ("glasses")
+func _on_files_item_collected():
+	
+	files = true
+	print ("files")
 
-func _on_files_item_collected(item_number):
-	collect_item(item_number)
+func _on_seraphinas_guitar_item_collected():
+	
+	guitar = true
+	print ("guitar")
+	
+func _on_novel_item_collected():
+	
+	book = true
+	print ("book")
 
-
-func _on_seraphinas_guitar_item_collected(item_number):
-	collect_item(item_number)
-
-func _on_novel_item_collected(item_number):
-	collect_item(item_number)
-
-
-func _on_friendship_necklace_item_collected(item_number):
-	collect_item(item_number)
+func _on_friendship_necklace_item_collected():
+	
+	necklace = true
+	print ("necklace")

@@ -34,4 +34,4 @@ func _on_EnterButton_pressed():
 
 func _on_close_pressed():
 	var parent = get_parent()
-	parent.closeFiles()
+	parent.close()

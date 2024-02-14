@@ -39,5 +39,8 @@ scale = Vector2(0.285, 0.47)
 icon = ExtResource("4_tfsrh")
 
 [node name="Interaction Area" parent="." instance=ExtResource("4_depvb")]
+z_index = 2
 position = Vector2(719.48, 307.2)
 scale = Vector2(0.535, 0.535)
+
+[connection signal="pressed" from="BigPostit/Close" to="." method="_on_close_pressed"]
