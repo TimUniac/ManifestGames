@@ -24,6 +24,5 @@ func change_scene():
 	get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
 
 
-
 func _on_male_doctor_character_all_items_collected():
 	$Finish.visible = true

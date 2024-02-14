@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://btp43hutw3i6o"]
 
 [ext_resource type="Script" path="res://Glasses.gd" id="1_kr4x8"]
-[ext_resource type="Texture2D" uid="uid://hikvlopmyau4" path="res://Assets/Texture assets/TempTutorialAssets/3110890-200Glassews.png" id="2_oatwd"]
+[ext_resource type="Texture2D" uid="uid://goblagy8y8a" path="res://Assets/Texture assets/TutorialAssets/spr_doctor_office_glasses.svg.svg" id="2_y7fp4"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_3s2om"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i4dwq"]
@@ -14,8 +14,7 @@ script = ExtResource("1_kr4x8")
 shape = SubResource("CircleShape2D_i4dwq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_oatwd")
+texture = ExtResource("2_y7fp4")
 
 [node name="Panel" type="Panel" parent="."]
 z_index = 2

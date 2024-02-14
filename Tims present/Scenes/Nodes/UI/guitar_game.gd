@@ -68,11 +68,10 @@ func _on_EnterButton_pressed():
 	if entered_code == secret_code:
 		print("Code Correct!")
 		var parent = get_parent()
-		var grandparent = parent.get_parent()
-		if grandparent and grandparent.has_method("playercollect"):
-			grandparent.playercollect()
-			grandparent.close()
-			$"..".visible = false
+		if parent and parent.has_method("playercollect"):
+			parent.playercollect()
+			parent.close()
+			
 			music_player.stream = music_win
 			music_player.play()
 		else:

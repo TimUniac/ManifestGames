@@ -15,9 +15,11 @@ var is_opened = false
 @onready var guitarDialogue: String = "This guitar seems to be important, I wonder if a song would unlock it."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
+var gameGuitar = null
+
 func _ready():
 	interaction_label.visible = false
-	$CanvasLayer/GuitarGame.visible = false
+	
 
 
 func _on_body_entered(body):
@@ -40,11 +42,18 @@ func _process(delta):
 			open()
 			
 func open():
-	$CanvasLayer/GuitarGame.visible = true
+	if gameGuitar == null:
+		var guitar_game_scene = preload("res://Scenes/Nodes/UI/guitar_game.tscn").instantiate()
+		
+		gameGuitar = guitar_game_scene
+		add_child(gameGuitar)
 	doctor.talking = true
 	is_opened = true		
 func close():
-	$CanvasLayer/GuitarGame.visible = false
+	if gameGuitar != null:
+		remove_child(gameGuitar)
+		gameGuitar.queue_free()
+		gameGuitar = null
 	doctor.talking = false
 	is_opened = false
 		
@@ -58,6 +67,10 @@ func playercollect():
 		
 func guitar():
 	pass
+
+signal playGame
+
+
 
 
 func _on_texture_button_pressed():
