@@ -96,6 +96,6 @@ func _on_EnterButton_pressed():
 
 
 
-func _on_texture_button_pressed():
-	var par = get_parent()
-	par.visible = false
+func _on_close_pressed():
+	var parent = get_parent()
+	parent.close()
