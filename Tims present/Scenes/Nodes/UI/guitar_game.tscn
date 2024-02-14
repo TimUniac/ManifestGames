@@ -1,21 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://xox3s1h15gac"]
+[gd_scene load_steps=6 format=3 uid="uid://xox3s1h15gac"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
 [ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="2_11gyi"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="2_o5paw"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="3_bcud7"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_bvjf5"]
 
 [node name="GuitarGame" type="Control"]
 z_index = 2
 layout_mode = 3
-anchor_left = -0.374
-anchor_top = -0.252
-anchor_right = -0.374
-anchor_bottom = -0.252
-offset_left = -452.92
-offset_top = -231.84
-offset_right = 719.08
-offset_bottom = 271.16
+anchor_left = -0.412
+anchor_top = -0.256
+anchor_right = -0.412
+anchor_bottom = -0.256
+offset_left = -379.96
+offset_top = -227.52
+offset_right = 792.04
+offset_bottom = 275.48
+scale = Vector2(0.815, 0.815)
 script = ExtResource("1_qw654")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -103,3 +105,14 @@ offset_bottom = 0.0421448
 grow_horizontal = 2
 grow_vertical = 2
 text = "Use Numbers 1-7/ Bksp in case of mistake"
+
+[node name="Close" type="Button" parent="."]
+z_index = 2
+offset_left = 8.0
+offset_top = 46.0
+offset_right = 227.0
+offset_bottom = 189.0
+scale = Vector2(0.245, 0.245)
+icon = ExtResource("3_bcud7")
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
