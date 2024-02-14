@@ -19,7 +19,7 @@ func _input(event):
 
 func _append_letter_to_code(letter):
 	entered_code += letter
-	$SequenceInput.text = entered_code
+	$TextureRect/SequenceInput.text = entered_code
 
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
@@ -34,4 +34,4 @@ func _on_EnterButton_pressed():
 	else:
 		print("Incorrect Code")
 		entered_code = ""
-		$SequenceInput.clear()
+		$TextureRect/SequenceInput.clear()

@@ -1,33 +1,45 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6brfnn42kqe6"]
+[gd_scene load_steps=7 format=3 uid="uid://b6brfnn42kqe6"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/TutorialGame.gd" id="1_sdyng"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_0lgi0"]
+[ext_resource type="Texture2D" uid="uid://5nrmr8qxy0e" path="res://Assets/Texture assets/Rectangle 2.png" id="2_dpibk"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_i2l02"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_ufs11"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_31e6p"]
 
 [node name="TutorialGame" type="Control"]
+z_index = 2
 layout_mode = 3
-anchors_preset = 0
-offset_left = -183.0
-offset_top = -209.0
-offset_right = 1208.0
-offset_bottom = 341.0
+anchor_left = -0.274
+anchor_top = -0.143
+anchor_right = -0.274
+anchor_bottom = -0.143
+offset_left = -1407.92
+offset_top = -637.56
+offset_right = 535.08
+offset_bottom = 435.44
 script = ExtResource("1_sdyng")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 144.0
-offset_right = 1550.0
-offset_bottom = 844.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 539.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dpibk")
 
-[node name="Panel" type="Sprite2D" parent="."]
-position = Vector2(438.75, 281.75)
-scale = Vector2(1.05932, 0.518957)
+[node name="Panel" type="Sprite2D" parent="TextureRect"]
+position = Vector2(709.5, 225.5)
+scale = Vector2(2.11864, 1.03791)
 texture = ExtResource("2_0lgi0")
 
-[node name="Clue" type="Label" parent="Panel"]
+[node name="Clue" type="Label" parent="TextureRect/Panel"]
 offset_left = -173.46
 offset_top = -72.742
 offset_right = 187.54
@@ -38,18 +50,19 @@ theme_override_font_sizes/font_size = 30
 text = "It should be on a post-it somewhere in here."
 autowrap_mode = 2
 
-[node name="SequenceInput" type="LineEdit" parent="."]
+[node name="SequenceInput" type="LineEdit" parent="TextureRect"]
+z_index = 2
 layout_mode = 0
-offset_left = 182.0
-offset_top = 378.0
-offset_right = 694.0
-offset_bottom = 435.0
+offset_left = 404.0
+offset_top = 386.0
+offset_right = 1034.0
+offset_bottom = 554.0
 tooltip_text = "\"I need to find the password to open this memory\""
 theme_override_fonts/font = ExtResource("3_ufs11")
 theme_override_font_sizes/font_size = 41
 placeholder_text = "Input Seqence and Press Enter"
 alignment = 1
-max_length = 9
+max_length = 25
 expand_to_text_length = true
 virtual_keyboard_enabled = false
 clear_button_enabled = true
@@ -59,11 +72,23 @@ selecting_enabled = false
 draw_control_chars = true
 caret_mid_grapheme = false
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 466.0
-offset_top = 306.0
-offset_right = 647.0
-offset_bottom = 332.0
+offset_left = 986.0
+offset_top = 590.0
+offset_right = 1416.0
+offset_bottom = 674.0
 theme_override_fonts/font = ExtResource("3_i2l02")
+theme_override_font_sizes/font_size = 40
 text = "Bksp in case of mistake"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_right = 219.0
+offset_bottom = 143.0
+scale = Vector2(0.285, 0.47)
+icon = ExtResource("6_31e6p")
+
+[connection signal="pressed" from="TextureRect/Close" to="." method="_on_close_pressed"]

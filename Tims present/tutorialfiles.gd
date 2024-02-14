@@ -18,7 +18,7 @@ var is_opened = false
 func _ready():
 	interaction_label.visible = false
 	$TutorialGame.visible = false
-	$TutorialGame/SequenceInput.set_process_input(false)
+	$TutorialGame/TextureRect/SequenceInput.set_process_input(false)
 	
 
 
@@ -47,12 +47,12 @@ func open():
 	$TutorialGame.visible = true
 	doctor.talking = true
 	is_opened = true
-	$TutorialGame/SequenceInput.set_process_input(true)
+	
 func close():
 	$TutorialGame.visible = false
 	doctor.talking = false
 	is_opened = false
-	$TutorialGame/SequenceInput.set_process_input(false)
+	
 
 		
 		
