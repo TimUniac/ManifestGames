@@ -98,6 +98,7 @@ bbcode_enabled = true
 scroll_following = true
 visible_characters = 0
 visible_ratio = 0.0
+text_direction = 1
 
 [node name="Timer" type="Timer" parent="."]
 
