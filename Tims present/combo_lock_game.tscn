@@ -1,15 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmhndf60c2tas"]
+[gd_scene load_steps=8 format=3 uid="uid://cmhndf60c2tas"]
 
 [ext_resource type="Script" path="res://ComboLockGame.gd" id="1_4wk0a"]
-[ext_resource type="Texture2D" uid="uid://daowjnkbddr3d" path="res://Assets/Texture assets/TempTutorialAssets/SVG/combowedgeRed.svg" id="1_8u0b5"]
-[ext_resource type="Texture2D" uid="uid://w2qgrx230gij" path="res://Assets/Texture assets/TempTutorialAssets/SVG/1Asset 3.svg" id="3_3rih4"]
-[ext_resource type="Texture2D" uid="uid://xv71t15md67k" path="res://Assets/Texture assets/TempTutorialAssets/SVG/1Asset 2.svg" id="5_b8rk3"]
-[ext_resource type="Texture2D" uid="uid://df367w4iq1chi" path="res://Assets/Texture assets/TempTutorialAssets/SVG/1Asset 4.svg" id="7_co0x4"]
+[ext_resource type="Texture2D" uid="uid://csowe4luvfno6" path="res://Assets/Texture assets/Chapter 2/SVG/Asset 5.svg" id="7_2jj01"]
+[ext_resource type="Texture2D" uid="uid://krqah0vlqv18" path="res://Assets/Texture assets/Chapter 2/SVG/Asset 1.svg" id="7_31eco"]
+[ext_resource type="Texture2D" uid="uid://kq1cikpne7wm" path="res://Assets/Texture assets/Chapter 2/SVG/Layer 3.svg" id="8_pk00u"]
+[ext_resource type="Texture2D" uid="uid://cc0q5mme6t15b" path="res://Assets/Texture assets/Chapter 2/SVG/Layer 4.svg" id="9_o0dod"]
 [ext_resource type="Texture2D" uid="uid://da0wpc2sot1tv" path="res://Assets/Texture assets/Chapter 2/BG_Lockers_V1.jpg" id="10_jkdid"]
+[ext_resource type="Texture2D" uid="uid://dbuw63f1vifn8" path="res://Assets/Texture assets/Chapter 2/SVG/Layer 5.svg" id="10_lhtiu"]
 
 [node name="ComboLockGame" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Locker" type="TextureRect" parent="."]
 offset_left = -102.0
 offset_top = -1257.0
 offset_right = 2378.0
@@ -24,38 +25,58 @@ offset_top = 6.0
 offset_right = 1922.0
 offset_bottom = 1080.0
 script = ExtResource("1_4wk0a")
-red_button_normal_original = ExtResource("1_8u0b5")
-blue_button_normal_original = ExtResource("3_3rih4")
-green_button_normal_original = ExtResource("5_b8rk3")
-yellow_button_normal_original = ExtResource("7_co0x4")
+red_button_normal_original = ExtResource("7_2jj01")
+blue_button_normal_original = ExtResource("8_pk00u")
+green_button_normal_original = ExtResource("9_o0dod")
+yellow_button_normal_original = ExtResource("10_lhtiu")
 
 [node name="redButton" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_left = 461.0
-offset_top = 666.0
-offset_right = 586.0
-offset_bottom = 794.0
+offset_left = 466.0
+offset_top = 665.0
+offset_right = 3165.0
+offset_bottom = 3365.0
+scale = Vector2(0.045, 0.045)
+texture_normal = ExtResource("7_2jj01")
 
 [node name="blueButton" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_left = 355.0
-offset_top = 551.0
-offset_right = 464.0
-offset_bottom = 663.0
+offset_left = 345.0
+offset_top = 544.0
+offset_right = 3045.0
+offset_bottom = 3243.0
+scale = Vector2(0.045, 0.045)
+texture_normal = ExtResource("8_pk00u")
+flip_h = true
 
 [node name="greenButton" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 666.0
-offset_right = 461.0
-offset_bottom = 782.0
+offset_left = 345.0
+offset_top = 665.0
+offset_right = 3044.0
+offset_bottom = 3365.0
+scale = Vector2(0.045, 0.045)
+texture_normal = ExtResource("9_o0dod")
+flip_v = true
 
 [node name="yellowButton" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_left = 461.0
+offset_left = 466.0
 offset_top = 545.0
-offset_right = 591.0
-offset_bottom = 661.0
+offset_right = 3166.0
+offset_bottom = 3244.0
+scale = Vector2(0.045, 0.045)
+texture_normal = ExtResource("10_lhtiu")
+flip_h = true
+flip_v = true
+
+[node name="Dial" type="TextureRect" parent="."]
+offset_left = 421.0
+offset_top = 620.0
+offset_right = 2427.0
+offset_bottom = 2973.0
+scale = Vector2(0.045, 0.045)
+texture = ExtResource("7_31eco")
 
 [connection signal="pressed" from="Control/redButton" to="Control" method="_on_red_button_pressed"]
 [connection signal="pressed" from="Control/blueButton" to="Control" method="_on_blue_button_pressed"]
