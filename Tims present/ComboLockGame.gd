@@ -7,6 +7,7 @@ var blue = false
 var green = false
 var yellow = false
 
+@onready var  game = $".."
 @export var red_button_normal_original: Texture
 @export var blue_button_normal_original: Texture
 @export var green_button_normal_original: Texture
@@ -56,6 +57,7 @@ func _on_green_button_pressed():
 		green = true
 		print ("open Locker")
 		button.texture_normal = button.texture_pressed
+		game.visible = false 
 	else:
 		print ("wrong answer")
 		reset_buttons()

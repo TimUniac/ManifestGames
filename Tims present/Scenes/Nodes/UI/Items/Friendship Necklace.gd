@@ -46,7 +46,7 @@ func close():
 	$CanvasLayer/NacklaceGame.visible = false
 	doctor.talking = false
 	is_opened = false
-
+	
 signal item_collected(item_number)
 
 func playercollect():

@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmhndf60c2tas"]
+[gd_scene load_steps=12 format=3 uid="uid://cmhndf60c2tas"]
 
 [ext_resource type="Script" path="res://ComboLockGame.gd" id="1_4wk0a"]
 [ext_resource type="Texture2D" uid="uid://csowe4luvfno6" path="res://Assets/Texture assets/Chapter 2/SVG/Asset 5.svg" id="7_2jj01"]
 [ext_resource type="Texture2D" uid="uid://krqah0vlqv18" path="res://Assets/Texture assets/Chapter 2/SVG/Asset 1.svg" id="7_31eco"]
+[ext_resource type="Texture2D" uid="uid://1tapuifhgg37" path="res://Assets/Texture assets/Chapter 2/SVG/SVG/Asset 10.svg" id="7_g4qd3"]
+[ext_resource type="Texture2D" uid="uid://besjvp4wq02gk" path="res://Assets/Texture assets/Chapter 2/SVG/SVG/Asset 8.svg" id="8_l8iq8"]
 [ext_resource type="Texture2D" uid="uid://kq1cikpne7wm" path="res://Assets/Texture assets/Chapter 2/SVG/Layer 3.svg" id="8_pk00u"]
 [ext_resource type="Texture2D" uid="uid://cc0q5mme6t15b" path="res://Assets/Texture assets/Chapter 2/SVG/Layer 4.svg" id="9_o0dod"]
+[ext_resource type="Texture2D" uid="uid://b10lc66wndko3" path="res://Assets/Texture assets/Chapter 2/SVG/SVG/Asset 11.svg" id="9_udwrr"]
+[ext_resource type="Texture2D" uid="uid://dvs3un7kunov4" path="res://Assets/Texture assets/Chapter 2/SVG/SVG/Asset 9.svg" id="10_dtmyf"]
 [ext_resource type="Texture2D" uid="uid://da0wpc2sot1tv" path="res://Assets/Texture assets/Chapter 2/BG_Lockers_V1.jpg" id="10_jkdid"]
 [ext_resource type="Texture2D" uid="uid://dbuw63f1vifn8" path="res://Assets/Texture assets/Chapter 2/SVG/Layer 5.svg" id="10_lhtiu"]
 
@@ -38,6 +42,7 @@ offset_right = 3165.0
 offset_bottom = 3365.0
 scale = Vector2(0.045, 0.045)
 texture_normal = ExtResource("7_2jj01")
+texture_pressed = ExtResource("7_g4qd3")
 
 [node name="blueButton" type="TextureButton" parent="Control"]
 layout_mode = 0
@@ -47,6 +52,7 @@ offset_right = 3045.0
 offset_bottom = 3243.0
 scale = Vector2(0.045, 0.045)
 texture_normal = ExtResource("8_pk00u")
+texture_pressed = ExtResource("8_l8iq8")
 flip_h = true
 
 [node name="greenButton" type="TextureButton" parent="Control"]
@@ -57,6 +63,7 @@ offset_right = 3044.0
 offset_bottom = 3365.0
 scale = Vector2(0.045, 0.045)
 texture_normal = ExtResource("9_o0dod")
+texture_pressed = ExtResource("9_udwrr")
 flip_v = true
 
 [node name="yellowButton" type="TextureButton" parent="Control"]
@@ -67,6 +74,7 @@ offset_right = 3166.0
 offset_bottom = 3244.0
 scale = Vector2(0.045, 0.045)
 texture_normal = ExtResource("10_lhtiu")
+texture_pressed = ExtResource("10_dtmyf")
 flip_h = true
 flip_v = true
 
