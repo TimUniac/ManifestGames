@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://2q3kv8sp8hks"]
+
+[ext_resource type="Texture2D" uid="uid://b5nrq53q808ft" path="res://Assets/Texture assets/Chapter 2/TempJigsaw/Layer 5.png" id="1_6l8lp"]
+
+[node name="PuzzlePiece5" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6l8lp")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/RigidBody2D"]
+polygon = PackedVector2Array(-130, -164, -11, -143, 135, -130, 26, 59, -31, 165, -134, 158)
