@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://tko7pgcnweeg"]
+[gd_scene load_steps=3 format=3 uid="uid://tko7pgcnweeg"]
 
 [ext_resource type="Texture2D" uid="uid://hyv838kdjn5n" path="res://Assets/Texture assets/Chapter 2/TempJigsaw/Layer 2.png" id="1_22257"]
+[ext_resource type="Script" path="res://PuzzlePiece.gd" id="2_pbnac"]
 
 [node name="PuzzlePiece2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_22257")
+script = ExtResource("2_pbnac")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Sprite2D"]
 

@@ -1,0 +1,130 @@
+[gd_scene load_steps=4 format=3 uid="uid://c47h75b0a84qf"]
+
+[ext_resource type="Texture2D" uid="uid://b47vpq2jt7kvm" path="res://Assets/Texture assets/Chapter 2/TempJigsaw/TempTorn.webp" id="1_7b38x"]
+[ext_resource type="Script" path="res://Scenes/Nodes/PiecePlace1.gd" id="2_3dghp"]
+[ext_resource type="PackedScene" uid="uid://cks0phve3b27l" path="res://Scenes/Nodes/UI/puzzle_pieces.tscn" id="3_hl5yh"]
+
+[node name="PuzzleGame" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1024.0
+offset_bottom = 1024.0
+color = Color(0.329412, 0.235294, 0.0588235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 1024.0
+texture = ExtResource("1_7b38x")
+
+[node name="PiecePlace1" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(158, 113)
+script = ExtResource("2_3dghp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace1"]
+position = Vector2(37, -6)
+polygon = PackedVector2Array(-195, -105, 191, -108, 76, 104, -83, 93, -190, 70, -190, 70)
+
+[node name="PiecePlace2" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(408, 136)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace2"]
+position = Vector2(-18, -8)
+polygon = PackedVector2Array(7, -130, 119, -126, 107, 129, -30, 117, -111, 96, -120, 85)
+
+[node name="PiecePlace3" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(621, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace3"]
+position = Vector2(-87, -6)
+polygon = PackedVector2Array(-20, -148, 193, -151, 251, 156, 122, 129, -16, 101, -20, 107)
+
+[node name="PiecePlace4" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(905, 150)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace4"]
+position = Vector2(-21, 25)
+polygon = PackedVector2Array(-141, -165, 143, -163, 143, 159, 60, 108, -23, 115, -88, 136)
+
+[node name="PiecePlace5" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(99, 312)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace5"]
+position = Vector2(42, 45)
+polygon = PackedVector2Array(-130, -164, -11, -143, 135, -130, 26, 59, -31, 165, -134, 158)
+
+[node name="PiecePlace6" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(342, 378)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace6"]
+position = Vector2(-18, 6)
+polygon = PackedVector2Array(-35, -143, 191, -108, 162, 121, 55, 111, -87, 150, -144, 130, -201, 135)
+
+[node name="PiecePlace7" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(645, 399)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace7"]
+position = Vector2(37, -5)
+polygon = PackedVector2Array(-153, -110, 20, -68, 126, -75, 195, 111, -72, 102, -194, 108, -190, 70)
+
+[node name="PiecePlace8" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(938, 417)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace8"]
+position = Vector2(-18, -6)
+polygon = PackedVector2Array(-101, -90, -6, -111, 60, -97, 103, -51, 104, 107, 28, 103, -48, 92, -67, 11)
+
+[node name="PiecePlace9" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(42, 582)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace9"]
+position = Vector2(14, 0)
+polygon = PackedVector2Array(-43, -63, 8, -57, 49, -55, -7, 61, -45, 54, -46, 20)
+
+[node name="PiecePlace10" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(266.6, 625)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace10"]
+polygon = PackedVector2Array(-153, -89, -100, -100, -31, -84, 64, -107, 210, -112, 177, 116, 62, 98, -37, 96, -186, 57, -213, 41)
+
+[node name="PiecePlace11" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(700, 682.77)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace11"]
+polygon = PackedVector2Array(-208, -163, -159, -170, 174, -165, 242, 170, 88, 116, -76, 112, -165, 79, -242, 69)
+
+[node name="PiecePlace12" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(954.905, 689.64)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace12"]
+polygon = PackedVector2Array(-67, -169.496, 3, -161.484, 67, -164.488, 68, 174.002, -3, 159.982, -27, 63.8425, -49, -87.3766)
+
+[node name="PiecePlace13" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(0, 700)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace13"]
+position = Vector2(45, -38)
+scale = Vector2(0.31438, 0.431294)
+polygon = PackedVector2Array(-117.692, -41.7348, -44.5321, -39.4162, -19.0852, -23.186, -114.511, 106.656, -120.873, 55.6465, -117.692, -11.593)
+
+[node name="PiecePlace14" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(223.675, 850)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace14"]
+polygon = PackedVector2Array(-174, -175, -140, -158, -85.2607, -149.341, -13, -123, 93, -120, 214, -102, 124, 174, -96, 172, -219, 173, -215, -94)
+
+[node name="PiecePlace15" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(684.215, 902.335)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace15"]
+polygon = PackedVector2Array(-239, -138, -164, -133, -61, -95, 79, -95, 257, -34, 287, 66, 324, 135, -328, 137, -298, 52, -283, -30)
+
+[node name="PiecePlace16" type="Area2D" parent="." groups=["PiecePlaces"]]
+position = Vector2(985.08, 950)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PiecePlace16"]
+polygon = PackedVector2Array(-33, -83, 33, -72, 32, 83, 2, 28, -11, -1, -24, -42)
+
+[node name="PuzzlePieces" parent="." instance=ExtResource("3_hl5yh")]
+position = Vector2(1034, -7)

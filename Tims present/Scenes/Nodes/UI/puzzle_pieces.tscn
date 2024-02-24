@@ -1,0 +1,74 @@
+[gd_scene load_steps=17 format=3 uid="uid://cks0phve3b27l"]
+
+[ext_resource type="PackedScene" uid="uid://cqmv8ds5ms55k" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_1.tscn" id="1_c8w4a"]
+[ext_resource type="PackedScene" uid="uid://tko7pgcnweeg" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_2.tscn" id="2_1hxxe"]
+[ext_resource type="PackedScene" uid="uid://dd7jgylg1nv4l" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_3.tscn" id="3_alnjj"]
+[ext_resource type="PackedScene" uid="uid://b4ih4ddfs52an" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_4.tscn" id="4_xgcnm"]
+[ext_resource type="PackedScene" uid="uid://2q3kv8sp8hks" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_5.tscn" id="5_s7klp"]
+[ext_resource type="PackedScene" uid="uid://my6h8di53rji" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_6.tscn" id="6_uhnb2"]
+[ext_resource type="PackedScene" uid="uid://bhrbca82xkytm" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_7.tscn" id="7_wfkdc"]
+[ext_resource type="PackedScene" uid="uid://cj4hhjgypyyis" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_8.tscn" id="8_spmcl"]
+[ext_resource type="PackedScene" uid="uid://btuj2v6ilfb4h" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_9.tscn" id="9_0s3sw"]
+[ext_resource type="PackedScene" uid="uid://dqtc3hrcdm0y8" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_10.tscn" id="10_mp33n"]
+[ext_resource type="PackedScene" uid="uid://b0hpxaafisa43" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_11.tscn" id="11_haer3"]
+[ext_resource type="PackedScene" uid="uid://b4ppchmrjumqj" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_12.tscn" id="12_cae0q"]
+[ext_resource type="PackedScene" uid="uid://dh1clx7mtwyjb" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_13.tscn" id="13_c35ig"]
+[ext_resource type="PackedScene" uid="uid://d1b7lxv6tr23" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_14.tscn" id="14_1eht4"]
+[ext_resource type="PackedScene" uid="uid://c8y1sdwkln4gm" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_15.tscn" id="15_rs036"]
+[ext_resource type="PackedScene" uid="uid://oqax5jwljng4" path="res://Assets/Texture assets/PuzzlePieces/puzzle_piece_16.tscn" id="16_016xw"]
+
+[node name="PuzzlePieces" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 886.0
+offset_bottom = 1077.0
+
+[node name="PuzzlePiece1" parent="Control" instance=ExtResource("1_c8w4a")]
+position = Vector2(208, 431)
+
+[node name="PuzzlePiece2" parent="Control" instance=ExtResource("2_1hxxe")]
+position = Vector2(657, 974)
+
+[node name="PuzzlePiece3" parent="Control" instance=ExtResource("3_alnjj")]
+position = Vector2(465, 712)
+
+[node name="PuzzlePiece4" parent="Control" instance=ExtResource("4_xgcnm")]
+position = Vector2(342, 180)
+
+[node name="PuzzlePiece5" parent="Control" instance=ExtResource("5_s7klp")]
+position = Vector2(653, 204)
+
+[node name="PuzzlePiece6" parent="Control" instance=ExtResource("6_uhnb2")]
+position = Vector2(687, 153)
+
+[node name="PuzzlePiece7" parent="Control" instance=ExtResource("7_wfkdc")]
+position = Vector2(611, 753)
+
+[node name="PuzzlePiece8" parent="Control" instance=ExtResource("8_spmcl")]
+position = Vector2(110, 115)
+
+[node name="PuzzlePiece9" parent="Control" instance=ExtResource("9_0s3sw")]
+position = Vector2(650, 445)
+
+[node name="PuzzlePiece10" parent="Control" instance=ExtResource("10_mp33n")]
+position = Vector2(218, 790)
+
+[node name="PuzzlePiece11" parent="Control" instance=ExtResource("11_haer3")]
+position = Vector2(637, 466)
+
+[node name="PuzzlePiece12" parent="Control" instance=ExtResource("12_cae0q")]
+position = Vector2(756, 661)
+
+[node name="PuzzlePiece13" parent="Control" instance=ExtResource("13_c35ig")]
+position = Vector2(860, 1034)
+
+[node name="PuzzlePiece14" parent="Control" instance=ExtResource("14_1eht4")]
+position = Vector2(224, 586)
+
+[node name="PuzzlePiece15" parent="Control" instance=ExtResource("15_rs036")]
+position = Vector2(285, 950)
+
+[node name="PuzzlePiece16" parent="Control" instance=ExtResource("16_016xw")]
+position = Vector2(831, 907)
