@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ko4o82mkd8k4"]
+
+[ext_resource type="Script" path="res://windowCounter.gd" id="1_b0w1g"]
+
+[node name="windowCounter" type="Node"]
+script = ExtResource("1_b0w1g")

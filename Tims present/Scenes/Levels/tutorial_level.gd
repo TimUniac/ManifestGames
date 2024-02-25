@@ -28,4 +28,5 @@ func hide_show_objectives():
 
 func _on_male_doctor_character_all_items_collected():
 	$Finish.visible = true
+	WindowCounter.openWindow()
 	print ("all tutorial items collected")

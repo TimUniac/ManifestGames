@@ -54,7 +54,7 @@ func open():
 		print_tree()
 	doctor.talking = true
 	is_opened = true 
-
+	WindowCounter.openWindow()
 
 func close():
 	if gameFiles != null:
@@ -63,6 +63,7 @@ func close():
 		gameFiles = null
 	doctor.talking = false
 	is_opened = false
+	WindowCounter.closeWindow()
 
 signal item_collected
 signal playGame

@@ -25,11 +25,12 @@ func close():
 	$BigPostit.visible = false
 	doctor.talking = false
 	is_opened = false
+	WindowCounter.closeWindow()
 func open():
 	$BigPostit.visible = true
 	doctor.talking = true
 	is_opened = true
-
+	WindowCounter.openWindow()
 
 
 
