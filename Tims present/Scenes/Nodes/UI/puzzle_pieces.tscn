@@ -20,55 +20,72 @@
 [node name="PuzzlePieces" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
+y_sort_enabled = true
 layout_mode = 3
 anchors_preset = 0
 offset_right = 886.0
 offset_bottom = 1077.0
 
-[node name="PuzzlePiece1" parent="Control" instance=ExtResource("1_c8w4a")]
+[node name="PuzzlePiece1" parent="Control" groups=["pieces"] instance=ExtResource("1_c8w4a")]
+y_sort_enabled = true
 position = Vector2(208, 431)
 
-[node name="PuzzlePiece2" parent="Control" instance=ExtResource("2_1hxxe")]
+[node name="PuzzlePiece2" parent="Control" groups=["pieces"] instance=ExtResource("2_1hxxe")]
+y_sort_enabled = true
 position = Vector2(657, 974)
 
-[node name="PuzzlePiece3" parent="Control" instance=ExtResource("3_alnjj")]
+[node name="PuzzlePiece3" parent="Control" groups=["pieces"] instance=ExtResource("3_alnjj")]
+y_sort_enabled = true
 position = Vector2(465, 712)
 
-[node name="PuzzlePiece4" parent="Control" instance=ExtResource("4_xgcnm")]
+[node name="PuzzlePiece4" parent="Control" groups=["pieces"] instance=ExtResource("4_xgcnm")]
+y_sort_enabled = true
 position = Vector2(342, 180)
 
-[node name="PuzzlePiece5" parent="Control" instance=ExtResource("5_s7klp")]
+[node name="PuzzlePiece5" parent="Control" groups=["pieces"] instance=ExtResource("5_s7klp")]
+y_sort_enabled = true
 position = Vector2(653, 204)
 
-[node name="PuzzlePiece6" parent="Control" instance=ExtResource("6_uhnb2")]
+[node name="PuzzlePiece6" parent="Control" groups=["pieces"] instance=ExtResource("6_uhnb2")]
+y_sort_enabled = true
 position = Vector2(687, 153)
 
-[node name="PuzzlePiece7" parent="Control" instance=ExtResource("7_wfkdc")]
+[node name="PuzzlePiece7" parent="Control" groups=["pieces"] instance=ExtResource("7_wfkdc")]
+y_sort_enabled = true
 position = Vector2(611, 753)
 
-[node name="PuzzlePiece8" parent="Control" instance=ExtResource("8_spmcl")]
+[node name="PuzzlePiece8" parent="Control" groups=["pieces"] instance=ExtResource("8_spmcl")]
+y_sort_enabled = true
 position = Vector2(110, 115)
 
-[node name="PuzzlePiece9" parent="Control" instance=ExtResource("9_0s3sw")]
+[node name="PuzzlePiece9" parent="Control" groups=["pieces"] instance=ExtResource("9_0s3sw")]
+y_sort_enabled = true
 position = Vector2(650, 445)
 
-[node name="PuzzlePiece10" parent="Control" instance=ExtResource("10_mp33n")]
+[node name="PuzzlePiece10" parent="Control" groups=["pieces"] instance=ExtResource("10_mp33n")]
+y_sort_enabled = true
 position = Vector2(218, 790)
 
-[node name="PuzzlePiece11" parent="Control" instance=ExtResource("11_haer3")]
+[node name="PuzzlePiece11" parent="Control" groups=["pieces"] instance=ExtResource("11_haer3")]
+y_sort_enabled = true
 position = Vector2(637, 466)
 
-[node name="PuzzlePiece12" parent="Control" instance=ExtResource("12_cae0q")]
+[node name="PuzzlePiece12" parent="Control" groups=["pieces"] instance=ExtResource("12_cae0q")]
+y_sort_enabled = true
 position = Vector2(756, 661)
 
-[node name="PuzzlePiece13" parent="Control" instance=ExtResource("13_c35ig")]
+[node name="PuzzlePiece13" parent="Control" groups=["pieces"] instance=ExtResource("13_c35ig")]
+y_sort_enabled = true
 position = Vector2(860, 1034)
 
-[node name="PuzzlePiece14" parent="Control" instance=ExtResource("14_1eht4")]
+[node name="PuzzlePiece14" parent="Control" groups=["pieces"] instance=ExtResource("14_1eht4")]
+y_sort_enabled = true
 position = Vector2(224, 586)
 
-[node name="PuzzlePiece15" parent="Control" instance=ExtResource("15_rs036")]
+[node name="PuzzlePiece15" parent="Control" groups=["pieces"] instance=ExtResource("15_rs036")]
+y_sort_enabled = true
 position = Vector2(285, 950)
 
-[node name="PuzzlePiece16" parent="Control" instance=ExtResource("16_016xw")]
+[node name="PuzzlePiece16" parent="Control" groups=["pieces"] instance=ExtResource("16_016xw")]
+y_sort_enabled = true
 position = Vector2(831, 907)
