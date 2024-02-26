@@ -48,7 +48,8 @@ func open():
 		gameGuitar = guitar_game_scene
 		add_child(gameGuitar)
 	doctor.talking = true
-	is_opened = true		
+	is_opened = true
+	WindowCounter.openWindow()
 func close():
 	if gameGuitar != null:
 		remove_child(gameGuitar)
@@ -56,6 +57,7 @@ func close():
 		gameGuitar = null
 	doctor.talking = false
 	is_opened = false
+	WindowCounter.closeWindow()
 		
  
 signal item_collected(item_number)
@@ -63,6 +65,7 @@ signal item_collected(item_number)
 func playercollect():
 	emit_signal("item_collected", 1)
 	visible = false
+	$'.'.queue_free()
 		
 		
 func guitar():

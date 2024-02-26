@@ -33,6 +33,7 @@ func _on_EnterButton_pressed():
 		if grandparent and grandparent.has_method("playercollect"):
 			grandparent.playercollect()
 			grandparent.close()
+			grandparent.queue_free()
 			$"..".visible = false
 			
 		else:

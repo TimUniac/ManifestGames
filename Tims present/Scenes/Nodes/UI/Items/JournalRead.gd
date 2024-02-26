@@ -20,10 +20,12 @@ func close():
 	$CanvasLayer/NewJournal.visible = false
 	doctor.talking = false
 	is_opened = false
+	WindowCounter.closeWindow()
 func open():
 	$CanvasLayer/NewJournal.visible = true
 	doctor.talking = true
 	is_opened = true
+	WindowCounter.openWindow()
 
 func _process(delta):
 	

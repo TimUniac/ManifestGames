@@ -35,7 +35,7 @@ func _physics_process(_delta):
 		if SpeechBubble.is_visible:
 			SpeechBubble.visible = false
 			talking = false
-			print("not talking")
+			
 			
 	
 func player_movement(): 

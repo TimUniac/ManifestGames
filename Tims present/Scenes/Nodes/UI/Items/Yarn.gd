@@ -45,12 +45,16 @@ func _process(delta):
 func open():
 	$CanvasLayer/BookGame/SequenceInput.clear()
 	$CanvasLayer/BookGame.visible = true
+	WindowCounter.openWindow()
 	doctor.talking = true
 	is_opened = true	
 func close():
-	$CanvasLayer/BookGame.visible = false
+	$CanvasLayer/BookGame.visible = false	
+	WindowCounter.closeWindow()
 	doctor.talking = false
 	is_opened = false
+	
+	
 		
 
 signal item_collected(item_number)

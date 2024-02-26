@@ -1,6 +1,6 @@
 extends Control
 
-var secret_code = "LeFanu"
+var secret_code = "LAFANU"
 var entered_code = ""
 
 
@@ -33,6 +33,7 @@ func _on_EnterButton_pressed():
 		if grandparent and grandparent.has_method("playercollect"):
 			grandparent.playercollect()
 			grandparent.close()
+			grandparent.queue_free()
 			$"..".visible = false
 			
 		else:
