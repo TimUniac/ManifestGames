@@ -108,6 +108,7 @@ text = "Use Numbers 1-7/ Bksp in case of mistake"
 
 [node name="Close" type="Button" parent="."]
 z_index = 2
+layout_mode = 0
 offset_left = 8.0
 offset_top = 46.0
 offset_right = 227.0

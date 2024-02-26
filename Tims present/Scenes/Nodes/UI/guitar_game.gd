@@ -2,9 +2,7 @@ extends Control
 
 var secret_code = "6415"
 var entered_code = ""
-@onready var music_player = $Room
-@onready var music_start = preload("res://Assets/Sound/Music/seraroom.mp3")
-@onready var music_win = preload("res://Assets/Sound/Music/serawin.mp3")
+signal changeSong
 @onready var wrong_answer = preload("res://Assets/Sound/Music/WrongAnswerGuitar.mp3")
 @onready var audio_player = $Chords
 @onready var audio_files = {
@@ -19,8 +17,7 @@ var entered_code = ""
 
 func _ready():
 	audio_player.stop()
-	music_player.stream = music_start
-	music_player.play()
+
 	
 func _input(event):
 	if event is InputEventKey and event.pressed:
@@ -67,13 +64,13 @@ func _append_number_to_code(number):
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
 		print("Code Correct!")
+		emit_signal("changeSong") 
 		var parent = get_parent()
 		if parent and parent.has_method("playercollect"):
 			parent.playercollect()
 			parent.close()
 			
-			music_player.stream = music_win
-			music_player.play()
+
 		else:
 			print("Parent node doesn't have the 'playercollect' method.")
 		#PLAY SONG
