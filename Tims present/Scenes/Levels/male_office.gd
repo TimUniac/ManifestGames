@@ -4,6 +4,7 @@ extends Node2D
 
 func _ready():
 	audio_stream_player.playing = true
+	print_orphan_nodes()
 	
 #func _process(delta):
 #	change_scene()
