@@ -7968,7 +7968,6 @@ scale = Vector2(0.7, 0.7)
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
-visible = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0
