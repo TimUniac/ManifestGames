@@ -38,14 +38,16 @@ func _process(delta):
 			open()
 
 func open():
+	WindowCounter.openWindow()
 	$CanvasLayer/NacklaceGame/NecklaceSequenceInput.clear()
 	$CanvasLayer/NacklaceGame.visible = true
-	WindowCounter.openWindow()
+	
 	doctor.talking = true
 	is_opened = true		
 func close():
-	$CanvasLayer/NacklaceGame.visible = false
 	WindowCounter.closeWindow()
+	$CanvasLayer/NacklaceGame.visible = false
+	
 	doctor.talking = false
 	is_opened = false
 	

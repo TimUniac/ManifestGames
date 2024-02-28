@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var counter = $"../windowCounter"
 @onready var music = $TutorialMusic
 @onready var doctor = $"Male Doctor Character"
 
@@ -30,5 +30,5 @@ func hide_show_objectives():
 
 func _on_male_doctor_character_all_items_collected():
 	$Finish.visible = true
-	WindowCounter.openWindow()
+	counter.openWindow()
 	

@@ -1,15 +1,12 @@
 extends Node
 
-@onready var player = null
+@onready var player = $"../Male Doctor Character"
 var openWindows = 0
 
 
 func _ready():
 	pass
-	
-func _process(delta):
-	if player == null:
-		player = get_tree().current_scene.get_node_or_null("Male Doctor Character")
+
 		
 func openWindow():
 	openWindows += 1
@@ -24,7 +21,7 @@ func walkable():
 	print (player)
 	if player != null:
 		if openWindows > 0:
-			player.talking == true
-		else:
-			player.talking == false
+			player.talking = true
+		if openWindows == 0:
+			player.talking = false
 	

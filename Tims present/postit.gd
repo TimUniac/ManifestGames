@@ -4,6 +4,7 @@ var is_opened = false
 @onready var areaLabel = $"Interaction Area"
 @onready var in_range = false
 @onready var doctor = get_parent().get_node("Male Doctor Character")
+@onready var counter = $"../windowCounter"
 func _ready():
 	$BigPostit.visible = false
 	
@@ -25,12 +26,12 @@ func close():
 	$BigPostit.visible = false
 	doctor.talking = false
 	is_opened = false
-	WindowCounter.closeWindow()
+	counter.closeWindow()
 func open():
 	$BigPostit.visible = true
 	doctor.talking = true
 	is_opened = true
-	WindowCounter.openWindow()
+	counter.openWindow()
 
 
 

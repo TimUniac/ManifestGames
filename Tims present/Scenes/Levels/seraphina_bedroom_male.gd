@@ -4,6 +4,8 @@ extends Node2D
 @onready var music_start = preload("res://Assets/Sound/Music/seraroom.mp3")
 @onready var music_win = preload("res://Assets/Sound/Music/serawin.mp3")
 
+@onready var counter = $"../windowCounter"
+
 func _ready():
 	music_player.stream = music_start
 	music_player.play()
@@ -34,7 +36,7 @@ func change_scene():
 
 func _on_male_doctor_character_all_items_collected():
 	$Finish.visible = true
-	WindowCounter.openWindow()
+	counter.openWindow()
 
 func _on_guitar_game_changeSong():
 	music_player.stream = music_win

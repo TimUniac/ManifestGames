@@ -11,6 +11,7 @@ var player = null
 var inrange = false
 var collect = false
 
+
 func _ready():
 	interaction_label.visible = false
 
