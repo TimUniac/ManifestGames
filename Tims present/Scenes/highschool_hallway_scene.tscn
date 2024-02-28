@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://blkjegc7fq5rw"]
+
+[ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
+[ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wncn3"]
+texture = ExtResource("1_8peia")
+5:35/size_in_atlas = Vector2i(10, 10)
+5:35/0 = 0
+20:35/size_in_atlas = Vector2i(10, 10)
+20:35/0 = 0
+35:35/size_in_atlas = Vector2i(10, 10)
+35:35/0 = 0
+50:20/size_in_atlas = Vector2i(10, 10)
+50:20/0 = 0
+35:20/size_in_atlas = Vector2i(10, 10)
+35:20/0 = 0
+20:20/size_in_atlas = Vector2i(10, 10)
+20:20/0 = 0
+5:20/size_in_atlas = Vector2i(10, 10)
+5:20/0 = 0
+5:5/size_in_atlas = Vector2i(10, 10)
+5:5/0 = 0
+20:5/size_in_atlas = Vector2i(10, 10)
+20:5/0 = 0
+35:5/size_in_atlas = Vector2i(10, 10)
+35:5/0 = 0
+50:5/size_in_atlas = Vector2i(10, 10)
+50:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5ghm"]
+texture = ExtResource("2_ebtbo")
+5:10/size_in_atlas = Vector2i(5, 15)
+5:10/0 = 0
+15:10/size_in_atlas = Vector2i(5, 15)
+15:10/0 = 0
+35:10/size_in_atlas = Vector2i(10, 15)
+35:10/0 = 0
+51:16/size_in_atlas = Vector2i(8, 9)
+51:16/0 = 0
+65:20/size_in_atlas = Vector2i(5, 5)
+65:20/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u8ib0"]
+sources/0 = SubResource("TileSetAtlasSource_wncn3")
+sources/1 = SubResource("TileSetAtlasSource_o5ghm")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iqpny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2r4c"]
+size = Vector2(294, 1283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0piag"]
+size = Vector2(2029, 171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrjfh"]
+size = Vector2(532, 187)
+
+[node name="Highschool_Hallway_Scene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_u8ib0")
+format = 2
+layer_0/tile_data = PackedInt32Array(196612, 1310720, 35, 196622, 1310720, 35, 196632, 1310720, 35, 196641, 1310720, 35, 196651, 1310720, 35, 196661, 1310720, 35, 196670, 1310720, 35, 196679, 1310720, 35, 196688, 1310720, 35, 196696, 1310720, 35, 196705, 1310720, 35, 196714, 1310720, 35, 196724, 1310720, 35, 458756, 1310720, 35, 458766, 1310720, 35, 458776, 1310720, 35, 458785, 1310720, 35, 458795, 1310720, 35, 458805, 1310720, 35, 458814, 1310720, 35, 458823, 1310720, 35, 458832, 1310720, 35, 458840, 1310720, 35, 458849, 1310720, 35, 458858, 1310720, 35, 458868, 1310720, 35, 786436, 1310720, 35, 786446, 1310720, 35, 786456, 1310720, 35, 786465, 1310720, 35, 786475, 1310720, 35, 786485, 1310720, 35, 786494, 1310720, 35, 786503, 1310720, 35, 786512, 1310720, 35, 786520, 1310720, 35, 786529, 1310720, 35, 786538, 1310720, 35, 786548, 1310720, 35, 720900, 1310720, 35, 720910, 1310720, 35, 720920, 1310720, 35, 720929, 1310720, 35, 720939, 1310720, 35, 720949, 1310720, 35, 720958, 1310720, 35, 720967, 1310720, 35, 720976, 1310720, 35, 720984, 1310720, 35, 720993, 1310720, 35, 721002, 1310720, 35, 721012, 1310720, 35, 917508, 1310720, 35, 917518, 1310720, 35, 917528, 1310720, 35, 917537, 1310720, 35, 917547, 1310720, 35, 917557, 1310720, 35, 917566, 1310720, 35, 917575, 1310720, 35, 917584, 1310720, 35, 917592, 1310720, 35, 917601, 1310720, 35, 917610, 1310720, 35, 917620, 1310720, 35, 1114116, 1310720, 35, 1114126, 1310720, 35, 1114136, 1310720, 35, 1114145, 1310720, 35, 1114155, 1310720, 35, 1114165, 1310720, 35, 1114174, 1310720, 35, 1114183, 1310720, 35, 1114192, 1310720, 35, 1114200, 1310720, 35, 1114209, 1310720, 35, 1114218, 1310720, 35, 1114228, 1310720, 35, 1769476, 2293760, 35, 1769486, 2293760, 35, 1769496, 2293760, 35, 1769506, 2293760, 35, 1769516, 2293760, 35, 1769526, 2293760, 35, 1769536, 2293760, 35, 1769546, 2293760, 35, 1769556, 2293760, 35, 1769566, 2293760, 35, 1769576, 2293760, 35, 1769586, 2293760, 35, 1769596, 2293760, 35, 2424835, 3276800, 20, 2424948, 2293760, 20, 2424938, 327680, 20, 2424928, 327680, 20, 2424918, 327680, 20, 2424845, 1310720, 20, 2424855, 1310720, 20, 2424865, 1310720, 20, 2424875, 1310720, 20, 2424908, 327680, 20, 2424885, 1310720, 20, 2424898, 327680, 20, 2424891, 327680, 5, 3080195, 1310720, 5, 3080225, 1310720, 5, 3080255, 1310720, 5, 3080283, 1310720, 5, 3080313, 1310720, 5, 3735673, 1310720, 5, 3735643, 1310720, 5, 3735615, 1310720, 5, 3735585, 1310720, 5, 3735555, 1310720, 5, 4391028, 327680, 35, 4390915, 3276800, 5, 4391018, 1310720, 20, 4391008, 1310720, 20, 4390998, 1310720, 20, 4390988, 1310720, 20, 4390978, 1310720, 20, 4390925, 327680, 20, 4390935, 327680, 20, 4390945, 327680, 20, 4390956, 327680, 20, 4390966, 327680, 20, 4390973, 327680, 5)
+layer_1/name = ""
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(1638502, 2293761, 10, 1900637, 3342337, 16, 1769557, 327681, 10, 1769552, 327681, 10, 1769547, 327681, 10, 1638421, 2293761, 10, 1769542, 983041, 10, 1769537, 327681, 10, 1769532, 327681, 10, 1769527, 327681, 10, 1769522, 327681, 10, 1769517, 327681, 10, 1769512, 327681, 10, 1769507, 327681, 10, 1769502, 327681, 10, 1900556, 3342337, 16, 4325489, 4259841, 20, 4325484, 4259841, 20, 4325479, 4259841, 20, 4325474, 4259841, 20, 4325469, 4259841, 20, 4325449, 4259841, 20, 4325444, 4259841, 20, 4325439, 4259841, 20, 4325434, 4259841, 20, 4325429, 4259841, 20, 4325424, 4259841, 20, 4325419, 4259841, 20, 4325401, 4259841, 20, 4325396, 4259841, 20, 4325391, 4259841, 20, 4325386, 4259841, 20, 4325381, 4259841, 20, 4325376, 4259841, 20, 1769584, 327681, 10, 1769589, 327681, 10, 1769594, 327681, 10, 4325494, 4259841, 20, 4325499, 4259841, 20)
+
+[node name="ColorRect" type="ColorRect" parent="TileMap"]
+offset_left = 145.0
+offset_top = 683.0
+offset_right = 448.0
+offset_bottom = 990.0
+color = Color(0.0117647, 1, 0.156863, 1)
+
+[node name="ColorRect" type="ColorRect" parent="TileMap/ColorRect"]
+offset_left = 479.0
+offset_top = 3.0
+offset_right = 782.0
+offset_bottom = 310.0
+color = Color(0.0117647, 0.027451, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="TileMap/ColorRect/ColorRect"]
+offset_left = 481.0
+offset_top = 1.0
+offset_right = 759.0
+offset_bottom = 308.0
+color = Color(1, 0.0117647, 0.752941, 1)
+
+[node name="ColorRect" type="ColorRect" parent="TileMap/ColorRect/ColorRect/ColorRect"]
+offset_left = 446.0
+offset_top = -3.0
+offset_right = 749.0
+offset_bottom = 304.0
+color = Color(1, 0.0117647, 0.0117647, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_iqpny")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-159, 656)
+shape = SubResource("RectangleShape2D_u2r4c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(951, 364)
+shape = SubResource("RectangleShape2D_0piag")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(955, 1184)
+shape = SubResource("RectangleShape2D_0piag")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2093, 642)
+shape = SubResource("RectangleShape2D_u2r4c")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(105, 1137)
+shape = SubResource("RectangleShape2D_nrjfh")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(938, 1137)
+shape = SubResource("RectangleShape2D_nrjfh")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1740, 1137)
+shape = SubResource("RectangleShape2D_nrjfh")

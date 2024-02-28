@@ -34,7 +34,7 @@ func _process(delta):
 			close()
 		else:
 			open()
-			$Journal2.visible = false
+			
 		
 
 
@@ -43,5 +43,7 @@ func _on_journal_2_body_entered(body):
 		player = body
 		doctor.speak(journalDialogue)
 		await get_tree().create_timer(0.3).timeout
+		$Journal2.queue_free()
 		$TextureButton.visible = true
 		inRange = true
+	

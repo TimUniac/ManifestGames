@@ -7962,7 +7962,7 @@ layer_1/tile_data = PackedInt32Array(655363, 4980736, 46, -262125, 4587520, 10, 
 
 [node name="Novel" parent="." instance=ExtResource("6_saerf")]
 y_sort_enabled = true
-position = Vector2(779.66, 682.95)
+position = Vector2(780.5, 675.165)
 scale = Vector2(0.7, 0.7)
 
 [node name="Friendship Necklace" parent="." instance=ExtResource("7_clvhx")]

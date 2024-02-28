@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bepo0m0r088a4"]
+[gd_scene load_steps=7 format=3 uid="uid://bepo0m0r088a4"]
 
 [ext_resource type="Script" path="res://BookGame.gd" id="1_nkguc"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_xic64"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_2kxd3"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_3iupo"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_lwvvf"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_undn8"]
 
 [node name="BookGame" type="Control"]
 layout_mode = 3
@@ -12,20 +14,22 @@ offset_right = 1391.0
 offset_bottom = 550.0
 script = ExtResource("1_nkguc")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 59.0
-offset_right = 1553.0
-offset_bottom = 759.0
-scale = Vector2(0.5, 0.5)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Sprite2D" parent="."]
-position = Vector2(439, 256)
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 1025.0
+offset_top = 438.0
+offset_right = 2525.0
+offset_bottom = 1138.0
+scale = Vector2(0.5, 0.5)
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1411, 635)
 scale = Vector2(1.24334, 0.78436)
 texture = ExtResource("2_xic64")
 
-[node name="Clue" type="Label" parent="Panel"]
+[node name="Clue" type="Label" parent="CanvasLayer/Panel"]
 offset_left = -180.16
 offset_top = -54.8217
 offset_right = 183.84
@@ -35,13 +39,13 @@ theme_override_fonts/font = ExtResource("3_2kxd3")
 theme_override_font_sizes/font_size = 30
 text = "Who was the author of the book Seraphina found?"
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="SequenceInput" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 182.0
-offset_top = 378.0
-offset_right = 694.0
-offset_bottom = 435.0
+[node name="SequenceInput" type="LineEdit" parent="CanvasLayer"]
+offset_left = 1154.0
+offset_top = 757.0
+offset_right = 1666.0
+offset_bottom = 814.0
 tooltip_text = "\"I need to find the password to open this memory\""
 theme_override_fonts/font = ExtResource("3_3iupo")
 theme_override_font_sizes/font_size = 41
@@ -55,12 +59,26 @@ middle_mouse_paste_enabled = false
 selecting_enabled = false
 caret_blink = true
 caret_force_displayed = true
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 502.0
-offset_top = 343.0
-offset_right = 683.0
-offset_bottom = 369.0
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 1474.0
+offset_top = 722.0
+offset_right = 1655.0
+offset_bottom = 748.0
 theme_override_fonts/font = ExtResource("3_2kxd3")
 text = "Bksp in case of mistake"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1611.0
+offset_top = 571.0
+offset_right = 1822.0
+offset_bottom = 706.0
+scale = Vector2(0.16963, 0.312977)
+texture_normal = ExtResource("5_lwvvf")
+texture_pressed = ExtResource("6_undn8")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

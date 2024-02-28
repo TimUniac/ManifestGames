@@ -18,29 +18,28 @@ func _input(event):
 			_on_EnterButton_pressed()
 		elif event.keycode == KEY_BACKSPACE and entered_code != "":
 			entered_code = entered_code.substr(0, entered_code.length() - 1)
-			$NecklaceSequenceInput.text = entered_code
+			$CanvasLayer/NecklaceSequenceInput.text = entered_code
 
 
 func _append_letter_to_code(letter):
 	entered_code += letter
-	$NecklaceSequenceInput.text = entered_code
+	$CanvasLayer/NecklaceSequenceInput.text = entered_code
 
 func _on_EnterButton_pressed():
 	if entered_code == secret_code:
 		print("Code Correct!")
 		var parent = get_parent()
-		var grandparent = parent.get_parent()
-		if grandparent and grandparent.has_method("playercollect"):
-			grandparent.playercollect()
-			grandparent.close()
-			grandparent.queue_free()
-			$"..".visible = false
+		if parent and parent.has_method("playercollect"):
+			parent.playercollect()
+			parent.close()
+			parent.queue_free()
+			
 			
 		else:
 			print("Parent node doesn't have the 'playercollect' method.")
 	else:
 		print("Incorrect Code")
 		entered_code = ""
-		$NecklaceSequenceInput.clear()
+		$CanvasLayer/NecklaceSequenceInput.clear()
 
 
