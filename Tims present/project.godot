@@ -26,6 +26,7 @@ inventory="res://Scenes/Nodes/UI/Inventory.gd"
 GlobalWorldEnvironment="*res://Scenes/Nodes/world_environment.tscn"
 VolumeControls="*res://Scenes/Levels/volume controls.gd"
 WindowCounter="*res://windowCounter.gd"
+GameManager="*res://GameManager.gd"
 
 [dialogic]
 
