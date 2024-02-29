@@ -1,36 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://s6mjonaypyfs"]
+[gd_scene load_steps=11 format=3 uid="uid://s6mjonaypyfs"]
 
 [ext_resource type="Script" path="res://NecklaceGame.gd" id="1_t24ej"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_6t4ud"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_tqdui"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="4_1ly55"]
-[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_y5y16"]
-[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_b8v4v"]
+[ext_resource type="Texture2D" uid="uid://kc0qlwahu5nr" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_a.svg.svg" id="5_3ty5e"]
+[ext_resource type="Script" path="res://button_Scaling.gd" id="6_5enba"]
+[ext_resource type="Texture2D" uid="uid://sexbchwxvg68" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_v.svg.svg" id="6_ehew3"]
+[ext_resource type="Texture2D" uid="uid://c5yp3yqvws3x1" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_i.svg.svg" id="7_mhc5q"]
+[ext_resource type="Texture2D" uid="uid://bisux8xe77bkj" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_e.svg.svg" id="8_n2bvx"]
+[ext_resource type="Texture2D" uid="uid://biic5dyi2bu8s" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_s.svg.svg" id="9_bg3sl"]
 
 [node name="NacklaceGame" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 496.0
-offset_top = 228.0
-offset_right = 1887.0
-offset_bottom = 778.0
+offset_right = 1391.0
+offset_bottom = 550.0
 script = ExtResource("1_t24ej")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 549.0
-offset_top = 287.0
-offset_right = 2049.0
-offset_bottom = 987.0
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 59.0
+offset_right = 1553.0
+offset_bottom = 759.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Panel" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(931, 466)
+[node name="Panel" type="Sprite2D" parent="."]
+position = Vector2(435, 238)
 scale = Vector2(1.24455, 0.957346)
 texture = ExtResource("2_6t4ud")
 
-[node name="Clue" type="Label" parent="CanvasLayer/Panel"]
+[node name="Clue" type="Label" parent="Panel"]
 offset_left = -180.788
 offset_top = -24.0247
 offset_right = 183.212
@@ -40,17 +41,18 @@ theme_override_font_sizes/font_size = 30
 text = "Who has the other Half of this Necklace?"
 autowrap_mode = 2
 
-[node name="NecklaceSequenceInput" type="LineEdit" parent="CanvasLayer"]
-offset_left = 678.0
-offset_top = 606.0
-offset_right = 1190.0
-offset_bottom = 663.0
+[node name="NecklaceSequenceInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 378.0
+offset_right = 694.0
+offset_bottom = 435.0
 tooltip_text = "\"I need to find the password to open this memory\""
 theme_override_fonts/font = ExtResource("4_1ly55")
 theme_override_font_sizes/font_size = 41
-placeholder_text = "Input Seqence and Press Enter"
 alignment = 1
 max_length = 9
+editable = false
 expand_to_text_length = true
 virtual_keyboard_enabled = false
 shortcut_keys_enabled = false
@@ -59,19 +61,56 @@ selecting_enabled = false
 caret_blink = true
 caret_force_displayed = true
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 998.0
-offset_top = 571.0
-offset_right = 1179.0
-offset_bottom = 597.0
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 502.0
+offset_top = 343.0
+offset_right = 683.0
+offset_bottom = 369.0
 text = "Bksp in case of mistake"
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 1129.0
-offset_top = 385.0
-offset_right = 1340.0
-offset_bottom = 520.0
-scale = Vector2(0.16963, 0.312977)
-texture_normal = ExtResource("5_y5y16")
-texture_pressed = ExtResource("6_b8v4v")
-stretch_mode = 1
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="letter_A" type="TextureButton" parent="CanvasGroup"]
+offset_left = 974.0
+offset_top = 81.0
+offset_right = 1134.0
+offset_bottom = 241.0
+texture_normal = ExtResource("5_3ty5e")
+script = ExtResource("6_5enba")
+
+[node name="letter_V" type="TextureButton" parent="CanvasGroup"]
+offset_left = 896.0
+offset_top = 694.0
+offset_right = 1056.0
+offset_bottom = 854.0
+texture_normal = ExtResource("6_ehew3")
+script = ExtResource("6_5enba")
+
+[node name="letter_I" type="TextureButton" parent="CanvasGroup"]
+offset_left = 426.0
+offset_top = 712.0
+offset_right = 586.0
+offset_bottom = 872.0
+texture_normal = ExtResource("7_mhc5q")
+script = ExtResource("6_5enba")
+
+[node name="letter_E" type="TextureButton" parent="CanvasGroup"]
+offset_left = 1174.0
+offset_top = 437.0
+offset_right = 1334.0
+offset_bottom = 597.0
+texture_normal = ExtResource("8_n2bvx")
+script = ExtResource("6_5enba")
+
+[node name="letter_S" type="TextureButton" parent="CanvasGroup"]
+offset_left = 134.0
+offset_top = 453.0
+offset_right = 294.0
+offset_bottom = 613.0
+texture_normal = ExtResource("9_bg3sl")
+script = ExtResource("6_5enba")
+
+[connection signal="button_down" from="CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]
+[connection signal="button_down" from="CanvasGroup/letter_V" to="." method="_on_letter_v_button_down"]
