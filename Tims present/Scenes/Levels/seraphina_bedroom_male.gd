@@ -17,10 +17,10 @@ func _ready():
 	var journal = $"CanvasLayer/Journal Read" 
 	print (doctor)
 	print (guitar)
-	$Finish1.visible = false
+	$Finish.visible = false
 
 func _process(delta):
-	if $Finish1.visible == true and Input.is_action_just_pressed("Next"):
+	if $Finish.visible == true and Input.is_action_just_pressed("Next"):
 		change_scene()
 func show_initial_speech_bubble():
 	$"Male Doctor Character/SpeechBubble".show_bubble("I need to find and unlock some of her core memories.")
@@ -28,14 +28,14 @@ func show_initial_speech_bubble():
 
 func change_scene():
 	$"transitions/transition player".play("Fade_Out")
-	$Finish1.queue_free()
+	$Finish.queue_free()
 	await $"transitions/transition player".animation_finished
 	get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
 	get_tree().queue_delete($root)
 
 
 func _on_male_doctor_character_all_items_collected():
-	$Finish1.visible = true
+	$Finish.visible = true
 	print ("bedroom clear")
 	
 

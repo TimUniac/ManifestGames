@@ -4,7 +4,7 @@ signal necklace_interacted(necklaceDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-#@export var item: InvItem
+
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 var player = null
@@ -40,7 +40,7 @@ func _process(delta):
 			open()
 
 func open():
-	WindowCounter.openWindow()
+
 	if gamenacklace == null:
 		var nacklace_game_scene = preload("res://Scenes/Nodes/UI/nacklace_game.tscn").instantiate()
 		
@@ -51,7 +51,7 @@ func open():
 	doctor.talking = true
 	is_opened = true		
 func close():
-	WindowCounter.closeWindow()
+	
 	if gamenacklace != null:
 		remove_child(gamenacklace)
 		gamenacklace.queue_free()
@@ -63,7 +63,7 @@ func close():
 signal item_collected(item_number)
 
 func playercollect():
-	emit_signal("item_collected", 3)
+	emit_signal("item_collected")
 	visible = false
 
 

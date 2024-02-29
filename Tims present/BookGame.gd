@@ -7,7 +7,7 @@ var sequence = 0
 
 func _process(delta): #checks if entered code matches the secret code
 	if entered_code == secret_code:
-		print("Code Correct!")
+		print("Book Correct!")
 		typed_code = ""
 		entered_code = ""
 		var parent = get_parent()
@@ -16,44 +16,19 @@ func _process(delta): #checks if entered code matches the secret code
 			grandparent.playercollect()
 			grandparent.close()
 			$"..".visible = false
+		else:
+			print ("No such method")
 
 
-func _ready():
-	pass
 	
-#func _input(event):
-	#if event is InputEventKey and event.pressed and !event.echo:
-		#var key = OS.get_keycode_string(event.keycode).capitalize()
-		
-		#if key in 'ABCFGHIJKLMNOPQRSTUVXYZ':  
-			#_append_letter_to_code(key)
-		#elif event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
-			#_on_EnterButton_pressed()
-		#elif event.keycode == KEY_BACKSPACE and entered_code != "":
-			#entered_code = entered_code.substr(0, entered_code.length() - 1)
-			#$SequenceInput.text = entered_code
+
 
 
 func _append_letter_to_code(typed_code):
 	entered_code = typed_code
 	$SequenceInput.text = entered_code
 
-#func _on_EnterButton_pressed():
-	#if entered_code == secret_code:
-		#print("Code Correct!")
-		#var parent = get_parent()
-		#var grandparent = parent.get_parent()
-		#if grandparent and grandparent.has_method("playercollect"):
-			#grandparent.playercollect()
-			#grandparent.close()
-			#$"..".visible = false
-			
-		#else:
-			#print("Parent node doesn't have the 'playercollect' method.")
-	#else:
-		#print("Incorrect Code")
-		#entered_code = ""
-		#$SequenceInput.clear()
+
 
 func _on_letter_c_button_down():
 	if sequence == 0:

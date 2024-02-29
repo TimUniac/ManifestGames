@@ -4,7 +4,7 @@ signal book_interacted(bookDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-#@export var item: InvItem
+
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 @onready var talking = false
@@ -43,7 +43,7 @@ func _process(delta):
 			open()
 
 func open():
-	WindowCounter.openWindow()
+	
 	if gameBook == null:
 		var book_game_scene = preload("res://Scenes/Nodes/UI/book_game.tscn").instantiate()
 		
@@ -53,7 +53,7 @@ func open():
 	doctor.talking = true
 	is_opened = true	
 func close():
-	WindowCounter.closeWindow()
+	
 	if gameBook != null:
 		remove_child(gameBook)
 		gameBook.queue_free()
@@ -64,11 +64,12 @@ func close():
 	
 		
 
-signal item_collected(item_number)
+signal item_collected()
 
 func playercollect():
-	emit_signal("item_collected", 2)
+	emit_signal("item_collected")
 	visible = false
+	print ("player collect novel")
 
 
 

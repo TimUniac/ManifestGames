@@ -63,7 +63,7 @@ func close():
 signal item_collected(item_number)
 
 func playercollect():
-	emit_signal("item_collected", 1)
+	emit_signal("item_collected")
 	visible = false
 	$'.'.queue_free()
 		

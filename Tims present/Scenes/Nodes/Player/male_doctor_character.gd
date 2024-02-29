@@ -166,7 +166,6 @@ func _on_files_item_collected():
 	print ("files")
 
 func _on_seraphinas_guitar_item_collected():
-	
 	guitar = true
 	print ("guitar")
 	
