@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=33 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_wd40v"]
 [ext_resource type="Texture2D" uid="uid://borjm68pbxy5l" path="res://Assets/Texture assets/bg_doctor_office.svg" id="3_ew1j3"]
+[ext_resource type="PackedScene" uid="uid://ciigwxoa7cgmj" path="res://window_counter.tscn" id="3_hvsle"]
 [ext_resource type="Texture2D" uid="uid://6yacjqx8tvjk" path="res://Assets/Texture assets/spr_doctor_office_furniture.svg.svg" id="4_2gwkq"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="5_rlxad"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="7_r3vgi"]
@@ -3472,6 +3473,8 @@ metadata/_edit_vertical_guides_ = [-604.0]
 [node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
 y_sort_enabled = true
 position = Vector2(62, 609)
+
+[node name="windowCounter" parent="." instance=ExtResource("3_hvsle")]
 
 [node name="Postit" parent="." instance=ExtResource("19_68dvt")]
 offset_left = 305.0

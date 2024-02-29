@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cvtnbtwsk1ecd"]
+[gd_scene load_steps=14 format=3 uid="uid://cvtnbtwsk1ecd"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/in_game_settings.gd" id="1_aglmf"]
 [ext_resource type="Texture2D" uid="uid://rndjdmf3owjl" path="res://Assets/Ui_recent_feb1/ui_setting_menu_base.png" id="2_snn3m"]
@@ -10,9 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_4kehu"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="7_2fbx1"]
 [ext_resource type="Texture2D" uid="uid://betsyttkbc0bh" path="res://Assets/Ui_recent_feb1/ui_aswd_key_w.png" id="7_cng1n"]
-[ext_resource type="Texture2D" uid="uid://bovda3ijx1lt1" path="res://Assets/Ui_recent_feb1/ui_inventory_icon.png" id="8_bpe31"]
-[ext_resource type="Texture2D" uid="uid://dm3y5df6urjhq" path="res://Assets/Ui_recent_feb1/ui_objectives_icon.png" id="9_3avs3"]
-[ext_resource type="Texture2D" uid="uid://r6ecmr5dk06t" path="res://Assets/Ui_recent_feb1/ui_pickup_icon.png" id="10_5r6pr"]
+[ext_resource type="Texture2D" uid="uid://cmiiel1fnpvtn" path="res://Assets/Menu Buttons/ui-boss icon-box 2.png" id="13_24wr4"]
 [ext_resource type="Texture2D" uid="uid://c00cce6q421pl" path="res://Assets/Ui_recent_feb1/ui_setting_icon_button.png" id="14_ccsou"]
 [ext_resource type="Texture2D" uid="uid://nsml6ma7swjp" path="res://Assets/Ui_recent_feb1/ui_setting_icon_button_reversed.png" id="15_1voqf"]
 
@@ -47,7 +45,6 @@ limit_bottom = 802
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
 
 [node name="SettingsPanel" type="CanvasLayer" parent="Camera2D/CanvasLayer2"]
-visible = false
 scale = Vector2(1.652, 1.652)
 transform = Transform2D(1.652, 0, 0, 1.652, 0, 0)
 
@@ -95,51 +92,6 @@ texture = ExtResource("6_4ifrh")
 position = Vector2(237.2, 37)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_cng1n")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel/Label"]
-position = Vector2(488.2, 35)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("8_bpe31")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel/Label/Sprite2D5"]
-offset_left = 142.667
-offset_top = -66.6667
-offset_right = 577.667
-offset_bottom = 56.3333
-theme_override_fonts/font = ExtResource("3_a1onk")
-theme_override_font_sizes/font_size = 100
-text = "Inventory"
-metadata/_edit_use_anchors_ = true
-
-[node name="Sprite2D6" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel/Label"]
-position = Vector2(488.2, 92)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("9_3avs3")
-
-[node name="Label2" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel/Label/Sprite2D6"]
-offset_left = 142.667
-offset_top = -83.3334
-offset_right = 577.667
-offset_bottom = 39.6666
-theme_override_fonts/font = ExtResource("3_a1onk")
-theme_override_font_sizes/font_size = 100
-text = "Objective"
-metadata/_edit_use_anchors_ = true
-
-[node name="Sprite2D7" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel/Label"]
-position = Vector2(752.2, 37)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("10_5r6pr")
-
-[node name="Label3" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel/Label/Sprite2D7"]
-offset_left = 166.0
-offset_top = -60.0
-offset_right = 601.0
-offset_bottom = 63.0
-theme_override_fonts/font = ExtResource("3_a1onk")
-theme_override_font_sizes/font_size = 100
-text = "Pick Up"
-metadata/_edit_use_anchors_ = true
 
 [node name="Label5" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel"]
 offset_left = 155.0
@@ -220,6 +172,56 @@ offset_bottom = 211.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_4kehu")
 texture_pressed = ExtResource("7_2fbx1")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel"]
+position = Vector2(821.728, 540.973)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_24wr4")
+
+[node name="Label3" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel/Sprite2D7"]
+offset_left = 166.0
+offset_top = -60.0
+offset_right = 601.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("3_a1onk")
+theme_override_font_sizes/font_size = 100
+text = "Read Journal"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel/Sprite2D7"]
+offset_left = -30.6667
+offset_top = -113.333
+offset_right = 47.3333
+offset_bottom = 117.667
+theme_override_fonts/font = ExtResource("3_a1onk")
+theme_override_font_sizes/font_size = 167
+text = "J"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel"]
+position = Vector2(557.728, 538.973)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_24wr4")
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel/Sprite2D5"]
+offset_left = 142.667
+offset_top = -66.6667
+offset_right = 577.667
+offset_bottom = 56.3333
+theme_override_fonts/font = ExtResource("3_a1onk")
+theme_override_font_sizes/font_size = 100
+text = "Interact"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Camera2D/CanvasLayer2/SettingsPanel/Sprite2D5"]
+offset_left = -50.6667
+offset_top = -133.333
+offset_right = 42.3333
+offset_bottom = 97.6666
+theme_override_fonts/font = ExtResource("3_a1onk")
+theme_override_font_sizes/font_size = 167
+text = "E"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Settings toggle" to="." method="_on_settings_toggle_pressed"]

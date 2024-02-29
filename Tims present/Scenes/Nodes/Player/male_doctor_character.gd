@@ -35,7 +35,9 @@ func _physics_process(_delta):
 		if SpeechBubble.is_visible:
 			SpeechBubble.visible = false
 			talking = false
-			print("not talking")
+	elif Input.is_action_pressed("Interact") and SpeechBubble.is_visible:
+		SpeechBubble.hide_bubble()
+			
 			
 	
 func player_movement(): 
@@ -130,6 +132,7 @@ func speak(text):
 	SpeechBubble.show_bubble(text)
 	SpeechBubble.position = Vector2(-150, -250)
 	talking = true
+	
 
 func _on_guitar_interacted(guitarDialogue):
 	speak(guitarDialogue)

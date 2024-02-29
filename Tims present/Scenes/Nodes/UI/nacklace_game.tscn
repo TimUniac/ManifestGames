@@ -1,31 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://s6mjonaypyfs"]
+[gd_scene load_steps=7 format=3 uid="uid://s6mjonaypyfs"]
 
 [ext_resource type="Script" path="res://NecklaceGame.gd" id="1_t24ej"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_6t4ud"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_tqdui"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="4_1ly55"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_y5y16"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_b8v4v"]
 
 [node name="NacklaceGame" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1391.0
-offset_bottom = 550.0
+offset_left = 496.0
+offset_top = 228.0
+offset_right = 1887.0
+offset_bottom = 778.0
 script = ExtResource("1_t24ej")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 59.0
-offset_right = 1553.0
-offset_bottom = 759.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 549.0
+offset_top = 287.0
+offset_right = 2049.0
+offset_bottom = 987.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Panel" type="Sprite2D" parent="."]
-position = Vector2(435, 238)
+[node name="Panel" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(931, 466)
 scale = Vector2(1.24455, 0.957346)
 texture = ExtResource("2_6t4ud")
 
-[node name="Clue" type="Label" parent="Panel"]
+[node name="Clue" type="Label" parent="CanvasLayer/Panel"]
 offset_left = -180.788
 offset_top = -24.0247
 offset_right = 183.212
@@ -35,12 +40,11 @@ theme_override_font_sizes/font_size = 30
 text = "Who has the other Half of this Necklace?"
 autowrap_mode = 2
 
-[node name="NecklaceSequenceInput" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 182.0
-offset_top = 378.0
-offset_right = 694.0
-offset_bottom = 435.0
+[node name="NecklaceSequenceInput" type="LineEdit" parent="CanvasLayer"]
+offset_left = 678.0
+offset_top = 606.0
+offset_right = 1190.0
+offset_bottom = 663.0
 tooltip_text = "\"I need to find the password to open this memory\""
 theme_override_fonts/font = ExtResource("4_1ly55")
 theme_override_font_sizes/font_size = 41
@@ -55,10 +59,19 @@ selecting_enabled = false
 caret_blink = true
 caret_force_displayed = true
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 502.0
-offset_top = 343.0
-offset_right = 683.0
-offset_bottom = 369.0
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 998.0
+offset_top = 571.0
+offset_right = 1179.0
+offset_bottom = 597.0
 text = "Bksp in case of mistake"
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1129.0
+offset_top = 385.0
+offset_right = 1340.0
+offset_bottom = 520.0
+scale = Vector2(0.16963, 0.312977)
+texture_normal = ExtResource("5_y5y16")
+texture_pressed = ExtResource("6_b8v4v")
+stretch_mode = 1

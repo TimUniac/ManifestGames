@@ -1,6 +1,6 @@
 extends Control
 
-
+@onready var counter = $"../windowCounter"
 
 func _ready():
 	$Camera2D/CanvasLayer2/SettingsPanel.visible = false
@@ -24,9 +24,9 @@ func open():
 func _on_settings_toggle_pressed():
 	open()
 	print("hey")
-	WindowCounter.openWindow()
+	counter.openWindow()
 
 
 func _on_texture_button_pressed():
 	close()
-	WindowCounter.closeWindow()
+	counter.closeWindow()

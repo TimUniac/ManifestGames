@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bgp5lqeeorqco"]
+[gd_scene load_steps=14 format=3 uid="uid://bgp5lqeeorqco"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/setting_scene.gd" id="1_084kn"]
 [ext_resource type="Texture2D" uid="uid://dhxcsg5i25wir" path="res://Assets/Texture assets/Brain Background.jpg" id="1_yyxvq"]
@@ -11,10 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://buxvmcyl6gnho" path="res://Assets/Ui_recent_feb1/ui_aswd_key_a.png" id="10_wicd0"]
 [ext_resource type="Texture2D" uid="uid://cjtjeok4g6442" path="res://Assets/Ui_recent_feb1/ui_aswd_key_d.png" id="11_v7iiv"]
 [ext_resource type="Texture2D" uid="uid://db6o6p67vdosu" path="res://Assets/Ui_recent_feb1/ui_aswd_key_s.png" id="12_uk2uj"]
+[ext_resource type="Texture2D" uid="uid://cmiiel1fnpvtn" path="res://Assets/Menu Buttons/ui-boss icon-box 2.png" id="13_3dkg3"]
 [ext_resource type="Texture2D" uid="uid://betsyttkbc0bh" path="res://Assets/Ui_recent_feb1/ui_aswd_key_w.png" id="13_vumjb"]
-[ext_resource type="Texture2D" uid="uid://bovda3ijx1lt1" path="res://Assets/Ui_recent_feb1/ui_inventory_icon.png" id="14_1hodw"]
-[ext_resource type="Texture2D" uid="uid://dm3y5df6urjhq" path="res://Assets/Ui_recent_feb1/ui_objectives_icon.png" id="15_o1sbk"]
-[ext_resource type="Texture2D" uid="uid://r6ecmr5dk06t" path="res://Assets/Ui_recent_feb1/ui_pickup_icon.png" id="16_hlj2u"]
 
 [node name="Setting_Scene" type="Node2D"]
 position = Vector2(10, -7)
@@ -154,38 +152,10 @@ position = Vector2(237.2, 37)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_vumjb")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Controls"]
-position = Vector2(488.2, 35)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("14_1hodw")
-
-[node name="Label" type="Label" parent="Controls/Sprite2D5"]
-offset_left = 142.667
-offset_top = -66.6667
-offset_right = 577.667
-offset_bottom = 56.3333
-theme_override_fonts/font = ExtResource("9_beos3")
-theme_override_font_sizes/font_size = 100
-text = "Inventory"
-
-[node name="Sprite2D6" type="Sprite2D" parent="Controls"]
-position = Vector2(488.2, 92)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("15_o1sbk")
-
-[node name="Label2" type="Label" parent="Controls/Sprite2D6"]
-offset_left = 142.667
-offset_top = -83.3334
-offset_right = 577.667
-offset_bottom = 39.6666
-theme_override_fonts/font = ExtResource("9_beos3")
-theme_override_font_sizes/font_size = 100
-text = "Objective"
-
 [node name="Sprite2D7" type="Sprite2D" parent="Controls"]
-position = Vector2(752.2, 37)
+position = Vector2(707.2, 70.001)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("16_hlj2u")
+texture = ExtResource("13_3dkg3")
 
 [node name="Label3" type="Label" parent="Controls/Sprite2D7"]
 offset_left = 166.0
@@ -194,7 +164,43 @@ offset_right = 601.0
 offset_bottom = 63.0
 theme_override_fonts/font = ExtResource("9_beos3")
 theme_override_font_sizes/font_size = 100
-text = "Pick Up"
+text = "Read Journal"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Controls/Sprite2D7"]
+offset_left = -30.6667
+offset_top = -113.333
+offset_right = 47.3333
+offset_bottom = 117.667
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 167
+text = "J"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="Controls"]
+position = Vector2(443.2, 68.001)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_3dkg3")
+
+[node name="Label" type="Label" parent="Controls/Sprite2D5"]
+offset_left = 142.667
+offset_top = -66.6667
+offset_right = 577.667
+offset_bottom = 56.3333
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 100
+text = "Interact"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Controls/Sprite2D5"]
+offset_left = -50.6667
+offset_top = -133.333
+offset_right = 42.3333
+offset_bottom = 97.6666
+theme_override_fonts/font = ExtResource("9_beos3")
+theme_override_font_sizes/font_size = 167
+text = "E"
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(562, 328)

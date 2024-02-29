@@ -15,10 +15,10 @@ var is_opened = false
 @onready var tutorialDialogue: String = "These files are new to my memories, I'll need to unlock them."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
-
+@onready var counter = $"../windowCounter"
 
 var gameFiles = null
-
+var counted = false
 func _ready():
 	interaction_label.visible = false
 
@@ -42,8 +42,10 @@ func _process(_delta):
 	if inrange and Input.is_action_just_pressed("Interact"):
 		if is_opened:
 			close()
+			counted = false
 		else:
 			open()
+			counter = true
 
 func open():
 	if gameFiles == null:
@@ -54,7 +56,10 @@ func open():
 		print_tree()
 	doctor.talking = true
 	is_opened = true 
-	WindowCounter.openWindow()
+	if counted == true:
+		counter.openWindow()
+	
+		
 
 func close():
 	if gameFiles != null:
@@ -63,7 +68,10 @@ func close():
 		gameFiles = null
 	doctor.talking = false
 	is_opened = false
-	WindowCounter.closeWindow()
+	if counted == true:
+		counter.closeWindow()
+		counted = false
+		
 
 signal item_collected
 signal playGame

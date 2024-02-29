@@ -11,12 +11,14 @@ var player = null
 var inrange = false
 var is_opened = false
 
+var gamenacklace = null
+
 @onready var necklaceDialogue: String = "Hmm, 'ST ENDS'?...oh It's a Best Friends Necklace"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 func _ready():
 	interaction_label.visible = false
-	$CanvasLayer/NacklaceGame.visible = false
+	
 
 func _on_body_entered(body):
 	if body.has_method("player"):
@@ -38,12 +40,23 @@ func _process(delta):
 			open()
 
 func open():
-	$CanvasLayer/NacklaceGame/NecklaceSequenceInput.clear()
-	$CanvasLayer/NacklaceGame.visible = true
+	WindowCounter.openWindow()
+	if gamenacklace == null:
+		var nacklace_game_scene = preload("res://Scenes/Nodes/UI/nacklace_game.tscn").instantiate()
+		
+		gamenacklace = nacklace_game_scene
+		add_child(gamenacklace)
+		print_tree()
+	
 	doctor.talking = true
 	is_opened = true		
 func close():
-	$CanvasLayer/NacklaceGame.visible = false
+	WindowCounter.closeWindow()
+	if gamenacklace != null:
+		remove_child(gamenacklace)
+		gamenacklace.queue_free()
+		gamenacklace = null
+	
 	doctor.talking = false
 	is_opened = false
 	

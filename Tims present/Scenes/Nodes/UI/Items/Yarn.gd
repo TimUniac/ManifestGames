@@ -14,13 +14,13 @@ var inrange = false
 var collect = false
 var is_opened = false
 
-
+var gameBook = null
 @onready var bookDialogue: String = "The cover of this book is so damaged I can't read the title."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 func _ready():
 	interaction_label.visible = false
-	$CanvasLayer/BookGame.visible = false
+	
 
 
 func _on_body_entered(body):
@@ -43,14 +43,25 @@ func _process(delta):
 			open()
 
 func open():
-	$CanvasLayer/BookGame/SequenceInput.clear()
-	$CanvasLayer/BookGame.visible = true
+	WindowCounter.openWindow()
+	if gameBook == null:
+		var book_game_scene = preload("res://Scenes/Nodes/UI/book_game.tscn").instantiate()
+		
+		gameBook = book_game_scene
+		add_child(gameBook)
+		print_tree()
 	doctor.talking = true
 	is_opened = true	
 func close():
-	$CanvasLayer/BookGame.visible = false
+	WindowCounter.closeWindow()
+	if gameBook != null:
+		remove_child(gameBook)
+		gameBook.queue_free()
+		gameBook = null
 	doctor.talking = false
 	is_opened = false
+	
+	
 		
 
 signal item_collected(item_number)
