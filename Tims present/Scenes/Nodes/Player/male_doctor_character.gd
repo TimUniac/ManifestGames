@@ -18,7 +18,7 @@ var book = false
 
 var talking = false
 signal all_items_collected
-var collectedReported = false
+
 
 
 func _ready():
@@ -79,13 +79,11 @@ func player_movement():
 	move_and_slide()	
 
 func check_done():
-	if not collectedReported:
-		if guitar and necklace and book:
-			emit_signal("all_items_collected")
-			collectedReported = true 
-		elif pen and glasses and files:
-			emit_signal("all_items_collected")
-			collectedReported = true  
+	if guitar and necklace and book:
+		emit_signal("all_items_collected")
+
+	elif pen and glasses and files:
+		emit_signal("all_items_collected")
 		
 func play_anim(movement):
 	var dir = current_dir

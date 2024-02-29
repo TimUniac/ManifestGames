@@ -7891,7 +7891,7 @@ limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
-[node name="Finish" type="TextureRect" parent="."]
+[node name="Finish1" type="TextureRect" parent="."]
 z_index = 5
 offset_left = 185.0
 offset_top = 246.0
@@ -7901,7 +7901,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_31iq0")
 expand_mode = 1
 
-[node name="FinishText" type="RichTextLabel" parent="Finish"]
+[node name="FinishText1" type="RichTextLabel" parent="Finish1"]
 z_index = 5
 layout_mode = 0
 offset_left = 950.0
