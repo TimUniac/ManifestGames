@@ -30,11 +30,11 @@ func _on_body_entered(body):
 		print("hi there")
 		doctor.speak(guitarDialogue)
 		
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	interaction_label.visible = false
 	inrange = false
 
-func _process(delta):
+func _process(_delta):
 	if inrange and Input.is_action_just_pressed("Interact"):
 		if is_opened:
 			close()
@@ -49,7 +49,7 @@ func open():
 		add_child(gameGuitar)
 	doctor.talking = true
 	is_opened = true
-	WindowCounter.openWindow()
+	
 func close():
 	if gameGuitar != null:
 		remove_child(gameGuitar)
@@ -57,7 +57,7 @@ func close():
 		gameGuitar = null
 	doctor.talking = false
 	is_opened = false
-	WindowCounter.closeWindow()
+	
 		
  
 signal item_collected(item_number)

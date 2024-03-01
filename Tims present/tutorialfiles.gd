@@ -5,7 +5,7 @@ signal tutorial_interacted(tutorialDialogue)
 @onready var interaction_label = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
-@onready var interaction_area = $"Interaction Area"
+
 @onready var sprite = $Sprite2D
 var player = null
 var inrange = false
@@ -13,7 +13,7 @@ var collect = false
 var is_opened = false
 
 @onready var tutorialDialogue: String = "These files are new to my memories, I'll need to unlock them."
-@onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
+
 
 @onready var counter = $"../windowCounter"
 

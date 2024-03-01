@@ -29,7 +29,7 @@ func _ready():
 	$Advance.visible = false
 	
 
-func _process(delta):
+func _process(_delta):
 	if (Input.is_action_just_released("Interact")):
 		handle_interact()
 	if (Input.is_action_just_released("jump")):

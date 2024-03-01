@@ -5,7 +5,7 @@ var player_exit_hallway_posy = 0
 var player_start_posx = 0
 var player_start_posy = 0
 
-func _process(delta):
+func _process(_delta):
 	closewindow()
 
 func closewindow(): 

@@ -5,7 +5,7 @@ var typed_code = ""
 var entered_code = ""
 var sequence = 0
 
-func _process(delta): #checks if entered code matches the secret code
+func _process(_delta): #checks if entered code matches the secret code
 	if entered_code == secret_code:
 		print("Necklace Correct!")
 		typed_code = ""

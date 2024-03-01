@@ -6,7 +6,7 @@ var current_page = 0  # Start with the first page
 func _ready():
 	update_page()
 	
-func _process(delta):
+func _process(_delta):
 	$Backward.disabled = current_page == 0
 	$Forward.disabled = current_page == pages.size() - 1
 

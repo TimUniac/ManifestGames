@@ -6,7 +6,7 @@ var entered_code = ""
 
 func _ready():
 	$"..".visible = true
-	WindowCounter.openWindow()
+
 signal codeCorrect
 func _input(event):
 	if event is InputEventKey and event.pressed and !event.echo:
@@ -29,7 +29,7 @@ func _on_EnterButton_pressed():
 		var parent = get_parent()
 		parent.playercollect()
 		$"..".visible = false
-		WindowCounter.closeWindow()
+
 	else:
 		print("Incorrect Code")
 		entered_code = ""
@@ -37,6 +37,6 @@ func _on_EnterButton_pressed():
 
 
 func _on_close_pressed():
-	WindowCounter.closeWindow()
+
 	var parent = get_parent()
 	parent.close()

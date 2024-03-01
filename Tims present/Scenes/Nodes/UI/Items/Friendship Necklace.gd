@@ -28,11 +28,11 @@ func _on_body_entered(body):
 		print("hi there")
 		doctor.speak(necklaceDialogue)
 		
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	interaction_label.visible = false
 	inrange = false
 
-func _process(delta):
+func _process(_delta):
 	if inrange and Input.is_action_just_pressed("Interact"):
 		if is_opened:
 			close()

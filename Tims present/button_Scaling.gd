@@ -8,7 +8,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if scale.x <= 1:
 		scale.x += 0.01
 		scale.y += 0.01

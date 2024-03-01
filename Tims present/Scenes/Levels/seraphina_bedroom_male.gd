@@ -19,7 +19,7 @@ func _ready():
 	print (guitar)
 	$Finish.visible = false
 
-func _process(delta):
+func _process(_delta):
 	if $Finish.visible == true and Input.is_action_just_pressed("Next"):
 		change_scene()
 func show_initial_speech_bubble():

@@ -42,9 +42,8 @@ func _physics_process(_delta):
 	
 func player_movement(): 
 	if talking == true:
-		
 		return 
-		print ("move again")
+
 	elif Input.is_action_pressed("right"):
 		current_dir = "right"
 		play_anim(1)
@@ -87,8 +86,6 @@ func check_done():
 		
 func play_anim(movement):
 	var dir = current_dir
-	var anim = $Sprite2D
-	
 	if dir == "right":
 		anim.flip_h = false
 		if movement == 1:
