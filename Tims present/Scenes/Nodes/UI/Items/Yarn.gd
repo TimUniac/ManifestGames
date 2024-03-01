@@ -69,9 +69,8 @@ signal item_collected()
 func playercollect():
 	emit_signal("item_collected")
 	visible = false
+	$'.'.queue_free()
 	print ("player collect novel")
 
 
 
-func _on_texture_button_pressed():
-	close()

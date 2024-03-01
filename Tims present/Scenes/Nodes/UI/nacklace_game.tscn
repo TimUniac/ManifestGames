@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://s6mjonaypyfs"]
+[gd_scene load_steps=13 format=3 uid="uid://s6mjonaypyfs"]
 
 [ext_resource type="Script" path="res://NecklaceGame.gd" id="1_t24ej"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_6t4ud"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c5yp3yqvws3x1" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_i.svg.svg" id="7_mhc5q"]
 [ext_resource type="Texture2D" uid="uid://bisux8xe77bkj" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_e.svg.svg" id="8_n2bvx"]
 [ext_resource type="Texture2D" uid="uid://biic5dyi2bu8s" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_s.svg.svg" id="9_bg3sl"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="11_88fib"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="12_0nvkc"]
 
 [node name="NacklaceGame" type="Control"]
 layout_mode = 3
@@ -18,20 +20,21 @@ offset_right = 1391.0
 offset_bottom = 550.0
 script = ExtResource("1_t24ej")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 59.0
-offset_right = 1553.0
-offset_bottom = 759.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = -378.0
+offset_top = -143.0
+offset_right = 1122.0
+offset_bottom = 557.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Panel" type="Sprite2D" parent="."]
-position = Vector2(435, 238)
+[node name="Panel" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(429, 207)
 scale = Vector2(1.24455, 0.957346)
 texture = ExtResource("2_6t4ud")
 
-[node name="Clue" type="Label" parent="Panel"]
+[node name="Clue" type="Label" parent="CanvasLayer/Panel"]
 offset_left = -180.788
 offset_top = -24.0247
 offset_right = 183.212
@@ -41,12 +44,11 @@ theme_override_font_sizes/font_size = 30
 text = "Who has the other Half of this Necklace?"
 autowrap_mode = 2
 
-[node name="NecklaceSequenceInput" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 182.0
-offset_top = 378.0
-offset_right = 694.0
-offset_bottom = 435.0
+[node name="NecklaceSequenceInput" type="LineEdit" parent="CanvasLayer"]
+offset_left = 176.0
+offset_top = 347.0
+offset_right = 688.0
+offset_bottom = 404.0
 tooltip_text = "\"I need to find the password to open this memory\""
 theme_override_fonts/font = ExtResource("4_1ly55")
 theme_override_font_sizes/font_size = 41
@@ -61,18 +63,18 @@ selecting_enabled = false
 caret_blink = true
 caret_force_displayed = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="CanvasLayer"]
 visible = false
-layout_mode = 0
 offset_left = 502.0
 offset_top = 343.0
 offset_right = 683.0
 offset_bottom = 369.0
 text = "Bksp in case of mistake"
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="CanvasGroup" type="CanvasGroup" parent="CanvasLayer"]
+position = Vector2(-6, -31)
 
-[node name="letter_A" type="TextureButton" parent="CanvasGroup"]
+[node name="letter_A" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
 offset_left = 974.0
 offset_top = 81.0
 offset_right = 1134.0
@@ -80,7 +82,7 @@ offset_bottom = 241.0
 texture_normal = ExtResource("5_3ty5e")
 script = ExtResource("6_5enba")
 
-[node name="letter_V" type="TextureButton" parent="CanvasGroup"]
+[node name="letter_V" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
 offset_left = 896.0
 offset_top = 694.0
 offset_right = 1056.0
@@ -88,7 +90,7 @@ offset_bottom = 854.0
 texture_normal = ExtResource("6_ehew3")
 script = ExtResource("6_5enba")
 
-[node name="letter_I" type="TextureButton" parent="CanvasGroup"]
+[node name="letter_I" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
 offset_left = 426.0
 offset_top = 712.0
 offset_right = 586.0
@@ -96,7 +98,7 @@ offset_bottom = 872.0
 texture_normal = ExtResource("7_mhc5q")
 script = ExtResource("6_5enba")
 
-[node name="letter_E" type="TextureButton" parent="CanvasGroup"]
+[node name="letter_E" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
 offset_left = 1174.0
 offset_top = 437.0
 offset_right = 1334.0
@@ -104,7 +106,7 @@ offset_bottom = 597.0
 texture_normal = ExtResource("8_n2bvx")
 script = ExtResource("6_5enba")
 
-[node name="letter_S" type="TextureButton" parent="CanvasGroup"]
+[node name="letter_S" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
 offset_left = 134.0
 offset_top = 453.0
 offset_right = 294.0
@@ -112,5 +114,16 @@ offset_bottom = 613.0
 texture_normal = ExtResource("9_bg3sl")
 script = ExtResource("6_5enba")
 
-[connection signal="button_down" from="CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]
-[connection signal="button_down" from="CanvasGroup/letter_V" to="." method="_on_letter_v_button_down"]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 627.0
+offset_top = 126.0
+offset_right = 838.0
+offset_bottom = 261.0
+scale = Vector2(0.16963, 0.312977)
+texture_normal = ExtResource("11_88fib")
+texture_pressed = ExtResource("12_0nvkc")
+stretch_mode = 1
+
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_V" to="." method="_on_letter_v_button_down"]
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

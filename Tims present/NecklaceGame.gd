@@ -11,11 +11,9 @@ func _process(_delta): #checks if entered code matches the secret code
 		typed_code = ""
 		entered_code = ""
 		var parent = get_parent()
-		var grandparent = parent.get_parent()
-		if grandparent and grandparent.has_method("playercollect"):
-			grandparent.playercollect()
-			grandparent.close()
-			$"..".visible = false
+		if parent and parent.has_method("playercollect"):
+			parent.playercollect()
+			parent.close()
 		else:
 			print("No method necklace")
 	
@@ -28,7 +26,7 @@ func _ready():
 
 func _append_letter_to_code(typed_code):
 	entered_code = typed_code
-	$NecklaceSequenceInput.text = entered_code
+	$CanvasLayer/NecklaceSequenceInput.text = entered_code
 
 
 
@@ -44,3 +42,9 @@ func _on_letter_v_button_down():
 		_append_letter_to_code(typed_code)
 		print(typed_code)
 		sequence += 1
+
+
+func _on_texture_button_pressed():
+	var parent = get_parent()
+	parent.close()
+	
