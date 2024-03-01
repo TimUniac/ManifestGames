@@ -74,40 +74,38 @@ theme_override_fonts/font = ExtResource("9_beos3")
 theme_override_font_sizes/font_size = 40
 text = "SFX Volume :"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Music Volume" type="HSlider" parent="CanvasLayer"]
-offset_left = 515.0
-offset_top = 399.999
-offset_right = 985.0
-offset_bottom = 415.999
+[node name="Music Volume" type="HSlider" parent="."]
+offset_left = 505.0
+offset_top = 406.999
+offset_right = 975.0
+offset_bottom = 422.999
 min_value = -30.0
 max_value = 0.0
 script = ExtResource("6_3l37t")
 
-[node name="SFX volume" type="HSlider" parent="CanvasLayer"]
-offset_left = 515.0
-offset_top = 306.999
-offset_right = 985.0
-offset_bottom = 322.999
+[node name="SFX volume" type="HSlider" parent="."]
+offset_left = 505.0
+offset_top = 313.999
+offset_right = 975.0
+offset_bottom = 329.999
 min_value = -30.0
 max_value = 0.0
 script = ExtResource("6_3l37t")
 
-[node name="Voice Volume" type="HSlider" parent="CanvasLayer"]
-offset_left = 515.0
-offset_top = 354.999
-offset_right = 985.0
-offset_bottom = 370.999
+[node name="Voice Volume" type="HSlider" parent="."]
+offset_left = 505.0
+offset_top = 361.999
+offset_right = 975.0
+offset_bottom = 377.999
 min_value = -30.0
 max_value = 0.0
 script = ExtResource("6_3l37t")
 
-[node name="Master Volume" type="HSlider" parent="CanvasLayer"]
-offset_left = 515.0
-offset_top = 258.999
-offset_right = 985.0
-offset_bottom = 274.999
+[node name="Master Volume" type="HSlider" parent="."]
+offset_left = 505.0
+offset_top = 265.999
+offset_right = 975.0
+offset_bottom = 281.999
 min_value = -30.0
 max_value = 0.0
 step = 0.01
@@ -207,8 +205,8 @@ position = Vector2(562, 328)
 scale = Vector2(0.176082, 0.100029)
 zoom = Vector2(1.7, 1.7)
 
-[connection signal="value_changed" from="CanvasLayer/Music Volume" to="CanvasLayer/Music Volume" method="_on_music_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/SFX volume" to="CanvasLayer/SFX volume" method="_on_sfx_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Voice Volume" to="CanvasLayer/Voice Volume" method="_on_voice_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Master Volume" to="CanvasLayer/Master Volume" method="_on_master_value_changed"]
+[connection signal="value_changed" from="Music Volume" to="Music Volume" method="_on_music_value_changed"]
+[connection signal="value_changed" from="SFX volume" to="SFX volume" method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="Voice Volume" to="Voice Volume" method="_on_voice_value_changed"]
+[connection signal="value_changed" from="Master Volume" to="Master Volume" method="_on_master_value_changed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
