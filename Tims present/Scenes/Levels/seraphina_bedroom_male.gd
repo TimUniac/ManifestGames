@@ -38,6 +38,7 @@ func _on_male_doctor_character_all_items_collected():
 	$Finish.visible = true
 	print ("bedroom clear")
 	
+	
 
 func _on_guitar_game_changeSong():
 	music_player.stream = music_win

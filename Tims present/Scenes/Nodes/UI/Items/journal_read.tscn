@@ -20,6 +20,7 @@ grow_vertical = 2
 script = ExtResource("1_45ewt")
 
 [node name="TextureButton" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(58, 604)
 texture = ExtResource("2_73dqi")
 

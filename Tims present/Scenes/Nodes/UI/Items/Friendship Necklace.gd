@@ -65,6 +65,7 @@ signal item_collected(item_number)
 func playercollect():
 	emit_signal("item_collected")
 	visible = false
+	$'.'.queue_free()
 
 
 func _on_texture_button_pressed():

@@ -23,12 +23,10 @@ func _process(delta):
 
 func close():
 	$ChordChart.visible = false
-	WindowCounter.closeWindow()
 	doctor.talking = false
 	is_opened = false
 func open():
 	$ChordChart.visible = true
-	WindowCounter.openWindow()
 	doctor.talking = true
 	is_opened = true
 

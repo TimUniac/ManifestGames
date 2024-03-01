@@ -1,11 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://7rbqvxmnnf8w"]
+[gd_scene load_steps=5 format=3 uid="uid://7rbqvxmnnf8w"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Friendship Necklace.gd" id="1_ftamq"]
 [ext_resource type="Texture2D" uid="uid://bx8jaqv1ydw36" path="res://Scenes/Nodes/UI/Items/SeraphinaNecklace (1).png" id="3_uvg7x"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_iflju"]
-[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_bkda5"]
-[ext_resource type="PackedScene" uid="uid://s6mjonaypyfs" path="res://Scenes/Nodes/UI/nacklace_game.tscn" id="5_ryi43"]
-[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_s2kfe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3iiu"]
 radius = 30.0
@@ -22,6 +19,7 @@ texture = ExtResource("3_uvg7x")
 shape = SubResource("CapsuleShape2D_i3iiu")
 
 [node name="Panel" type="Panel" parent="."]
+z_index = 2
 offset_left = -81.0
 offset_top = -56.0
 offset_right = 81.0
@@ -42,25 +40,5 @@ text = "[E] To Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="NacklaceGame" parent="CanvasLayer" instance=ExtResource("5_ryi43")]
-offset_left = 156.0
-offset_top = 126.0
-offset_right = 1547.0
-offset_bottom = 676.0
-
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/NacklaceGame"]
-layout_mode = 0
-offset_left = 633.0
-offset_top = 157.0
-offset_right = 844.0
-offset_bottom = 292.0
-scale = Vector2(0.16963, 0.312977)
-texture_normal = ExtResource("5_bkda5")
-texture_pressed = ExtResource("6_s2kfe")
-stretch_mode = 1
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
-[connection signal="pressed" from="CanvasLayer/NacklaceGame/TextureButton" to="." method="_on_texture_button_pressed"]

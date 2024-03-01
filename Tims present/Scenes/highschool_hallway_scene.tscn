@@ -78,6 +78,7 @@ offset_bottom = 990.0
 color = Color(0.0117647, 1, 0.156863, 1)
 
 [node name="ColorRect" type="ColorRect" parent="TileMap/ColorRect"]
+layout_mode = 0
 offset_left = 479.0
 offset_top = 3.0
 offset_right = 782.0
@@ -85,6 +86,7 @@ offset_bottom = 310.0
 color = Color(0.0117647, 0.027451, 1, 1)
 
 [node name="ColorRect" type="ColorRect" parent="TileMap/ColorRect/ColorRect"]
+layout_mode = 0
 offset_left = 481.0
 offset_top = 1.0
 offset_right = 759.0
@@ -92,6 +94,7 @@ offset_bottom = 308.0
 color = Color(1, 0.0117647, 0.752941, 1)
 
 [node name="ColorRect" type="ColorRect" parent="TileMap/ColorRect/ColorRect/ColorRect"]
+layout_mode = 0
 offset_left = 446.0
 offset_top = -3.0
 offset_right = 749.0
