@@ -28,7 +28,7 @@ func _ready():
 	
 func _physics_process(_delta):
 	
-	check_done()
+
 	player_movement()
 		
 	if Input.is_action_pressed("jump"):
@@ -116,13 +116,6 @@ func play_anim(movement):
 func player():
 	pass
 
-
-
-
-
-
-	
-	
 func speak(text):
 	SpeechBubble.show_bubble(text)
 	SpeechBubble.position = Vector2(-150, -250)
@@ -154,24 +147,26 @@ func _on_pen_item_collected():
 
 
 func _on_glasses_item_collected():
-	
 	glasses = true
 	print ("glasses")
-func _on_files_item_collected():
+	check_done()
 	
+func _on_files_item_collected():
 	files = true
 	print ("files")
+	check_done()
 
 func _on_seraphinas_guitar_item_collected():
 	guitar = true
 	print ("guitar")
+	check_done()
 	
 func _on_novel_item_collected():
-	
 	book = true
 	print ("book")
+	check_done()
 
 func _on_friendship_necklace_item_collected():
-	
 	necklace = true
 	print ("necklace")
+	check_done()

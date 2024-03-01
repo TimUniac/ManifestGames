@@ -7892,7 +7892,7 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
-z_index = 5
+z_index = 2
 offset_left = 185.0
 offset_top = 246.0
 offset_right = 6925.0

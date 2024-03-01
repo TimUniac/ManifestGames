@@ -28,6 +28,7 @@ rotation = 0.00480434
 metadata/_edit_use_anchors_ = true
 
 [node name="interaction_label" type="Label" parent="Panel"]
+z_index = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.620574

@@ -8,7 +8,7 @@ var is_opened = false
 func _ready():
 	$ChordChart.visible = false
 	
-func _process(delta):
+func _process(_delta):
 	if areaLabel.interaction_label.visible == true:
 		in_range = true
 	if areaLabel.interaction_label.visible == false:

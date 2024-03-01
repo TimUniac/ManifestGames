@@ -25,6 +25,7 @@ offset_bottom = -24.0
 metadata/_edit_use_anchors_ = true
 
 [node name="interaction_label" type="Label" parent="Panel"]
+z_index = 2
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
