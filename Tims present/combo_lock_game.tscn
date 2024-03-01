@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmhndf60c2tas"]
+[gd_scene load_steps=12 format=3 uid="uid://da7etb24nj5tb"]
 
 [ext_resource type="Script" path="res://ComboLockGame.gd" id="1_4wk0a"]
 [ext_resource type="Texture2D" uid="uid://csowe4luvfno6" path="res://Assets/Texture assets/Chapter 2/SVG/Asset 5.svg" id="7_2jj01"]
@@ -14,14 +14,16 @@
 
 [node name="ComboLockGame" type="Node2D"]
 
-[node name="Locker" type="TextureRect" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Locker" type="TextureRect" parent="CanvasLayer"]
 offset_left = -102.0
 offset_top = -1257.0
 offset_right = 2378.0
 offset_bottom = 2251.0
 texture = ExtResource("10_jkdid")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1.0
@@ -34,7 +36,7 @@ blue_button_normal_original = ExtResource("8_pk00u")
 green_button_normal_original = ExtResource("9_o0dod")
 yellow_button_normal_original = ExtResource("10_lhtiu")
 
-[node name="redButton" type="TextureButton" parent="Control"]
+[node name="redButton" type="TextureButton" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 466.0
 offset_top = 665.0
@@ -44,7 +46,7 @@ scale = Vector2(0.045, 0.045)
 texture_normal = ExtResource("7_2jj01")
 texture_pressed = ExtResource("7_g4qd3")
 
-[node name="blueButton" type="TextureButton" parent="Control"]
+[node name="blueButton" type="TextureButton" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 544.0
@@ -55,7 +57,7 @@ texture_normal = ExtResource("8_pk00u")
 texture_pressed = ExtResource("8_l8iq8")
 flip_h = true
 
-[node name="greenButton" type="TextureButton" parent="Control"]
+[node name="greenButton" type="TextureButton" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 665.0
@@ -66,7 +68,7 @@ texture_normal = ExtResource("9_o0dod")
 texture_pressed = ExtResource("9_udwrr")
 flip_v = true
 
-[node name="yellowButton" type="TextureButton" parent="Control"]
+[node name="yellowButton" type="TextureButton" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 466.0
 offset_top = 545.0
@@ -78,7 +80,7 @@ texture_pressed = ExtResource("10_dtmyf")
 flip_h = true
 flip_v = true
 
-[node name="Dial" type="TextureRect" parent="."]
+[node name="Dial" type="TextureRect" parent="CanvasLayer"]
 offset_left = 421.0
 offset_top = 620.0
 offset_right = 2427.0
@@ -86,7 +88,7 @@ offset_bottom = 2973.0
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("7_31eco")
 
-[connection signal="pressed" from="Control/redButton" to="Control" method="_on_red_button_pressed"]
-[connection signal="pressed" from="Control/blueButton" to="Control" method="_on_blue_button_pressed"]
-[connection signal="pressed" from="Control/greenButton" to="Control" method="_on_green_button_pressed"]
-[connection signal="pressed" from="Control/yellowButton" to="Control" method="_on_yellow_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/redButton" to="CanvasLayer/Control" method="_on_red_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/blueButton" to="CanvasLayer/Control" method="_on_blue_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/greenButton" to="CanvasLayer/Control" method="_on_green_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/yellowButton" to="CanvasLayer/Control" method="_on_yellow_button_pressed"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://blkjegc7fq5rw"]
+[gd_scene load_steps=12 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
+[ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
+[ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wncn3"]
 texture = ExtResource("1_8peia")
@@ -75,7 +77,7 @@ offset_left = 145.0
 offset_top = 683.0
 offset_right = 448.0
 offset_bottom = 990.0
-color = Color(0.0117647, 1, 0.156863, 1)
+color = Color(1, 0.0117647, 0.0117647, 1)
 
 [node name="ColorRect" type="ColorRect" parent="TileMap/ColorRect"]
 layout_mode = 0
@@ -99,7 +101,7 @@ offset_left = 446.0
 offset_top = -3.0
 offset_right = 749.0
 offset_bottom = 304.0
-color = Color(1, 0.0117647, 0.0117647, 1)
+color = Color(0.0117647, 1, 0.156863, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_iqpny")
@@ -131,3 +133,12 @@ shape = SubResource("RectangleShape2D_nrjfh")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1740, 1137)
 shape = SubResource("RectangleShape2D_nrjfh")
+
+[node name="Locker_Node" parent="." instance=ExtResource("3_3sy0g")]
+z_index = 1
+position = Vector2(1127, 438)
+
+[node name="Male Doctor Character" parent="." instance=ExtResource("4_0rm6y")]
+z_index = 2
+position = Vector2(130, 867)
+scale = Vector2(1.565, 1.565)

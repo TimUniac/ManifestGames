@@ -56,6 +56,10 @@ func _on_green_button_pressed():
 	if red == true and yellow == true and blue == true:
 		green = true
 		print ("open Locker")
+		var parent = get_parent()
+		var grandpa = parent.get_parent()
+		var greatgramps = grandpa.get_parent()
+		greatgramps.open_locker()
 		button.texture_normal = button.texture_pressed
 		game.visible = false 
 	else:

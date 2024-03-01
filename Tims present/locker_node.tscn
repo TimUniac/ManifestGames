@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq2qu3m4iowox"]
+
+[ext_resource type="Script" path="res://locker_node.gd" id="1_1yfu2"]
+[ext_resource type="Texture2D" uid="uid://bt25xm8aiyep0" path="res://Closed Locker.png" id="2_guyw2"]
+[ext_resource type="Texture2D" uid="uid://dfcvvi3l008dj" path="res://Opened Locker.png" id="3_8gps5"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_eoq7p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g18ri"]
+radius = 87.0057
+
+[node name="Locker_Node" type="Area2D"]
+script = ExtResource("1_1yfu2")
+
+[node name="ClosedLocker" type="Sprite2D" parent="."]
+texture = ExtResource("2_guyw2")
+
+[node name="OpenedLocker" type="Sprite2D" parent="."]
+texture = ExtResource("3_8gps5")
+
+[node name="Interactionarea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactionarea"]
+shape = SubResource("CircleShape2D_g18ri")
+
+[node name="Panel" type="Panel" parent="Interactionarea"]
+z_index = 2
+z_as_relative = false
+offset_left = -102.0
+offset_top = -64.0
+offset_right = 105.0
+offset_bottom = -24.0
+
+[node name="interaction_label" type="Label" parent="Interactionarea/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_top = -1.0
+offset_right = 81.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_eoq7p")
+theme_override_font_sizes/font_size = 25
+text = "[E] to Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Interactionarea" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Interactionarea" to="." method="_on_area_2d_body_exited"]
