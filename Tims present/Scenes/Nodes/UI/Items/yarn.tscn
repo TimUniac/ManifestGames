@@ -16,6 +16,25 @@ collision_layer = 3
 collision_mask = 2
 script = ExtResource("1_o1w34")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BookGame" parent="CanvasLayer" instance=ExtResource("5_q7rj5")]
+offset_left = 52.0
+offset_top = 200.0
+offset_right = 1443.0
+offset_bottom = 750.0
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/BookGame"]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 192.0
+offset_right = 850.0
+offset_bottom = 327.0
+scale = Vector2(0.16963, 0.312977)
+texture_normal = ExtResource("5_yca30")
+texture_pressed = ExtResource("6_p26fl")
+stretch_mode = 1
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_k7kem")
 
@@ -44,25 +63,6 @@ theme_override_font_sizes/font_size = 25
 text = "[E] to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="BookGame" parent="CanvasLayer" instance=ExtResource("5_q7rj5")]
-offset_left = 52.0
-offset_top = 200.0
-offset_right = 1443.0
-offset_bottom = 750.0
-
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/BookGame"]
-layout_mode = 0
-offset_left = 639.0
-offset_top = 192.0
-offset_right = 850.0
-offset_bottom = 327.0
-scale = Vector2(0.16963, 0.312977)
-texture_normal = ExtResource("5_yca30")
-texture_pressed = ExtResource("6_p26fl")
-stretch_mode = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="pressed" from="CanvasLayer/BookGame/TextureButton" to="." method="_on_texture_button_pressed"]

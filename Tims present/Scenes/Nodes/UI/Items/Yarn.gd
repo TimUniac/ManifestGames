@@ -45,6 +45,9 @@ func _process(delta):
 func open():
 	$CanvasLayer/BookGame/SequenceInput.clear()
 	$CanvasLayer/BookGame.visible = true
+	$CanvasLayer/BookGame.typed_code = ""
+	$CanvasLayer/BookGame.entered_code = ""
+	$CanvasLayer/BookGame.sequence = 0
 	doctor.talking = true
 	is_opened = true	
 func close():

@@ -40,6 +40,9 @@ func _process(delta):
 func open():
 	$CanvasLayer/NacklaceGame/NecklaceSequenceInput.clear()
 	$CanvasLayer/NacklaceGame.visible = true
+	$CanvasLayer/NacklaceGame.typed_code = ""
+	$CanvasLayer/NacklaceGame.entered_code = ""
+	$CanvasLayer/NacklaceGame.sequence = 0
 	doctor.talking = true
 	is_opened = true		
 func close():
