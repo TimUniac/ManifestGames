@@ -1,16 +1,183 @@
-[gd_scene load_steps=3 format=3 uid="uid://cprfaem0ixxx8"]
+[gd_scene load_steps=4 format=3 uid="uid://c0tntntnithl5"]
 
-[ext_resource type="Texture2D" uid="uid://divdjasgyxtsk" path="res://Assets/Texture assets/Chapter 2/LightSwitch_ON_V2.jpg" id="1_e37o2"]
+[ext_resource type="Script" path="res://LightsOffGame.gd" id="1_qp2dy"]
 [ext_resource type="Script" path="res://lightswitch.gd" id="2_56sok"]
+[ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="3_f0b3h"]
 
-[node name="Node2D" type="Node2D"]
+[node name="LightsOffGame" type="Node2D"]
+script = ExtResource("1_qp2dy")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-offset_right = 2488.0
-offset_bottom = 3516.0
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1914.0
+offset_bottom = 1081.0
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 35.0
+offset_right = 38275.0
+offset_bottom = 21415.0
+scale = Vector2(0.06, 0.06)
 columns = 5
 
-[node name="Switch 1" type="Button" parent="GridContainer"]
+[node name="Switch 1" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-icon = ExtResource("1_e37o2")
 script = ExtResource("2_56sok")
+
+[node name="Switch 2" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 3" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 4" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 5" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 6" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 7" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 8" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 9" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 10" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 11" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 12" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 13" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 14" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 15" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 16" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 17" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 18" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 19" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 20" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 21" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 22" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 23" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 24" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="Switch 25" type="TextureButton" parent="Control/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_56sok")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1049.0
+offset_top = 38.0
+offset_right = 3529.0
+offset_bottom = 3546.0
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("3_f0b3h")
+
+[connection signal="lightON" from="Control/GridContainer/Switch 1" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 1" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 2" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 2" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 3" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 3" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 4" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 4" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 5" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 5" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 6" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 6" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 7" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 7" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 8" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 8" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 9" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 9" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 10" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 10" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 11" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 11" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 12" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 12" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 13" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 13" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 14" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 14" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 15" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 15" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 16" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 16" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 17" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 17" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 18" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 18" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 19" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 19" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 20" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 20" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 21" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 21" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 22" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 22" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 23" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 23" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 24" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 24" to="." method="_on_switch_1_light_off"]
+[connection signal="lightON" from="Control/GridContainer/Switch 25" to="." method="_on_switch_1_light_on"]
+[connection signal="lightOff" from="Control/GridContainer/Switch 25" to="." method="_on_switch_1_light_off"]

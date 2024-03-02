@@ -1,10 +1,13 @@
-extends Button
+extends TextureButton
 
+@onready var root = $"../../.."
 var switchON: Texture
 var switchOFF: Texture
-signal toggle_neighbors(x, y)
+signal switch
+signal lightON
+signal lightOff
 
-var is_on = true # Track the state of the light
+var ON = true 
 
 func _ready():
 	switchON = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_ON_V2.jpg")
@@ -12,10 +15,17 @@ func _ready():
 	self.texture_normal = switchON
 
 func _pressed():
-	if self.texture_normal == switchON:
-		self.texture_normal = switchOFF
-#		emit_signal("toggle_neighbors", grid_x, grid_y) # Assuming grid_x and grid_y are set based on the light's position in the grid
-	else:
+	switcher()
+	emit_signal("switch")
+		
+func switcher():
+	if ON == false:
 		self.texture_normal = switchON
+		ON = true
+		root.lightOn()
+	elif ON == true:
+		self.texture_normal = switchOFF
+		ON = false
+		root.lightOff()
 
 

@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
-[ext_resource type="FontFile" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_5adpj"]
-[ext_resource type="Texture2D" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
-[ext_resource type="Texture2D" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_5adpj"]
+[ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
+[ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
 [ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
 [ext_resource type="Texture2D" uid="uid://ejypncfnhp1m" path="res://Assets/Texture assets/Chapter 1/Furniture.svg" id="6_g7641"]
 [ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_saerf"]
@@ -11812,7 +11812,6 @@ volume_db = -10.162
 bus = &"Music"
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
-[connection signal="body_exited" from="Novel" to="Novel" method="_on_body_exited"]
 [connection signal="item_collected" from="Novel" to="Male Doctor Character" method="_on_novel_item_collected"]
 [connection signal="item_collected" from="Friendship Necklace" to="Male Doctor Character" method="_on_friendship_necklace_item_collected"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]

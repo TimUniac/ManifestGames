@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bfb6v64egfvyb"]
 
-[ext_resource type="Texture2D" path="res://Assets/Texture assets/spr_doctor_office_furniture.svg.svg" id="1_h0bgp"]
+[ext_resource type="Texture2D" uid="uid://6yacjqx8tvjk" path="res://Assets/Texture assets/spr_doctor_office_furniture.svg.svg" id="1_h0bgp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6coo7"]
 resource_name = "OfficeFurniture"
