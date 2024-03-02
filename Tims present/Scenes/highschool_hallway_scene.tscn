@@ -60,6 +60,11 @@ size = Vector2(532, 187)
 
 [node name="Highschool_Hallway_Scene" type="Node2D"]
 
+[node name="Male Doctor Character" parent="." instance=ExtResource("4_0rm6y")]
+z_index = 2
+position = Vector2(130, 867)
+scale = Vector2(1.565, 1.565)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_u8ib0")
 format = 2
@@ -137,8 +142,3 @@ shape = SubResource("RectangleShape2D_nrjfh")
 [node name="Locker_Node" parent="." instance=ExtResource("3_3sy0g")]
 z_index = 1
 position = Vector2(1127, 438)
-
-[node name="Male Doctor Character" parent="." instance=ExtResource("4_0rm6y")]
-z_index = 2
-position = Vector2(130, 867)
-scale = Vector2(1.565, 1.565)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cprfaem0ixxx8"]
+
+[ext_resource type="Texture2D" uid="uid://divdjasgyxtsk" path="res://Assets/Texture assets/Chapter 2/LightSwitch_ON_V2.jpg" id="1_e37o2"]
+[ext_resource type="Script" path="res://lightswitch.gd" id="2_56sok"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 2488.0
+offset_bottom = 3516.0
+columns = 5
+
+[node name="Switch 1" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_e37o2")
+script = ExtResource("2_56sok")
