@@ -114,3 +114,6 @@ script = ExtResource("6_5enba")
 
 [connection signal="button_down" from="CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]
 [connection signal="button_down" from="CanvasGroup/letter_V" to="." method="_on_letter_v_button_down"]
+[connection signal="button_down" from="CanvasGroup/letter_I" to="." method="_on_letter_i_button_down"]
+[connection signal="button_down" from="CanvasGroup/letter_E" to="." method="_on_letter_e_button_down"]
+[connection signal="button_down" from="CanvasGroup/letter_S" to="." method="_on_letter_s_button_down"]

@@ -21,6 +21,10 @@ func _process(delta): #checks if entered code matches the secret code
 func _ready():
 	pass
 	
+func wait(seconds: float, letter) -> void:
+	await get_tree().create_timer(seconds).timeout
+	letter.visible = true
+	
 	
 #This is what Tim and Stephane did, IDK I'm not touching this
 #func _input(event):
@@ -70,9 +74,22 @@ func _on_letter_a_button_down():
 		_append_letter_to_code(typed_code)
 		print(typed_code)
 		sequence += 1
+	$"CanvasGroup/letter_A".visible = false
+	wait(1.0, $"CanvasGroup/letter_A")
 func _on_letter_v_button_down():
 	if sequence == 1:
 		typed_code += "V"
 		_append_letter_to_code(typed_code)
 		print(typed_code)
 		sequence += 1
+	$"CanvasGroup/letter_V".visible = false
+	wait(1.0, $"CanvasGroup/letter_V")
+func _on_letter_i_button_down():
+	$"CanvasGroup/letter_I".visible = false
+	wait(1.0, $"CanvasGroup/letter_I")
+func _on_letter_e_button_down():
+	$"CanvasGroup/letter_E".visible = false
+	wait(1.0, $"CanvasGroup/letter_E")
+func _on_letter_s_button_down():
+	$"CanvasGroup/letter_S".visible = false
+	wait(1.0, $"CanvasGroup/letter_S")
