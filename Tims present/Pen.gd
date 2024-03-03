@@ -5,7 +5,7 @@ extends Area2D
 @onready var interaction_label = $Panel
 
 
-
+@onready var objlist = $"../Objectives"
 @onready var sprite = $Sprite2D
 var player = null
 var inrange = false
@@ -40,3 +40,4 @@ signal item_collected
 func playercollect():
 	emit_signal("item_collected")
 	visible = false
+	objlist.foundpen()

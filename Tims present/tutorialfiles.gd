@@ -14,13 +14,14 @@ var is_opened = false
 
 @onready var tutorialDialogue: String = "These files are new to my memories, I'll need to unlock them."
 
-
+@onready var objlist = $"../Objectives"
 @onready var counter = $"../windowCounter"
 
 var gameFiles = null
 var counted = false
 func _ready():
 	interaction_label.visible = false
+	
 
 
 func _on_code_correct():
@@ -79,6 +80,8 @@ signal playGame
 func playercollect():
 	emit_signal("item_collected")
 	$'.'.queue_free()
+	objlist.foundlist()
+	
 	visible = false
 
 

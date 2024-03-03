@@ -1,10 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=19 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
+[ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
 [ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
 [ext_resource type="PackedScene" uid="uid://cq85s1sgkavqx" path="res://light_poster_node.tscn" id="5_r81s3"]
+[ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="6_j5f1c"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="7_3lthy"]
+[ext_resource type="Script" path="res://Scenes/ObjectivesHallway.gd" id="8_wobnu"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="9_3xv8w"]
+[ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="11_jjmvn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wncn3"]
 texture = ExtResource("1_8peia")
@@ -60,6 +66,7 @@ size = Vector2(2029, 171)
 size = Vector2(532, 187)
 
 [node name="Highschool_Hallway_Scene" type="Node2D"]
+script = ExtResource("1_n677l")
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("4_0rm6y")]
 z_index = 2
@@ -146,3 +153,70 @@ position = Vector2(1127, 438)
 
 [node name="LightPoster" parent="." instance=ExtResource("5_r81s3")]
 position = Vector2(17, -14)
+
+[node name="Objectives" type="TextureRect" parent="."]
+z_index = 2
+offset_left = 21.9999
+offset_top = 12.0
+offset_right = 493.0
+offset_bottom = 324.0
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("6_j5f1c")
+expand_mode = 1
+script = ExtResource("8_wobnu")
+
+[node name="oTohide" type="RichTextLabel" parent="Objectives"]
+layout_mode = 0
+offset_left = 341.026
+offset_top = 253.846
+offset_right = 431.026
+offset_bottom = 276.846
+text = "[Q] to hide"
+
+[node name="Label" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 85.8976
+offset_top = 208.974
+offset_right = 403.898
+offset_bottom = 253.974
+theme_override_fonts/font = ExtResource("7_3lthy")
+theme_override_font_sizes/font_size = 25
+text = "Turn off the lights"
+
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
+position = Vector2(-25.8976, -87.3077)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("9_3xv8w")
+
+[node name="Label2" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 83.3333
+offset_top = 108.333
+offset_right = 225.333
+offset_bottom = 141.333
+theme_override_fonts/font = ExtResource("7_3lthy")
+theme_override_font_sizes/font_size = 25
+text = "Unlock Seraphina's Locker"
+
+[node name="Orbs2" type="Sprite2D" parent="Objectives/Label2"]
+position = Vector2(-21.7947, 63.4619)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("9_3xv8w")
+
+[node name="Label3" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 88.4617
+offset_top = 143.59
+offset_right = 426.462
+offset_bottom = 209.59
+theme_override_fonts/font = ExtResource("7_3lthy")
+theme_override_font_sizes/font_size = 25
+text = "Find what Seraphina is hiding in her locker"
+autowrap_mode = 2
+
+[node name="Orbs3" type="Sprite2D" parent="Objectives/Label3"]
+position = Vector2(-26.9231, 80.7692)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("9_3xv8w")
+
+[node name="transitions" parent="." instance=ExtResource("11_jjmvn")]

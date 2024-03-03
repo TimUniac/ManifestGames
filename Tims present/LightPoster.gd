@@ -11,6 +11,7 @@ signal lightposter_interacted(lightposterDialogue)
 @onready var talking = false
 @onready var openedlocker = $OpenedLocker	
 @onready var closedlocker = $ClosedLocker
+@onready var objlist = $"../Objectives"
 
 var player = null
 var inrange = false
@@ -64,12 +65,12 @@ func lightsturnedoff():
 
 signal item_collected()
 
-func playerunlockedlocker():
+func playerturnedofflights():
 	emit_signal("item_collected")
 	visible = false
 	$Interactionarea.queue_free()
-	
-	print ("player opened locker")
+	objlist.turnedoffthelights()
+	print ("player turned off lights")
 
 
 

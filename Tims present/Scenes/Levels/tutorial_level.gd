@@ -8,6 +8,9 @@ extends Node2D
 func _ready():
 	$Finish.visible = false
 	music.stream.loop = true
+	$Objectives/Label/Orbs.visible = false
+	$Objectives/Label2/Orbs2.visible = false
+	$Objectives/Label3/Orbs3.visible = false
 	
 
 func _process(_delta):

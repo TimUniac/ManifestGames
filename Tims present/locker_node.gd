@@ -6,7 +6,7 @@ signal locker_interacted(lockerDialogue)
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
 
-
+@onready var objlist = $"../Objectives"
 @onready var sprite = $Sprite2D
 @onready var talking = false
 @onready var openedlocker = $OpenedLocker	
@@ -65,6 +65,7 @@ func open_locker():
 	$OpenedLocker/StaticBody2D/CollisionShape2D.disabled = false
 	doctor.talking = false
 	$Interactionarea.visible = false
+	objlist.openlocker()
 	$Interactionarea/CollisionShape2D.queue_free()
 	
 		

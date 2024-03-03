@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=33 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://cl1710oyetj6h" path="res://Scenes/Nodes/UI/Items/journal_read.tscn" id="10_if3c2"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="12_mu1tk"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="13_o7pkr"]
+[ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="17_5c8an"]
+[ext_resource type="Script" path="res://Scenes/Levels/ObjectivesBedroom.gd" id="18_rkoi0"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="18_t0f3l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
@@ -33,7 +36,7 @@ size = Vector2(131, 63)
 size = Vector2(238, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as2yl"]
-size = Vector2(70, 67)
+size = Vector2(92, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_snajd"]
 size = Vector2(36, 25)
@@ -11681,7 +11684,6 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
-visible = false
 z_index = 2
 offset_left = 185.0
 offset_top = 246.0
@@ -11733,7 +11735,7 @@ position = Vector2(-706, -316)
 shape = SubResource("RectangleShape2D_llr8k")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(94, -23.5)
+position = Vector2(86, -23.5)
 shape = SubResource("RectangleShape2D_as2yl")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
@@ -11810,6 +11812,71 @@ mouse_filter = 2
 [node name="Room" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.162
 bus = &"Music"
+
+[node name="Objectives" type="TextureRect" parent="."]
+z_index = 2
+offset_left = -74.0
+offset_top = 101.0
+offset_right = 397.0
+offset_bottom = 413.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("17_5c8an")
+expand_mode = 1
+script = ExtResource("18_rkoi0")
+
+[node name="oTohide" type="RichTextLabel" parent="Objectives"]
+layout_mode = 0
+offset_left = 341.026
+offset_top = 253.846
+offset_right = 431.026
+offset_bottom = 276.846
+text = "[Q] to hide"
+
+[node name="Label" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 85.8976
+offset_top = 208.974
+offset_right = 403.898
+offset_bottom = 253.974
+theme_override_fonts/font = ExtResource("3_5adpj")
+theme_override_font_sizes/font_size = 25
+text = "Collect Seraphinas Book"
+
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
+position = Vector2(-25.8976, -87.3077)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("18_t0f3l")
+
+[node name="Label2" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 83.3333
+offset_top = 108.333
+offset_right = 225.333
+offset_bottom = 141.333
+theme_override_fonts/font = ExtResource("3_5adpj")
+theme_override_font_sizes/font_size = 25
+text = "Collect Seraphinas Guitar"
+
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label2"]
+position = Vector2(-21.6666, 63.3336)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("18_t0f3l")
+
+[node name="Label3" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 88.4617
+offset_top = 143.59
+offset_right = 426.462
+offset_bottom = 209.59
+theme_override_fonts/font = ExtResource("3_5adpj")
+theme_override_font_sizes/font_size = 25
+text = "Collect Seraphina's Friendship Necklace"
+autowrap_mode = 2
+
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label3"]
+position = Vector2(-26.795, 79.7437)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("18_t0f3l")
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Novel" to="Male Doctor Character" method="_on_novel_item_collected"]
