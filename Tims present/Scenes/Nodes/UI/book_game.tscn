@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://BookGame.gd" id="1_nkguc"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_xic64"]
-[ext_resource type="FontFile" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_2kxd3"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_2kxd3"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_3iupo"]
 [ext_resource type="Texture2D" uid="uid://bit1gym186poi" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_c.svg.svg" id="5_wv1va"]
 [ext_resource type="Script" path="res://button_Scaling.gd" id="6_lfb8h"]

@@ -1,6 +1,6 @@
 extends Area2D
 
-signal locker_interacted(lockerDialogue)
+signal lightposter_interacted(lightposterDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Interactionarea
 @onready var doctor = get_parent().get_node("Male Doctor Character")
@@ -18,14 +18,11 @@ var collect = false
 var is_opened = false
 var opened = false
 
-var gamelock = null
-@onready var lockerDialogue: String = "I wonder what Seraphina's locker combination is?"
+var gamelightposter = null
+@onready var lightposterDialogue: String = "It looks Seraphina has a sensitivity towards light, we should help turn them off!"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
-
 func _ready():
-	openedlocker.visible = false
-	$OpenedLocker/StaticBody2D/CollisionShape2D.disabled = true
 	interaction_label.visible = false
 	
 
@@ -41,28 +38,24 @@ func _process(delta):
 
 func open():
 	
-	if gamelock == null:
-		var lock_game_scene = preload("res://combo_lock_game.tscn").instantiate()
+	if gamelightposter == null:
+		var lightposter_game_scene = preload("res://lightswitch.tscn").instantiate()
 		
-		gamelock = lock_game_scene
-		add_child(gamelock)
+		gamelightposter = lightposter_game_scene
+		add_child(gamelightposter)
 		print_tree()
 	doctor.talking = true
 	is_opened = true	
 func close():
 	
-	if gamelock != null:
-		remove_child(gamelock)
-		gamelock.queue_free()
-		gamelock = null
+	if gamelightposter != null:
+		remove_child(gamelightposter)
+		gamelightposter.queue_free()
+		gamelightposter = null
 	doctor.talking = false
 	is_opened = false
 	
-func open_locker():
-	openedlocker.visible = true
-	opened = true
-	closedlocker.visible = false
-	$OpenedLocker/StaticBody2D/CollisionShape2D.disabled = false
+func lightsturnedoff():
 	doctor.talking = false
 	$Interactionarea.visible = false
 	$Interactionarea/CollisionShape2D.queue_free()
@@ -79,15 +72,17 @@ func playerunlockedlocker():
 	print ("player opened locker")
 
 
-func _on_area_2d_body_entered(body):
+
+
+func _on_interactionarea_body_entered(body):
 	if body.has_method("player"):
 		interaction_label.visible = true
 		inrange = true
 		player = body
 		print("hi there")
-		doctor.speak(lockerDialogue)
+		doctor.speak(lightposterDialogue)
 
 
-func _on_area_2d_body_exited(body):
+func _on_interactionarea_body_exited(body):
 	interaction_label.visible = false
 	inrange = false

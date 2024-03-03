@@ -78,6 +78,7 @@ signal playGame
 
 func playercollect():
 	emit_signal("item_collected")
+	$'.'.queue_free()
 	visible = false
 
 

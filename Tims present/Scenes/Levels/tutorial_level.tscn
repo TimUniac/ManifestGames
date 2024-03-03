@@ -16,7 +16,7 @@
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/TutorialVO.gd" id="14_i4uyg"]
 [ext_resource type="PackedScene" uid="uid://bq1i0a0hfrbdm" path="res://Scenes/Nodes/UI/Items/pen.tscn" id="15_mef17"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
-[ext_resource type="PackedScene" uid="uid://rlp544kiajnq" path="res://postit.tscn" id="19_68dvt"]
+[ext_resource type="PackedScene" path="res://postit.tscn" id="19_68dvt"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="21_np8ei"]
 [ext_resource type="TileSet" uid="uid://bfb6v64egfvyb" path="res://Assets/Texture assets/OfficeFurniture.tres" id="23_v2q8d"]
 

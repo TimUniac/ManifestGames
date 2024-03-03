@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="3_f0b3h"]
 
 [node name="LightsOffGame" type="Node2D"]
+z_index = 4
 script = ExtResource("1_qp2dy")
 
 [node name="Control" type="Control" parent="."]
