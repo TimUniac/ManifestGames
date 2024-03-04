@@ -16,3 +16,6 @@ func _process(delta):
 func hide_show_objectives():
 	if Input.is_action_just_pressed("Objective"):
 		$Objectives.visible = !$Objectives.visible
+
+func _input(_event):
+		hide_show_objectives()

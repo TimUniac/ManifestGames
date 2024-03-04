@@ -161,6 +161,7 @@ offset_top = 12.0
 offset_right = 493.0
 offset_bottom = 324.0
 scale = Vector2(0.78, 0.78)
+mouse_filter = 2
 texture = ExtResource("6_j5f1c")
 expand_mode = 1
 script = ExtResource("8_wobnu")
