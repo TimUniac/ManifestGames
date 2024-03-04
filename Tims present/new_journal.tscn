@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://drb6ny7iq5wwi"]
+[gd_scene load_steps=5 format=3 uid="uid://d0pkoyaoalmcd"]
 
 [ext_resource type="Script" path="res://NewJournal.gd" id="1_bere3"]
 [ext_resource type="Texture2D" uid="uid://c2nkyvjcl36c1" path="res://Assets/Ui_recent_feb1/ui_right_arrow.png" id="2_6r51h"]
@@ -16,30 +16,34 @@ script = ExtResource("1_bere3")
 layout_mode = 0
 offset_right = 613.0
 offset_bottom = 795.0
+scale = Vector2(1.9194, 1.25375)
 expand_mode = 5
 
 [node name="Forward" type="Button" parent="."]
 layout_mode = 0
-offset_left = 554.86
-offset_top = 726.595
-offset_right = 792.861
-offset_bottom = 866.595
+offset_left = 1050.0
+offset_top = 664.0
+offset_right = 1288.0
+offset_bottom = 804.0
 scale = Vector2(0.24, 0.47)
 icon = ExtResource("2_6r51h")
 
 [node name="Backward" type="Button" parent="."]
 layout_mode = 0
-offset_top = 726.959
-offset_right = 239.0
-offset_bottom = 865.959
+offset_left = 145.0
+offset_top = 664.0
+offset_right = 384.0
+offset_bottom = 803.0
 scale = Vector2(0.25, 0.47)
 icon = ExtResource("3_f3scs")
 
 [node name="Close" type="Button" parent="."]
 layout_mode = 0
-offset_right = 219.0
-offset_bottom = 143.0
-scale = Vector2(0.285, 0.47)
+offset_left = 145.0
+offset_top = 165.0
+offset_right = 364.0
+offset_bottom = 308.0
+scale = Vector2(0.27, 0.445)
 icon = ExtResource("4_garip")
 
 [connection signal="pressed" from="Forward" to="." method="_on_forward_pressed"]
