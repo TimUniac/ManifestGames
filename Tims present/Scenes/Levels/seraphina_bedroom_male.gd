@@ -38,7 +38,7 @@ func change_scene():
 	$"transitions/transition player".play("Fade_Out")
 	$Finish.queue_free()
 	await $"transitions/transition player".animation_finished
-	get_tree().change_scene_to_file("res://Scenes/Levels/more_game_please.tscn")
+	get_tree().change_scene_to_file("res://OfficeChapter2.tscn")
 	get_tree().queue_delete($root)
 
 

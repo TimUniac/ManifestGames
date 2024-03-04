@@ -11,8 +11,8 @@ var ON = true
 @onready var parent = $".."
 
 func _ready():
-	switchON = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_ON_V2.jpg")
-	switchOFF = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_OFF_V2.jpg")
+	switchON = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_ON_V2.png")
+	switchOFF = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_OFF_V2.png")
 	self.texture_normal = switchON
 	switchID = int(name.split("_")[1]) #Set the switches ID
 func _pressed():
@@ -61,5 +61,7 @@ func switch_neighbours():
 		print (neighbour)
 		if neighbour:
 			neighbour.switcher()
-
+func reset_state():
+	ON = true
+	self.texture_normal = switchON
 

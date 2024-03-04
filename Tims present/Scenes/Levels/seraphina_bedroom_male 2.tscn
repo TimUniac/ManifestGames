@@ -7996,7 +7996,6 @@ mouse_filter = 2
 [node name="transitions" parent="." instance=ExtResource("13_o7pkr")]
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
-[connection signal="body_exited" from="Novel" to="Novel" method="_on_body_exited"]
 [connection signal="item_collected" from="Novel" to="Male Doctor Character" method="_on_novel_item_collected"]
 [connection signal="item_collected" from="Friendship Necklace" to="Male Doctor Character" method="_on_friendship_necklace_item_collected"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]

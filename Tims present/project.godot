@@ -91,6 +91,10 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray()
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 up={
