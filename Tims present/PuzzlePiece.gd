@@ -17,3 +17,4 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	dragging = false
+

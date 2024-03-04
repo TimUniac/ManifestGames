@@ -55,6 +55,7 @@ script = ExtResource("2_hlqwy")
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_4"]
 y_sort_enabled = true
 script = ExtResource("3_3foot")
+target_position = Vector2(600, 600)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_4/Area2D"]
 y_sort_enabled = true
@@ -67,7 +68,9 @@ texture = ExtResource("1_cd2wx")
 script = ExtResource("2_hlqwy")
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_5"]
+y_sort_enabled = true
 script = ExtResource("3_3foot")
+target_position = Vector2(100, 100)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_5/Area2D"]
 polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)

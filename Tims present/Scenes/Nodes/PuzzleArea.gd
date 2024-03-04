@@ -2,6 +2,9 @@ extends Area2D
 
 var dragging = false
 var drag_offset = Vector2()
+@export var target_position = Vector2()  # Set this for each piece
+var tolerance = 10.0
+signal piece_placed_correctly
 @onready var parent = $".."
 # Signal connections (done via the editor or programmatically in _ready)
 func _ready():
@@ -31,3 +34,11 @@ func _on_input_event(viewport, event, shape_idx):
 		# Move the parent Sprite2D
 		parent.global_position = get_global_mouse_position() + drag_offset
 
+func _on_drag_end():  # Call this when the drag operation for the piece ends
+	if position.distance_to(target_position) <= tolerance:
+		position = target_position  
+		emit_signal("piece_placed_correctly", self)
+
+
+func _on_piece_placed_correctly():
+	pass # Replace with function body.
