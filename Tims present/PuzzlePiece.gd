@@ -29,7 +29,7 @@ func _input(event):
 				var highest_z_index = -1
 				var clicked_pos = to_local(event.position)
 				for piece in get_tree().get_nodes_in_group("pieces"): 
-					if piece.get_rect().has_point(piece.to_local(event.position)) and piece.z_index > highest_z_index:
+					if is_point_in_sprite(piece, event.position) and piece.z_index > highest_z_index:
 						highest_z_index = piece.z_index
 						activePiece = piece
 				if activePiece:

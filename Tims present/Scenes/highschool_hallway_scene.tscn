@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
-[ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
+[ext_resource type="PackedScene" path="res://locker_node.tscn" id="3_3sy0g"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wncn3"]

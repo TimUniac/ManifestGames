@@ -99,4 +99,4 @@ func update_visible_characters():
 	$Text.visible_characters = visible_characters
 
 func change_scene():
-	get_tree().change_scene_to_file("res://Scenes/Levels/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/highschool_hallway_scene.tscn")
