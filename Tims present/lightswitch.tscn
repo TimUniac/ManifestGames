@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0tntntnithl5"]
+[gd_scene load_steps=7 format=3 uid="uid://c0tntntnithl5"]
 
 [ext_resource type="Script" path="res://LightsOffGame.gd" id="1_qp2dy"]
 [ext_resource type="Script" path="res://lightswitch_startOFF.gd" id="2_356yp"]
+[ext_resource type="Script" path="res://SwitchPanel.gd" id="2_flf77"]
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="3_f0b3h"]
 [ext_resource type="Script" path="res://lightswitch_startON.gd" id="3_i7px7"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="6_ng8yc"]
 
 [node name="LightsOffGame" type="Node2D"]
 script = ExtResource("1_qp2dy")
@@ -22,6 +24,7 @@ offset_right = 38275.0
 offset_bottom = 21415.0
 scale = Vector2(0.06, 0.06)
 columns = 5
+script = ExtResource("2_flf77")
 
 [node name="Switch_1" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
@@ -29,31 +32,31 @@ script = ExtResource("2_356yp")
 
 [node name="Switch_2" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_3" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_4" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_5" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_6" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_7" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("2_356yp")
+script = ExtResource("3_i7px7")
 
 [node name="Switch_8" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_9" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
@@ -69,27 +72,27 @@ script = ExtResource("3_i7px7")
 
 [node name="Switch_12" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("2_356yp")
+script = ExtResource("3_i7px7")
 
 [node name="Switch_13" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("2_356yp")
+script = ExtResource("3_i7px7")
 
 [node name="Switch_14" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("2_356yp")
+script = ExtResource("3_i7px7")
 
 [node name="Switch_15" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("2_356yp")
+script = ExtResource("3_i7px7")
 
 [node name="Switch_16" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("2_356yp")
+script = ExtResource("3_i7px7")
 
 [node name="Switch_17" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("2_356yp")
+script = ExtResource("3_i7px7")
 
 [node name="Switch_18" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
@@ -97,7 +100,7 @@ script = ExtResource("2_356yp")
 
 [node name="Switch_19" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_20" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
@@ -113,7 +116,7 @@ script = ExtResource("3_i7px7")
 
 [node name="Switch_23" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_24" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
@@ -131,6 +134,21 @@ offset_right = 3529.0
 offset_bottom = 3546.0
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_f0b3h")
+
+[node name="Reset" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 977.0
+offset_right = 1366.0
+offset_bottom = 1056.0
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.596078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/h_separation = 9
+theme_override_fonts/font = ExtResource("6_ng8yc")
+theme_override_font_sizes/font_size = 48
+text = "Reset Lights"
 
 [connection signal="lightON" from="Control/GridContainer/Switch_1" to="." method="_on_switch_1_light_on"]
 [connection signal="lightOff" from="Control/GridContainer/Switch_1" to="." method="_on_switch_1_light_off"]
@@ -182,3 +200,5 @@ texture = ExtResource("3_f0b3h")
 [connection signal="lightOff" from="Control/GridContainer/Switch_24" to="." method="_on_switch_1_light_off"]
 [connection signal="lightON" from="Control/GridContainer/Switch_25" to="." method="_on_switch_1_light_on"]
 [connection signal="lightOff" from="Control/GridContainer/Switch_25" to="." method="_on_switch_1_light_off"]
+[connection signal="pressed" from="Control/Reset" to="Control/GridContainer" method="_on_reset_pressed"]
+[connection signal="toggled" from="Control/Reset" to="Control/GridContainer" method="_on_reset_toggled"]
