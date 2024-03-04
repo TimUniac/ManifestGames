@@ -7,13 +7,13 @@ signal switch
 signal lightON
 signal lightOff
 var switchID = 0
-var ON = true 
+var ON = false 
 @onready var parent = $".."
 
 func _ready():
 	switchON = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_ON_V2.jpg")
 	switchOFF = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_OFF_V2.jpg")
-	self.texture_normal = switchON
+	self.texture_normal = switchOFF
 	switchID = int(name.split("_")[1]) #Set the switches ID
 func _pressed():
 	switcher()
