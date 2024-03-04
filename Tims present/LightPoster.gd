@@ -61,6 +61,7 @@ func lightsturnedoff():
 	$Interactionarea.visible = false
 	$Interactionarea/CollisionShape2D.queue_free()
 	
+	
 		
 
 signal item_collected()

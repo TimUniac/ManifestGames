@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=20 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
 [ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
+[ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="5_2euu6"]
 [ext_resource type="PackedScene" uid="uid://cq85s1sgkavqx" path="res://light_poster_node.tscn" id="5_r81s3"]
 [ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="6_j5f1c"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="7_3lthy"]
@@ -63,7 +64,7 @@ size = Vector2(294, 1283)
 size = Vector2(2029, 171)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrjfh"]
-size = Vector2(532, 187)
+size = Vector2(546.5, 216.5)
 
 [node name="Highschool_Hallway_Scene" type="Node2D"]
 script = ExtResource("1_n677l")
@@ -84,6 +85,11 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(1638502, 2293761, 10, 1900637, 3342337, 16, 1769557, 327681, 10, 1769552, 327681, 10, 1769547, 327681, 10, 1769542, 983041, 10, 1769537, 327681, 10, 1769532, 327681, 10, 1769527, 327681, 10, 1769522, 327681, 10, 1769517, 327681, 10, 1769512, 327681, 10, 1769507, 327681, 10, 1769502, 327681, 10, 4325489, 4259841, 20, 4325484, 4259841, 20, 4325479, 4259841, 20, 4325474, 4259841, 20, 4325469, 4259841, 20, 4325449, 4259841, 20, 4325444, 4259841, 20, 4325439, 4259841, 20, 4325434, 4259841, 20, 4325429, 4259841, 20, 4325424, 4259841, 20, 4325419, 4259841, 20, 4325401, 4259841, 20, 4325396, 4259841, 20, 4325391, 4259841, 20, 4325386, 4259841, 20, 4325381, 4259841, 20, 4325376, 4259841, 20, 1769584, 327681, 10, 1769589, 327681, 10, 1769594, 327681, 10, 4325494, 4259841, 20, 4325499, 4259841, 20, 1900566, 3342337, 16, 1638407, 2293761, 10)
+
+[node name="UiLightGameInstructionsPoster" type="Sprite2D" parent="TileMap"]
+position = Vector2(363, 336)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("5_2euu6")
 
 [node name="ColorRect" type="ColorRect" parent="TileMap"]
 offset_left = 145.0
@@ -136,15 +142,15 @@ position = Vector2(2093, 642)
 shape = SubResource("RectangleShape2D_u2r4c")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(105, 1137)
+position = Vector2(172, 1140)
 shape = SubResource("RectangleShape2D_nrjfh")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(938, 1137)
+position = Vector2(936.25, 1137)
 shape = SubResource("RectangleShape2D_nrjfh")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1740, 1137)
+position = Vector2(1734.5, 1122.25)
 shape = SubResource("RectangleShape2D_nrjfh")
 
 [node name="Locker_Node" parent="." instance=ExtResource("3_3sy0g")]

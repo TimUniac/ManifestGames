@@ -17,4 +17,7 @@ func lightOff():
 		winstate()
 
 func winstate():
-	print ("you win!")
+	var parent = get_parent()
+	parent.close()
+	parent.playerturnedofflights()
+	parent.lightsturnedoff()
