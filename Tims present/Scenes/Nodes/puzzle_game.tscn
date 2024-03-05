@@ -1,76 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://c47h75b0a84qf"]
 
 [ext_resource type="Texture2D" uid="uid://bwb4cxvnvts7p" path="res://Assets/Texture assets/Chapter 2/TempJigsaw/Layer 1.png" id="1_cd2wx"]
+[ext_resource type="Script" path="res://Scenes/Nodes/puzzle_game.gd" id="1_h6jmb"]
 [ext_resource type="Script" path="res://PuzzlePiece.gd" id="2_hlqwy"]
-[ext_resource type="Script" path="res://Scenes/Nodes/PuzzleArea.gd" id="3_3foot"]
 
-[node name="PuzzleGame" type="CanvasLayer"]
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h6jmb")
 
 [node name="PuzzlePiece_1" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(1026, 646)
+position = Vector2(900, 500)
 texture = ExtResource("1_cd2wx")
 script = ExtResource("2_hlqwy")
+target_position = Vector2(300, 300)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_1"]
-script = ExtResource("3_3foot")
+y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_1/Area2D"]
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
-
-[node name="PuzzlePiece_2" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(400, 646)
-texture = ExtResource("1_cd2wx")
-script = ExtResource("2_hlqwy")
-
-[node name="Area2D" type="Area2D" parent="PuzzlePiece_2"]
-y_sort_enabled = true
-script = ExtResource("3_3foot")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_2/Area2D"]
 y_sort_enabled = true
 polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
 
-[node name="PuzzlePiece_3" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(450, 646)
-texture = ExtResource("1_cd2wx")
-script = ExtResource("2_hlqwy")
-
-[node name="Area2D" type="Area2D" parent="PuzzlePiece_3"]
-y_sort_enabled = true
-script = ExtResource("3_3foot")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_3/Area2D"]
-y_sort_enabled = true
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
-
-[node name="PuzzlePiece_4" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(700, 646)
-texture = ExtResource("1_cd2wx")
-script = ExtResource("2_hlqwy")
-
-[node name="Area2D" type="Area2D" parent="PuzzlePiece_4"]
-y_sort_enabled = true
-script = ExtResource("3_3foot")
-target_position = Vector2(600, 600)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_4/Area2D"]
-y_sort_enabled = true
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
-
-[node name="PuzzlePiece_5" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(1200, 646)
-texture = ExtResource("1_cd2wx")
-script = ExtResource("2_hlqwy")
-
-[node name="Area2D" type="Area2D" parent="PuzzlePiece_5"]
-y_sort_enabled = true
-script = ExtResource("3_3foot")
-target_position = Vector2(100, 100)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_5/Area2D"]
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 300.0
+offset_top = 300.0
+offset_right = 325.0
+offset_bottom = 325.0
