@@ -5,8 +5,8 @@ signal locker_interacted(lockerDialogue)
 @onready var interaction_label = $Interactionarea
 @onready var puzzle_interaction = $OpenedLocker/Image_Puzzle_Node/Interactionarea
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-@onready var puzzlenode = get_parent().get_node("image_puzzle_node")
-@onready var image_puzzle_node = ("res://image_puzzle_node.gd")
+
+
 
 @onready var objlist = $"../Objectives"
 @onready var sprite = $Sprite2D
@@ -70,13 +70,8 @@ func open_locker():
 	$Interactionarea.visible = false
 	objlist.openlocker()
 	$Interactionarea/CollisionShape2D.queue_free()
-	puzzleavalible()
 	
-signal puzzleavaliable()
 
-func puzzleavalible():
-	lockerisopened = true
-	emit_signal("puzzleavaliable")
 
 		
 
