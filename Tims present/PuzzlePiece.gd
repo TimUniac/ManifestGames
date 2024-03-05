@@ -4,7 +4,7 @@ var is_dragging = false
 var original_position = Vector2()
 var drag_offset = Vector2()
 @export var target_position = Vector2()
-@onready var root = $"..."
+@onready var root = $"../.."
 func _ready():
 	original_position = position
 

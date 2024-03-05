@@ -8,6 +8,7 @@ signal picturegame_interacted(picturegameDialogue)
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
 
+
 @onready var sprite = $Sprite2D
 @onready var talking = false
 @onready var objlist = $"../Objectives"
@@ -23,8 +24,11 @@ var picturegame = null
 @onready var picturegameDialogue: String = "Whats ripped up at the bottom of the locker, we must solve the puzzle!"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
+var lockeropened = false
 
-
+func locker_open():
+	lockeropened = true
+	
 	
 func _ready():
 	interactionlabel.visible = false
@@ -80,12 +84,13 @@ func playersolved_puzzle():
 
 
 func _on_interactionarea_body_entered(body):
-	if body.has_method("player"):
-		interactionlabel.visible = true
-		inrange = true
-		player = body
-		print("hi there")
-		doctor.speak(picturegameDialogue)
+	if lockeropened == true:
+		if body.has_method("player"):
+			interactionlabel.visible = true
+			inrange = true
+			player = body
+			print("hi there")
+			doctor.speak(picturegameDialogue)
 
 
 func _on_interactionarea_body_exited(body):

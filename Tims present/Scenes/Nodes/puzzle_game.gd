@@ -16,4 +16,8 @@ func snapped_pieces():
 		answer.visible = true
 
 func winstate():
+	var parent = get_parent()
+	parent.close()
+	parent.solvedpuzzle()
+	parent.playersolved_puzzle()
 	print("All pieces correctly placed!")

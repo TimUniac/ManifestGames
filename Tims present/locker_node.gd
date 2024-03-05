@@ -5,6 +5,7 @@ signal locker_interacted(lockerDialogue)
 @onready var interaction_label = $Interactionarea
 @onready var puzzle_interaction = $OpenedLocker/Image_Puzzle_Node/Interactionarea
 @onready var doctor = get_parent().get_node("Male Doctor Character")
+@onready var puzzlenode = get_parent().get_node("Image_Puzzle_Node")
 
 
 
@@ -25,6 +26,7 @@ var gamelock = null
 @onready var lockerDialogue: String = "I wonder what Seraphina's locker combination is?"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
+signal locker_opened
 
 func _ready():
 	openedlocker.visible = false
@@ -69,6 +71,7 @@ func open_locker():
 	doctor.talking = false
 	$Interactionarea.visible = false
 	objlist.openlocker()
+	puzzlenode.locker_open()
 	$Interactionarea/CollisionShape2D.queue_free()
 	
 

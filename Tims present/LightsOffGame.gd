@@ -21,3 +21,6 @@ func winstate():
 	parent.close()
 	parent.playerturnedofflights()
 	parent.lightsturnedoff()
+	var grandparent = parent.get_parent()
+	grandparent.lightsoff()
+	

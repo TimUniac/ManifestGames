@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=24 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
@@ -67,6 +67,13 @@ size = Vector2(2029, 171)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrjfh"]
 size = Vector2(546.5, 227.25)
+
+[sub_resource type="Gradient" id="Gradient_bjhph"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k2nhn"]
+gradient = SubResource("Gradient_bjhph")
+fill_from = Vector2(0.981707, 0.341463)
+fill_to = Vector2(0.987805, 1)
 
 [node name="Highschool_Hallway_Scene" type="Node2D"]
 script = ExtResource("1_n677l")
@@ -234,3 +241,11 @@ texture = ExtResource("9_3xv8w")
 [node name="transitions" parent="." instance=ExtResource("11_jjmvn")]
 
 [node name="In_game_settings" parent="." instance=ExtResource("13_owwma")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.27451, 0.27451, 0.27451, 0.415686)
+offset_left = -36.0
+offset_top = -53.0
+offset_right = 1975.0
+offset_bottom = 1166.0
+texture = SubResource("GradientTexture2D_k2nhn")
