@@ -6,6 +6,7 @@ func _ready():
 	$Objectives/Label/Orbs.visible = false
 	$Objectives/Label2/Orbs2.visible = false
 	$Objectives/Label3/Orbs3.visible = false
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

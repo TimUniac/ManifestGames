@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cq2qu3m4iowox"]
+[gd_scene load_steps=8 format=3 uid="uid://cq2qu3m4iowox"]
 
 [ext_resource type="Script" path="res://locker_node.gd" id="1_1yfu2"]
 [ext_resource type="Texture2D" uid="uid://bt25xm8aiyep0" path="res://Closed Locker.png" id="2_guyw2"]
 [ext_resource type="Texture2D" uid="uid://dfcvvi3l008dj" path="res://Opened Locker.png" id="3_8gps5"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_eoq7p"]
+[ext_resource type="PackedScene" uid="uid://cw65xj0ph3tcr" path="res://image_puzzle_node.tscn" id="4_wdp4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jjgq"]
 size = Vector2(17.1802, 52)
@@ -28,9 +29,13 @@ rotation = -3.14159
 scale = Vector2(1.22, 3)
 shape = SubResource("RectangleShape2D_4jjgq")
 
+[node name="Image_Puzzle_Node" parent="OpenedLocker" instance=ExtResource("4_wdp4c")]
+position = Vector2(-48, 9)
+
 [node name="Interactionarea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactionarea"]
+position = Vector2(-35, 24)
 shape = SubResource("CircleShape2D_g18ri")
 
 [node name="Panel" type="Panel" parent="Interactionarea"]
@@ -40,6 +45,7 @@ offset_left = -102.0
 offset_top = -64.0
 offset_right = 105.0
 offset_bottom = -24.0
+metadata/_edit_use_anchors_ = true
 
 [node name="interaction_label" type="Label" parent="Interactionarea/Panel"]
 layout_mode = 1
@@ -56,6 +62,7 @@ theme_override_font_sizes/font_size = 25
 text = "[E] to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Interactionarea" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Interactionarea" to="." method="_on_area_2d_body_exited"]

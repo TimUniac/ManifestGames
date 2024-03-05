@@ -1,6 +1,6 @@
 extends Node2D
-@onready var answer = $Control/TextureRect
-@onready var blocker = $Control/ColorRect2
+@onready var answer = $CanvasLayer/Control/TextureRect
+@onready var blocker = $CanvasLayer/Control/ColorRect2
 var total_pieces = 9
 var pieces_snapped = 0
 
