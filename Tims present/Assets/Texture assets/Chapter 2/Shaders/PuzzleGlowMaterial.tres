@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://qsxdnr7i87fi"]
+
+[ext_resource type="Shader" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzleGlow.gdshader" id="1_1frln"]
+
+[resource]
+shader = ExtResource("1_1frln")
+shader_parameter/is_correctly_placed = null
+shader_parameter/glow_color = Vector4(1, 1, 0, 1)
+shader_parameter/glow_strength = 0.02

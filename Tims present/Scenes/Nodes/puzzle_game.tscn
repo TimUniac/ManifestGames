@@ -1,76 +1,197 @@
-[gd_scene load_steps=4 format=3 uid="uid://c47h75b0a84qf"]
+[gd_scene load_steps=14 format=3 uid="uid://c47h75b0a84qf"]
 
-[ext_resource type="Texture2D" uid="uid://bwb4cxvnvts7p" path="res://Assets/Texture assets/Chapter 2/TempJigsaw/Layer 1.png" id="1_cd2wx"]
+[ext_resource type="Script" path="res://Scenes/Nodes/puzzle_game.gd" id="1_h6jmb"]
+[ext_resource type="Texture2D" uid="uid://c8nsthtlcwrci" path="res://Assets/Texture assets/Chapter 2/Shaders/texture-age.jpg" id="2_5nbm0"]
 [ext_resource type="Script" path="res://PuzzlePiece.gd" id="2_hlqwy"]
-[ext_resource type="Script" path="res://Scenes/Nodes/PuzzleArea.gd" id="3_3foot"]
+[ext_resource type="Texture2D" uid="uid://dr1r3fokpyfna" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0000_Layer-2.png" id="3_dlrwt"]
+[ext_resource type="Texture2D" uid="uid://dkpk4gmj8mjkn" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0001_Layer-3.png" id="5_xsjri"]
+[ext_resource type="Texture2D" uid="uid://cyhi448tf56jx" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0002_Layer-4.png" id="6_bwjor"]
+[ext_resource type="Texture2D" uid="uid://dt2ykgmawkj3b" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0003_Layer-5.png" id="7_dp4v4"]
+[ext_resource type="Texture2D" uid="uid://mlc1wgwqu3pw" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0004_Layer-6.png" id="8_m7tf1"]
+[ext_resource type="Texture2D" uid="uid://dne2ekh26b8gt" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0005_Layer-7.png" id="9_qwiqi"]
+[ext_resource type="Texture2D" uid="uid://fgpo5edprvav" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0006_Layer-8.png" id="10_ue830"]
+[ext_resource type="Texture2D" uid="uid://dhjfw0nsg0eak" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0007_Layer-9.png" id="11_8fgye"]
+[ext_resource type="Texture2D" uid="uid://b8bijpvs3led3" path="res://Assets/Texture assets/Chapter 2/Shaders/PuzzlePiece__0008_Layer-10.png" id="12_e0s81"]
+[ext_resource type="Texture2D" uid="uid://coihlj24c0o4l" path="res://Assets/Texture assets/Chapter 2/UI_TrainTicketGameInstructions.png" id="13_oari1"]
 
-[node name="PuzzleGame" type="CanvasLayer"]
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h6jmb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1931.0
+offset_bottom = 1076.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1081.55
+offset_top = -209.5
+offset_right = -67.5498
+offset_bottom = 209.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_5nbm0")
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1088.0
+offset_top = -206.0
+offset_right = -74.0
+offset_bottom = 213.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(1, 0.733333, 0, 1)
 
 [node name="PuzzlePiece_1" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(1026, 646)
-texture = ExtResource("1_cd2wx")
+position = Vector2(100, 500)
+texture = ExtResource("3_dlrwt")
 script = ExtResource("2_hlqwy")
+target_position = Vector2(911, 442)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_1"]
-script = ExtResource("3_3foot")
+y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_1/Area2D"]
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
+y_sort_enabled = true
+polygon = PackedVector2Array(3, 58, 61, -104, -62, -108, -65, 117)
 
 [node name="PuzzlePiece_2" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(400, 646)
-texture = ExtResource("1_cd2wx")
+position = Vector2(960, 900)
+texture = ExtResource("5_xsjri")
 script = ExtResource("2_hlqwy")
+target_position = Vector2(960, 625)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_2"]
 y_sort_enabled = true
-script = ExtResource("3_3foot")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_2/Area2D"]
 y_sort_enabled = true
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
+polygon = PackedVector2Array(104, -45, -7, -84, -41, -118, -112, -69, -113, 120, 75, 120, 48, 79, 86, 32)
 
 [node name="PuzzlePiece_3" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(450, 646)
-texture = ExtResource("1_cd2wx")
+position = Vector2(200, 860)
+texture = ExtResource("6_bwjor")
 script = ExtResource("2_hlqwy")
+target_position = Vector2(1090, 541)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_3"]
 y_sort_enabled = true
-script = ExtResource("3_3foot")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_3/Area2D"]
 y_sort_enabled = true
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
+polygon = PackedVector2Array(76, 210, 110, -1, 171, -130, -115, -207, -174, -37, -120, -1, -29, 33, -21, 65, -76, 160, -47, 205)
 
 [node name="PuzzlePiece_4" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(700, 646)
-texture = ExtResource("1_cd2wx")
+position = Vector2(900, 125)
+texture = ExtResource("7_dp4v4")
 script = ExtResource("2_hlqwy")
+target_position = Vector2(1168, 371)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_4"]
 y_sort_enabled = true
-script = ExtResource("3_3foot")
-target_position = Vector2(600, 600)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_4/Area2D"]
 y_sort_enabled = true
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
+polygon = PackedVector2Array(97, 39, 174, -36, -183, -36)
 
 [node name="PuzzlePiece_5" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(1200, 646)
-texture = ExtResource("1_cd2wx")
+position = Vector2(500, 200)
+texture = ExtResource("8_m7tf1")
 script = ExtResource("2_hlqwy")
+target_position = Vector2(1463, 471)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_5"]
 y_sort_enabled = true
-script = ExtResource("3_3foot")
-target_position = Vector2(100, 100)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_5/Area2D"]
-polygon = PackedVector2Array(73, 106, 73, 106, 191, -107, -192, -105, -192, 60, -111, 89, -11, 95)
+y_sort_enabled = true
+polygon = PackedVector2Array(192, -19, 155, -102, 118, -137, -117, -142, -192, -62, -32, 5, -1, 96, 38, 139, 135, 57)
+
+[node name="PuzzlePiece_6" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(200, 200)
+texture = ExtResource("9_qwiqi")
+script = ExtResource("2_hlqwy")
+target_position = Vector2(1338, 584)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_6"]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_6/Area2D"]
+y_sort_enabled = true
+polygon = PackedVector2Array(163, 32, 115, -11, 98, -94, 80, -112, -72, -171, -132, -45, -160, 167, -11, 165)
+
+[node name="PuzzlePiece_7" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(600, 950)
+texture = ExtResource("10_ue830")
+script = ExtResource("2_hlqwy")
+target_position = Vector2(1517, 679)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_7"]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_7/Area2D"]
+y_sort_enabled = true
+polygon = PackedVector2Array(165, 66, 68, -18, 2, -61, -173, 69)
+
+[node name="PuzzlePiece_8" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(280, 550)
+texture = ExtResource("11_8fgye")
+script = ExtResource("2_hlqwy")
+target_position = Vector2(1682, 601)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_8"]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_8/Area2D"]
+y_sort_enabled = true
+polygon = PackedVector2Array(173, 147, 142, 79, 145, -59, -20, -150, -79, -70, -166, 8, -72, 70, 6, 147)
+
+[node name="PuzzlePiece_9" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(500, 526)
+texture = ExtResource("12_e0s81")
+script = ExtResource("2_hlqwy")
+target_position = Vector2(1722, 526)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_9"]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_9/Area2D"]
+y_sort_enabled = true
+polygon = PackedVector2Array(134, 189, 130, -194, -128, -194, -97, -169, -69, -87, 121, 16, 117, 146)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 1926.0
+offset_bottom = 1086.0
+color = Color(0.0431373, 0.196078, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1111.0
+offset_top = -358.0
+offset_right = 3591.0
+offset_bottom = 3150.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_oari1")
