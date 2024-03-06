@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://jviws4e1cnvs"]
+[gd_scene load_steps=4 format=3 uid="uid://desqvm5r76kll"]
 
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="1_7f81q"]
 [ext_resource type="Script" path="res://image_puzzle_node.gd" id="1_q4hew"]
@@ -25,13 +25,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="interaction_label" type="Label" parent="Interactionarea/Panel"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -78.0
+anchors_preset = -1
+anchor_left = 0.507
+anchor_right = 9.706
+anchor_bottom = 28.593
+offset_left = -79.449
 offset_top = -1.0
-offset_right = 81.0
-offset_bottom = 45.0
+offset_right = -1824.64
+offset_bottom = -1098.72
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_7f81q")
 theme_override_font_sizes/font_size = 25

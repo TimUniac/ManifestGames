@@ -1,3 +1,4 @@
+
 extends Area2D
 
 signal lightposter_interacted(lightposterDialogue)
@@ -9,7 +10,7 @@ signal lightposter_interacted(lightposterDialogue)
 
 @onready var sprite = $Sprite2D
 @onready var talking = false
-@onready var openedlocker = $OpenedLocker	
+@onready var openedlocker = $OpenedLocker
 @onready var closedlocker = $ClosedLocker
 @onready var objlist = $"../Objectives"
 

@@ -1,6 +1,6 @@
 extends TextureRect
 
-func hardyboys():
+func hardyboys(): #wut?
 	pass
 
 func openlocker():

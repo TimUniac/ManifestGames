@@ -23,3 +23,7 @@ func winstate():
 	for child in get_children():
 		if child.has_method("winHide"):
 			child.winHide()
+	var parent = get_parent()
+	parent.solvedpuzzle()
+	parent.close()
+	

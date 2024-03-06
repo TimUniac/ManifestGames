@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
-[ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_wd40v"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="3_05p0w"]
 [ext_resource type="Texture2D" uid="uid://borjm68pbxy5l" path="res://Assets/Texture assets/bg_doctor_office.svg" id="3_ew1j3"]
 [ext_resource type="Texture2D" uid="uid://6yacjqx8tvjk" path="res://Assets/Texture assets/spr_doctor_office_furniture.svg.svg" id="4_2gwkq"]
 [ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="5_rlxad"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="14_lw1ro"]
 [ext_resource type="PackedScene" uid="uid://bq1i0a0hfrbdm" path="res://Scenes/Nodes/UI/Items/pen.tscn" id="15_mef17"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
-[ext_resource type="PackedScene" path="res://postit.tscn" id="19_68dvt"]
+[ext_resource type="PackedScene" uid="uid://rlp544kiajnq" path="res://postit.tscn" id="19_68dvt"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="21_np8ei"]
 [ext_resource type="TileSet" uid="uid://bfb6v64egfvyb" path="res://Assets/Texture assets/OfficeFurniture.tres" id="23_v2q8d"]
 
@@ -3475,6 +3475,34 @@ metadata/_edit_vertical_guides_ = [-604.0]
 y_sort_enabled = true
 position = Vector2(62, 609)
 
+[node name="Finish" type="TextureRect" parent="."]
+z_index = 2
+offset_left = 185.0
+offset_top = 246.0
+offset_right = 6925.0
+offset_bottom = 2736.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_05p0w")
+expand_mode = 1
+
+[node name="FinishText" type="RichTextLabel" parent="Finish"]
+z_index = 5
+layout_mode = 0
+offset_left = 950.0
+offset_top = 620.0
+offset_right = 6190.0
+offset_bottom = 1988.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("11_7x82w")
+theme_override_fonts/bold_font = ExtResource("11_7x82w")
+theme_override_font_sizes/normal_font_size = 250
+theme_override_font_sizes/bold_font_size = 260
+bbcode_enabled = true
+text = "Now that these memories have been unlocked, Seraphina should be able to remember more about her past. 
+[b]Press 'R'[/b] to return to the concious world. "
+fit_content = true
+
 [node name="Postit" parent="." instance=ExtResource("19_68dvt")]
 offset_left = 305.0
 offset_top = 70.0
@@ -3489,31 +3517,6 @@ limit_left = -91
 limit_top = 107
 limit_right = 1071
 limit_bottom = 802
-
-[node name="Finish" type="TextureRect" parent="."]
-z_index = 2
-offset_left = -500.0
-offset_top = -400.0
-offset_right = 3479.0
-offset_bottom = 2540.0
-texture = ExtResource("2_wd40v")
-expand_mode = 1
-
-[node name="FinishText" type="RichTextLabel" parent="Finish"]
-z_index = 2
-layout_mode = 0
-offset_left = 700.0
-offset_top = 724.0
-offset_right = 1447.0
-offset_bottom = 913.0
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 35
-bbcode_enabled = true
-text = "You have collected all of the items needed to begin your next therapy session. 
-[b]Press 'R'[/b] to return to the concious world and meet your new patient. "
-fit_content = true
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1

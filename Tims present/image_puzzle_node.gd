@@ -66,7 +66,7 @@ func solvedpuzzle():
 	doctor.talking = false
 	$Interactionarea.visible = false
 	$Interactionarea/CollisionShape2D.queue_free()
-	
+	objlist.foundpicture()
 	
 		
 

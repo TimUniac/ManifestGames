@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq85s1sgkavqx"]
+[gd_scene load_steps=5 format=3 uid="uid://dy50vp0ngetqt"]
 
 [ext_resource type="Script" path="res://LightPoster.gd" id="1_y0bxy"]
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="2_t7ppv"]
