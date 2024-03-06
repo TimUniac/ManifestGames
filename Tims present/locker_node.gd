@@ -12,7 +12,7 @@ signal locker_interacted(lockerDialogue)
 @onready var objlist = $"../Objectives"
 @onready var sprite = $Sprite2D
 @onready var talking = false
-@onready var openedlocker = $OpenedLocker	
+@onready var openedlocker = $OpenedLocker
 @onready var closedlocker = $ClosedLocker
 
 var player = null
@@ -65,7 +65,7 @@ func close():
 	
 func open_locker():
 	openedlocker.visible = true
-	
+	playerunlockedlocker()
 	closedlocker.visible = false
 	$OpenedLocker/StaticBody2D/CollisionShape2D.disabled = false
 	doctor.talking = false

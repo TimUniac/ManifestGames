@@ -35,3 +35,4 @@ func change_scene():
 func _on_male_doctor_character_all_items_collected():
 	$Finish.visible = true
 	done = true
+	print ("you did it")

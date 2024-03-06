@@ -179,13 +179,15 @@ func _on_friendship_necklace_item_collected():
 
 func _on_locker_node_item_collected():
 	locker = true
+	print("locker")
 	check_done()
 
 
 func _on_image_puzzle_node_item_collected():
 	puzzle = true
 	check_done()
-
+	print ("puzzle")
 func _on_light_poster_item_collected():
 	lights = true
 	check_done()
+	print ("lights")

@@ -26,4 +26,4 @@ func winstate():
 	var parent = get_parent()
 	parent.solvedpuzzle()
 	parent.close()
-	
+	parent.playersolved_puzzle()

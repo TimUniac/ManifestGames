@@ -76,7 +76,6 @@ func playersolved_puzzle():
 	emit_signal("item_collected")
 	visible = false
 	$Interactionarea.queue_free()
-	objlist.foundpicture()
 	print ("player solved puzzle")
 
 
