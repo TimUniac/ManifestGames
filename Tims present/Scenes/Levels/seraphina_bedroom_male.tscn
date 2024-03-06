@@ -42,7 +42,7 @@ size = Vector2(92, 67)
 size = Vector2(36, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tbj5"]
-size = Vector2(63, 16)
+size = Vector2(148.785, 156.675)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_s8uak")
@@ -11684,6 +11684,7 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
+visible = false
 z_index = 2
 offset_left = 185.0
 offset_top = 246.0
@@ -11694,6 +11695,7 @@ texture = ExtResource("2_31iq0")
 expand_mode = 1
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]
+visible = false
 z_index = 5
 layout_mode = 0
 offset_left = 950.0
@@ -11714,36 +11716,44 @@ fit_content = true
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(747, 640)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Desk" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(102.5, 43.5)
 shape = SubResource("RectangleShape2D_twda4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Door" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-610, 166)
 shape = SubResource("RectangleShape2D_m45hp")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="USWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-254, -378)
+shape = SubResource("RectangleShape2D_m45hp")
+
+[node name="Boxes" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(161, -306.5)
 shape = SubResource("RectangleShape2D_ps56l")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="yarn" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(251.5, -266.5)
 shape = SubResource("RectangleShape2D_ddebc")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Bed" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-706, -316)
 shape = SubResource("RectangleShape2D_llr8k")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Chair" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(86, -23.5)
 shape = SubResource("RectangleShape2D_as2yl")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Headphones" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(276, -222.5)
 shape = SubResource("RectangleShape2D_snajd")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Plant" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-41.5, -321)
+shape = SubResource("RectangleShape2D_8tbj5")
+
+[node name="BookShelf" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-319.393, -407.337)
 shape = SubResource("RectangleShape2D_8tbj5")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -11777,6 +11787,7 @@ y_sort_enabled = true
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
+visible = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0
