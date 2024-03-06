@@ -23,7 +23,12 @@ func winstate():
 	for child in get_children():
 		if child.has_method("winHide"):
 			child.winHide()
+	var timer = await get_tree().create_timer(3.0).timeout
 	var parent = get_parent()
 	parent.solvedpuzzle()
 	parent.close()
 	parent.playersolved_puzzle()
+
+
+func _on_close_pressed():
+	$".".visible = false

@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://c47h75b0a84qf"]
+[gd_scene load_steps=14 format=3 uid="uid://c47h75b0a84qf"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/puzzle_game.gd" id="1_h6jmb"]
 [ext_resource type="Texture2D" uid="uid://dnjr2kapuveak" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/TrainTicket.png" id="2_0h8gd"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="2_42vcc"]
 [ext_resource type="Script" path="res://PuzzlePiece.gd" id="2_hlqwy"]
 [ext_resource type="Texture2D" uid="uid://dcyxqj4jrmbh2" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_1.png" id="3_ofhwo"]
 [ext_resource type="Texture2D" uid="uid://j3b42pqwopqs" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_2.png" id="5_2ht46"]
@@ -18,6 +19,14 @@ top_level = true
 z_index = 3
 position = Vector2(810, 540)
 script = ExtResource("1_h6jmb")
+
+[node name="Close" type="Button" parent="."]
+offset_left = 1018.54
+offset_top = -509.88
+offset_right = 1285.54
+offset_bottom = -366.88
+scale = Vector2(0.27, 0.445)
+icon = ExtResource("2_42vcc")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -203,3 +212,5 @@ offset_right = 2786.0
 offset_bottom = 2611.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_oari1")
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
