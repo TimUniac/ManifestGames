@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="6_ng8yc"]
 
 [node name="LightsOffGame" type="Node2D"]
+z_index = 4
 script = ExtResource("1_qp2dy")
 
 [node name="Control" type="Control" parent="."]

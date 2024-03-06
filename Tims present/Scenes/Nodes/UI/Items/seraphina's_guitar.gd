@@ -12,6 +12,7 @@ var player = null
 var inrange = false
 var is_opened = false
 
+@onready var objlist = $"../Objectives"
 @onready var guitarDialogue: String = "This guitar seems to be important, I wonder if a song would unlock it."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
@@ -66,7 +67,7 @@ func playercollect():
 	emit_signal("item_collected")
 	visible = false
 	$'.'.queue_free()
-		
+	objlist.foundguitar()
 		
 func guitar():
 	pass

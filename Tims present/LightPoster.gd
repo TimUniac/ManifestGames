@@ -1,36 +1,29 @@
 extends Area2D
 
-signal locker_interacted(lockerDialogue)
+signal lightposter_interacted(lightposterDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Interactionarea
-@onready var puzzle_interaction = $OpenedLocker/Image_Puzzle_Node/Interactionarea
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-@onready var puzzlenode = get_parent().get_node("Image_Puzzle_Node")
 
 
 
-@onready var objlist = $"../Objectives"
 @onready var sprite = $Sprite2D
 @onready var talking = false
 @onready var openedlocker = $OpenedLocker	
 @onready var closedlocker = $ClosedLocker
+@onready var objlist = $"../Objectives"
 
 var player = null
 var inrange = false
 var collect = false
 var is_opened = false
-var lockerisopened = false
+var opened = false
 
-var picturescene = null
-var gamelock = null
-@onready var lockerDialogue: String = "I wonder what Seraphina's locker combination is?"
+var gamelightposter = null
+@onready var lightposterDialogue: String = "It looks Seraphina has a sensitivity towards light, we should help turn them off!"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
-signal locker_opened
-
 func _ready():
-	openedlocker.visible = false
-	$OpenedLocker/StaticBody2D/CollisionShape2D.disabled = true
 	interaction_label.visible = false
 	
 
@@ -46,57 +39,52 @@ func _process(delta):
 
 func open():
 	
-	if gamelock == null:
-		var lock_game_scene = preload("res://combo_lock_game.tscn").instantiate()
+	if gamelightposter == null:
+		var lightposter_game_scene = preload("res://lightswitch.tscn").instantiate()
 		
-		gamelock = lock_game_scene
-		add_child(gamelock)
+		gamelightposter = lightposter_game_scene
+		add_child(gamelightposter)
 		print_tree()
 	doctor.talking = true
 	is_opened = true	
 func close():
 	
-	if gamelock != null:
-		remove_child(gamelock)
-		gamelock.queue_free()
-		gamelock = null
+	if gamelightposter != null:
+		remove_child(gamelightposter)
+		gamelightposter.queue_free()
+		gamelightposter = null
 	doctor.talking = false
 	is_opened = false
 	
-func open_locker():
-	openedlocker.visible = true
-	
-	closedlocker.visible = false
-	$OpenedLocker/StaticBody2D/CollisionShape2D.disabled = false
+func lightsturnedoff():
 	doctor.talking = false
 	$Interactionarea.visible = false
-	objlist.openlocker()
-	puzzlenode.locker_open()
 	$Interactionarea/CollisionShape2D.queue_free()
 	
-
-
+	
 		
 
 signal item_collected()
 
-func playerunlockedlocker():
+func playerturnedofflights():
 	emit_signal("item_collected")
 	visible = false
 	$Interactionarea.queue_free()
-	print ("player opened locker")
+	objlist.turnedoffthelights()
+	print ("player turned off lights")
 
 
-func _on_area_2d_body_entered(body):
+
+
+func _on_interactionarea_body_entered(body):
 	if body.has_method("player"):
 		interaction_label.visible = true
 		inrange = true
 		player = body
 		print("hi there")
-		doctor.speak(lockerDialogue)
+		doctor.speak(lightposterDialogue)
 
 
-func _on_area_2d_body_exited(body):
+func _on_interactionarea_body_exited(body):
 	interaction_label.visible = false
 	inrange = false
-

@@ -5,6 +5,7 @@ signal book_interacted(bookDialogue)
 @onready var interaction_label = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
+@onready var objlist = $"../Objectives"
 @onready var interaction_area = $"Interaction Area"
 @onready var sprite = $Sprite2D
 @onready var talking = false
@@ -69,7 +70,9 @@ signal item_collected()
 func playercollect():
 	emit_signal("item_collected")
 	visible = false
+	
 	$'.'.queue_free()
+	objlist.foundbook()
 	print ("player collect novel")
 
 

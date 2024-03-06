@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=34 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://df5hq6xe8e3yh" path="res://Assets/textbox/Task Bar/heading.png" id="2_wd40v"]
@@ -11,12 +11,14 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="11_7x82w"]
 [ext_resource type="Script" path="res://Scenes/Levels/TutorialMusic.gd" id="12_pcd4s"]
 [ext_resource type="AudioStream" uid="uid://b0fa5hki573om" path="res://Assets/Sound/VO/Tutorial/VO_Dr_Tut_That Session.mp3" id="13_4c6jg"]
+[ext_resource type="Script" path="res://Scenes/Levels/ObjectivesTutorial.gd" id="13_dumi5"]
 [ext_resource type="PackedScene" uid="uid://cpkxp8vg2ayj8" path="res://Scenes/Nodes/UI/Items/files.tscn" id="13_hm7ep"]
 [ext_resource type="PackedScene" uid="uid://btp43hutw3i6o" path="res://Scenes/Nodes/UI/Items/glasses.tscn" id="14_4h0r1"]
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/TutorialVO.gd" id="14_i4uyg"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="14_lw1ro"]
 [ext_resource type="PackedScene" uid="uid://bq1i0a0hfrbdm" path="res://Scenes/Nodes/UI/Items/pen.tscn" id="15_mef17"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
-[ext_resource type="PackedScene" uid="uid://rlp544kiajnq" path="res://postit.tscn" id="19_68dvt"]
+[ext_resource type="PackedScene" path="res://postit.tscn" id="19_68dvt"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="21_np8ei"]
 [ext_resource type="TileSet" uid="uid://bfb6v64egfvyb" path="res://Assets/Texture assets/OfficeFurniture.tres" id="23_v2q8d"]
 
@@ -3440,7 +3442,7 @@ sources/0 = SubResource("TileSetAtlasSource_o47qh")
 sources/2 = SubResource("TileSetAtlasSource_7p2eb")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0xfb"]
-size = Vector2(1257, 41)
+size = Vector2(1257, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ct82p"]
 size = Vector2(59, 464)
@@ -3548,6 +3550,7 @@ offset_bottom = 441.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_tj4jr")
 expand_mode = 1
+script = ExtResource("13_dumi5")
 
 [node name="oTohide" type="RichTextLabel" parent="Objectives"]
 layout_mode = 0
@@ -3567,6 +3570,11 @@ theme_override_fonts/font = ExtResource("11_7x82w")
 theme_override_font_sizes/font_size = 25
 text = "Find Favourable Pen"
 
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
+position = Vector2(-21.6667, -86.6663)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("14_lw1ro")
+
 [node name="Label2" type="Label" parent="Objectives"]
 layout_mode = 0
 offset_left = 83.3333
@@ -3577,6 +3585,11 @@ theme_override_fonts/font = ExtResource("11_7x82w")
 theme_override_font_sizes/font_size = 25
 text = "Find Glasses"
 
+[node name="Orbs2" type="Sprite2D" parent="Objectives/Label2"]
+position = Vector2(-21.6666, 63.3336)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("14_lw1ro")
+
 [node name="Label3" type="Label" parent="Objectives"]
 layout_mode = 0
 offset_left = 85.0
@@ -3586,6 +3599,11 @@ offset_bottom = 186.333
 theme_override_fonts/font = ExtResource("11_7x82w")
 theme_override_font_sizes/font_size = 25
 text = "Find Patient File"
+
+[node name="Orbs3" type="Sprite2D" parent="Objectives/Label3"]
+position = Vector2(-23.3333, 71.667)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("14_lw1ro")
 
 [node name="In_game_settings" parent="." instance=ExtResource("19_4r33g")]
 z_index = 2
@@ -3602,7 +3620,7 @@ position = Vector2(-226, 93.0001)
 shape = SubResource("RectangleShape2D_c0xfb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-252, -358.5)
+position = Vector2(-252, -358)
 shape = SubResource("RectangleShape2D_c0xfb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]

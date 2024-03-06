@@ -1,9 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=24 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
+[ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
 [ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
+[ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="5_2euu6"]
+[ext_resource type="PackedScene" uid="uid://vul1e2uqflnj" path="res://light_poster_node.tscn" id="5_r81s3"]
+[ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="6_j5f1c"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="7_3lthy"]
+[ext_resource type="PackedScene" uid="uid://jviws4e1cnvs" path="res://image_puzzle_node.tscn" id="7_wrdrh"]
+[ext_resource type="Script" path="res://Scenes/ObjectivesHallway.gd" id="8_wobnu"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="9_3xv8w"]
+[ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="11_jjmvn"]
+[ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="13_owwma"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wncn3"]
 texture = ExtResource("1_8peia")
@@ -56,13 +66,21 @@ size = Vector2(294, 1283)
 size = Vector2(2029, 171)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrjfh"]
-size = Vector2(532, 187)
+size = Vector2(546.5, 227.25)
+
+[sub_resource type="Gradient" id="Gradient_bjhph"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k2nhn"]
+gradient = SubResource("Gradient_bjhph")
+fill_from = Vector2(0.981707, 0.341463)
+fill_to = Vector2(0.987805, 1)
 
 [node name="Highschool_Hallway_Scene" type="Node2D"]
+script = ExtResource("1_n677l")
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("4_0rm6y")]
 z_index = 2
-position = Vector2(130, 867)
+position = Vector2(272, 879)
 scale = Vector2(1.565, 1.565)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -75,7 +93,12 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(1638502, 2293761, 10, 1900637, 3342337, 16, 1769557, 327681, 10, 1769552, 327681, 10, 1769547, 327681, 10, 1638421, 2293761, 10, 1769542, 983041, 10, 1769537, 327681, 10, 1769532, 327681, 10, 1769527, 327681, 10, 1769522, 327681, 10, 1769517, 327681, 10, 1769512, 327681, 10, 1769507, 327681, 10, 1769502, 327681, 10, 1900556, 3342337, 16, 4325489, 4259841, 20, 4325484, 4259841, 20, 4325479, 4259841, 20, 4325474, 4259841, 20, 4325469, 4259841, 20, 4325449, 4259841, 20, 4325444, 4259841, 20, 4325439, 4259841, 20, 4325434, 4259841, 20, 4325429, 4259841, 20, 4325424, 4259841, 20, 4325419, 4259841, 20, 4325401, 4259841, 20, 4325396, 4259841, 20, 4325391, 4259841, 20, 4325386, 4259841, 20, 4325381, 4259841, 20, 4325376, 4259841, 20, 1769584, 327681, 10, 1769589, 327681, 10, 1769594, 327681, 10, 4325494, 4259841, 20, 4325499, 4259841, 20)
+layer_1/tile_data = PackedInt32Array(1638502, 2293761, 10, 1900637, 3342337, 16, 1769557, 327681, 10, 1769552, 327681, 10, 1769547, 327681, 10, 1769542, 983041, 10, 1769537, 327681, 10, 1769532, 327681, 10, 1769527, 327681, 10, 1769522, 327681, 10, 1769517, 327681, 10, 1769512, 327681, 10, 1769507, 327681, 10, 1769502, 327681, 10, 4325489, 4259841, 20, 4325484, 4259841, 20, 4325479, 4259841, 20, 4325474, 4259841, 20, 4325469, 4259841, 20, 4325449, 4259841, 20, 4325444, 4259841, 20, 4325439, 4259841, 20, 4325434, 4259841, 20, 4325429, 4259841, 20, 4325424, 4259841, 20, 4325419, 4259841, 20, 4325401, 4259841, 20, 4325396, 4259841, 20, 4325391, 4259841, 20, 4325386, 4259841, 20, 4325381, 4259841, 20, 4325376, 4259841, 20, 1769584, 327681, 10, 1769589, 327681, 10, 1769594, 327681, 10, 4325494, 4259841, 20, 4325499, 4259841, 20, 1900566, 3342337, 16, 1638407, 2293761, 10)
+
+[node name="UiLightGameInstructionsPoster" type="Sprite2D" parent="TileMap"]
+position = Vector2(363, 336)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("5_2euu6")
 
 [node name="ColorRect" type="ColorRect" parent="TileMap"]
 offset_left = 145.0
@@ -128,17 +151,101 @@ position = Vector2(2093, 642)
 shape = SubResource("RectangleShape2D_u2r4c")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(105, 1137)
+position = Vector2(172, 1140)
 shape = SubResource("RectangleShape2D_nrjfh")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(938, 1137)
+position = Vector2(936.25, 1131.63)
 shape = SubResource("RectangleShape2D_nrjfh")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1740, 1137)
+position = Vector2(1734.5, 1122.25)
 shape = SubResource("RectangleShape2D_nrjfh")
 
 [node name="Locker_Node" parent="." instance=ExtResource("3_3sy0g")]
 z_index = 1
 position = Vector2(1127, 438)
+
+[node name="Image_Puzzle_Node" parent="." instance=ExtResource("7_wrdrh")]
+position = Vector2(1093, 463)
+
+[node name="LightPoster" parent="." instance=ExtResource("5_r81s3")]
+position = Vector2(17, -14)
+
+[node name="Objectives" type="TextureRect" parent="."]
+z_index = 2
+offset_left = 21.9999
+offset_top = 12.0
+offset_right = 493.0
+offset_bottom = 324.0
+scale = Vector2(0.78, 0.78)
+mouse_filter = 2
+texture = ExtResource("6_j5f1c")
+expand_mode = 1
+script = ExtResource("8_wobnu")
+
+[node name="oTohide" type="RichTextLabel" parent="Objectives"]
+layout_mode = 0
+offset_left = 341.026
+offset_top = 253.846
+offset_right = 431.026
+offset_bottom = 276.846
+text = "[Q] to hide"
+
+[node name="Label" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 85.8976
+offset_top = 208.974
+offset_right = 403.898
+offset_bottom = 253.974
+theme_override_fonts/font = ExtResource("7_3lthy")
+theme_override_font_sizes/font_size = 25
+text = "Turn off the lights"
+
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
+position = Vector2(-25.8976, -87.3077)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("9_3xv8w")
+
+[node name="Label2" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 83.3333
+offset_top = 108.333
+offset_right = 225.333
+offset_bottom = 141.333
+theme_override_fonts/font = ExtResource("7_3lthy")
+theme_override_font_sizes/font_size = 25
+text = "Unlock Seraphina's Locker"
+
+[node name="Orbs2" type="Sprite2D" parent="Objectives/Label2"]
+position = Vector2(-21.7947, 63.4619)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("9_3xv8w")
+
+[node name="Label3" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 88.4617
+offset_top = 143.59
+offset_right = 426.462
+offset_bottom = 209.59
+theme_override_fonts/font = ExtResource("7_3lthy")
+theme_override_font_sizes/font_size = 25
+text = "Find what Seraphina is hiding in her locker"
+autowrap_mode = 2
+
+[node name="Orbs3" type="Sprite2D" parent="Objectives/Label3"]
+position = Vector2(-26.9231, 80.7692)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("9_3xv8w")
+
+[node name="transitions" parent="." instance=ExtResource("11_jjmvn")]
+
+[node name="In_game_settings" parent="." instance=ExtResource("13_owwma")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.27451, 0.27451, 0.27451, 0.415686)
+offset_left = -36.0
+offset_top = -53.0
+offset_right = 1975.0
+offset_bottom = 1166.0
+texture = SubResource("GradientTexture2D_k2nhn")

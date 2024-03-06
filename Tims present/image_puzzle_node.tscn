@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://jviws4e1cnvs"]
+
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="1_7f81q"]
+[ext_resource type="Script" path="res://image_puzzle_node.gd" id="1_q4hew"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d8t1k"]
+radius = 64.0703
+
+[node name="Image_Puzzle_Node" type="Area2D"]
+script = ExtResource("1_q4hew")
+
+[node name="Interactionarea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactionarea"]
+shape = SubResource("CircleShape2D_d8t1k")
+
+[node name="Panel" type="Panel" parent="Interactionarea"]
+z_index = 2
+z_as_relative = false
+offset_left = -102.0
+offset_top = -64.0
+offset_right = 105.0
+offset_bottom = -24.0
+metadata/_edit_use_anchors_ = true
+
+[node name="interaction_label" type="Label" parent="Interactionarea/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_top = -1.0
+offset_right = 81.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_7f81q")
+theme_override_font_sizes/font_size = 25
+text = "[E] to Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Interactionarea" to="." method="_on_interactionarea_body_entered"]
+[connection signal="body_exited" from="Interactionarea" to="." method="_on_interactionarea_body_exited"]

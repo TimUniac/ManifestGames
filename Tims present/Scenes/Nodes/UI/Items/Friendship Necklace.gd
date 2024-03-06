@@ -13,6 +13,7 @@ var is_opened = false
 
 var gamenacklace = null
 
+@onready var objlist = $"../Objectives"
 @onready var necklaceDialogue: String = "Hmm, 'ST ENDS'?...oh It's a Best Friends Necklace"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
@@ -66,7 +67,7 @@ func playercollect():
 	emit_signal("item_collected")
 	visible = false
 	$'.'.queue_free()
-
+	objlist.foundnacklace()
 
 func _on_texture_button_pressed():
 	close()
