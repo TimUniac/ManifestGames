@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://p0gv74ti7sqp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/Yarn.gd" id="1_o1w34"]
-[ext_resource type="Texture2D" uid="uid://diavt4i6p01my" path="res://Assets/Ui_recent_feb1/ui_book.svg.svg" id="2_ogxss"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_m6rrv"]
+[ext_resource type="Texture2D" uid="uid://dd0sxf8i86egi" path="res://Assets/Texture assets/spr_carmilla_book.svg" id="5_125l5"]
 [ext_resource type="PackedScene" uid="uid://bepo0m0r088a4" path="res://Scenes/Nodes/UI/book_game.tscn" id="5_q7rj5"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_yca30"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_p26fl"]
@@ -39,8 +39,8 @@ stretch_mode = 1
 shape = SubResource("CircleShape2D_k7kem")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_ogxss")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_125l5")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -102.0
