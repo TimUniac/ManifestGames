@@ -31,4 +31,5 @@ func winstate():
 
 
 func _on_close_pressed():
-	$".".visible = false
+	var parent = get_parent()
+	parent.close()
