@@ -48,11 +48,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="DoctorPortrait" type="TextureRect" parent="DP/Control"]
+z_index = 2
 layout_mode = 0
-offset_left = 11786.7
-offset_top = 3306.67
-offset_right = 15286.7
-offset_bottom = 8556.67
+offset_left = 10984.0
+offset_top = 3136.0
+offset_right = 14484.0
+offset_bottom = 8386.0
 texture = ExtResource("4_xu34y")
 
 [node name="SP" type="CanvasLayer" parent="."]

@@ -1,15 +1,16 @@
-[gd_scene load_steps=24 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=25 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
 [ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="3_mn1fx"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="5_2euu6"]
-[ext_resource type="PackedScene" uid="uid://cq85s1sgkavqx" path="res://light_poster_node.tscn" id="5_r81s3"]
+[ext_resource type="PackedScene" uid="uid://dy50vp0ngetqt" path="res://light_poster_node.tscn" id="5_r81s3"]
 [ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="6_j5f1c"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="7_3lthy"]
-[ext_resource type="PackedScene" uid="uid://jviws4e1cnvs" path="res://image_puzzle_node.tscn" id="7_wrdrh"]
+[ext_resource type="PackedScene" uid="uid://desqvm5r76kll" path="res://image_puzzle_node.tscn" id="7_wrdrh"]
 [ext_resource type="Script" path="res://Scenes/ObjectivesHallway.gd" id="8_wobnu"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="9_3xv8w"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="11_jjmvn"]
@@ -82,6 +83,33 @@ script = ExtResource("1_n677l")
 z_index = 2
 position = Vector2(272, 879)
 scale = Vector2(1.565, 1.565)
+
+[node name="Finish" type="TextureRect" parent="."]
+z_index = 6
+offset_left = 397.0
+offset_top = 314.0
+offset_right = 7137.0
+offset_bottom = 2804.0
+scale = Vector2(0.177198, 0.20846)
+texture = ExtResource("3_mn1fx")
+expand_mode = 1
+
+[node name="FinishText" type="RichTextLabel" parent="Finish"]
+z_index = 5
+layout_mode = 0
+offset_left = 950.0
+offset_top = 620.0
+offset_right = 6190.0
+offset_bottom = 1988.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_3lthy")
+theme_override_fonts/bold_font = ExtResource("7_3lthy")
+theme_override_font_sizes/normal_font_size = 250
+theme_override_font_sizes/bold_font_size = 260
+bbcode_enabled = true
+text = "Thanks for Playing our game, don't forget to fill out the questionaire to help us improve! Press 'R' to go back to the main menu. "
+fit_content = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_u8ib0")
@@ -163,7 +191,7 @@ position = Vector2(1734.5, 1122.25)
 shape = SubResource("RectangleShape2D_nrjfh")
 
 [node name="Locker_Node" parent="." instance=ExtResource("3_3sy0g")]
-z_index = 1
+z_index = 3
 position = Vector2(1127, 438)
 
 [node name="Image_Puzzle_Node" parent="." instance=ExtResource("7_wrdrh")]
@@ -244,8 +272,13 @@ texture = ExtResource("9_3xv8w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.27451, 0.27451, 0.27451, 0.415686)
-offset_left = -36.0
-offset_top = -53.0
-offset_right = 1975.0
-offset_bottom = 1166.0
+offset_left = -68.0
+offset_top = -2.0
+offset_right = 1943.0
+offset_bottom = 1217.0
 texture = SubResource("GradientTexture2D_k2nhn")
+
+[connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
+[connection signal="item_collected" from="Locker_Node" to="Male Doctor Character" method="_on_locker_node_item_collected"]
+[connection signal="item_collected" from="Image_Puzzle_Node" to="Male Doctor Character" method="_on_image_puzzle_node_item_collected"]
+[connection signal="item_collected" from="LightPoster" to="Male Doctor Character" method="_on_light_poster_item_collected"]

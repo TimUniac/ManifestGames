@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/JournalRead.gd" id="1_45ewt"]
 [ext_resource type="Texture2D" uid="uid://000kdtegf1b0" path="res://Assets/Journal.png" id="2_4mvgt"]
 [ext_resource type="Texture2D" uid="uid://dqvgegajo36xi" path="res://Assets/Journal 2.png" id="2_73dqi"]
-[ext_resource type="PackedScene" uid="uid://d0pkoyaoalmcd" path="res://new_journal.tscn" id="4_ln5s1"]
+[ext_resource type="PackedScene" uid="uid://drb6ny7iq5wwi" path="res://new_journal.tscn" id="4_ln5s1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw7kn"]
 size = Vector2(75, 77.5)

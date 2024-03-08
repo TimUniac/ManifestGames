@@ -12,7 +12,9 @@ var files = false
 var guitar = false
 var necklace = false
 var book = false
-
+var locker = false
+var puzzle = false
+var lights = false
 
 @onready var SpeechBubble = $SpeechBubble
 
@@ -82,6 +84,9 @@ func check_done():
 		emit_signal("all_items_collected")
 
 	elif pen and glasses and files:
+		emit_signal("all_items_collected")
+	
+	elif locker and puzzle and lights:
 		emit_signal("all_items_collected")
 		
 func play_anim(movement):
@@ -170,3 +175,19 @@ func _on_friendship_necklace_item_collected():
 	necklace = true
 	print ("necklace")
 	check_done()
+
+
+func _on_locker_node_item_collected():
+	locker = true
+	print("locker")
+	check_done()
+
+
+func _on_image_puzzle_node_item_collected():
+	puzzle = true
+	check_done()
+	print ("puzzle")
+func _on_light_poster_item_collected():
+	lights = true
+	check_done()
+	print ("lights")

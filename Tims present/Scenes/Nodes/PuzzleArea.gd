@@ -6,7 +6,7 @@ var drag_offset = Vector2()
 var tolerance = 20.0
 signal piece_placed_correctly
 @onready var parent = $".."
-
+@onready var inPlace = false
 func _ready():
 	connect("mouse_entered", Callable(self, "_on_mouse_entered"))
 	connect("mouse_exited", Callable(self, "_on_mouse_exited"))
@@ -34,10 +34,15 @@ func _on_drag_end():
 	if position.distance_to(target_position) <= tolerance:
 		position = target_position  
 		emit_signal("piece_placed_correctly", self)
-
+	
 
 func _on_piece_placed_correctly():
 	print ("correct")
 	var material = $Sprite2D.material as ShaderMaterial
 	material.set_shader_param("is_correctly_placed", true)
 	
+func _process(_delta):
+	if position == target_position:
+		inPlace = true
+	else:
+		inPlace = false

@@ -66,7 +66,7 @@ func solvedpuzzle():
 	doctor.talking = false
 	$Interactionarea.visible = false
 	$Interactionarea/CollisionShape2D.queue_free()
-	
+	objlist.foundpicture()
 	
 		
 
@@ -76,7 +76,6 @@ func playersolved_puzzle():
 	emit_signal("item_collected")
 	visible = false
 	$Interactionarea.queue_free()
-	objlist.foundpicture()
 	print ("player solved puzzle")
 
 

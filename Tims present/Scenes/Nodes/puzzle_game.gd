@@ -1,7 +1,7 @@
 extends Node2D
-@onready var answer = $CanvasLayer/Control/TextureRect
-@onready var blocker = $CanvasLayer/Control/ColorRect2
-var total_pieces = 9
+@onready var answer = $Control/TextureRect
+@onready var blocker = $Control/ColorRect2
+var total_pieces = 8 
 var pieces_snapped = 0
 
 func _ready():
@@ -14,10 +14,21 @@ func snapped_pieces():
 		winstate()
 		blocker.visible = false
 		answer.visible = true
-
-func winstate():
-	var parent = get_parent()
-	parent.close()
-	parent.solvedpuzzle()
-	parent.playersolved_puzzle()
+func unsnapped_pieces():
+	pieces_snapped -= 1
+	print(pieces_snapped)
+	
+func winstate():	
 	print("All pieces correctly placed!")
+	for child in get_children():
+		if child.has_method("winHide"):
+			child.winHide()
+	var timer = await get_tree().create_timer(3.0).timeout
+	var parent = get_parent()
+	parent.solvedpuzzle()
+	parent.close()
+	parent.playersolved_puzzle()
+
+
+func _on_close_pressed():
+	$".".visible = false
