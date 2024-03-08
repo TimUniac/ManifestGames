@@ -124,7 +124,7 @@ func player():
 func speak(text):
 	SpeechBubble.show_bubble(text)
 	SpeechBubble.position = Vector2(-150, -250)
-	talking = true
+	
 	
 
 func _on_guitar_interacted(guitarDialogue):
