@@ -276,6 +276,7 @@ offset_left = -68.0
 offset_top = -2.0
 offset_right = 1943.0
 offset_bottom = 1217.0
+mouse_filter = 2
 texture = SubResource("GradientTexture2D_k2nhn")
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]

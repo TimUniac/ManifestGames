@@ -6,7 +6,7 @@ var is_opened = false
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
 func _ready():
-	$ChordChart.visible = false
+	$CanvasLayer/ChordChart.visible = false
 	
 func _process(_delta):
 	if areaLabel.interaction_label.visible == true:
@@ -14,7 +14,7 @@ func _process(_delta):
 	if areaLabel.interaction_label.visible == false:
 		in_range = false
 	
-	if Input.is_action_just_pressed("Look") and in_range:
+	if Input.is_action_just_pressed("Interact") and in_range:
 		if is_opened:
 			close()
 		else:
@@ -22,11 +22,11 @@ func _process(_delta):
 			
 
 func close():
-	$ChordChart.visible = false
+	$CanvasLayer/ChordChart.visible = false
 	doctor.talking = false
 	is_opened = false
 func open():
-	$ChordChart.visible = true
+	$CanvasLayer/ChordChart.visible = true
 	doctor.talking = true
 	is_opened = true
 

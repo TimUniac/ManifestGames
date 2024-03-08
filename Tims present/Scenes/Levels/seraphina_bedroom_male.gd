@@ -23,6 +23,7 @@ func _ready():
 	$Objectives/Label/Orbs.visible = false
 	$Objectives/Label2/Orbs.visible = false
 	$Objectives/Label3/Orbs.visible = false
+	$Objectives/Label4/Orbs.visible = false
 	doctor.talking = true
 
 func _process(_delta):

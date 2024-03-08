@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://drb6ny7iq5wwi"]
 
 [ext_resource type="Script" path="res://NewJournal.gd" id="1_bere3"]
-[ext_resource type="Texture2D" uid="uid://c2nkyvjcl36c1" path="res://Assets/Ui_recent_feb1/ui_right_arrow.png" id="2_6r51h"]
-[ext_resource type="Texture2D" uid="uid://ba64evcnoyo5b" path="res://Assets/Ui_recent_feb1/ui_left_arrow.png" id="3_f3scs"]
+[ext_resource type="Texture2D" uid="uid://bsqmpug5y0s8t" path="res://Scenes/Nodes/UI/UI_forward_button.png" id="2_uasbu"]
+[ext_resource type="Texture2D" uid="uid://cvfv0eqtecm5f" path="res://Scenes/Nodes/UI/UI_backward_button.png" id="3_2dv3n"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="4_garip"]
 
 [node name="NewJournal" type="Control"]
@@ -14,35 +14,35 @@ script = ExtResource("1_bere3")
 
 [node name="Page" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 613.0
-offset_bottom = 795.0
+offset_right = 651.0
+offset_bottom = 668.0
 scale = Vector2(1.9194, 1.25375)
 expand_mode = 5
 
 [node name="Forward" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1050.0
-offset_top = 664.0
-offset_right = 1288.0
-offset_bottom = 804.0
-scale = Vector2(0.24, 0.47)
-icon = ExtResource("2_6r51h")
+offset_left = 1162.18
+offset_top = 748.0
+offset_right = 3314.18
+offset_bottom = 2691.0
+scale = Vector2(0.03, 0.03)
+icon = ExtResource("2_uasbu")
 
 [node name="Backward" type="Button" parent="."]
 layout_mode = 0
-offset_left = 145.0
-offset_top = 664.0
-offset_right = 384.0
-offset_bottom = 803.0
-scale = Vector2(0.25, 0.47)
-icon = ExtResource("3_f3scs")
+offset_left = 19.3
+offset_top = 748.0
+offset_right = 2171.3
+offset_bottom = 2691.0
+scale = Vector2(0.03, 0.03)
+icon = ExtResource("3_2dv3n")
 
 [node name="Close" type="Button" parent="."]
 layout_mode = 0
-offset_left = 145.0
-offset_top = 165.0
-offset_right = 364.0
-offset_bottom = 308.0
+offset_left = 21.0
+offset_top = 21.0
+offset_right = 240.0
+offset_bottom = 164.0
 scale = Vector2(0.27, 0.445)
 icon = ExtResource("4_garip")
 

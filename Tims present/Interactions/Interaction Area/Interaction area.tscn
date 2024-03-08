@@ -33,7 +33,7 @@ offset_right = 79.0
 offset_bottom = 45.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_hyfdl")
-text = "[L] To Investigate"
+text = "[E] To Investigate"
 horizontal_alignment = 1
 vertical_alignment = 1
 

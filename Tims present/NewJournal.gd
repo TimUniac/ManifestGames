@@ -1,6 +1,6 @@
 extends Control
 
-var pages = ["res://Assets/Texture assets/UI_JournalPage1.png","res://Assets/Texture assets/UI_JournalPage2.png" ,"res://Assets/Texture assets/UI_JournalPage3.png"]  
+var pages = ["res://Scenes/Nodes/UI/UI_Cropped_JournalPage1.png", "res://Scenes/Nodes/UI/UI_Cropped_JournalPage2 (2).png", "res://Scenes/Nodes/UI/UI_Cropped_JournalPage3 (1).png" ]  
 var current_page = 0  # Start with the first page
 
 func _ready():

@@ -87,10 +87,10 @@ texture = ExtResource("2_4mvgt")
 anchors_preset = -1
 anchor_right = 0.061
 anchor_bottom = 0.045
-offset_left = 445.0
-offset_top = 32.0
-offset_right = 684.88
-offset_bottom = 175.4
+offset_left = 109.0
+offset_top = -16.0
+offset_right = 348.88
+offset_bottom = 127.4
 scale = Vector2(1.3, 1.3)
 
 [connection signal="body_entered" from="Journal2" to="." method="_on_journal_2_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=35 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
@@ -19,12 +19,13 @@
 [ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="17_5c8an"]
 [ext_resource type="Script" path="res://Scenes/Levels/ObjectivesBedroom.gd" id="18_rkoi0"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="18_t0f3l"]
+[ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="20_67ppl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m45hp"]
-size = Vector2(668, 118)
+size = Vector2(668, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ps56l"]
 size = Vector2(240, 87)
@@ -42,7 +43,10 @@ size = Vector2(92, 67)
 size = Vector2(36, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tbj5"]
-size = Vector2(148.785, 156.675)
+size = Vector2(159, 113.338)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vw3l"]
+size = Vector2(61, 134)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_s8uak")
@@ -11684,7 +11688,6 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
-visible = false
 z_index = 2
 offset_left = 185.0
 offset_top = 246.0
@@ -11695,7 +11698,6 @@ texture = ExtResource("2_31iq0")
 expand_mode = 1
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]
-visible = false
 z_index = 5
 layout_mode = 0
 offset_left = 950.0
@@ -11725,7 +11727,7 @@ position = Vector2(-610, 166)
 shape = SubResource("RectangleShape2D_m45hp")
 
 [node name="USWall" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-254, -378)
+position = Vector2(-254, -404.5)
 shape = SubResource("RectangleShape2D_m45hp")
 
 [node name="Boxes" type="CollisionShape2D" parent="StaticBody2D"]
@@ -11748,13 +11750,13 @@ shape = SubResource("RectangleShape2D_as2yl")
 position = Vector2(276, -222.5)
 shape = SubResource("RectangleShape2D_snajd")
 
-[node name="Plant" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-41.5, -321)
+[node name="BookShelf" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-324.5, -407.337)
 shape = SubResource("RectangleShape2D_8tbj5")
 
-[node name="BookShelf" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-319.393, -407.337)
-shape = SubResource("RectangleShape2D_8tbj5")
+[node name="Plant2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-40.5, -347)
+shape = SubResource("RectangleShape2D_0vw3l")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(116, 325)
@@ -11787,7 +11789,6 @@ y_sort_enabled = true
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
-visible = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0
@@ -11809,6 +11810,7 @@ mouse_filter = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
+visible = false
 position = Vector2(10, 100)
 
 [node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
@@ -11831,16 +11833,17 @@ offset_top = 101.0
 offset_right = 397.0
 offset_bottom = 413.0
 scale = Vector2(0.6, 0.6)
+mouse_filter = 2
 texture = ExtResource("17_5c8an")
 expand_mode = 1
 script = ExtResource("18_rkoi0")
 
 [node name="oTohide" type="RichTextLabel" parent="Objectives"]
 layout_mode = 0
-offset_left = 341.026
-offset_top = 253.846
-offset_right = 431.026
-offset_bottom = 276.846
+offset_left = 350.0
+offset_top = 285.0
+offset_right = 440.0
+offset_bottom = 308.0
 text = "[Q] to hide"
 
 [node name="Label" type="Label" parent="Objectives"]
@@ -11855,6 +11858,30 @@ text = "Collect Seraphinas Book"
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
 position = Vector2(-25.8976, -87.3077)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("18_t0f3l")
+
+[node name="Label4" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 86.6667
+offset_top = 245.0
+offset_right = 404.667
+offset_bottom = 290.0
+theme_override_fonts/font = ExtResource("3_5adpj")
+theme_override_font_sizes/font_size = 25
+text = "Collect Seraphinas Journal"
+
+[node name="TextureRect" type="TextureRect" parent="Objectives/Label4"]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 4.99997
+offset_right = 24.0
+offset_bottom = 64.0
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("20_67ppl")
+
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label4"]
+position = Vector2(-26.6667, 15)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
 
@@ -11885,7 +11912,7 @@ text = "Collect Seraphina's Friendship Necklace"
 autowrap_mode = 2
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label3"]
-position = Vector2(-26.795, 79.7437)
+position = Vector2(-26.795, 78.0768)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
 
