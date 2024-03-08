@@ -29,13 +29,15 @@ scale = Vector2(1.22, 3)
 shape = SubResource("RectangleShape2D_4jjgq")
 
 [node name="Interactionarea" type="Area2D" parent="."]
+z_index = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactionarea"]
+z_index = 5
 position = Vector2(-35, 24)
 shape = SubResource("CircleShape2D_g18ri")
 
 [node name="Panel" type="Panel" parent="Interactionarea"]
-z_index = 2
+z_index = 6
 z_as_relative = false
 offset_left = -102.0
 offset_top = -64.0
