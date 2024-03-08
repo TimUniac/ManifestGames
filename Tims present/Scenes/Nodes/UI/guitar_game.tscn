@@ -18,6 +18,8 @@ offset_top = -227.52
 offset_right = 792.04
 offset_bottom = 275.48
 scale = Vector2(0.815, 0.815)
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
 script = ExtResource("1_qw654")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -76,7 +78,7 @@ theme_override_fonts/font = ExtResource("2_o5paw")
 theme_override_font_sizes/font_size = 41
 placeholder_text = "Input Seqence and Press Enter"
 alignment = 1
-expand_to_text_length = true
+max_length = 4
 virtual_keyboard_enabled = false
 shortcut_keys_enabled = false
 middle_mouse_paste_enabled = false

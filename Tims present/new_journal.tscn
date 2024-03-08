@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0pkoyaoalmcd"]
+[gd_scene load_steps=5 format=3 uid="uid://drb6ny7iq5wwi"]
 
 [ext_resource type="Script" path="res://NewJournal.gd" id="1_bere3"]
 [ext_resource type="Texture2D" uid="uid://c2nkyvjcl36c1" path="res://Assets/Ui_recent_feb1/ui_right_arrow.png" id="2_6r51h"]
