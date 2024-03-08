@@ -53,6 +53,7 @@ func open():
 	
 func close():
 	if gameGuitar != null:
+		print("Close Guitar")
 		remove_child(gameGuitar)
 		gameGuitar.queue_free()
 		gameGuitar = null
