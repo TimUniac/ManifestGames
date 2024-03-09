@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://c47h75b0a84qf"]
+[gd_scene load_steps=17 format=3 uid="uid://c47h75b0a84qf"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/puzzle_game.gd" id="1_h6jmb"]
 [ext_resource type="Texture2D" uid="uid://dnjr2kapuveak" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/TrainTicket.png" id="2_0h8gd"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="2_42vcc"]
 [ext_resource type="Script" path="res://PuzzlePiece.gd" id="2_hlqwy"]
 [ext_resource type="Texture2D" uid="uid://dcyxqj4jrmbh2" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_1.png" id="3_ofhwo"]
+[ext_resource type="Shader" path="res://Scenes/Nodes/dropshadowUnsnapped.gdshader" id="4_gg0ut"]
+[ext_resource type="Texture2D" uid="uid://d22qng25na2pi" path="res://Scenes/Nodes/TicketPad.png" id="4_uh8pt"]
 [ext_resource type="Texture2D" uid="uid://j3b42pqwopqs" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_2.png" id="5_2ht46"]
 [ext_resource type="Texture2D" uid="uid://1klmocw401uy" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_3.png" id="6_6iokd"]
 [ext_resource type="Texture2D" uid="uid://ga1jorhtl4u1" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_4.png" id="7_tgqd5"]
@@ -14,19 +16,17 @@
 [ext_resource type="Texture2D" uid="uid://1nu5nvn3rosm" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_8.png" id="11_cwmlh"]
 [ext_resource type="Texture2D" uid="uid://coihlj24c0o4l" path="res://Assets/Texture assets/Chapter 2/UI_TrainTicketGameInstructions.png" id="13_oari1"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2qoy1"]
+shader = ExtResource("4_gg0ut")
+shader_parameter/shadow_offset = Vector2(5, -5)
+shader_parameter/shadow_color = Vector4(0, 0, 0, 1)
+shader_parameter/shadow_alpha_threshold = 0.9
+
 [node name="Node2D" type="Node2D"]
 top_level = true
 z_index = 3
 position = Vector2(810, 540)
 script = ExtResource("1_h6jmb")
-
-[node name="Close" type="Button" parent="."]
-offset_left = 1018.54
-offset_top = -509.88
-offset_right = 1285.54
-offset_bottom = -366.88
-scale = Vector2(0.27, 0.445)
-icon = ExtResource("2_42vcc")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -35,14 +35,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -783.0
-offset_top = -565.0
-offset_right = 1148.0
-offset_bottom = 511.0
+offset_left = -791.0
+offset_top = -534.0
+offset_right = 1140.0
+offset_bottom = 542.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 6
@@ -59,158 +60,193 @@ grow_vertical = 2
 scale = Vector2(0.33, 0.33)
 texture = ExtResource("2_0h8gd")
 
-[node name="ColorRect2" type="ColorRect" parent="Control"]
+[node name="Pad" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -1254.0
-offset_top = -167.0
-offset_right = -31.0
-offset_bottom = 199.0
+offset_left = -1955.0
+offset_top = -542.0
+offset_right = 6393.0
+offset_bottom = 4132.0
 grow_horizontal = 0
 grow_vertical = 2
-color = Color(0.921569, 0.705882, 0.87451, 1)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("4_uh8pt")
 
 [node name="PuzzlePiece_1" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-724, -419)
-scale = Vector2(1.18, 1.18)
+position = Vector2(-662, -310)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("3_ofhwo")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(-37, -100)
+target_position = Vector2(-205, -98)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_1"]
+visible = false
 y_sort_enabled = true
 position = Vector2(126, -20)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_1/Area2D"]
+visible = false
 y_sort_enabled = true
 position = Vector2(-112.441, 31.8645)
 polygon = PackedVector2Array(5.93225, 18.6441, 37.2881, -94.9153, -22.8813, -95.7627, -26.6009, -76.9734, -62.7119, -67.7966, -61.8644, 67.7966)
 
 [node name="PuzzlePiece_2" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-594, 270)
-scale = Vector2(1.18, 1.18)
+material = SubResource("ShaderMaterial_2qoy1")
+position = Vector2(-604, 366)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("5_2ht46")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(192, -13)
+target_position = Vector2(-28, -36)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_2"]
+visible = false
 y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_2/Area2D"]
+visible = false
 y_sort_enabled = true
 polygon = PackedVector2Array(166.102, -127.119, 82.2034, -157.627, -138.983, -150, -169.492, -43.2203, -32.2034, 38.1356, -75.4237, 152.542, 89.8305, 157.627)
 
 [node name="PuzzlePiece_3" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(268, 324)
-scale = Vector2(1.18, 1.18)
+position = Vector2(921, 391)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("6_6iokd")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(35, 59)
+target_position = Vector2(-149, 17)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_3"]
+visible = false
 y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_3/Area2D"]
+visible = false
 y_sort_enabled = true
 polygon = PackedVector2Array(59.322, 98.3051, 108.475, -17.7966, -47.4576, -94.0678, -111.864, -43.2203, -105.932, 54.2372, -70.339, 63.5593, -55.0847, 98.3051)
 
 [node name="PuzzlePiece_4" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-465, -362)
-scale = Vector2(1.18, 1.18)
+position = Vector2(927, 89)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("7_tgqd5")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(487, 6.1)
+target_position = Vector2(197, -23)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_4"]
+visible = false
 y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_4/Area2D"]
+visible = false
 y_sort_enabled = true
 polygon = PackedVector2Array(-163.559, 135.593, 58.4746, 139.831, 153.39, 50, 111.864, 11.8644, 81.356, -84.7458, -70.339, -142.373, -140.678, -35.5932)
 
 [node name="PuzzlePiece_5" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(654, 362)
-scale = Vector2(1.18, 1.18)
+position = Vector2(216, 393)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("8_cigbd")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(589, -64)
+target_position = Vector2(271, -76)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_5"]
+visible = false
 y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_5/Area2D"]
+visible = false
 y_sort_enabled = true
 position = Vector2(0, 1.69492)
 polygon = PackedVector2Array(215.254, -38.1356, 192.373, -104.237, -229.661, -115.254, 2.54239, -14.4068, 33.0508, 68.6441, 77.9661, 102.542, 135.593, 45.7627)
 
 [node name="PuzzlePiece_6" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-144, 342)
-scale = Vector2(1.18, 1.18)
+position = Vector2(-588, -90)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("9_gqd0e")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(877, 25)
+target_position = Vector2(492, -9)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_6"]
+visible = false
 y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_6/Area2D"]
+visible = false
 y_sort_enabled = true
 polygon = PackedVector2Array(155.932, 74.5763, 153.39, -33.8983, -13.5593, -125.424, -80.5085, -41.5254, -160.169, 38.1356, -44.0678, 122.034, 136.441, 122.034)
 
 [node name="PuzzlePiece_7" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-255, -8)
-scale = Vector2(1.18, 1.18)
+position = Vector2(-283, 406)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("10_xy77r")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(958, -25)
+target_position = Vector2(554, -46)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_7"]
+visible = false
 y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_7/Area2D"]
+visible = false
 y_sort_enabled = true
 polygon = PackedVector2Array(100, -111.864, 60.1695, -150, -103.39, -142.373, -80.5085, -76.2712, 88.9831, 9.32202, 81.3559, 127.119, 107.627, 125.424)
 
 [node name="PuzzlePiece_8" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-130, -461)
-scale = Vector2(1.18, 1.18)
+position = Vector2(-619, 145)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("11_cwmlh")
 script = ExtResource("2_hlqwy")
-target_position = Vector2(694, 120)
+target_position = Vector2(354, 64)
 
 [node name="Area2D" type="Area2D" parent="PuzzlePiece_8"]
+visible = false
 y_sort_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_8/Area2D"]
+visible = false
 y_sort_enabled = true
 polygon = PackedVector2Array(99.1526, 38.9831, -7.62701, -39.8305, -98.305, 38.9831)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -808.0
-offset_top = -541.0
-offset_right = 1112.0
-offset_bottom = 539.0
-color = Color(0.0431373, 0.196078, 1, 1)
+offset_left = -823.0
+offset_top = -553.0
+offset_right = 1115.0
+offset_bottom = 557.0
+color = Color(0.34902, 0.458824, 0.415686, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -768.0
+offset_top = -508.0
+offset_right = 1046.0
+offset_bottom = 502.0
+color = Color(0.47451, 0.592157, 0.52549, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 306.0
-offset_top = -897.0
-offset_right = 2786.0
-offset_bottom = 2611.0
-scale = Vector2(0.3, 0.3)
+offset_left = 425.0
+offset_top = -932.6
+offset_right = 2905.0
+offset_bottom = 2575.4
+scale = Vector2(0.335, 0.335)
 texture = ExtResource("13_oari1")
+
+[node name="Close" type="Button" parent="."]
+z_index = 2
+offset_left = 1018.54
+offset_top = -509.88
+offset_right = 1285.54
+offset_bottom = -366.88
+scale = Vector2(0.27, 0.445)
+icon = ExtResource("2_42vcc")
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
