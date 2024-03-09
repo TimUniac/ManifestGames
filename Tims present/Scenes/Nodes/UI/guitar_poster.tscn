@@ -34,12 +34,12 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_5k18p")
 
 [node name="ChordChart" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(766, 459)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("4_kuew2")
 
 [node name="Panel" type="Panel" parent="."]
-z_index = 2
 y_sort_enabled = true
 layout_mode = 0
 offset_left = 663.0
@@ -64,3 +64,5 @@ vertical_alignment = 1
 
 [connection signal="area_entered" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_body_exited"]

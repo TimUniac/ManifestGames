@@ -27,7 +27,9 @@ func _ready():
 		displayChords()
 	if global.guitarPosterSeen:
 		bigHint.visible = true
-		
+func _process(_delta):
+	if global.guitarPosterSeen == true:
+		bigHint.visible = true
 func _input(event):
 	if event is InputEventKey and event.pressed:
 		var audio_stream = audio_files.get(event.keycode)
