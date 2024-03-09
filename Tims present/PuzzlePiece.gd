@@ -9,12 +9,30 @@ var isSnapped = false
 
 func _ready():
 	original_position = position
+	add_to_group("puzzle_pieces")
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if is_dragging and not event.pressed:
 			is_dragging = false
 			check_snap_position()
+		elif !is_dragging and event.pressed:
+			var top_piece = null
+			var highest_z_index = -99
+			for piece in get_tree().get_nodes_in_group("puzzle_pieces"):
+				if piece.get_rect().has_point(piece.to_local(event.global_position)):
+					highest_z_index = piece.z_index
+					top_piece = piece
+			
+			if top_piece == self:
+				# This piece is the topmost one under the mouse
+				is_dragging = true
+				drag_offset = position - event.global_position
+				modulate = Color(1, 1, 1, 0.5)
+				z_index += 1
+				if isSnapped:
+					root.unsnapped_pieces()
+					isSnapped = false
 		elif !is_dragging and event.pressed and get_rect().has_point(to_local(event.global_position)):
 			is_dragging = true
 			drag_offset = position - event.global_position
@@ -44,3 +62,6 @@ func check_snap_position():
 
 func winHide():
 	self.visible = false
+	
+func sorter(a, b):
+	return a.z_index < b.z_index
