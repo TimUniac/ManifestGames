@@ -3,6 +3,9 @@ extends Control
 var secret_code = "6415"
 var entered_code = ""
 signal changeSong
+@onready var clue = $Clue
+@onready var chords = $Clue2
+@onready var bigHint = $BigHint
 @onready var wrong_answer = preload("res://Assets/Sound/Music/WrongAnswerGuitar.mp3")
 @onready var audio_player = $Chords
 @onready var audio_files = {
@@ -16,9 +19,15 @@ signal changeSong
 }
 
 func _ready():
+	bigHint.visible = false
 	audio_player.stop()
-
-	
+	clue.visible = true
+	chords.visible = false
+	if global.journalLyricsSeen == true:
+		displayChords()
+	if global.guitarPosterSeen:
+		bigHint.visible = true
+		
 func _input(event):
 	if event is InputEventKey and event.pressed:
 		var audio_stream = audio_files.get(event.keycode)
@@ -90,6 +99,11 @@ func _on_EnterButton_pressed():
 		
 		$GuitarSequenceInput.clear()
 
+func displayChords():
+	print ("Guitar Change")
+	chords.visible = true
+	clue.visible = false
+	
 
 
 

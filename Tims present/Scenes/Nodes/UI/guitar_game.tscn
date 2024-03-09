@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://xox3s1h15gac"]
+[gd_scene load_steps=7 format=3 uid="uid://xox3s1h15gac"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
 [ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="2_11gyi"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="2_o5paw"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="3_bcud7"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_bvjf5"]
+[ext_resource type="Texture2D" uid="uid://6okuon7k8ey8" path="res://Scenes/Nodes/UI/ChordChartBigHint.png" id="6_pjeq7"]
 
 [node name="GuitarGame" type="Control"]
 z_index = 2
@@ -58,6 +59,30 @@ text = "Just a closeted soul,
 locked away from your light;
 in the still of the night, 
 I cry, I fight."
+fit_content = true
+scroll_active = false
+
+[node name="Clue2" type="RichTextLabel" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.185
+anchor_top = 0.105
+anchor_right = 0.976
+anchor_bottom = 0.487
+offset_left = 31.0327
+offset_top = -17.2322
+offset_right = 197.981
+offset_bottom = 79.6218
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_bvjf5")
+theme_override_font_sizes/normal_font_size = 37
+bbcode_enabled = true
+text = "[i]e min[/i]                                          [i]C[/i]
+Just a closeted soul, locked away from your light;
+[i]G[/i]                            [i]D[/i]
+in the still of the night, I cry, I fight."
 fit_content = true
 scroll_active = false
 
@@ -117,5 +142,15 @@ offset_right = 227.0
 offset_bottom = 189.0
 scale = Vector2(0.245, 0.245)
 icon = ExtResource("3_bcud7")
+
+[node name="BigHint" type="TextureRect" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 900.0
+offset_top = 236.935
+offset_right = 3456.0
+offset_bottom = 3584.94
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("6_pjeq7")
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

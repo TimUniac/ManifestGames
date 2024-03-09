@@ -24,7 +24,7 @@
 size = Vector2(225, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m45hp"]
-size = Vector2(668, 118)
+size = Vector2(670, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ps56l"]
 size = Vector2(240, 87)
@@ -11725,7 +11725,7 @@ position = Vector2(-610, 166)
 shape = SubResource("RectangleShape2D_m45hp")
 
 [node name="USWall" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-254, -378)
+position = Vector2(-253, -395)
 shape = SubResource("RectangleShape2D_m45hp")
 
 [node name="Boxes" type="CollisionShape2D" parent="StaticBody2D"]
@@ -11787,7 +11787,6 @@ y_sort_enabled = true
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
-visible = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0

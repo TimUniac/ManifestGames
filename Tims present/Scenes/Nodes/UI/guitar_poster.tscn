@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkq7anlswuk6p"]
+[gd_scene load_steps=6 format=3 uid="uid://bkq7anlswuk6p"]
 
 [ext_resource type="Script" path="res://Guitar Poster.gd" id="1_1lx0p"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="2_jj7qr"]
-[ext_resource type="PackedScene" uid="uid://c8aeqw3ip5n48" path="res://Interactions/Interaction Area/Interaction area.tscn" id="3_t0ww6"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_k08dy"]
 [ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="4_kuew2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5k18p"]
+radius = 86.0
+height = 340.0
 
 [node name="Guitar Poster" type="Control"]
 layout_mode = 3
@@ -22,10 +26,40 @@ script = ExtResource("1_1lx0p")
 position = Vector2(726, 216)
 texture = ExtResource("2_jj7qr")
 
+[node name="Area2D" type="Area2D" parent="SprGuitarChord_svg"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SprGuitarChord_svg/Area2D"]
+position = Vector2(0, 1)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_5k18p")
+
 [node name="ChordChart" type="Sprite2D" parent="."]
-position = Vector2(977, 501)
-scale = Vector2(0.52443, 0.420655)
+position = Vector2(766, 459)
+scale = Vector2(0.16, 0.16)
 texture = ExtResource("4_kuew2")
 
-[node name="Interaction Area" parent="." instance=ExtResource("3_t0ww6")]
-position = Vector2(733, 284)
+[node name="Panel" type="Panel" parent="."]
+z_index = 2
+y_sort_enabled = true
+offset_left = 663.0
+offset_top = 167.0
+offset_right = 789.0
+offset_bottom = 207.0
+
+[node name="interaction_label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_top = -1.0
+offset_right = 81.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_k08dy")
+text = "[E] To Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_area_exited"]

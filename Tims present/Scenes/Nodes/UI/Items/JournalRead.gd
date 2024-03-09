@@ -26,6 +26,8 @@ func open():
 	doctor.talking = true
 	is_opened = true
 
+func lyricsSeen():
+	pass
 
 func _process(_delta):
 	

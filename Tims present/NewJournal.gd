@@ -35,7 +35,8 @@ func _on_forward_pressed():
 	if current_page < pages.size() - 1:
 					current_page += 1
 					update_page()
-					
+					global.journalLyricsSeen = true
+					print ("forward pressed")
 
 
 
