@@ -201,5 +201,6 @@ text = "Reset Lights"
 [connection signal="lightOff" from="Control/GridContainer/Switch_24" to="." method="_on_switch_1_light_off"]
 [connection signal="lightON" from="Control/GridContainer/Switch_25" to="." method="_on_switch_1_light_on"]
 [connection signal="lightOff" from="Control/GridContainer/Switch_25" to="." method="_on_switch_1_light_off"]
+[connection signal="pressed" from="Control/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Control/Reset" to="Control/GridContainer" method="_on_reset_pressed"]
 [connection signal="toggled" from="Control/Reset" to="Control/GridContainer" method="_on_reset_toggled"]

@@ -41,6 +41,7 @@ texture = ExtResource("4_kuew2")
 [node name="Panel" type="Panel" parent="."]
 z_index = 2
 y_sort_enabled = true
+layout_mode = 0
 offset_left = 663.0
 offset_top = 167.0
 offset_right = 789.0

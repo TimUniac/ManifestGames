@@ -71,3 +71,4 @@ func reset_state():
 	print ("reset")
 	ON = false
 	self.texture_normal = switchOFF
+
