@@ -44,3 +44,5 @@ position = Vector2(719.48, 307.2)
 scale = Vector2(0.535, 0.535)
 
 [connection signal="pressed" from="BigPostit/Close" to="." method="_on_close_pressed"]
+[connection signal="body_entered" from="Interaction Area" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Interaction Area" to="." method="_on_interaction_area_body_exited"]
