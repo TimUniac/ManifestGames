@@ -33,7 +33,7 @@ func show_initial_speech_bubble():
 	$"Male Doctor Character/SpeechBubble".show_bubble("I need to find and unlock some of her core memories.")
 	
 func _input(_event):
-		hide_show_objectives()
+		hide_show_objectives() 
 
 func change_scene():
 	$"transitions/transition player".play("Fade_Out")
@@ -56,3 +56,8 @@ func hide_show_objectives():
 func _on_guitar_game_changeSong():
 	music_player.stream = music_win
 	music_player.play()
+
+func lyricsSeen():
+	print ("the root has seen the lyrics")
+	var guitar = $"Seraphina's Guitar"
+	guitar.showChords()

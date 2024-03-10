@@ -1,14 +1,15 @@
 extends Area2D
 
+@onready var interaction_label = $Panel/interaction_label
 
-@export var action_name: String = "Look"
-@onready var interaction_label = $Panel
-func _ready():
-	interaction_label.visible = false
-	
+signal bodyEntered
+signal bodyExited
 
-func _on_body_entered(_body):
+func _on_body_entered(body):
 	interaction_label.visible = true
-
-func _on_body_exited(_body):
+	emit_signal("bodyEntered") # Emit signal on body entered
+	print("body near poster")
+	
+func _on_body_exited(body):
 	interaction_label.visible = false
+	emit_signal("bodyExited") # Emit signal on body exited

@@ -24,3 +24,7 @@ func winstate():
 	var grandparent = parent.get_parent()
 	grandparent.lightsoff()
 	
+
+
+func _on_reset_pressed():
+	offLights = 13

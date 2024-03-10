@@ -3,10 +3,11 @@ extends Node2D
 @onready var blocker = $Control/ColorRect2
 var total_pieces = 8 
 var pieces_snapped = 0
+@onready var root = $"."
 
 func _ready():
 	answer.visible = false
-	
+	root.visible = true
 func snapped_pieces():
 	pieces_snapped += 1
 	print(pieces_snapped)

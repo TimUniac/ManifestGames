@@ -24,6 +24,7 @@ func _input(event):
 				if current_page < pages.size() - 1:
 					current_page += 1
 					update_page()
+					global.journalLyricsSeen = true
 			elif event.keycode == KEY_LEFT:
 				if current_page > 0:
 					current_page -= 1
@@ -35,7 +36,8 @@ func _on_forward_pressed():
 	if current_page < pages.size() - 1:
 					current_page += 1
 					update_page()
-					
+					global.journalLyricsSeen = true
+					print ("forward pressed")
 
 
 

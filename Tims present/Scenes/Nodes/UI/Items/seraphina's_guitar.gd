@@ -17,7 +17,7 @@ var is_opened = false
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 var gameGuitar = null
-
+signal chordsSeen
 func _ready():
 	interaction_label.visible = false
 	
@@ -54,6 +54,7 @@ func open():
 	
 func close():
 	if gameGuitar != null:
+		print("Close Guitar")
 		remove_child(gameGuitar)
 		gameGuitar.queue_free()
 		gameGuitar = null
@@ -80,3 +81,9 @@ signal playGame
 
 func _on_texture_button_pressed():
 	close()
+
+func showChords():
+	if gameGuitar and gameGuitar.has_method("displayChords"):
+		gameGuitar.displayChords()
+	else:
+		print("Guitar game is not open or does not have the displayChords method.")
