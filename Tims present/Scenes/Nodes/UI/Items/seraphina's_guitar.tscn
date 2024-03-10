@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://84d0ghv75mkp"]
+[gd_scene load_steps=7 format=3 uid="uid://84d0ghv75mkp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.gd" id="1_ldbsd"]
 [ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="3_pktu2"]

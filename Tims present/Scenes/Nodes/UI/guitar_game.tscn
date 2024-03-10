@@ -99,6 +99,7 @@ offset_top = 0.184998
 offset_right = 0.175964
 offset_bottom = 11.9149
 tooltip_text = "\"I need to find the password to open this memory\""
+mouse_filter = 2
 theme_override_fonts/font = ExtResource("2_o5paw")
 theme_override_font_sizes/font_size = 41
 placeholder_text = "Input Seqence and Press Enter"

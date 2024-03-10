@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/TutorialGame.gd" id="1_sdyng"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_0lgi0"]
-[ext_resource type="FontFile" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_i2l02"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_i2l02"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_ufs11"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_31e6p"]
 
@@ -46,6 +46,7 @@ offset_right = 1830.0
 offset_bottom = 1446.0
 scale = Vector2(2.5, 2)
 tooltip_text = "\"I need to find the password to open this memory\""
+mouse_filter = 2
 theme_override_fonts/font = ExtResource("3_ufs11")
 theme_override_font_sizes/font_size = 41
 placeholder_text = "Input Seqence and Press Enter"

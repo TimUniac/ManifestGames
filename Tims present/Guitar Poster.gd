@@ -1,14 +1,18 @@
 extends Control
 
 var is_opened = false
-@onready var areaLabel = $Panel/interaction_label
+@onready var areaLabel = $Panel
 @onready var in_range = false
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
+
+
 func _ready():
-	$ChordChart.visible = false
-	areaLabel.visible = false
+	interactionnotvisible()
+	$CanvasLayer/ChordChart.visible = false
+	
 	print (areaLabel)
+	
 func _process(_delta):
 	if areaLabel.visible == true:
 		in_range = true
@@ -34,7 +38,8 @@ func open():
 	is_opened = true
 	global.guitarPosterSeen = true
 
-
+func interactionnotvisible():
+	areaLabel.visible = false
 
 
 func _on_close_pressed():

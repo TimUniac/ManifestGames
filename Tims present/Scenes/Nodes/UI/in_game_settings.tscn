@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cvtnbtwsk1ecd"]
+[gd_scene load_steps=16 format=3 uid="uid://cvtnbtwsk1ecd"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/in_game_settings.gd" id="1_aglmf"]
 [ext_resource type="Texture2D" uid="uid://rndjdmf3owjl" path="res://Assets/Ui_recent_feb1/ui_setting_menu_base.png" id="2_snn3m"]
@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://betsyttkbc0bh" path="res://Assets/Ui_recent_feb1/ui_aswd_key_w.png" id="7_cng1n"]
 [ext_resource type="Texture2D" uid="uid://cmiiel1fnpvtn" path="res://Assets/Menu Buttons/ui-boss icon-box 2.png" id="13_24wr4"]
 [ext_resource type="Texture2D" uid="uid://c00cce6q421pl" path="res://Assets/Ui_recent_feb1/ui_setting_icon_button.png" id="14_ccsou"]
+[ext_resource type="Texture2D" uid="uid://dhnbfnmwja1uv" path="res://Scenes/Nodes/UI/home button untouched.png" id="14_lby3s"]
 [ext_resource type="Texture2D" uid="uid://nsml6ma7swjp" path="res://Assets/Ui_recent_feb1/ui_setting_icon_button_reversed.png" id="15_1voqf"]
+[ext_resource type="Texture2D" uid="uid://b6qtjc2vaqhyk" path="res://Scenes/Nodes/UI/home button touched (1).png" id="15_2muxr"]
 
 [node name="In_game_settings" type="Control"]
 layout_mode = 3
@@ -45,7 +47,6 @@ limit_bottom = 802
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
 
 [node name="SettingsPanel" type="CanvasLayer" parent="Camera2D/CanvasLayer2"]
-visible = false
 scale = Vector2(1.652, 1.652)
 transform = Transform2D(1.652, 0, 0, 1.652, 0, 0)
 
@@ -227,9 +228,20 @@ theme_override_font_sizes/font_size = 167
 text = "E"
 metadata/_edit_use_anchors_ = true
 
+[node name="TextureButton2" type="TextureButton" parent="Camera2D/CanvasLayer2/SettingsPanel"]
+offset_left = 87.1671
+offset_top = 78.6925
+offset_right = 967.167
+offset_bottom = 746.693
+scale = Vector2(0.0941474, 0.101774)
+texture_normal = ExtResource("14_lby3s")
+texture_pressed = ExtResource("15_2muxr")
+stretch_mode = 0
+
 [connection signal="pressed" from="Settings toggle" to="." method="_on_settings_toggle_pressed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/Music Volume" to="Camera2D/CanvasLayer2/SettingsPanel/Music Volume" method="_on_music_value_changed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/SFX volume" to="Camera2D/CanvasLayer2/SettingsPanel/SFX volume" method="_on_sfx_value_changed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/Voice Volume" to="Camera2D/CanvasLayer2/SettingsPanel/Voice Volume" method="_on_voice_value_changed"]
 [connection signal="value_changed" from="Camera2D/CanvasLayer2/SettingsPanel/Master Volume" to="Camera2D/CanvasLayer2/SettingsPanel/Master Volume" method="_on_master_value_changed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer2/SettingsPanel/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer2/SettingsPanel/TextureButton2" to="." method="_on_texture_button_2_pressed"]

@@ -4,6 +4,7 @@ extends Node2D
 @onready var music_start = preload("res://Assets/Sound/Music/seraroom.mp3")
 @onready var music_win = preload("res://Assets/Sound/Music/serawin.mp3")
 @onready var doctor = $"Male Doctor Character"
+@onready var guitarposter = $"Guitar Poster"
 
 var done = false
 
@@ -24,6 +25,7 @@ func _ready():
 	$Objectives/Label2/Orbs.visible = false
 	$Objectives/Label3/Orbs.visible = false
 	$Objectives/Label4/Orbs.visible = false
+	guitarposter.interactionnotvisible()
 	doctor.talking = true
 
 func _process(_delta):

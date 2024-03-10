@@ -95,3 +95,4 @@ func _on_interactionarea_body_entered(body):
 func _on_interactionarea_body_exited(body):
 		interactionlabel.visible = false
 		inrange = false
+		
