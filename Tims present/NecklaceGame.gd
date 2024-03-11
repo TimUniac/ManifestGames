@@ -39,25 +39,25 @@ func _on_letter_a_button_down():
 		_append_letter_to_code(typed_code)
 		print(typed_code)
 		sequence += 1
-	$"CanvasLayer/CanvasGroup/letter_A".visible = false
-	wait(1.0, $"CanvasLayer/CanvasGroup/letter_A")
+	$"Camera2D/CanvasLayer/CanvasGroup/letter_A".visible = false
+	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_A")
 func _on_letter_v_button_down():
 	if sequence == 1:
 		typed_code += "V"
 		_append_letter_to_code(typed_code)
 		print(typed_code)
 		sequence += 1
-	$"CanvasLayer/CanvasGroup/letter_V".visible = false
-	wait(1.0, $"CanvasLayer/CanvasGroup/letter_V")
+	$"Camera2D/CanvasLayer/CanvasGroup/letter_V".visible = false
+	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_V")
 func _on_letter_i_button_down():
-	$"CanvasLayer/CanvasGroup/letter_I".visible = false
-	wait(1.0, $"CanvasLayer/CanvasGroup/letter_I")
+	$"Camera2D/CanvasLayer/CanvasGroup/letter_I".visible = false
+	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_I")
 func _on_letter_e_button_down():
-	$"CanvasLayer/CanvasGroup/letter_E".visible = false
+	$"Camera2D/CanvasLayer/CanvasGroup/letter_E".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_E")
 func _on_letter_s_button_down():
-	$"CanvasLayer/CanvasGroup/letter_S".visible = false
-	wait(1.0, $"CanvasLayer/CanvasGroup/letter_S")
+	$"Camera2D/CanvasLayer/CanvasGroup/letter_S".visible = false
+	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_S")
 
 
 func _on_texture_button_pressed():
