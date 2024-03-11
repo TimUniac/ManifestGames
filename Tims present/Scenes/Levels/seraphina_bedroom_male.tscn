@@ -11790,6 +11790,7 @@ y_sort_enabled = true
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
+z_as_relative = false
 offset_left = -113.0
 offset_top = -2.0
 offset_right = -113.0

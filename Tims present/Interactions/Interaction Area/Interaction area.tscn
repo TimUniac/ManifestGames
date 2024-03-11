@@ -15,10 +15,11 @@ shape = SubResource("CircleShape2D_iyrrn")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(0.915482, 0.0583519, 0.96316, 1)
-offset_left = -72.0
-offset_top = -171.0
-offset_right = 62.0
-offset_bottom = -131.0
+offset_left = -216.0
+offset_top = -187.0
+offset_right = -82.0
+offset_bottom = -147.0
+scale = Vector2(1.69, 1.69)
 
 [node name="interaction_label" type="Label" parent="Panel"]
 layout_mode = 1

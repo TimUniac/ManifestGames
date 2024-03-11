@@ -44,7 +44,7 @@ scale = Vector2(0.16, 0.16)
 texture = ExtResource("4_kuew2")
 
 [node name="Panel" type="Panel" parent="."]
-y_sort_enabled = true
+z_as_relative = false
 layout_mode = 0
 offset_left = 663.0
 offset_top = 167.0
@@ -52,6 +52,7 @@ offset_right = 789.0
 offset_bottom = 207.0
 
 [node name="interaction_label" type="Label" parent="Panel"]
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
