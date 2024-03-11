@@ -2,6 +2,7 @@ extends Control
 
 var secret_code = "6415"
 var entered_code = ""
+var audio_queue = []
 signal changeSong
 @onready var clue = $Clue
 @onready var chords = $Clue2
@@ -69,13 +70,35 @@ func _input(event):
 
 
 func _append_number_to_code(number):
-	entered_code += str(number)
-	$GuitarSequenceInput.text = entered_code
+	if entered_code.length() < 4:
+		entered_code += str(number)
+		$GuitarSequenceInput.text = entered_code
+		var audio_stream = audio_files.get("KEY_" + str(number))
+		if audio_stream:
+			audio_queue.append(audio_stream)
+			
+
+func _play_next_in_queue():
+	if audio_queue.size() > 0:
+		var next_audio = audio_queue.pop_front()
+		audio_player.stream = next_audio
+		audio_player.play()
+	else:
+		audio_player.disconnect("finished", Callable(self, "_play_next_in_queue"))
+		if entered_code != secret_code:
+			audio_player.stream = wrong_answer
+			audio_player.play()
+		entered_code = ""
+		$GuitarSequenceInput.clear()
 
 func _on_EnterButton_pressed():
+	if entered_code.length() == 0:
+		return
+		audio_player.connect("finished", Callable(self, "_play_next_in_queue"))
+		_play_next_in_queue()
 	if entered_code == secret_code:
 		print("Code Correct!")
-		emit_signal("changeSong") 
+		
 		var parent = get_parent()
 		if parent and parent.has_method("playercollect"):
 			parent.playercollect()

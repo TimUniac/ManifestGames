@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=37 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_5adpj"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
+[ext_resource type="Script" path="res://script/global.gd" id="4_vqf5k"]
 [ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
 [ext_resource type="Texture2D" uid="uid://ejypncfnhp1m" path="res://Assets/Texture assets/Chapter 1/Furniture.svg" id="6_g7641"]
 [ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_saerf"]
@@ -17,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="12_mu1tk"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="13_o7pkr"]
 [ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="17_5c8an"]
+[ext_resource type="Script" path="res://Scenes/Levels/RoomSound.gd" id="17_nnesx"]
 [ext_resource type="Script" path="res://Scenes/Levels/ObjectivesBedroom.gd" id="18_rkoi0"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="18_t0f3l"]
 [ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="20_67ppl"]
@@ -11697,6 +11699,7 @@ offset_bottom = 2736.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_31iq0")
 expand_mode = 1
+script = ExtResource("4_vqf5k")
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]
 z_index = 5
@@ -11828,6 +11831,7 @@ mouse_filter = 2
 [node name="Room" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.162
 bus = &"Music"
+script = ExtResource("17_nnesx")
 
 [node name="Objectives" type="TextureRect" parent="."]
 z_index = 2
@@ -11924,3 +11928,4 @@ texture = ExtResource("18_t0f3l")
 [connection signal="item_collected" from="Friendship Necklace" to="Male Doctor Character" method="_on_friendship_necklace_item_collected"]
 [connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
 [connection signal="item_collected" from="Seraphina's Guitar" to="Male Doctor Character" method="_on_seraphinas_guitar_item_collected"]
+[connection signal="finished" from="Room" to="Room" method="_on_finished"]
