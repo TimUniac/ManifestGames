@@ -1,6 +1,6 @@
 extends Node2D
 @onready var answer = $Control/TextureRect
-@onready var blocker = $Control/ColorRect2
+@onready var blocker = $ColorRect2
 var total_pieces = 8 
 var pieces_snapped = 0
 @onready var root = $"."

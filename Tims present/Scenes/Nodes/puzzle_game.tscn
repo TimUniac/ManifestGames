@@ -1,11 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://c47h75b0a84qf"]
+[gd_scene load_steps=16 format=3 uid="uid://c47h75b0a84qf"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/puzzle_game.gd" id="1_h6jmb"]
 [ext_resource type="Texture2D" uid="uid://dnjr2kapuveak" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/TrainTicket.png" id="2_0h8gd"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="2_42vcc"]
 [ext_resource type="Script" path="res://PuzzlePiece.gd" id="2_hlqwy"]
 [ext_resource type="Texture2D" uid="uid://dcyxqj4jrmbh2" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_1.png" id="3_ofhwo"]
-[ext_resource type="Shader" path="res://Scenes/Nodes/dropshadowUnsnapped.gdshader" id="4_gg0ut"]
 [ext_resource type="Texture2D" uid="uid://d22qng25na2pi" path="res://Scenes/Nodes/TicketPad.png" id="4_uh8pt"]
 [ext_resource type="Texture2D" uid="uid://j3b42pqwopqs" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_2.png" id="5_2ht46"]
 [ext_resource type="Texture2D" uid="uid://1klmocw401uy" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_3.png" id="6_6iokd"]
@@ -16,12 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://1nu5nvn3rosm" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_8.png" id="11_cwmlh"]
 [ext_resource type="Texture2D" uid="uid://coihlj24c0o4l" path="res://Assets/Texture assets/Chapter 2/UI_TrainTicketGameInstructions.png" id="13_oari1"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="15_7hdam"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2qoy1"]
-shader = ExtResource("4_gg0ut")
-shader_parameter/shadow_offset = Vector2(5, -5)
-shader_parameter/shadow_color = Vector4(0, 0, 0, 1)
-shader_parameter/shadow_alpha_threshold = 0.9
 
 [node name="Node2D" type="Node2D"]
 top_level = true
@@ -44,7 +37,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 6
@@ -52,10 +44,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -2025.0
-offset_top = -673.0
-offset_right = 5975.0
-offset_bottom = 3827.0
+offset_left = -2217.0
+offset_top = -705.0
+offset_right = 5783.0
+offset_bottom = 3795.0
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.33, 0.33)
@@ -99,7 +91,6 @@ polygon = PackedVector2Array(5.93225, 18.6441, 37.2881, -94.9153, -22.8813, -95.
 
 [node name="PuzzlePiece_2" type="Sprite2D" parent="."]
 y_sort_enabled = true
-material = SubResource("ShaderMaterial_2qoy1")
 position = Vector2(-604, 366)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("5_2ht46")
