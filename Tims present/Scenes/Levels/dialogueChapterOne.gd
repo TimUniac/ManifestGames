@@ -26,7 +26,7 @@ var is_line_complete = false
 
 func _ready():
 	update_dialogue()
-	$Advance.visible = false
+	$Advance/Advance.visible = false
 	
 
 func _process(_delta):
@@ -62,7 +62,7 @@ func complete_line():
 	visible_characters = total_characters
 	is_line_complete = true
 	update_visible_characters()
-	$Advance.visible = true
+	$Advance/Advance.visible = true
 
 func next_line():
 	current_line += 1

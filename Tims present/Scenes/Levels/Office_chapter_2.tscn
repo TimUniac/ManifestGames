@@ -122,7 +122,12 @@ Seraphina"
 fit_content = true
 scroll_active = false
 
-[node name="Advance" type="AnimatedSprite2D" parent="."]
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Advance" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(535, 174)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_uqm3g")

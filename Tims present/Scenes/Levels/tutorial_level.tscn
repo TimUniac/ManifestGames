@@ -3471,12 +3471,20 @@ position = Vector2(0, -4)
 script = ExtResource("1_ye8l3")
 metadata/_edit_vertical_guides_ = [-604.0]
 
-[node name="Male Doctor Character" parent="." instance=ExtResource("7_r3vgi")]
+[node name="Control" type="Control" parent="."]
+y_sort_enabled = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1914.0
+offset_bottom = 1097.0
+
+[node name="Male Doctor Character" parent="Control" instance=ExtResource("7_r3vgi")]
 y_sort_enabled = true
 position = Vector2(62, 609)
 
-[node name="Finish" type="TextureRect" parent="."]
+[node name="Finish" type="TextureRect" parent="Control"]
 z_index = 2
+layout_mode = 0
 offset_left = 185.0
 offset_top = 246.0
 offset_right = 6925.0
@@ -3485,7 +3493,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_05p0w")
 expand_mode = 1
 
-[node name="FinishText" type="RichTextLabel" parent="Finish"]
+[node name="FinishText" type="RichTextLabel" parent="Control/Finish"]
 z_index = 5
 layout_mode = 0
 offset_left = 950.0
@@ -3503,13 +3511,14 @@ text = "Now that these memories have been unlocked, Seraphina should be able to 
 [b]Press 'R'[/b] to return to the concious world. "
 fit_content = true
 
-[node name="Postit" parent="." instance=ExtResource("19_68dvt")]
+[node name="Postit" parent="Control" instance=ExtResource("19_68dvt")]
+layout_mode = 1
 offset_left = 305.0
 offset_top = 70.0
 offset_right = 305.0
 offset_bottom = 70.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Control"]
 z_index = 8
 offset = Vector2(2.08165e-12, -17.245)
 zoom = Vector2(1.65, 1.65)
@@ -3518,34 +3527,35 @@ limit_top = 107
 limit_right = 1071
 limit_bottom = 802
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="Control"]
 z_index = -1
 position = Vector2(111, 325)
 tile_set = SubResource("TileSet_py7gw")
 format = 2
 layer_0/tile_data = PackedInt32Array(-589770, 4587521, 55, -589780, 4587521, 55, -589790, 4587521, 55, -589800, 4587521, 55, -589810, 4587521, 55, -589820, 4587521, 55, -524294, 4587521, 55, -524304, 4587521, 55, 65591, 3604481, 55, 131062, 655361, 55, 65582, 2621441, 55, 65536, 2621441, 55, 65572, 1638401, 55, 65546, 1638401, 55, 65556, 2621441, 55, 65564, 2621441, 55, 720951, 3276801, 70, 1376311, 3276801, 70, 1376301, 1310721, 70, 720941, 2293761, 70, 1376291, 2293761, 85, 720931, 1310721, 70, 720921, 327681, 70, 1376281, 327681, 70, 1376271, 2293761, 70, 720911, 2293761, 70, 1376261, 327681, 70, 720901, 327681, 70, 786426, 2293761, 85, 1441786, 2293761, 85, 786416, 3276801, 70, 1441775, 3276801, 70, 2097140, 2293761, 70, 2097150, 1310721, 70, 2031625, 327681, 70, 2031671, 1310721, 85, 2031661, 2293761, 70, 2031651, 2293761, 85, 2031641, 1310721, 70, 2031633, 3276801, 70)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
 
-[node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("5_rlxad")]
+[node name="PickupDisplay" parent="Control/CanvasLayer" instance=ExtResource("5_rlxad")]
 z_index = 2
 position = Vector2(10, 100)
 
-[node name="TutorialMusic" type="AudioStreamPlayer" parent="."]
+[node name="TutorialMusic" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("10_cviwq")
 volume_db = -23.424
 autoplay = true
 bus = &"Music"
 script = ExtResource("12_pcd4s")
 
-[node name="TutorialVO" type="AudioStreamPlayer" parent="."]
+[node name="TutorialVO" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("13_4c6jg")
 volume_db = -80.0
 bus = &"Dialogue"
 script = ExtResource("14_i4uyg")
 
-[node name="Objectives" type="TextureRect" parent="."]
+[node name="Objectives" type="TextureRect" parent="Control"]
 z_index = 2
+layout_mode = 0
 offset_left = -73.0
 offset_top = 129.0
 offset_right = 398.0
@@ -3555,7 +3565,7 @@ texture = ExtResource("10_tj4jr")
 expand_mode = 1
 script = ExtResource("13_dumi5")
 
-[node name="oTohide" type="RichTextLabel" parent="Objectives"]
+[node name="oTohide" type="RichTextLabel" parent="Control/Objectives"]
 layout_mode = 0
 offset_left = 280.0
 offset_top = 230.0
@@ -3563,7 +3573,7 @@ offset_right = 370.0
 offset_bottom = 253.0
 text = "[Q] to hide"
 
-[node name="Label" type="Label" parent="Objectives"]
+[node name="Label" type="Label" parent="Control/Objectives"]
 layout_mode = 0
 offset_left = 81.6667
 offset_top = 208.333
@@ -3573,12 +3583,12 @@ theme_override_fonts/font = ExtResource("11_7x82w")
 theme_override_font_sizes/font_size = 25
 text = "Find Favourable Pen"
 
-[node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
+[node name="Orbs" type="Sprite2D" parent="Control/Objectives/Label"]
 position = Vector2(-21.6667, -86.6663)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("14_lw1ro")
 
-[node name="Label2" type="Label" parent="Objectives"]
+[node name="Label2" type="Label" parent="Control/Objectives"]
 layout_mode = 0
 offset_left = 83.3333
 offset_top = 108.333
@@ -3588,12 +3598,12 @@ theme_override_fonts/font = ExtResource("11_7x82w")
 theme_override_font_sizes/font_size = 25
 text = "Find Glasses"
 
-[node name="Orbs2" type="Sprite2D" parent="Objectives/Label2"]
+[node name="Orbs2" type="Sprite2D" parent="Control/Objectives/Label2"]
 position = Vector2(-21.6666, 63.3336)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("14_lw1ro")
 
-[node name="Label3" type="Label" parent="Objectives"]
+[node name="Label3" type="Label" parent="Control/Objectives"]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 153.333
@@ -3603,130 +3613,131 @@ theme_override_fonts/font = ExtResource("11_7x82w")
 theme_override_font_sizes/font_size = 25
 text = "Find Patient File"
 
-[node name="Orbs3" type="Sprite2D" parent="Objectives/Label3"]
+[node name="Orbs3" type="Sprite2D" parent="Control/Objectives/Label3"]
 position = Vector2(-23.3333, 71.667)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("14_lw1ro")
 
-[node name="In_game_settings" parent="." instance=ExtResource("19_4r33g")]
+[node name="In_game_settings" parent="Control" instance=ExtResource("19_4r33g")]
 z_index = 2
+layout_mode = 1
 offset_left = -843.0
 offset_top = 126.0
 offset_right = -843.0
 offset_bottom = 126.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="Control"]
 position = Vector2(722, 674)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/StaticBody2D"]
 position = Vector2(-226, 93.0001)
 shape = SubResource("RectangleShape2D_c0xfb")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control/StaticBody2D"]
 position = Vector2(-252, -358)
 shape = SubResource("RectangleShape2D_c0xfb")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control/StaticBody2D"]
 position = Vector2(371, -147)
 shape = SubResource("RectangleShape2D_ct82p")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Control/StaticBody2D"]
 position = Vector2(-847, -141)
 shape = SubResource("RectangleShape2D_ct82p")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Control/StaticBody2D"]
 position = Vector2(310.5, -307)
 shape = SubResource("RectangleShape2D_7cqfn")
 
-[node name="transitions" parent="." instance=ExtResource("21_np8ei")]
+[node name="transitions" parent="Control" instance=ExtResource("21_np8ei")]
 
-[node name="FilingCabinets" type="TileMap" parent="."]
+[node name="FilingCabinets" type="TileMap" parent="Control"]
 z_index = 1
 position = Vector2(500, 500)
 tile_set = ExtResource("23_v2q8d")
 format = 2
 layer_0/tile_data = PackedInt32Array(655392, 2621440, 15, 655387, 2621440, 15, 655382, 2621440, 15)
 
-[node name="Furniture" type="TileMap" parent="."]
+[node name="Furniture" type="TileMap" parent="Control"]
 y_sort_enabled = true
 position = Vector2(450, 550)
 tile_set = ExtResource("23_v2q8d")
 format = 2
 layer_0/tile_data = PackedInt32Array(65537, 393216, 17, -65524, 3276800, 35, -655344, 1638400, 10, 196595, 3276800, 13)
 
-[node name="rug" type="TileMap" parent="Furniture"]
+[node name="rug" type="TileMap" parent="Control/Furniture"]
 z_index = -1
 tile_set = ExtResource("23_v2q8d")
 format = 2
 layer_0/tile_data = PackedInt32Array(65536, 327680, 35)
 
-[node name="BlueChair" type="StaticBody2D" parent="."]
+[node name="BlueChair" type="StaticBody2D" parent="Control"]
 position = Vector2(500, 500)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueChair"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/BlueChair"]
 position = Vector2(-256.25, 96)
 shape = SubResource("RectangleShape2D_wmvkw")
 
-[node name="YellowChair" type="StaticBody2D" parent="."]
+[node name="YellowChair" type="StaticBody2D" parent="Control"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YellowChair"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/YellowChair"]
 position = Vector2(652.25, 525)
 shape = SubResource("RectangleShape2D_kd5yq")
 
-[node name="Lamp" type="StaticBody2D" parent="."]
+[node name="Lamp" type="StaticBody2D" parent="Control"]
 position = Vector2(-0.695, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lamp"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Lamp"]
 position = Vector2(715.695, 500)
 shape = SubResource("CircleShape2D_eg44k")
 
-[node name="Table" type="StaticBody2D" parent="."]
+[node name="Table" type="StaticBody2D" parent="Control"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Table"]
 position = Vector2(477.25, 558)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7o5jx")
 
-[node name="FileCabinet1" type="StaticBody2D" parent="."]
+[node name="FileCabinet1" type="StaticBody2D" parent="Control"]
 z_index = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FileCabinet1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/FileCabinet1"]
 position = Vector2(1022, 712)
 shape = SubResource("RectangleShape2D_p37vf")
 
-[node name="FileCabinet2" type="StaticBody2D" parent="."]
+[node name="FileCabinet2" type="StaticBody2D" parent="Control"]
 z_index = 1
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="FileCabinet2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control/FileCabinet2"]
 position = Vector2(941, 713)
 shape = SubResource("RectangleShape2D_p37vf")
 
-[node name="FileCabinet3" type="StaticBody2D" parent="."]
+[node name="FileCabinet3" type="StaticBody2D" parent="Control"]
 z_index = 1
 position = Vector2(23, 30)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="FileCabinet3"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Control/FileCabinet3"]
 position = Vector2(834, 679.5)
 shape = SubResource("RectangleShape2D_p37vf")
 
-[node name="Files" parent="." instance=ExtResource("13_hm7ep")]
+[node name="Files" parent="Control" instance=ExtResource("13_hm7ep")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(957, 650)
 
-[node name="Glasses" parent="." instance=ExtResource("14_4h0r1")]
+[node name="Glasses" parent="Control" instance=ExtResource("14_4h0r1")]
 y_sort_enabled = true
 position = Vector2(658, 568)
 scale = Vector2(0.625, 0.625)
 
-[node name="Pen" parent="." instance=ExtResource("15_mef17")]
+[node name="Pen" parent="Control" instance=ExtResource("15_mef17")]
 y_sort_enabled = true
 position = Vector2(469, 561)
 scale = Vector2(0.64, 0.64)
 
-[connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
-[connection signal="finished" from="TutorialMusic" to="TutorialMusic" method="_on_finished"]
-[connection signal="item_collected" from="Files" to="Male Doctor Character" method="_on_files_item_collected"]
-[connection signal="playGame" from="Files" to="." method="_on_files_play_game"]
-[connection signal="item_collected" from="Glasses" to="Male Doctor Character" method="_on_glasses_item_collected"]
-[connection signal="item_collected" from="Pen" to="Male Doctor Character" method="_on_pen_item_collected"]
+[connection signal="all_items_collected" from="Control/Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
+[connection signal="finished" from="Control/TutorialMusic" to="Control/TutorialMusic" method="_on_finished"]
+[connection signal="item_collected" from="Control/Files" to="Control/Male Doctor Character" method="_on_files_item_collected"]
+[connection signal="playGame" from="Control/Files" to="." method="_on_files_play_game"]
+[connection signal="item_collected" from="Control/Glasses" to="Control/Male Doctor Character" method="_on_glasses_item_collected"]
+[connection signal="item_collected" from="Control/Pen" to="Control/Male Doctor Character" method="_on_pen_item_collected"]
