@@ -1,20 +1,20 @@
 extends Node2D
 
 
-@onready var music = $TutorialMusic
-@onready var doctor = $"Male Doctor Character"
+@onready var music = $Control/TutorialMusic
+@onready var doctor = $"Control/Male Doctor Character"
 
 
 func _ready():
-	$Finish.visible = false
+	$Control/Finish.visible = false
 	music.stream.loop = true
-	$Objectives/Label/Orbs.visible = false
-	$Objectives/Label2/Orbs2.visible = false
-	$Objectives/Label3/Orbs3.visible = false
+	$Control/Objectives/Label/Orbs.visible = false
+	$Control/Objectives/Label2/Orbs2.visible = false
+	$Control/Objectives/Label3/Orbs3.visible = false
 	
 
 func _process(_delta):
-	if $Finish.visible == true and Input.is_action_just_pressed("Next"):
+	if $Control/Finish.visible == true and Input.is_action_just_pressed("Next"):
 		
 		change_scene()
 	
@@ -22,16 +22,16 @@ func _input(_event):
 		hide_show_objectives()
 
 func change_scene():
-	$"transitions/transition player".play("Fade_Out")
-	await $"transitions/transition player".animation_finished
-	$Finish.queue_free()
+	$"Control/transitions/transition player".play("Fade_Out")
+	await $"Control/transitions/transition player".animation_finished
+	$Control/Finish.queue_free()
 	get_tree().change_scene_to_file("res://Scenes/Levels/male_office.tscn")
 
 func hide_show_objectives():
 	if Input.is_action_just_pressed("Objective"):
-		$Objectives.visible = !$Objectives.visible
+		$Control/Objectives.visible = !$Objectives.visible
 
 func _on_male_doctor_character_all_items_collected():
-	$Finish.visible = true
+	$Control/Finish.visible = true
 	
 	
