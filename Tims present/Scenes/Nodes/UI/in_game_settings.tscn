@@ -36,7 +36,6 @@ texture_normal = ExtResource("14_ccsou")
 texture_pressed = ExtResource("15_1voqf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 z_index = 8
 offset = Vector2(2.08165e-12, -17.245)
 zoom = Vector2(1.65, 1.65)
@@ -46,10 +45,8 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
-visible = false
 
 [node name="SettingsPanel" type="CanvasLayer" parent="Camera2D/CanvasLayer2"]
-visible = false
 scale = Vector2(1.652, 1.652)
 transform = Transform2D(1.652, 0, 0, 1.652, 0, 0)
 

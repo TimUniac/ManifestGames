@@ -26,7 +26,7 @@ func _ready():
 
 func _append_letter_to_code(typed_code):
 	entered_code = typed_code
-	$CanvasLayer/NecklaceSequenceInput.text = entered_code
+	$Camera2D/CanvasLayer/NecklaceSequenceInput.text = entered_code
 
 
 
