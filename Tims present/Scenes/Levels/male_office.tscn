@@ -87,3 +87,5 @@ transform = Transform2D(1, 0, 0, 1, 350, 350)
 texture = ExtResource("6_nu3b3")
 
 [node name="TextureRect" parent="." instance=ExtResource("7_qsch1")]
+
+[connection signal="finished" from="OfficeTheme" to="OfficeTheme" method="_on_finished"]

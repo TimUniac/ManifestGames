@@ -66,6 +66,8 @@ func close():
 signal item_collected(item_number)
 
 func playercollect():
+	var parent = get_parent()
+	parent.guitarSong()
 	emit_signal("item_collected")
 	visible = false
 	$'.'.queue_free()

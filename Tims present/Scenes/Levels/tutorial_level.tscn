@@ -3725,6 +3725,7 @@ position = Vector2(469, 561)
 scale = Vector2(0.64, 0.64)
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
+[connection signal="finished" from="TutorialMusic" to="TutorialMusic" method="_on_finished"]
 [connection signal="item_collected" from="Files" to="Male Doctor Character" method="_on_files_item_collected"]
 [connection signal="playGame" from="Files" to="." method="_on_files_play_game"]
 [connection signal="item_collected" from="Glasses" to="Male Doctor Character" method="_on_glasses_item_collected"]

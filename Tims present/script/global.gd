@@ -8,6 +8,7 @@ var player_start_posy = 0
 var journalLyricsSeen = false
 var guitarPosterSeen = false
 
+
 func _process(_delta):
 	closewindow()
 	tutorialJump()
@@ -29,3 +30,5 @@ func bedroomJump():
 func hallwayJump():
 	if Input.is_action_pressed("hallJump"):
 		get_tree().change_scene_to_file("res://Scenes/highschool_hallway_scene.tscn")
+
+

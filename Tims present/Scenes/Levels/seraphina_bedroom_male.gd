@@ -55,7 +55,7 @@ func hide_show_objectives():
 		$Objectives.visible = !$Objectives.visible
 	
 
-func _on_guitar_game_changeSong():
+func guitarSong():
 	music_player.stream = music_win
 	music_player.play()
 
