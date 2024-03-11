@@ -33,9 +33,11 @@ position = Vector2(0, 1)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_5k18p")
 
-[node name="ChordChart" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ChordChart" type="Sprite2D" parent="CanvasLayer"]
 z_index = 2
-position = Vector2(766, 459)
+position = Vector2(765, 175)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("4_kuew2")
 

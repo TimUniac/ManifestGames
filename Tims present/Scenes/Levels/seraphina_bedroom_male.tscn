@@ -11688,6 +11688,7 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
+visible = false
 z_index = 2
 offset_left = 185.0
 offset_top = 246.0
@@ -11808,6 +11809,7 @@ offset_bottom = 12.0
 mouse_filter = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
 visible = false

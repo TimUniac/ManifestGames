@@ -10,15 +10,12 @@ var is_opened = false
 func _ready():
 	interactionnotvisible()
 	$CanvasLayer/ChordChart.visible = false
+	areaLabel.visible = false
 	
 	print (areaLabel)
 	
 func _process(_delta):
-	if areaLabel.visible == true:
-		in_range = true
-	if areaLabel.visible == false:
-		in_range = false
-	
+
 			
 	if Input.is_action_just_pressed("Interact") and in_range:
 		if is_opened:
@@ -47,10 +44,12 @@ func _on_close_pressed():
 
 
 func _on_area_2d_body_entered(body):
-	print ("entered")
+	print (body)
 	areaLabel.visible = true
+	in_range = true
 	print ("shown")
 func _on_area_2d_body_exited(body):
 	print ("exited")
 	areaLabel.visible = false
+	in_range = false
 	print ("not shown")
