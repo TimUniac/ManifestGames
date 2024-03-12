@@ -13,3 +13,7 @@ func _process(delta):
 
 func _on_texture_button_pressed():
 	$'.'.visible = false
+
+
+func _on_pink_button_pressed():
+	pass # Replace with function body.

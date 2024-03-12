@@ -61,7 +61,6 @@ script = ExtResource("1_4wk0a")
 red_button_normal_original = ExtResource("7_2jj01")
 blue_button_normal_original = ExtResource("8_pk00u")
 green_button_normal_original = ExtResource("9_o0dod")
-yellow_button_normal_original = ExtResource("10_lhtiu")
 
 [node name="redButton" type="TextureButton" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -110,7 +109,7 @@ texture_normal = ExtResource("9_o0dod")
 texture_pressed = ExtResource("9_udwrr")
 flip_v = true
 
-[node name="yellowButton" type="TextureButton" parent="CanvasLayer/Control"]
+[node name="pinkButton" type="TextureButton" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.466
@@ -141,6 +140,8 @@ offset_bottom = 2247.04
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("7_31eco")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer/Control"]
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 layout_mode = 0
 offset_left = 1040.0
@@ -167,5 +168,5 @@ texture_pressed = ExtResource("15_6flli")
 [connection signal="pressed" from="CanvasLayer/Control/redButton" to="CanvasLayer/Control" method="_on_red_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/blueButton" to="CanvasLayer/Control" method="_on_blue_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/greenButton" to="CanvasLayer/Control" method="_on_green_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/yellowButton" to="CanvasLayer/Control" method="_on_yellow_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/pinkButton" to="CanvasLayer/Control" method="_on_pink_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
