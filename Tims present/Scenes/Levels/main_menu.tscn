@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scenes/Levels/main_menu.gd" id="1_fmsfi"]
 [ext_resource type="Texture2D" uid="uid://cxqabbm44tvdo" path="res://Assets/Menu Buttons/Revised Menu Assets/MainMenu - Bg - Jan 10th.jpg" id="2_6wvn1"]
 [ext_resource type="AudioStream" uid="uid://cr2ey5esrru83" path="res://Assets/Sound/Music/MainMenuMusic.mp3" id="3_bkduy"]
-[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="4_1e3nq"]
 [ext_resource type="Script" path="res://Scenes/Levels/MainMenu.gd" id="4_55doq"]
+[ext_resource type="AudioStream" uid="uid://bb1vjjffxhhuk" path="res://Assets/Sound/SFX/ButtonGong.mp3" id="5_41ko7"]
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/Clicks.gd" id="5_jk223"]
 [ext_resource type="Texture2D" uid="uid://3ro286u6tm68" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_exit.png" id="6_rhtlc"]
 [ext_resource type="Texture2D" uid="uid://crnslnf5j5lvh" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_settings.png" id="7_cybjv"]
@@ -97,15 +97,17 @@ texture = ExtResource("2_6wvn1")
 stream = ExtResource("3_bkduy")
 volume_db = -14.9
 autoplay = true
+bus = &"Music"
 script = ExtResource("4_55doq")
 
 [node name="AudioStreamPlayerB" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_bkduy")
 volume_db = -14.9
+bus = &"Music"
 script = ExtResource("4_55doq")
 
 [node name="Clicks" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_1e3nq")
+stream = ExtResource("5_41ko7")
 bus = &"SFX"
 script = ExtResource("5_jk223")
 
@@ -155,6 +157,7 @@ limit_bottom = 802
 [connection signal="finished" from="AudioStreamPlayerA" to="AudioStreamPlayerB" method="_on_audio_stream_player_a_finished"]
 [connection signal="startCrossfade" from="AudioStreamPlayerA" to="AudioStreamPlayerB" method="_on_audio_stream_player_a_start_crossfade"]
 [connection signal="startCrossfade" from="AudioStreamPlayerB" to="AudioStreamPlayerA" method="_on_audio_stream_player_b_start_crossfade"]
+[connection signal="finished" from="Clicks" to="." method="_on_clicks_finished"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Exit" to="Clicks" method="_on_exit_pressed"]
 [connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]

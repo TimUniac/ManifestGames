@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://71ehm6judpk5"]
+
+[ext_resource type="Script" path="res://pickupsSound.gd" id="1_47blf"]
+[ext_resource type="AudioStream" uid="uid://ba6nfrsmjpspt" path="res://Assets/Sound/SFX/Pickup.mp3" id="1_l281y"]
+
+[node name="Pickups" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_l281y")
+volume_db = -10.0
+bus = &"SFX"
+script = ExtResource("1_47blf")
