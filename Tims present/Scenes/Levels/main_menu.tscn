@@ -1,11 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://cj07lmxspcvhe"]
+[gd_scene load_steps=22 format=3 uid="uid://cj07lmxspcvhe"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/main_menu.gd" id="1_fmsfi"]
 [ext_resource type="Texture2D" uid="uid://cxqabbm44tvdo" path="res://Assets/Menu Buttons/Revised Menu Assets/MainMenu - Bg - Jan 10th.jpg" id="2_6wvn1"]
 [ext_resource type="AudioStream" uid="uid://cr2ey5esrru83" path="res://Assets/Sound/Music/MainMenuMusic.mp3" id="3_bkduy"]
 [ext_resource type="Script" path="res://Scenes/Levels/MainMenu.gd" id="4_55doq"]
-[ext_resource type="AudioStream" uid="uid://bb1vjjffxhhuk" path="res://Assets/Sound/SFX/ButtonGong.mp3" id="5_41ko7"]
-[ext_resource type="Script" path="res://Scenes/Nodes/Audio/Clicks.gd" id="5_jk223"]
 [ext_resource type="Texture2D" uid="uid://3ro286u6tm68" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_exit.png" id="6_rhtlc"]
 [ext_resource type="Texture2D" uid="uid://crnslnf5j5lvh" path="res://Assets/Menu Buttons/Revised Menu Assets/UI_button_settings.png" id="7_cybjv"]
 [ext_resource type="Texture2D" uid="uid://blg0exos37r2x" path="res://Assets/Menu Buttons/ExitButton_v2.png" id="7_kiwqc"]
@@ -106,11 +104,6 @@ volume_db = -14.9
 bus = &"Music"
 script = ExtResource("4_55doq")
 
-[node name="Clicks" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_41ko7")
-bus = &"SFX"
-script = ExtResource("5_jk223")
-
 [node name="Exit" type="TextureButton" parent="."]
 offset_left = 188.0
 offset_top = 440.0
@@ -157,10 +150,6 @@ limit_bottom = 802
 [connection signal="finished" from="AudioStreamPlayerA" to="AudioStreamPlayerB" method="_on_audio_stream_player_a_finished"]
 [connection signal="startCrossfade" from="AudioStreamPlayerA" to="AudioStreamPlayerB" method="_on_audio_stream_player_a_start_crossfade"]
 [connection signal="startCrossfade" from="AudioStreamPlayerB" to="AudioStreamPlayerA" method="_on_audio_stream_player_b_start_crossfade"]
-[connection signal="finished" from="Clicks" to="." method="_on_clicks_finished"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Exit" to="Clicks" method="_on_exit_pressed"]
 [connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
-[connection signal="pressed" from="Setting" to="Clicks" method="_on_setting_pressed"]
 [connection signal="pressed" from="new" to="." method="_on_new_pressed"]
-[connection signal="pressed" from="new" to="Clicks" method="_on_new_pressed"]

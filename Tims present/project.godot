@@ -27,6 +27,7 @@ VolumeControls="*res://Scenes/Levels/volume controls.gd"
 WindowCounter="*res://windowCounter.gd"
 GameManager="*res://GameManager.gd"
 PickupsSoundPlayer="*res://pickupsSound.tscn"
+Clicks="*res://Scenes/Nodes/Audio/clicks.tscn"
 
 [dialogic]
 

@@ -52,9 +52,7 @@ func _on_red_button_pressed():
 		print ("wrong answer")
 		reset_buttons()
 		print ("red 3")
-	audioPlayer.stream = soundRed
-	print (audioPlayer.stream)
-	audioPlayer.play()
+	
 	print ("red 4")
 	
 func _on_blue_button_pressed():
