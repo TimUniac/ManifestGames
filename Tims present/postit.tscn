@@ -23,6 +23,13 @@ position = Vector2(726, 300)
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("2_dshq3")
 
+[node name="TextureRect" type="Polygon2D" parent="SmallPostit"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(-177.778, -111.111)
+color = Color(0.941176, 0.984314, 0.694118, 1)
+polygon = PackedVector2Array(0, 0, 311.111, -22.2222, 333.333, 288.889, 22.2227, 311.111)
+
 [node name="BigPostit" type="Sprite2D" parent="."]
 z_index = 2
 position = Vector2(448, 442)

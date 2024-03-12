@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl1710oyetj6h"]
+[gd_scene load_steps=8 format=3 uid="uid://cl1710oyetj6h"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/JournalRead.gd" id="1_45ewt"]
 [ext_resource type="Texture2D" uid="uid://000kdtegf1b0" path="res://Assets/Journal.png" id="2_4mvgt"]
 [ext_resource type="Texture2D" uid="uid://dqvgegajo36xi" path="res://Assets/Journal 2.png" id="2_73dqi"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="3_3pit0"]
 [ext_resource type="PackedScene" uid="uid://drb6ny7iq5wwi" path="res://new_journal.tscn" id="4_ln5s1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw7kn"]
 size = Vector2(75, 77.5)
+
+[sub_resource type="Theme" id="Theme_1v3nt"]
 
 [node name="Journal Read" type="Control"]
 layout_mode = 3
@@ -24,23 +27,19 @@ z_index = 2
 position = Vector2(58, 604)
 texture = ExtResource("2_73dqi")
 
-[node name="Panel" type="Panel" parent="TextureButton"]
-anchors_preset = -1
-anchor_right = 0.256
-anchor_bottom = 0.388
-offset_left = -66.6666
-offset_top = 23.3334
-offset_right = 58.3654
-offset_bottom = 23.3694
+[node name="Label" type="Label" parent="TextureButton"]
+offset_left = -53.0
+offset_top = 36.0
+offset_right = 72.0004
+offset_bottom = 62.0
+text = "Press J to read "
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="TextureButton/Panel"]
-layout_mode = 0
-offset_left = 11.6666
-offset_top = 8.33331
-offset_right = 136.667
-offset_bottom = 34.3333
-text = "Press J to read "
+[node name="Panel" type="Sprite2D" parent="TextureButton"]
+z_index = -1
+position = Vector2(3.5, 7.49999)
+scale = Vector2(0.307506, 0.535545)
+texture = ExtResource("3_3pit0")
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -80,6 +79,16 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(94, 327)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_4mvgt")
+
+[node name="TextureRect" type="ColorRect" parent="Journal2/Sprite2D2"]
+show_behind_parent = true
+texture_filter = 1
+offset_left = -29.0
+offset_top = -44.0
+offset_right = 34.0
+offset_bottom = 44.0
+theme = SubResource("Theme_1v3nt")
+color = Color(0.941176, 0.984314, 0.694118, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
