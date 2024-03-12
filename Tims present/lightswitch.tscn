@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0tntntnithl5"]
+[gd_scene load_steps=9 format=3 uid="uid://c0tntntnithl5"]
 
 [ext_resource type="Script" path="res://LightsOffGame.gd" id="1_qp2dy"]
 [ext_resource type="Script" path="res://lightswitch_startOFF.gd" id="2_356yp"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="3_f0b3h"]
 [ext_resource type="Script" path="res://lightswitch_startON.gd" id="3_i7px7"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="6_ng8yc"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="7_x4hgy"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="8_xpsn7"]
 
 [node name="LightsOffGame" type="Node2D"]
 z_index = 4
@@ -151,6 +153,15 @@ theme_override_fonts/font = ExtResource("6_ng8yc")
 theme_override_font_sizes/font_size = 48
 text = "Reset Lights"
 
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1684.0
+offset_top = 38.0
+offset_right = 1895.0
+offset_bottom = 173.0
+scale = Vector2(0.39, 0.39)
+texture_normal = ExtResource("7_x4hgy")
+texture_pressed = ExtResource("8_xpsn7")
+
 [connection signal="lightON" from="Control/GridContainer/Switch_1" to="." method="_on_switch_1_light_on"]
 [connection signal="lightOff" from="Control/GridContainer/Switch_1" to="." method="_on_switch_1_light_off"]
 [connection signal="lightON" from="Control/GridContainer/Switch_2" to="." method="_on_switch_1_light_on"]
@@ -204,3 +215,4 @@ text = "Reset Lights"
 [connection signal="pressed" from="Control/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Control/Reset" to="Control/GridContainer" method="_on_reset_pressed"]
 [connection signal="toggled" from="Control/Reset" to="Control/GridContainer" method="_on_reset_toggled"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

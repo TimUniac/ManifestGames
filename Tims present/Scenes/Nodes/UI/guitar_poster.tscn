@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkq7anlswuk6p"]
+[gd_scene load_steps=8 format=3 uid="uid://bkq7anlswuk6p"]
 
 [ext_resource type="Script" path="res://Guitar Poster.gd" id="1_1lx0p"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="2_jj7qr"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="4_5ly5t"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_k08dy"]
 [ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="4_kuew2"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="5_7yatp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5k18p"]
 radius = 86.0
@@ -39,9 +41,17 @@ shape = SubResource("CapsuleShape2D_5k18p")
 
 [node name="ChordChart" type="Sprite2D" parent="CanvasLayer"]
 z_index = 2
-position = Vector2(765, 175)
+position = Vector2(765, 280.86)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("4_kuew2")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/ChordChart"]
+offset_left = 1043.75
+offset_top = -1661.63
+offset_right = 1254.75
+offset_bottom = -1526.63
+texture_normal = ExtResource("4_5ly5t")
+texture_pressed = ExtResource("5_7yatp")
 
 [node name="Panel" type="Panel" parent="."]
 z_as_relative = false
@@ -71,3 +81,4 @@ vertical_alignment = 1
 [connection signal="area_exited" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/ChordChart/TextureButton" to="." method="_on_texture_button_pressed"]
