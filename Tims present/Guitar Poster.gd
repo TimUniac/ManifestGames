@@ -39,8 +39,6 @@ func interactionnotvisible():
 	areaLabel.visible = false
 
 
-func _on_close_pressed():
-	close()
 
 
 func _on_area_2d_body_entered(body):
@@ -53,3 +51,7 @@ func _on_area_2d_body_exited(body):
 	areaLabel.visible = false
 	in_range = false
 	print ("not shown")
+
+
+func _on_texture_button_pressed():
+	close()
