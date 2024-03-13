@@ -47,6 +47,7 @@ limit_bottom = 802
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
 
 [node name="SettingsPanel" type="CanvasLayer" parent="Camera2D/CanvasLayer2"]
+visible = false
 scale = Vector2(1.652, 1.652)
 transform = Transform2D(1.652, 0, 0, 1.652, 0, 0)
 

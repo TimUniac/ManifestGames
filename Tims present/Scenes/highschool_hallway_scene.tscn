@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=25 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
 [ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
+[ext_resource type="Texture2D" path="res://Scenes/qr.png" id="3_tsxqx"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="5_2euu6"]
 [ext_resource type="PackedScene" uid="uid://dy50vp0ngetqt" path="res://light_poster_node.tscn" id="5_r81s3"]
@@ -85,20 +86,21 @@ scale = Vector2(1.565, 1.565)
 
 [node name="Finish" type="TextureRect" parent="."]
 z_index = 10
-offset_left = 397.0
-offset_top = 314.0
-offset_right = 7137.0
-offset_bottom = 2804.0
-stretch_mode = 2
+offset_left = 449.0
+offset_top = 350.0
+offset_right = 4857.0
+offset_bottom = 2840.0
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("3_tsxqx")
+expand_mode = 1
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]
-visible = false
 z_index = 5
 layout_mode = 0
-offset_left = 950.0
-offset_top = 620.0
-offset_right = 6190.0
-offset_bottom = 1988.0
+offset_left = 578.261
+offset_top = -1260.87
+offset_right = 5818.26
+offset_bottom = 107.13
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("7_3lthy")
