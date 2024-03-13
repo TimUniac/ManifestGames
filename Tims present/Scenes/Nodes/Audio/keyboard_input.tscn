@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxak0krnww7v6"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/Audio/keyboard_input.gd" id="1_f6ure"]
+
+[node name="KeyboardInput" type="AudioStreamPlayer2D"]
+script = ExtResource("1_f6ure")

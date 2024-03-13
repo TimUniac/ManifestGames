@@ -5,6 +5,10 @@ var typed_code = ""
 var entered_code = ""
 var sequence = 0
 
+
+func _ready():
+	KeyboardInput.mute(false)
+	
 func _process(delta): #checks if entered code matches the secret code
 	if entered_code == secret_code:
 		print("Code Correct!")
@@ -14,14 +18,7 @@ func _process(delta): #checks if entered code matches the secret code
 		if parent and parent.has_method("playercollect"):
 			parent.playercollect()
 			parent.close()
-
-
-func _ready():
-	pass
-	
-
-
-
+			
 func _append_letter_to_code(typed_code):
 	entered_code = typed_code
 	$CanvasLayer/SequenceInput.text = entered_code
@@ -82,5 +79,6 @@ func _on_letter_l_button_down():
 
 
 func _on_texture_button_pressed():
+	KeyboardInput.mute(true)
 	var parent = get_parent()
 	parent.close()

@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b01embttftnk"]
+[gd_scene load_steps=2 format=3 uid="uid://bewnrf76iyae7"]
 
-[ext_resource type="AudioStream" uid="uid://bb1vjjffxhhuk" path="res://Assets/Sound/SFX/ButtonGong.mp3" id="1_wgk66"]
+[ext_resource type="AudioStream" uid="uid://bkfd44anydp7y" path="res://Assets/Sound/SFX/ComboLock/ButtonGong.mp3" id="1_c43tk"]
 
 [node name="Clicks" type="AudioStreamPlayer"]
-stream = ExtResource("1_wgk66")
+stream = ExtResource("1_c43tk")
 bus = &"SFX"

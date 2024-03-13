@@ -112,6 +112,7 @@ selecting_enabled = false
 caret_mid_grapheme = false
 
 [node name="Chords" type="AudioStreamPlayer2D" parent="."]
+max_polyphony = 4
 bus = &"SFX"
 
 [node name="Room" type="AudioStreamPlayer2D" parent="."]

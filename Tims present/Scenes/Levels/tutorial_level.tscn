@@ -3741,7 +3741,3 @@ script = null
 
 [connection signal="all_items_collected" from="Control/Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="finished" from="Control/TutorialMusic" to="Control/TutorialMusic" method="_on_finished"]
-[connection signal="item_collected" from="Control/Files" to="Control/Male Doctor Character" method="_on_files_item_collected"]
-[connection signal="playGame" from="Control/Files" to="." method="_on_files_play_game"]
-[connection signal="item_collected" from="Control/Glasses" to="Control/Male Doctor Character" method="_on_glasses_item_collected"]
-[connection signal="item_collected" from="Control/Pen" to="Control/Male Doctor Character" method="_on_pen_item_collected"]

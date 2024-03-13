@@ -36,14 +36,9 @@ func _input(event):
 		var audio_stream = audio_files.get(event.keycode)
 		print ("gotStream")
 		if audio_stream:
-			print ("stream")
-			if audio_player.is_playing:
-				print ("is it playing?")
-				audio_player.stop()
-				print ("Stop")
-				audio_player.stream = audio_stream
-				audio_player.play()
-				print("play")
+			audio_player.stream = audio_stream
+			audio_player.play()
+			print("play")
 	if event is InputEventKey and event.pressed and !event.echo:
 		if event.keycode == KEY_1:
 			_append_number_to_code(1)

@@ -28,6 +28,7 @@ WindowCounter="*res://windowCounter.gd"
 GameManager="*res://GameManager.gd"
 PickupsSoundPlayer="*res://pickupsSound.tscn"
 Clicks="*res://Scenes/Nodes/Audio/clicks.tscn"
+KeyboardInput="*res://Scenes/Nodes/Audio/keyboard_input.gd"
 
 [dialogic]
 
