@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://xox3s1h15gac"]
+[gd_scene load_steps=8 format=3 uid="uid://xox3s1h15gac"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
 [ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="2_11gyi"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="2_o5paw"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="3_bcud7"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_bvjf5"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_xlec7"]
 [ext_resource type="Texture2D" uid="uid://6okuon7k8ey8" path="res://Scenes/Nodes/UI/ChordChartBigHint.png" id="6_pjeq7"]
 
 [node name="GuitarGame" type="Control"]
@@ -38,6 +39,14 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_11gyi")
+
+[node name="Label2" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 87.1705
+offset_top = 603.604
+offset_right = 271.171
+offset_bottom = 629.604
+text = "Press [H] for assistence."
 
 [node name="Clue" type="RichTextLabel" parent="."]
 z_index = 2
@@ -134,7 +143,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Use Numbers 1-7/ Bksp in case of mistake"
 
-[node name="Close" type="Button" parent="."]
+[node name="Close" type="TextureButton" parent="."]
 z_index = 2
 layout_mode = 0
 offset_left = 8.0
@@ -142,7 +151,10 @@ offset_top = 46.0
 offset_right = 227.0
 offset_bottom = 189.0
 scale = Vector2(0.245, 0.245)
-icon = ExtResource("3_bcud7")
+texture_normal = ExtResource("5_xlec7")
+texture_pressed = ExtResource("3_bcud7")
+texture_hover = ExtResource("3_bcud7")
+stretch_mode = 0
 
 [node name="BigHint" type="TextureRect" parent="."]
 z_index = 2

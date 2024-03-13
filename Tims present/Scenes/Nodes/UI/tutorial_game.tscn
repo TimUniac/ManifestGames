@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6brfnn42kqe6"]
+[gd_scene load_steps=7 format=3 uid="uid://b6brfnn42kqe6"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/TutorialGame.gd" id="1_sdyng"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_0lgi0"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_i2l02"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_ufs11"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_7ja8i"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_31e6p"]
 
 [node name="TutorialGame" type="Control"]
 z_index = 2
 layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -54,6 +56,7 @@ autowrap_mode = 2
 
 [node name="SequenceInput" type="LineEdit" parent="CanvasLayer"]
 z_index = 2
+layout_mode = 0
 offset_left = 630.0
 offset_top = 698.0
 offset_right = 1260.0
@@ -75,6 +78,7 @@ draw_control_chars = true
 caret_mid_grapheme = false
 
 [node name="Label" type="Label" parent="CanvasLayer"]
+layout_mode = 0
 offset_left = 804.348
 offset_top = 572.5
 offset_right = 1234.35
@@ -85,7 +89,7 @@ text = "Bksp in case of mistake"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Close" type="Button" parent="CanvasLayer"]
+[node name="Close" type="TextureButton" parent="CanvasLayer"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.75
@@ -97,6 +101,9 @@ offset_top = -0.65802
 offset_right = 113.4
 offset_bottom = 73.812
 scale = Vector2(0.485, 0.485)
-icon = ExtResource("6_31e6p")
+texture_normal = ExtResource("5_7ja8i")
+texture_pressed = ExtResource("6_31e6p")
+texture_hover = ExtResource("6_31e6p")
+stretch_mode = 0
 
 [connection signal="pressed" from="CanvasLayer/Close" to="." method="_on_close_pressed"]

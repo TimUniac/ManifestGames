@@ -1,10 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=24 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
 [ext_resource type="Texture2D" uid="uid://ctgwcboxaiiy7" path="res://Assets/Texture assets/Chapter 2/SVG/spr_school_hall_props.svg.svg" id="2_ebtbo"]
 [ext_resource type="PackedScene" uid="uid://cq2qu3m4iowox" path="res://locker_node.tscn" id="3_3sy0g"]
-[ext_resource type="Texture2D" uid="uid://wtxn5kurukam" path="res://Scenes/qr.png" id="3_tsxqx"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="4_0rm6y"]
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="5_2euu6"]
 [ext_resource type="PackedScene" uid="uid://dy50vp0ngetqt" path="res://light_poster_node.tscn" id="5_r81s3"]
@@ -90,7 +89,6 @@ offset_left = 397.0
 offset_top = 314.0
 offset_right = 7137.0
 offset_bottom = 2804.0
-texture = ExtResource("3_tsxqx")
 stretch_mode = 2
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]

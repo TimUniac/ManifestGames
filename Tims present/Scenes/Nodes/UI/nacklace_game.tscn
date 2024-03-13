@@ -146,14 +146,14 @@ anchor_left = 0.371
 anchor_top = 0.356
 anchor_right = 0.606
 anchor_bottom = 0.618
-offset_left = 214.557
-offset_top = 173.867
-offset_right = -188.968
-offset_bottom = -77.3207
-scale = Vector2(0.325, 0.325)
+offset_left = 222.89
+offset_top = 197.478
+offset_right = -180.635
+offset_bottom = -53.7103
+scale = Vector2(0.195, 0.195)
 texture_normal = ExtResource("11_88fib")
 texture_pressed = ExtResource("12_0nvkc")
-stretch_mode = 1
+stretch_mode = 0
 
 [connection signal="button_down" from="Camera2D/CanvasLayer/CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]
 [connection signal="button_down" from="Camera2D/CanvasLayer/CanvasGroup/letter_V" to="." method="_on_letter_v_button_down"]
