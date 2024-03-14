@@ -46,10 +46,12 @@ offset_left = -78.0
 offset_top = -74.0
 offset_right = 73.0
 offset_bottom = 83.0
+mouse_filter = 2
 theme = SubResource("Theme_u64n6")
 color = Color(0.941176, 0.984314, 0.694118, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ChordChart" type="Sprite2D" parent="CanvasLayer"]
 z_index = 2

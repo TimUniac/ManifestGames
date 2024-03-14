@@ -15,10 +15,10 @@ anchor_left = -0.412
 anchor_top = -0.256
 anchor_right = -0.412
 anchor_bottom = -0.256
-offset_left = -379.96
-offset_top = -227.52
-offset_right = 792.04
-offset_bottom = 275.48
+offset_left = -295.96
+offset_top = -82.52
+offset_right = 876.04
+offset_bottom = 420.48
 scale = Vector2(0.815, 0.815)
 mouse_filter = 2
 mouse_force_pass_scroll_events = false
@@ -42,10 +42,11 @@ texture = ExtResource("2_11gyi")
 
 [node name="Label2" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 87.1705
-offset_top = 603.604
-offset_right = 271.171
-offset_bottom = 629.604
+offset_left = 888.326
+offset_top = 605.048
+offset_right = 1095.33
+offset_bottom = 634.048
+theme_override_font_sizes/font_size = 18
 text = "Press [H] for assistence."
 
 [node name="Clue" type="RichTextLabel" parent="."]

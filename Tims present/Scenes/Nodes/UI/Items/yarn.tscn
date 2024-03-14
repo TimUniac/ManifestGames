@@ -30,7 +30,7 @@ texture_filter = 1
 offset_left = -176.0
 offset_top = -273.0
 offset_right = 184.0
-offset_bottom = 250.0
+offset_bottom = 259.0
 theme = SubResource("Theme_kuc1v")
 color = Color(0.941176, 0.984314, 0.694118, 1)
 

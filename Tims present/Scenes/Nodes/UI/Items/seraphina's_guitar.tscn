@@ -101,10 +101,10 @@ theme_override_font_sizes/font_size = 38
 text = "Hints"
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/Help Box"]
-offset_left = 136.0
-offset_top = -93.0
-offset_right = 347.0
-offset_bottom = 42.0
+offset_left = 148.0
+offset_top = -91.0
+offset_right = 359.0
+offset_bottom = 44.0
 scale = Vector2(0.205878, 0.226114)
 texture_normal = ExtResource("7_gnej7")
 texture_pressed = ExtResource("8_cdpks")

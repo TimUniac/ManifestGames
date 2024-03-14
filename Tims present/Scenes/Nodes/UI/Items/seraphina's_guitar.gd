@@ -12,6 +12,7 @@ var player = null
 var inrange = false
 var is_opened = false
 var hint1 = false
+var hintsshown = false
 
 @onready var objlist = $"../Objectives"
 @onready var guitarDialogue: String = "This guitar seems to be important, I wonder if a song would unlock it."
@@ -47,11 +48,10 @@ func _process(_delta):
 		else:
 			open()
 	if is_opened and Input.is_action_just_pressed("Help"):
-		open_hint()
-		if hint1 and Input.is_action_just_pressed("Help"):
-				$"CanvasLayer/Help Box".visible = true
-				$"CanvasLayer/Help Box/Hint1".visible = true
-				$"CanvasLayer/Help Box/Hint2".visible = true
+		if hint1:
+			close_hint()
+		else:
+			open_hint()
 			
 func open():
 	if gameGuitar == null:
@@ -75,17 +75,13 @@ func close():
 func open_hint():
 	$"CanvasLayer/Help Box".visible = true
 	$"CanvasLayer/Help Box/Hint1".visible = true
+	$"CanvasLayer/Help Box/Hint2".visible = true
 	hint1 = true
-	
-func open_hint2():
-	if hint1 == true:
-		if Input.is_action_just_pressed("Help"):
-			$"CanvasLayer/Help Box".visible = true
-			$"CanvasLayer/Help Box/Hint1".visible = true
-			$"CanvasLayer/Help Box/Hint2".visible = true
+			
 		
 func close_hint():
 	$"CanvasLayer/Help Box".visible = false
+	hint1 = false
 	
 signal item_collected(item_number)
 
@@ -102,19 +98,9 @@ func guitar():
 
 signal playGame
 
-func guitar_help():
-	if is_opened and Input.is_action_just_pressed("Help"):
-		$"CanvasLayer/Help Box".visible = true
-		$"CanvasLayer/Help Box/Hint1".visible = true
-		hint1 = true
-		if hint1 and Input.is_action_just_pressed("Help"):
-			$"CanvasLayer/Help Box".visible = true
-			$"CanvasLayer/Help Box/Hint1".visible = true
-			$"CanvasLayer/Help Box/Hint2".visible = true
 		
 func _on_texture_button_pressed():
 	close_hint()
-	close()
 
 func showChords():
 	if gameGuitar and gameGuitar.has_method("displayChords"):

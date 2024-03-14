@@ -91,7 +91,7 @@ script = ExtResource("3_i7px7")
 
 [node name="Switch_16" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_17" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
@@ -111,11 +111,11 @@ script = ExtResource("3_i7px7")
 
 [node name="Switch_21" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_22" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_i7px7")
+script = ExtResource("2_356yp")
 
 [node name="Switch_23" type="TextureButton" parent="Control/GridContainer"]
 layout_mode = 2
