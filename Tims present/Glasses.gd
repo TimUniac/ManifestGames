@@ -31,7 +31,7 @@ func _on_body_exited(_body):
 func _process(_delta):
 	if inrange and Input.is_action_just_pressed("Interact"):
 		playercollect()
-		PickupsSound.pickup()
+		PickupsSoundPlayer.pickup()
 		visible = false
 
 		

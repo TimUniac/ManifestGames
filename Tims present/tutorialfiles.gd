@@ -21,7 +21,7 @@ var gameFiles = null
 var counted = false
 func _ready():
 	interaction_label.visible = false
-	PickupsSound.pickup()
+	PickupsSoundPlayer.pickup()
 
 
 func _on_code_correct():
