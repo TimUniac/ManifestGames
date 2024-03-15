@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://84d0ghv75mkp"]
+[gd_scene load_steps=11 format=3 uid="uid://84d0ghv75mkp"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.gd" id="1_ldbsd"]
 [ext_resource type="Texture2D" uid="uid://csg6yc10hfcc0" path="res://Scenes/Nodes/UI/Items/Guitar.png" id="3_pktu2"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/GuitarGameSprite.gd" id="3_vealc"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_godal"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="5_4vro6"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="6_gcg5a"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="7_gnej7"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="8_cdpks"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbpr"]
 radius = 86.0
@@ -20,6 +24,14 @@ position = Vector2(0, 1)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_pktu2")
 script = ExtResource("3_vealc")
+
+[node name="TextureRect" type="Polygon2D" parent="Sprite2D"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(-60, 43.75)
+color = Color(0.941176, 0.984314, 0.694118, 1)
+offset = Vector2(6.25, -2.5)
+polygon = PackedVector2Array(1.25001, -1.25, 11.25, -21.25, 23.75, -38.75, 35, -48.75, 50, -48.75, 70, -91.25, 68.75, -107.5, 80, -121.25, 93.75, -122.5, 102.5, -113.75, 103.75, -93.75, 76.25, -36.25, 87.5, -18.75, 88.75, -12.5, 86.25, -1.25, 78.75, 3.75, 76.25, 11.25, 73.75, 27.5, 67.5, 35, 56.25, 46.25, 45, 48.75, 28.75, 45, 16.25, 37.5, 6.25001, 25, 7.62939e-06, 10)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -53,5 +65,52 @@ vertical_alignment = 1
 position = Vector2(-1, 19)
 shape = SubResource("CircleShape2D_2n226")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Help Box" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1472, 603)
+texture = ExtResource("5_4vro6")
+
+[node name="Hint1" type="Label" parent="CanvasLayer/Help Box"]
+offset_left = -143.0
+offset_top = 14.0
+offset_right = 203.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("6_gcg5a")
+theme_override_font_sizes/font_size = 28
+text = "Find the lyrics In the Journal"
+autowrap_mode = 2
+
+[node name="Hint2" type="Label" parent="CanvasLayer/Help Box"]
+offset_left = -141.0
+offset_top = -61.0
+offset_right = 246.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("6_gcg5a")
+theme_override_font_sizes/font_size = 28
+text = "Look at the guitar chord chart"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Help Box"]
+offset_left = -180.0
+offset_top = -98.0
+offset_right = -27.0
+offset_bottom = -22.0
+theme_override_fonts/font = ExtResource("6_gcg5a")
+theme_override_font_sizes/font_size = 38
+text = "Hints"
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Help Box"]
+offset_left = 148.0
+offset_top = -91.0
+offset_right = 359.0
+offset_bottom = 44.0
+scale = Vector2(0.205878, 0.226114)
+texture_normal = ExtResource("7_gnej7")
+texture_pressed = ExtResource("8_cdpks")
+texture_hover = ExtResource("8_cdpks")
+stretch_mode = 0
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="chordsSeen" from="." to="Sprite2D" method="_on_seraphinas_guitar_chords_seen"]
+[connection signal="pressed" from="CanvasLayer/Help Box/TextureButton" to="." method="_on_texture_button_pressed"]

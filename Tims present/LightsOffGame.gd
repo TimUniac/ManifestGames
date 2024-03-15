@@ -28,7 +28,7 @@ func winstate():
 
 
 func _on_reset_pressed():
-	offLights = 13
+	offLights = 16
 
 
 func _on_texture_button_pressed():

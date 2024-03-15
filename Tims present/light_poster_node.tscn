@@ -16,6 +16,11 @@ position = Vector2(346.4, 351.39)
 scale = Vector2(0.035, 0.035)
 texture = ExtResource("2_t7ppv")
 
+[node name="Polygon2D" type="Polygon2D" parent="UiLightGameInstructionsPoster"]
+show_behind_parent = true
+color = Color(0.941176, 0.984314, 0.694118, 1)
+polygon = PackedVector2Array(1360, 1788.86, 1274.29, 1931.71, -1211.43, 1931.71, -1382.86, 1760.29, -1411.43, -1725.43, -1211.43, -1896.86, 1188.57, -1896.86, 1445.71, -1782.57)
+
 [node name="Interactionarea" type="Area2D" parent="."]
 position = Vector2(346.401, 351.39)
 

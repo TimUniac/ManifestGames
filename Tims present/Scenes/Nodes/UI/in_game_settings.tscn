@@ -47,6 +47,7 @@ limit_bottom = 802
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
 
 [node name="SettingsPanel" type="CanvasLayer" parent="Camera2D/CanvasLayer2"]
+visible = false
 scale = Vector2(1.652, 1.652)
 transform = Transform2D(1.652, 0, 0, 1.652, 0, 0)
 
@@ -174,6 +175,8 @@ offset_bottom = 211.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_4kehu")
 texture_pressed = ExtResource("7_2fbx1")
+texture_hover = ExtResource("7_2fbx1")
+stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D7" type="Sprite2D" parent="Camera2D/CanvasLayer2/SettingsPanel"]

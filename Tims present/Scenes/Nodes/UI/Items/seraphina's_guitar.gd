@@ -11,6 +11,8 @@ signal guitar_interacted(guitarDialogue)
 var player = null
 var inrange = false
 var is_opened = false
+var hint1 = false
+var hintsshown = false
 
 @onready var objlist = $"../Objectives"
 @onready var guitarDialogue: String = "This guitar seems to be important, I wonder if a song would unlock it."
@@ -20,6 +22,9 @@ var gameGuitar = null
 signal chordsSeen
 func _ready():
 	interaction_label.visible = false
+	$"CanvasLayer/Help Box".visible = false
+	$"CanvasLayer/Help Box/Hint1".visible = false
+	$"CanvasLayer/Help Box/Hint2".visible = false
 	
 
 
@@ -42,6 +47,11 @@ func _process(_delta):
 			close()
 		else:
 			open()
+	if is_opened and Input.is_action_just_pressed("Help"):
+		if hint1:
+			close_hint()
+		else:
+			open_hint()
 			
 func open():
 	if gameGuitar == null:
@@ -62,7 +72,17 @@ func close():
 	is_opened = false
 	
 		
- 
+func open_hint():
+	$"CanvasLayer/Help Box".visible = true
+	$"CanvasLayer/Help Box/Hint1".visible = true
+	$"CanvasLayer/Help Box/Hint2".visible = true
+	hint1 = true
+			
+		
+func close_hint():
+	$"CanvasLayer/Help Box".visible = false
+	hint1 = false
+	
 signal item_collected(item_number)
 
 func playercollect():
@@ -78,11 +98,9 @@ func guitar():
 
 signal playGame
 
-
-
-
+		
 func _on_texture_button_pressed():
-	close()
+	close_hint()
 
 func showChords():
 	if gameGuitar and gameGuitar.has_method("displayChords"):

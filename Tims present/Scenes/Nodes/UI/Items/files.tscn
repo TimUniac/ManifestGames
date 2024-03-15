@@ -18,6 +18,13 @@ shape = SubResource("RectangleShape2D_rgjqr")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_brnnc")
 
+[node name="TextureRect" type="Polygon2D" parent="Sprite2D"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(-44.5699, -16.35)
+color = Color(0.941176, 0.984314, 0.694118, 1)
+polygon = PackedVector2Array(3, -9, 11, -19, 31, -20, 50, -16, 84, -7, 89, -1, 90, 44, 82, 50, 51, 57, 11, 58, 1, 57, -1, 52, -1, 4)
+
 [node name="Panel" type="Panel" parent="."]
 z_index = 2
 offset_left = -102.0

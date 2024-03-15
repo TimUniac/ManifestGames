@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkq7anlswuk6p"]
+[gd_scene load_steps=9 format=3 uid="uid://bkq7anlswuk6p"]
 
 [ext_resource type="Script" path="res://Guitar Poster.gd" id="1_1lx0p"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="2_jj7qr"]
@@ -10,6 +10,8 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5k18p"]
 radius = 86.0
 height = 340.0
+
+[sub_resource type="Theme" id="Theme_u64n6"]
 
 [node name="Guitar Poster" type="Control"]
 layout_mode = 3
@@ -37,7 +39,19 @@ position = Vector2(0, 1)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_5k18p")
 
+[node name="TextureRect" type="ColorRect" parent="SprGuitarChord_svg"]
+show_behind_parent = true
+texture_filter = 1
+offset_left = -78.0
+offset_top = -74.0
+offset_right = 73.0
+offset_bottom = 83.0
+mouse_filter = 2
+theme = SubResource("Theme_u64n6")
+color = Color(0.941176, 0.984314, 0.694118, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ChordChart" type="Sprite2D" parent="CanvasLayer"]
 z_index = 2

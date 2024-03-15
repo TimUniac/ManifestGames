@@ -15,6 +15,13 @@ script = ExtResource("1_ftamq")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_uvg7x")
 
+[node name="TextureRect" type="Polygon2D" parent="SeraphinaNecklace"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(33.3333, 16.6667)
+color = Color(0.941176, 0.984314, 0.694118, 1)
+polygon = PackedVector2Array(0, -3.33333, -6.66667, -23.3333, -6.66667, -43.3333, -23.3333, -53.3333, -46.6667, -60, -60, -50, -70, -40, -66.6667, -23.3333, -60, -6.66667, -43.3333, 3.33333, -33.3333, 6.66667, -20, 16.6667, -10, 30, 10, 10)
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_i3iiu")
 

@@ -141,14 +141,14 @@ script = ExtResource("6_lfb8h")
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
 layout_mode = 0
-offset_left = 1364.0
-offset_top = 554.0
-offset_right = 1575.0
-offset_bottom = 689.0
-scale = Vector2(0.16963, 0.312977)
+offset_left = 1354.0
+offset_top = 551.0
+offset_right = 1565.0
+offset_bottom = 686.0
+scale = Vector2(0.21, 0.21)
 texture_normal = ExtResource("12_x04qv")
 texture_pressed = ExtResource("13_f0aee")
-stretch_mode = 1
+texture_hover = ExtResource("13_f0aee")
 
 [connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_C" to="." method="_on_letter_c_button_down"]
 [connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]

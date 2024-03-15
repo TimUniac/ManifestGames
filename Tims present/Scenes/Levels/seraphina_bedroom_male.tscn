@@ -1,8 +1,7 @@
-[gd_scene load_steps=37 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=36 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
-[ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_5adpj"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
@@ -11722,7 +11721,7 @@ fit_content = true
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(747, 640)
 
-[node name="Desk" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(102.5, 43.5)
 shape = SubResource("RectangleShape2D_twda4")
 
@@ -11794,11 +11793,12 @@ position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
 z_as_relative = false
-offset_left = -113.0
-offset_top = -2.0
-offset_right = -113.0
-offset_bottom = -2.0
+offset_left = -132.0
+offset_top = -3.0
+offset_right = -132.0
+offset_bottom = -3.0
 rotation = -0.0030264
+scale = Vector2(1.01706, 1.00603)
 
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
 position = Vector2(320, 318)
@@ -11812,21 +11812,14 @@ offset_right = -18.0
 offset_bottom = 12.0
 mouse_filter = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
-visible = false
-position = Vector2(10, 100)
-
-[node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
-offset_left = -6.0
-offset_top = 39.0
-offset_right = -6.0
-offset_bottom = 39.0
-mouse_filter = 2
-
 [node name="transitions" parent="." instance=ExtResource("13_o7pkr")]
+
+[node name="In_game_settings" parent="." instance=ExtResource("12_mu1tk")]
+offset_left = -821.0
+offset_top = 75.0
+offset_right = -821.0
+offset_bottom = 75.0
+mouse_filter = 2
 
 [node name="Room" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.162

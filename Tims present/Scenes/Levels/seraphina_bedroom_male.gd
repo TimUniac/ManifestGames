@@ -53,7 +53,7 @@ func _on_male_doctor_character_all_items_collected():
 func hide_show_objectives():
 	if Input.is_action_just_pressed("Objective"):
 		$Objectives.visible = !$Objectives.visible
-	
+
 
 func guitarSong():
 	music_player.stream = music_win
