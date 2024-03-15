@@ -4,7 +4,7 @@ var Speed: float = 300.0
 var current_dir = "none"
 
 
-@onready var pickupSound = $"../../Pickups"
+
 @onready var anim = $Sprite2D
 var pen = false
 var glasses = false
@@ -144,7 +144,7 @@ func _on_tutorial_interacted(tutorialDialogue):
 
 
 func _on_pen_item_collected():
-	pickupSound.play()
+	PickupsSoundPlayer.play()
 	pen = true
 	print ("Pen")
 	
@@ -152,13 +152,13 @@ func _on_pen_item_collected():
 
 
 func _on_glasses_item_collected():
-	pickupSound.play()
+	PickupsSoundPlayer.play()
 	glasses = true
 	print ("glasses")
 	check_done()
 	
 func _on_files_item_collected():
-	pickupSound.play()
+	PickupsSoundPlayer.play()
 	files = true
 	print ("files")
 	check_done()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=34 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="3_05p0w"]
@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="19_4r33g"]
 [ext_resource type="PackedScene" uid="uid://rlp544kiajnq" path="res://postit.tscn" id="19_68dvt"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="21_np8ei"]
-[ext_resource type="PackedScene" uid="uid://71ehm6judpk5" path="res://pickupsSound.tscn" id="22_dey2n"]
 [ext_resource type="TileSet" uid="uid://bfb6v64egfvyb" path="res://Assets/Texture assets/OfficeFurniture.tres" id="23_v2q8d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o47qh"]
@@ -3736,8 +3735,8 @@ y_sort_enabled = true
 position = Vector2(469, 561)
 scale = Vector2(0.64, 0.64)
 
-[node name="Pickups" parent="." instance=ExtResource("22_dey2n")]
-script = null
-
 [connection signal="all_items_collected" from="Control/Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="finished" from="Control/TutorialMusic" to="Control/TutorialMusic" method="_on_finished"]
+[connection signal="item_collected" from="Control/Files" to="Control/Male Doctor Character" method="_on_files_item_collected"]
+[connection signal="item_collected" from="Control/Glasses" to="Control/Male Doctor Character" method="_on_glasses_item_collected"]
+[connection signal="item_collected" from="Control/Pen" to="Control/Male Doctor Character" method="_on_pen_item_collected"]
