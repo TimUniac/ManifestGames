@@ -1,12 +1,13 @@
 extends AudioStreamPlayer2D
 
 
-const SOUND_BASE_PATH = "res://Assets/Sound/SFX/GuitarPickSounds/GuitarPick_"
+const SOUND_BASE_PATH = "res://Assets/Sound/SFX/GuitarPickSounds/GuitarPick__"
 var sound_players = []
 var is_muted = true
 
 func _ready():
 	for i in range(26): 
+		volume_db = -80.0
 		var sound_path = SOUND_BASE_PATH + str(i) + ".wav" 
 		var sound_player = AudioStreamPlayer.new()
 		sound_player.stream = load(sound_path)

@@ -5,6 +5,6 @@
 
 [node name="Pickups" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_l281y")
-volume_db = -10.0
+volume_db = -10.085
 bus = &"SFX"
 script = ExtResource("1_47blf")

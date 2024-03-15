@@ -34,6 +34,7 @@ func _append_letter_to_code(typed_code):
 
 
 func _on_letter_a_button_down():
+	KeyboardInput.play_sound(0)
 	if sequence == 0 or sequence == 2:
 		typed_code += "A"
 		_append_letter_to_code(typed_code)
@@ -42,6 +43,7 @@ func _on_letter_a_button_down():
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_A".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_A")
 func _on_letter_v_button_down():
+	KeyboardInput.play_sound(21)
 	if sequence == 1:
 		typed_code += "V"
 		_append_letter_to_code(typed_code)
@@ -50,12 +52,15 @@ func _on_letter_v_button_down():
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_V".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_V")
 func _on_letter_i_button_down():
+	KeyboardInput.play_sound(8)
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_I".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_I")
 func _on_letter_e_button_down():
+	KeyboardInput.play_sound(4)
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_E".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_E")
 func _on_letter_s_button_down():
+	KeyboardInput.play_sound(18)
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_S".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_S")
 

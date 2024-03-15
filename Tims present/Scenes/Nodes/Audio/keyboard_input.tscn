@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://Scenes/Nodes/Audio/keyboard_input.gd" id="1_f6ure"]
 
 [node name="KeyboardInput" type="AudioStreamPlayer2D"]
+volume_db = -80.0
 script = ExtResource("1_f6ure")

@@ -51,7 +51,7 @@ offset_right = -206.654
 offset_bottom = -105.579
 theme_override_fonts/font = ExtResource("3_i2l02")
 theme_override_font_sizes/font_size = 25
-text = "This file is retricted. The password should be on a post-it somewhere in here."
+text = "This file is restricted. The password should be on a post-it somewhere in here."
 autowrap_mode = 2
 
 [node name="SequenceInput" type="LineEdit" parent="CanvasLayer"]
