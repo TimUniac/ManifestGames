@@ -34,6 +34,7 @@ func open():
 	doctor.talking = true
 	is_opened = true
 	global.guitarPosterSeen = true
+	
 
 func interactionnotvisible():
 	areaLabel.visible = false
