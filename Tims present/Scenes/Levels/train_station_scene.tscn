@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=26 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
 [ext_resource type="Texture2D" uid="uid://caplpe2ma3pjs" path="res://bg_train_station.svg.svg" id="1_qs83u"]
 [ext_resource type="Texture2D" uid="uid://1dcdpuqtqdba" path="res://bg_train_station.svg 1.svg" id="3_bntpw"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="4_txkr3"]
+[ext_resource type="PackedScene" uid="uid://blp0ee2kt5j0a" path="res://trainstation_light_game_node.tscn" id="6_y3hfb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")
@@ -3847,6 +3848,9 @@ size = Vector2(4063.75, 74)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5jjs7"]
 size = Vector2(140, 1221)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dp3sj"]
+size = Vector2(145, 57)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mk5e2"]
 size = Vector2(81, 1092)
 
@@ -3991,13 +3995,24 @@ shape = SubResource("RectangleShape2D_5jjs7")
 position = Vector2(3342, 528)
 shape = SubResource("RectangleShape2D_5jjs7")
 
+[node name="Electrical Box Collison" type="StaticBody2D" parent="."]
+position = Vector2(2045, 120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Electrical Box Collison"]
+position = Vector2(7.5, 18.5)
+shape = SubResource("RectangleShape2D_dp3sj")
+
 [node name="Teleport Area" type="Area2D" parent="."]
 position = Vector2(0, 994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport Area"]
-position = Vector2(30.5, -448)
+position = Vector2(55, -458)
 shape = SubResource("RectangleShape2D_mk5e2")
 
 [node name="transitions" parent="." instance=ExtResource("4_txkr3")]
+
+[node name="TrainstationLightGame Area" parent="." instance=ExtResource("6_y3hfb")]
+z_index = 1
+position = Vector2(2046, 221)
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
