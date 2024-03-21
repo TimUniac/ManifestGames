@@ -14,19 +14,23 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -17.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4aarw")
 
-[node name="Control" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 6.0
-offset_top = -6.0
+offset_top = -23.0
 offset_right = 1920.0
-offset_bottom = 1075.0
+offset_bottom = 1058.0
 
-[node name="GridContainer" type="GridContainer" parent="Control"]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 35.0
@@ -36,107 +40,107 @@ scale = Vector2(0.06, 0.06)
 columns = 5
 script = ExtResource("2_4gyts")
 
-[node name="Switch_1" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_1" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_2" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_2" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_3" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_3" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_4" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_4" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_5" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_5" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_6" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_6" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_7" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_7" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_8" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_8" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_9" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_9" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_10" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_10" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_11" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_11" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_12" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_12" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_13" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_13" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_14" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_14" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_15" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_15" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_16" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_16" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_17" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_17" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_18" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_18" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_19" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_19" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_20" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_20" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("4_5v56v")
 
-[node name="Switch_21" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_21" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_22" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_22" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_23" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_23" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_24" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_24" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="Switch_25" type="TextureButton" parent="Control/GridContainer"]
+[node name="Switch_25" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
 script = ExtResource("3_4gfbx")
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 1049.0
 offset_top = 38.0
@@ -145,7 +149,7 @@ offset_bottom = 3546.0
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("5_ch2qb")
 
-[node name="Reset" type="Button" parent="Control"]
+[node name="Reset" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
 offset_left = 1048.0
 offset_top = 977.0
@@ -160,15 +164,15 @@ theme_override_fonts/font = ExtResource("6_o5li7")
 theme_override_font_sizes/font_size = 48
 text = "Reset Lights"
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
 offset_left = 1690.0
-offset_top = 32.0
+offset_top = 15.0
 offset_right = 1901.0
-offset_bottom = 167.0
+offset_bottom = 150.0
 scale = Vector2(0.39, 0.39)
 texture_normal = ExtResource("7_g2khs")
 texture_pressed = ExtResource("8_18855")
 
-[connection signal="pressed" from="Control/Reset" to="." method="_on_reset_pressed"]
-[connection signal="pressed" from="Control/Reset" to="Control/GridContainer" method="_on_reset_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Reset" to="CanvasLayer/Control/GridContainer" method="_on_reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
