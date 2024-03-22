@@ -3891,7 +3891,6 @@ light_mask = 5
 visibility_layer = 5
 z_index = 2
 position = Vector2(3077, 751)
-scale = Vector2(0.807, 0.814)
 
 [node name="Camera2D" type="Camera2D" parent="Male Doctor Character"]
 position = Vector2(-289.962, -245.7)
@@ -3903,7 +3902,6 @@ limit_bottom = 1106
 limit_smoothed = true
 drag_horizontal_enabled = true
 drag_left_margin = 0.02
-drag_right_margin = 1.0
 
 [node name="Garbage Collison" type="StaticBody2D" parent="."]
 
