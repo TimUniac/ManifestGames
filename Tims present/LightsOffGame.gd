@@ -18,6 +18,7 @@ func lightOff():
 		winstate()
 
 func winstate():
+	
 	var parent = get_parent()
 	parent.close()
 	parent.playerturnedofflights()

@@ -76,7 +76,7 @@ func open_locker():
 		print("openeing locker")
 
 
-		
+
 
 signal item_collected()
 

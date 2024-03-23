@@ -2,7 +2,7 @@ extends Area2D
 
 signal locker_interacted(lockerDialogue)
 @export var action_name: String = "interact"
-@onready var interaction_label = $CollisionShape2D/Panel
+@onready var interaction_label = $Panel
 
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
@@ -59,7 +59,12 @@ func close():
 	is_opened = false
 	
 func lightsturnedon():
-	pass
+	doctor.talking = false
+	interaction_label.visible = false
+	$ColorRect.visible = false
+	$CollisionShape2D.queue_free()
+	var parent = get_parent()
+	parent.lightson()
 
 
 		
