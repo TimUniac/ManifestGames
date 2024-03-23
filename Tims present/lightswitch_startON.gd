@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var root = $"../../.."
+@onready var root = $"../../../.."
 var switchON: Texture
 var switchOFF: Texture
 signal switch

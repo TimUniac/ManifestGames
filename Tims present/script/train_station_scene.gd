@@ -16,3 +16,6 @@ func _on_teleport_area_body_entered(body):
 	await $"transitions/transition player".animation_finished
 	get_tree().change_scene_to_file("res://Scenes/Levels/main_menu.tscn")
 	get_tree().queue_delete($root)
+
+func lightson():
+	$lightgroup.visible = false

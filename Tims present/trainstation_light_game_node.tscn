@@ -9,10 +9,7 @@ radius = 78.1601
 [node name="TrainstationLightGame Area" type="Area2D"]
 script = ExtResource("1_epy3j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_jwj6s")
-
-[node name="Panel" type="Panel" parent="CollisionShape2D"]
+[node name="Panel" type="Panel" parent="."]
 z_index = 6
 z_as_relative = false
 offset_left = -102.0
@@ -21,7 +18,7 @@ offset_right = 105.0
 offset_bottom = -24.0
 metadata/_edit_use_anchors_ = true
 
-[node name="interaction_label" type="Label" parent="CollisionShape2D/Panel"]
+[node name="interaction_label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -37,6 +34,16 @@ text = "[E] to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jwj6s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -4688.0
+offset_top = -1488.0
+offset_right = 3856.0
+offset_bottom = 1552.0
+color = Color(0.0470588, 0.0470588, 0.0470588, 0.482353)
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
