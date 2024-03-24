@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6brfnn42kqe6"]
+[gd_scene load_steps=9 format=3 uid="uid://b6brfnn42kqe6"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/TutorialGame.gd" id="1_sdyng"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_0lgi0"]
@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_ufs11"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_7ja8i"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_31e6p"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="7_rmrne"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Clicks.gd" id="8_ryfn7"]
 
 [node name="TutorialGame" type="Control"]
 z_index = 2
@@ -105,5 +107,10 @@ texture_normal = ExtResource("5_7ja8i")
 texture_pressed = ExtResource("6_31e6p")
 texture_hover = ExtResource("6_31e6p")
 stretch_mode = 0
+
+[node name="Clicks" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_rmrne")
+pitch_scale = 0.5
+script = ExtResource("8_ryfn7")
 
 [connection signal="pressed" from="CanvasLayer/Close" to="." method="_on_close_pressed"]
