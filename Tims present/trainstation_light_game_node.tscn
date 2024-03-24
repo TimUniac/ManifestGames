@@ -39,6 +39,7 @@ metadata/_edit_use_anchors_ = true
 shape = SubResource("CircleShape2D_jwj6s")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = 4
 offset_left = -4688.0
 offset_top = -1488.0
 offset_right = 3856.0

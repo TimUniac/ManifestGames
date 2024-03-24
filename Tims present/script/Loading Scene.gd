@@ -10,4 +10,4 @@ func _ready():
 
 
 func _on_animated_sprite_2d_animation_finished():
-	get_tree().change_scene_to_file("res://Scenes/Levels/tutorial_level.tscn")
+	get_tree().change_scene_to_file("res://Prologue.tscn")

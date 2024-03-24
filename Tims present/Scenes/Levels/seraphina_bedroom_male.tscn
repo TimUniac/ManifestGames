@@ -11860,46 +11860,47 @@ theme_override_font_sizes/font_size = 25
 text = "Collect Seraphinas Book"
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
-position = Vector2(-25.8976, -87.3077)
+z_index = 1
+position = Vector2(-24.2309, 52.6926)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
 
 [node name="Label4" type="Label" parent="Objectives"]
 layout_mode = 0
-offset_left = 86.6667
-offset_top = 245.0
-offset_right = 404.667
-offset_bottom = 290.0
+offset_left = 88.3333
+offset_top = 108.333
+offset_right = 406.334
+offset_bottom = 153.333
 theme_override_fonts/font = ExtResource("3_5adpj")
 theme_override_font_sizes/font_size = 25
 text = "Collect Seraphinas Journal"
 
 [node name="TextureRect" type="TextureRect" parent="Objectives/Label4"]
 layout_mode = 0
-offset_left = -35.0
-offset_top = 4.99997
-offset_right = 24.0
-offset_bottom = 64.0
+offset_left = -36.6667
+offset_top = 143.333
+offset_right = 22.3333
+offset_bottom = 202.333
 scale = Vector2(0.335, 0.335)
 texture = ExtResource("20_67ppl")
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label4"]
-position = Vector2(-26.6667, 15)
+position = Vector2(-26.6667, 13.3333)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
 
 [node name="Label2" type="Label" parent="Objectives"]
 layout_mode = 0
-offset_left = 83.3333
-offset_top = 108.333
-offset_right = 225.333
-offset_bottom = 141.333
+offset_left = 85.0
+offset_top = 245.0
+offset_right = 377.0
+offset_bottom = 278.0
 theme_override_fonts/font = ExtResource("3_5adpj")
 theme_override_font_sizes/font_size = 25
 text = "Collect Seraphinas Guitar"
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label2"]
-position = Vector2(-21.6666, 63.3336)
+position = Vector2(-23.3333, -70)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
 
