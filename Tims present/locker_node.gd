@@ -74,7 +74,7 @@ func open_locker():
 	openedlocker.visible = true
 	if openedlocker.visible == true:
 		print("openeing locker")
-
+	$LockerDoorSound.play()
 
 
 

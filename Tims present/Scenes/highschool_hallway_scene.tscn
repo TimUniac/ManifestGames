@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=26 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="7_3lthy"]
 [ext_resource type="PackedScene" uid="uid://desqvm5r76kll" path="res://image_puzzle_node.tscn" id="7_wrdrh"]
 [ext_resource type="Script" path="res://Scenes/ObjectivesHallway.gd" id="8_wobnu"]
+[ext_resource type="AudioStream" uid="uid://bntuw08b63mud" path="res://Assets/Sound/SFX/HallwaySounds/LockerDoor.mp3" id="9_3q8h1"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="9_3xv8w"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="11_jjmvn"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="13_owwma"]
@@ -193,6 +194,11 @@ shape = SubResource("RectangleShape2D_nrjfh")
 [node name="Locker_Node" parent="." instance=ExtResource("3_3sy0g")]
 z_index = 1
 position = Vector2(1127, 438)
+
+[node name="LockerDoorSound" type="AudioStreamPlayer2D" parent="Locker_Node"]
+position = Vector2(-1127, -438)
+stream = ExtResource("9_3q8h1")
+volume_db = -5.829
 
 [node name="Image_Puzzle_Node" parent="." instance=ExtResource("7_wrdrh")]
 position = Vector2(1093, 463)

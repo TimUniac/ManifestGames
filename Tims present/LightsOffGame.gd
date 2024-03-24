@@ -6,12 +6,14 @@ var offLights = 0
 func _ready():
 	$".".visible = true
 func lightOn():
+	$SwitchSound.play()
 	offLights -= 1
 	print (offLights)
 	
 
 
 func lightOff():
+	$SwitchSound.play()
 	offLights += 1
 	print (offLights)
 	if offLights == 25:

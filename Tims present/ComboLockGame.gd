@@ -46,13 +46,14 @@ func _on_red_button_pressed():
 	print ("red 1")
 	if blue == false and green == false and pink == false:
 		red = true
+		
 		button.texture_normal = button.texture_pressed
 		print ("red 2")
 	else:
 		print ("wrong answer")
 		reset_buttons()
 		print ("red 3")
-	
+	audioPlayer.stream = soundRed
 	print ("red 4")
 	
 func _on_blue_button_pressed():
