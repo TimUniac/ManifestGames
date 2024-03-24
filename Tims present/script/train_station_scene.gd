@@ -14,7 +14,7 @@ func _process(delta):
 func _on_teleport_area_body_entered(body):
 	$"transitions/transition player".play("Fade_Out")
 	await $"transitions/transition player".animation_finished
-	get_tree().change_scene_to_file("res://Scenes/Levels/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/forest_scene.tscn")
 	get_tree().queue_delete($root)
 
 func lightson():

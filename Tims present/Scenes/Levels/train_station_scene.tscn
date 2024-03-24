@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=32 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
@@ -7,6 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="4_txkr3"]
 [ext_resource type="PackedScene" uid="uid://blp0ee2kt5j0a" path="res://trainstation_light_game_node.tscn" id="6_y3hfb"]
 [ext_resource type="Texture2D" uid="uid://6jr7bja2ousp" path="res://Darken Lamp post.png" id="7_xqh6i"]
+[ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="8_ln6jp"]
+[ext_resource type="Script" path="res://Scenes/Levels/ObjectivesBedroom.gd" id="9_hcecc"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="10_76lgp"]
+[ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="11_w1bx0"]
+[ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="12_j2yq6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")
@@ -4037,5 +4042,97 @@ z_index = 4
 position = Vector2(1764, -191.247)
 scale = Vector2(1.02381, 1.00394)
 texture = ExtResource("7_xqh6i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Objectives" type="TextureRect" parent="CanvasLayer"]
+z_index = 2
+offset_left = 34.0
+offset_top = 28.0
+offset_right = 505.0
+offset_bottom = 340.0
+scale = Vector2(0.895, 0.895)
+mouse_filter = 2
+texture = ExtResource("8_ln6jp")
+expand_mode = 1
+script = ExtResource("9_hcecc")
+
+[node name="oTohide" type="RichTextLabel" parent="CanvasLayer/Objectives"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 285.0
+offset_right = 440.0
+offset_bottom = 308.0
+text = "[Q] to hide"
+
+[node name="Label" type="Label" parent="CanvasLayer/Objectives"]
+layout_mode = 0
+offset_left = 85.8976
+offset_top = 208.974
+offset_right = 403.898
+offset_bottom = 253.974
+theme_override_fonts/font = ExtResource("10_76lgp")
+theme_override_font_sizes/font_size = 25
+text = "Place H	older"
+
+[node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label"]
+position = Vector2(-25.8976, -87.3077)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("11_w1bx0")
+
+[node name="Label4" type="Label" parent="CanvasLayer/Objectives"]
+layout_mode = 0
+offset_left = 86.6667
+offset_top = 245.0
+offset_right = 404.667
+offset_bottom = 290.0
+theme_override_fonts/font = ExtResource("10_76lgp")
+theme_override_font_sizes/font_size = 25
+text = "Place Holder"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Objectives/Label4"]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 4.99997
+offset_right = 24.0
+offset_bottom = 64.0
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("12_j2yq6")
+
+[node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label4"]
+position = Vector2(-26.6667, 15)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("11_w1bx0")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Objectives"]
+layout_mode = 0
+offset_left = 83.3333
+offset_top = 108.333
+offset_right = 225.333
+offset_bottom = 141.333
+theme_override_fonts/font = ExtResource("10_76lgp")
+theme_override_font_sizes/font_size = 25
+text = "Turn on the lights"
+
+[node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label2"]
+position = Vector2(-21.6666, 63.3336)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("11_w1bx0")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Objectives"]
+layout_mode = 0
+offset_left = 87.1508
+offset_top = 154.19
+offset_right = 425.151
+offset_bottom = 220.19
+theme_override_fonts/font = ExtResource("10_76lgp")
+theme_override_font_sizes/font_size = 25
+text = "Fix the Train Map"
+autowrap_mode = 2
+
+[node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label3"]
+position = Vector2(-25.6983, 67.0391)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("11_w1bx0")
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
