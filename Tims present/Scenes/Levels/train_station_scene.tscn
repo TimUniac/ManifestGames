@@ -4038,4 +4038,29 @@ position = Vector2(1764, -191.247)
 scale = Vector2(1.02381, 1.00394)
 texture = ExtResource("7_xqh6i")
 
+[node name="Platform" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platform"]
+polygon = PackedVector2Array(-1, -4, 45, 5, 167, 1, 240, 0, 239, 576, 1366, 580, 1363, -14, 1516, -11, 1516, 509, 1626, 572, 1626, 761, 1525, 707, 1516, 829, 161, 840, 169, -1, 169, -1, 169, -1)
+
+[node name="ParkingLot" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParkingLot"]
+polygon = PackedVector2Array(1686, 256, 3263, 239, 3267, 866, 1695, 866, 1682, 802, 1636, 790, 1640, 569, 1695, 565)
+
+[node name="Gravel" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Gravel"]
+polygon = PackedVector2Array(3263, 230, 3250, 1, 1535, 6, 1532, 474, 1627, 561, 1682, 552, 1682, 120, 1915, 107, 1922, 234, 1960, 234, 1962, 117, 2125, 104, 2136, 226)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Gravel"]
+polygon = PackedVector2Array(3255, 893, 3260, 1083, 100, 1087, 96, -1, 144, 0, 141, 889, 1531, 887, 1541, 811, 1653, 807, 1659, 885)
+
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
+[connection signal="body_entered" from="Platform" to="Male Doctor Character" method="_on_platform_body_entered"]
+[connection signal="body_entered" from="ParkingLot" to="Male Doctor Character" method="_on_parking_lot_body_entered"]
+[connection signal="body_entered" from="Gravel" to="Male Doctor Character" method="_on_gravel_body_entered"]

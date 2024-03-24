@@ -5,6 +5,7 @@ extends Node2D
 @onready var music_win = preload("res://Assets/Sound/Music/serawin.mp3")
 @onready var doctor = $"Male Doctor Character"
 @onready var guitarposter = $"Guitar Poster"
+@onready var ground = "bedroom" 
 
 var done = false
 
@@ -27,6 +28,7 @@ func _ready():
 	$Objectives/Label4/Orbs.visible = false
 	guitarposter.interactionnotvisible()
 	doctor.talking = true
+	$"Male Doctor Character/Footsteps".activeGround = "bedroom"
 
 func _process(_delta):
 	if done == true and Input.is_action_just_pressed("Next"):

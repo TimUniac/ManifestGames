@@ -254,8 +254,10 @@ radius = 29.0
 height = 98.0
 
 [node name="Male Doctor Character" type="CharacterBody2D"]
-collision_layer = 3
+collision_layer = 7
 script = ExtResource("1_ic5fy")
+
+[node name="Footsteps" parent="." instance=ExtResource("8_p7t5t")]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.499998, -1.07288e-06)
@@ -270,9 +272,6 @@ position = Vector2(-7, 28)
 shape = SubResource("CapsuleShape2D_lutv1")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-
-[node name="Footfalls" parent="." instance=ExtResource("8_p7t5t")]
-volume_db = 1.66533e-15
 
 [node name="BubbleMark" type="Marker2D" parent="."]
 position = Vector2(14, -24)

@@ -11,7 +11,7 @@ func _ready():
 	$Control/Objectives/Label/Orbs.visible = false
 	$Control/Objectives/Label2/Orbs2.visible = false
 	$Control/Objectives/Label3/Orbs3.visible = false
-	
+	$Control/"Male Doctor Character/Footsteps".activeGround = "office"
 
 func _process(_delta):
 	if $Control/Finish.visible == true and Input.is_action_just_pressed("Next"):
