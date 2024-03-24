@@ -4047,11 +4047,11 @@ texture = ExtResource("7_xqh6i")
 
 [node name="Objectives" type="TextureRect" parent="CanvasLayer"]
 z_index = 2
-offset_left = -74.0
-offset_top = 101.0
-offset_right = 397.0
-offset_bottom = 413.0
-scale = Vector2(0.6, 0.6)
+offset_left = 34.0
+offset_top = 28.0
+offset_right = 505.0
+offset_bottom = 340.0
+scale = Vector2(0.895, 0.895)
 mouse_filter = 2
 texture = ExtResource("8_ln6jp")
 expand_mode = 1
@@ -4073,7 +4073,7 @@ offset_right = 403.898
 offset_bottom = 253.974
 theme_override_fonts/font = ExtResource("10_76lgp")
 theme_override_font_sizes/font_size = 25
-text = "Collect Seraphinas Book"
+text = "Place H	older"
 
 [node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label"]
 position = Vector2(-25.8976, -87.3077)
@@ -4088,7 +4088,7 @@ offset_right = 404.667
 offset_bottom = 290.0
 theme_override_fonts/font = ExtResource("10_76lgp")
 theme_override_font_sizes/font_size = 25
-text = "Collect Seraphinas Journal"
+text = "Place Holder"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Objectives/Label4"]
 layout_mode = 0
@@ -4112,7 +4112,7 @@ offset_right = 225.333
 offset_bottom = 141.333
 theme_override_fonts/font = ExtResource("10_76lgp")
 theme_override_font_sizes/font_size = 25
-text = "Collect Seraphinas Guitar"
+text = "Turn on the lights"
 
 [node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label2"]
 position = Vector2(-21.6666, 63.3336)
@@ -4121,17 +4121,17 @@ texture = ExtResource("11_w1bx0")
 
 [node name="Label3" type="Label" parent="CanvasLayer/Objectives"]
 layout_mode = 0
-offset_left = 88.4617
-offset_top = 143.59
-offset_right = 426.462
-offset_bottom = 209.59
+offset_left = 87.1508
+offset_top = 154.19
+offset_right = 425.151
+offset_bottom = 220.19
 theme_override_fonts/font = ExtResource("10_76lgp")
 theme_override_font_sizes/font_size = 25
-text = "Collect Seraphina's Friendship Necklace"
+text = "Fix the Train Map"
 autowrap_mode = 2
 
 [node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label3"]
-position = Vector2(-26.795, 78.0768)
+position = Vector2(-25.6983, 67.0391)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("11_w1bx0")
 
