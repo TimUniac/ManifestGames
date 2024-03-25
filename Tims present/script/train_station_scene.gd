@@ -9,6 +9,7 @@ func _ready():
 	$CanvasLayer/Objectives/Label3/Orbs.visible = false
 	
 	
+	#$"Male Doctor Character/Footsteps".activeGround = "parking"
 
 
 func _input(_event):

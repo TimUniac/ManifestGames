@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=37 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
@@ -11671,6 +11671,9 @@ sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 sources/2 = SubResource("TileSetAtlasSource_bu02x")
 sources/3 = SubResource("TileSetAtlasSource_ecml8")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3thre"]
+size = Vector2(1154, 649)
+
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
 position = Vector2(0, -4)
 script = ExtResource("1_ruhi7")
@@ -11916,6 +11919,14 @@ autowrap_mode = 2
 position = Vector2(-26.795, 78.0768)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
+
+[node name="BedroomFloor" type="Area2D" parent="." groups=["bedroom"]]
+collision_layer = 4
+collision_mask = 4
+
+[node name="BedroomFloor" type="CollisionShape2D" parent="BedroomFloor"]
+position = Vector2(491, 427.5)
+shape = SubResource("RectangleShape2D_3thre")
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Novel" to="Male Doctor Character" method="_on_novel_item_collected"]

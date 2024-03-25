@@ -34,7 +34,7 @@ func _append_letter_to_code(typed_code):
 
 
 func _on_letter_a_button_down():
-	KeyboardInput.play_sound(0)
+	$Clicks.play_random_pitch()
 	if sequence == 0 or sequence == 2:
 		typed_code += "A"
 		_append_letter_to_code(typed_code)
@@ -43,7 +43,7 @@ func _on_letter_a_button_down():
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_A".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_A")
 func _on_letter_v_button_down():
-	KeyboardInput.play_sound(21)
+	$Clicks.play_random_pitch()
 	if sequence == 1:
 		typed_code += "V"
 		_append_letter_to_code(typed_code)
@@ -52,19 +52,20 @@ func _on_letter_v_button_down():
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_V".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_V")
 func _on_letter_i_button_down():
-	KeyboardInput.play_sound(8)
+	$Clicks.play_random_pitch()
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_I".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_I")
 func _on_letter_e_button_down():
-	KeyboardInput.play_sound(4)
+	$Clicks.play_random_pitch()
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_E".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_E")
 func _on_letter_s_button_down():
-	KeyboardInput.play_sound(18)
+	$Clicks.play_random_pitch()
 	$"Camera2D/CanvasLayer/CanvasGroup/letter_S".visible = false
 	wait(1.0, $"Camera2D/CanvasLayer/CanvasGroup/letter_S")
 
 
 func _on_texture_button_pressed():
+	$Clicks.play_random_pitch()
 	var parent = get_parent()
 	parent.close()

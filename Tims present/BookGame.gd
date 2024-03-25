@@ -6,8 +6,7 @@ var entered_code = ""
 var sequence = 0
 
 
-func _ready():
-	KeyboardInput.volume_db = -80.0
+
 	
 func _process(delta): #checks if entered code matches the secret code
 	if entered_code == secret_code:
@@ -15,7 +14,7 @@ func _process(delta): #checks if entered code matches the secret code
 		typed_code = ""
 		entered_code = ""
 		var parent = get_parent()
-		KeyboardInput.volume_db = -80
+
 		if parent and parent.has_method("playercollect"):
 			parent.playercollect()
 			parent.close()
@@ -31,7 +30,7 @@ func wait(seconds: float, letter) -> void:
 	letter.visible = true
 
 func _on_letter_c_button_down():
-	KeyboardInput.play_sound(2)
+	$Clicks.play_random_pitch()
 	if sequence == 0:
 		typed_code += "C"
 		_append_letter_to_code(typed_code)
@@ -40,7 +39,7 @@ func _on_letter_c_button_down():
 	$"CanvasLayer/CanvasGroup/letter_C".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_C")
 func _on_letter_a_button_down():
-	KeyboardInput.play_sound(0)
+	$Clicks.play_random_pitch()
 	if sequence == 1 or sequence == 7:
 		typed_code += "A"
 		_append_letter_to_code(typed_code)
@@ -49,7 +48,7 @@ func _on_letter_a_button_down():
 	$"CanvasLayer/CanvasGroup/letter_A".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_A")
 func _on_letter_r_button_down():
-	KeyboardInput.play_sound(17)
+	$Clicks.play_random_pitch()
 	if sequence == 2:
 		typed_code += "R"
 		_append_letter_to_code(typed_code)
@@ -58,7 +57,7 @@ func _on_letter_r_button_down():
 	$"CanvasLayer/CanvasGroup/letter_R".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_R")
 func _on_letter_m_button_down():
-	KeyboardInput.play_sound(12)
+	$Clicks.play_random_pitch()
 	if sequence == 3:
 		typed_code += "M"
 		_append_letter_to_code(typed_code)
@@ -67,7 +66,7 @@ func _on_letter_m_button_down():
 	$"CanvasLayer/CanvasGroup/letter_M".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_M")
 func _on_letter_i_button_down():
-	KeyboardInput.play_sound(8)
+	$Clicks.play_random_pitch()
 	if sequence == 4:
 		typed_code += "I"
 		_append_letter_to_code(typed_code)
@@ -76,7 +75,7 @@ func _on_letter_i_button_down():
 	$"CanvasLayer/CanvasGroup/letter_I".visible = false
 	wait(1.0, $"CanvasLayer/CanvasGroup/letter_I")
 func _on_letter_l_button_down():
-	KeyboardInput.play_sound(11)
+	$Clicks.play_random_pitch()
 	if sequence == 5 or sequence == 6:
 		typed_code += "L"
 		_append_letter_to_code(typed_code)
@@ -87,6 +86,6 @@ func _on_letter_l_button_down():
 
 
 func _on_texture_button_pressed():
-	KeyboardInput.mute(true)
+	$Clicks.play_random_pitch()
 	var parent = get_parent()
 	parent.close()

@@ -4,7 +4,7 @@ var Speed: float = 300.0
 var current_dir = "none"
 
 
-
+@onready var footfalls = $Footsteps
 @onready var anim = $Sprite2D
 var pen = false
 var glasses = false
@@ -24,10 +24,11 @@ signal all_items_collected
 
 
 func _ready():
-	
 	$Sprite2D.play("front_idle")
 
+
 	
+
 func _physics_process(_delta):
 	
 
@@ -199,3 +200,18 @@ func _on_light_poster_item_collected():
 	PickupsSoundPlayer.play()
 	check_done()
 	print ("lights")
+
+
+
+
+
+func _on_platform_body_entered(body):
+	footfalls.currentGround = "platform"
+
+
+func _on_parking_lot_body_entered(body):
+	footfalls.currentGround = "parking"
+
+
+func _on_gravel_body_entered(body):
+	footfalls.currentGround = "gravel"

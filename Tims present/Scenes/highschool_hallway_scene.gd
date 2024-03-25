@@ -9,6 +9,7 @@ func _ready():
 	$Objectives/Label3/Orbs3.visible = false
 	$TextureRect.visible = false
 	$Finish.visible = false
+	$"Male Doctor Character/Footsteps".activeGround = "hallway"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

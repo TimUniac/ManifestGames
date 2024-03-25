@@ -58,6 +58,7 @@ func close():
 	is_opened = false
 	
 func lightsturnedoff():
+	$PowerDown.play()
 	doctor.talking = false
 	$Interactionarea.visible = false
 	$Interactionarea/CollisionShape2D.queue_free()

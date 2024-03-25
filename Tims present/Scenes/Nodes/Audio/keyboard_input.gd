@@ -7,7 +7,7 @@ var is_muted = true
 
 func _ready():
 	for i in range(26): 
-		volume_db = -80.0
+		set_volume_db(-20.0)
 		var sound_path = SOUND_BASE_PATH + str(i) + ".wav" 
 		var sound_player = AudioStreamPlayer.new()
 		sound_player.stream = load(sound_path)
@@ -15,6 +15,7 @@ func _ready():
 		sound_players.append(sound_player)
 
 func _input(event):
+	set_volume_db(-20.0)
 	if not is_muted and event is InputEventKey and event.pressed:
 		# Handle alphanumeric input.
 		if event.keycode >= KEY_A and event.keycode <= KEY_Z:

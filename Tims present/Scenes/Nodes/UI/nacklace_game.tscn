@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://s6mjonaypyfs"]
+[gd_scene load_steps=15 format=3 uid="uid://s6mjonaypyfs"]
 
 [ext_resource type="Script" path="res://NecklaceGame.gd" id="1_t24ej"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_6t4ud"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://biic5dyi2bu8s" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_s.svg.svg" id="9_bg3sl"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="11_88fib"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="12_0nvkc"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Clicks.gd" id="13_qtuhf"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="13_uuhkt"]
 
 [node name="NacklaceGame" type="Control"]
 z_index = 4
@@ -154,6 +156,10 @@ scale = Vector2(0.195, 0.195)
 texture_normal = ExtResource("11_88fib")
 texture_pressed = ExtResource("12_0nvkc")
 stretch_mode = 0
+
+[node name="Clicks" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_uuhkt")
+script = ExtResource("13_qtuhf")
 
 [connection signal="button_down" from="Camera2D/CanvasLayer/CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]
 [connection signal="button_down" from="Camera2D/CanvasLayer/CanvasGroup/letter_V" to="." method="_on_letter_v_button_down"]
