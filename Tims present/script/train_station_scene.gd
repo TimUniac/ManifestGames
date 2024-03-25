@@ -3,10 +3,17 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$CanvasLayer/Objectives/Label/Orbs.visible = false
+	$CanvasLayer/Objectives/Label4/Orbs.visible = false
+	$CanvasLayer/Objectives/Label2/Orbs.visible = false
+	$CanvasLayer/Objectives/Label3/Orbs.visible = false
+	
+	
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _input(_event):
+		hide_show_objectives() 
+
 func _process(delta):
 	pass
 
@@ -19,3 +26,8 @@ func _on_teleport_area_body_entered(body):
 
 func lightson():
 	$lightgroup.visible = false
+	$CanvasLayer/Objectives/Label/Orbs.visible = true
+
+func hide_show_objectives():
+	if Input.is_action_just_pressed("Objective"):
+		$CanvasLayer/Objectives.visible = !$CanvasLayer/Objectives.visible
