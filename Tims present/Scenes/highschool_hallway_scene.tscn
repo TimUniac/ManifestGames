@@ -290,5 +290,3 @@ texture = SubResource("GradientTexture2D_k2nhn")
 [connection signal="item_collected" from="Locker_Node" to="Male Doctor Character" method="_on_locker_node_item_collected"]
 [connection signal="item_collected" from="Image_Puzzle_Node" to="Male Doctor Character" method="_on_image_puzzle_node_item_collected"]
 [connection signal="item_collected" from="LightPoster" to="Male Doctor Character" method="_on_light_poster_item_collected"]
-[connection signal="animation_changed" from="transitions" to="." method="_on_transitions_animation_changed"]
-[connection signal="animation_finished" from="transitions" to="." method="_on_transitions_animation_finished"]
