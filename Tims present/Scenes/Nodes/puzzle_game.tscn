@@ -37,6 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 6

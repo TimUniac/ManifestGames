@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dprgno2g8ltoa"]
+
+[ext_resource type="AudioStream" uid="uid://cbw1vl05xecp8" path="res://Assets/Sound/SFX/SFX_TransitionSwell_IN.mp3" id="1_kw610"]
+
+[node name="TransitionIN" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_kw610")
+volume_db = -10.667
