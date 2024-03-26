@@ -11,6 +11,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 script = ExtResource("1_bere3")
 
 [node name="Page" type="TextureRect" parent="."]
@@ -20,6 +21,7 @@ offset_left = 12.0
 offset_right = 1656.0
 offset_bottom = 1037.0
 scale = Vector2(0.8, 0.8)
+mouse_filter = 2
 expand_mode = 5
 
 [node name="Forward" type="Button" parent="."]

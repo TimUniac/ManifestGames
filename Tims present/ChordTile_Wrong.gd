@@ -61,15 +61,8 @@ func checkDropZone():
 
 
 func _on_strum_pressed():
-	var parent = get_parent()
-	if correctSpace == true:
-		print ("C")
-		parent.tileCount()
-		settleTile()
-	if correctSpace == false:
 		position = original_position
 		$"../WrongChords".play()
-		parent.correctTiles = 0
 func settleTile():
 	set_process(false) 
 	$".".modulate = Color(0, 1, 0, 1)

@@ -11692,7 +11692,6 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
-visible = false
 z_index = 2
 offset_left = 185.0
 offset_top = 246.0
@@ -11804,7 +11803,8 @@ rotation = -0.0030264
 scale = Vector2(1.01706, 1.00603)
 
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
-position = Vector2(320, 318)
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="Journal Read" parent="." instance=ExtResource("10_if3c2")]
 z_as_relative = false
@@ -11813,7 +11813,6 @@ offset_left = -18.0
 offset_top = 12.0
 offset_right = -18.0
 offset_bottom = 12.0
-mouse_filter = 2
 
 [node name="transitions" parent="." instance=ExtResource("13_o7pkr")]
 
@@ -11931,6 +11930,5 @@ shape = SubResource("RectangleShape2D_3thre")
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Novel" to="Male Doctor Character" method="_on_novel_item_collected"]
 [connection signal="item_collected" from="Friendship Necklace" to="Male Doctor Character" method="_on_friendship_necklace_item_collected"]
-[connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
 [connection signal="item_collected" from="Seraphina's Guitar" to="Male Doctor Character" method="_on_seraphinas_guitar_item_collected"]
 [connection signal="finished" from="Room" to="Room" method="_on_finished"]

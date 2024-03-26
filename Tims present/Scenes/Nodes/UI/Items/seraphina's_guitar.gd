@@ -1,4 +1,4 @@
-extends Area2D
+extends Control
 
 signal guitar_interacted(guitarDialogue)
 @export var action_name: String = "interact"
@@ -13,7 +13,7 @@ var inrange = false
 var is_opened = false
 var hint1 = false
 var hintsshown = false
-
+@onready var area = $Area2D
 @onready var objlist = $"../Objectives"
 @onready var guitarDialogue: String = "This guitar seems to be important, I wonder if a song would unlock it."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
@@ -29,16 +29,10 @@ func _ready():
 
 
 func _on_body_entered(body):
-	if body.has_method("player"):
-		interaction_label.visible = true
-		inrange = true
-		player = body
-		print("hi there")
-		doctor.speak(guitarDialogue)
-		
+	pass
+	
 func _on_body_exited(_body):
-	interaction_label.visible = false
-	inrange = false
+	pass
 	
 	
 func _process(_delta):
@@ -55,7 +49,7 @@ func _process(_delta):
 			
 func open():
 	if gameGuitar == null:
-		var guitar_game_scene = preload("res://Scenes/Nodes/UI/guitar_game.tscn").instantiate()
+		var guitar_game_scene = preload("res://Guitar_Game_ForDummies.tscn").instantiate()
 		
 		gameGuitar = guitar_game_scene
 		add_child(gameGuitar)
@@ -107,3 +101,18 @@ func showChords():
 		gameGuitar.displayChords()
 	else:
 		print("Guitar game is not open or does not have the displayChords method.")
+
+
+func _on_area_2d_body_entered(body):
+	if body.has_method("player"):
+		interaction_label.visible = true
+		inrange = true
+		player = body
+		print("hi there")
+		doctor.speak(guitarDialogue)
+		
+
+
+func _on_area_2d_body_exited(body):
+	interaction_label.visible = false
+	inrange = false

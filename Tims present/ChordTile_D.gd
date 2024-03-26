@@ -5,13 +5,15 @@ var dragging = false
 var original_position = Vector2()
 var inDropZone = false
 var correctDropZone = null  # Assign this based on your game logic
-@export var tile_id = ""
-
+@export var tile_id = "" 
+@onready 	var area2d= $Area2D
 var correctSpace = false
+signal tile_dropped(tile_id)
 
 func _ready():
 	original_position = position
 	set_process(true)
+
 
 
 
@@ -36,21 +38,26 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			inDropZone = false  # Reset drop zone flag
 		elif event is InputEventMouseButton:
 			dragging = false
+			tileDropped()
 			checkDropZone()
+			
 	if inDropZone:
-			# Snap to the center of the correct drop zone
+
 		position = correctDropZone.global_position
 	else:
-			# Return to original position if not dropped in a correct zone
 		return
-
+func tileDropped():
+	emit_signal("tile_dropped", tile_id)
+	
 func checkDropZone():
-	var area2d= $Area2D
-	for area in area2d.get_overlapping_areas():
 
-		if area.has_method("checkTile") and area.checkTile(tile_id):
+	for area in area2d.get_overlapping_areas():
+		if area.owner and area.owner.has_method("checkTile"):
+			area.owner.checkTile(tile_id)
+		if global_position.distance_to(area2d.global_position) <= 10:
 			global_position = area.global_position
 			$"../SnapSound".play()
+
 
 
 func _on_strum_pressed():
@@ -66,3 +73,5 @@ func _on_strum_pressed():
 func settleTile():
 	set_process(false) 
 	$".".modulate = Color(0, 1, 0, 1)
+
+

@@ -5,13 +5,15 @@ var dragging = false
 var original_position = Vector2()
 var inDropZone = false
 var correctDropZone = null  # Assign this based on your game logic
-@export var tile_id = ""
-
+@export var tile_id = "" 
+@onready 	var area2d= $Area2D
 var correctSpace = false
+signal tile_dropped(tile_id)
 
 func _ready():
 	original_position = position
 	set_process(true)
+
 
 
 
@@ -31,26 +33,41 @@ func _on_area_2d_wrong_tile():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			print ("1")
 			dragging = true
-			drag_offset = position - get_global_mouse_position()
-			inDropZone = false  # Reset drop zone flag
-		elif event is InputEventMouseButton:
+			print ("2")
+			drag_offset = global_position - get_global_mouse_position()
+			print ("3")
+			position = get_global_mouse_position() + drag_offset
+			print ("4")
+			#inDropZone = false  # Reset drop zone flag
+			print ("5")
+		else:
+			print ("6")
 			dragging = false
+			print ("7")
+			tileDropped()
+			print ("8")
 			checkDropZone()
+			print ("9")
 	if inDropZone:
-			# Snap to the center of the correct drop zone
+
 		position = correctDropZone.global_position
 	else:
-			# Return to original position if not dropped in a correct zone
+		
 		return
-
+func tileDropped():
+	emit_signal("tile_dropped", tile_id)
+	
 func checkDropZone():
-	var area2d= $Area2D
-	for area in area2d.get_overlapping_areas():
 
-		if area.has_method("checkTile") and area.checkTile(tile_id):
+	for area in area2d.get_overlapping_areas():
+		if area.owner and area.owner.has_method("checkTile"):
+			area.owner.checkTile(tile_id)
+		if global_position.distance_to(area2d.global_position) <= 10:
 			global_position = area.global_position
 			$"../SnapSound".play()
+
 
 
 func _on_strum_pressed():
@@ -66,3 +83,5 @@ func _on_strum_pressed():
 func settleTile():
 	set_process(false) 
 	$".".modulate = Color(0, 1, 0, 1)
+
+
