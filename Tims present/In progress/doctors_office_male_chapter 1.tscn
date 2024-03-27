@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://8bn85v2l14x7"]
+[gd_scene load_steps=3 format=3 uid="uid://bgolvywwtuqjg"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/doctors_office_male.gd" id="1_4eaif"]
+[ext_resource type="Script" path="res://In progress/doctors_office_male.gd" id="1_4eaif"]
 [ext_resource type="Texture2D" path="res://Assets/OfficeDayRealFinal.jpg" id="2_yi7ua"]
 
 [node name="Doctors Office Male" type="Node2D"]

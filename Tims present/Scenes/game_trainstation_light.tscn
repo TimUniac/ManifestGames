@@ -165,10 +165,10 @@ theme_override_font_sizes/font_size = 48
 text = "Reset Lights"
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 1690.0
-offset_top = 15.0
-offset_right = 1901.0
-offset_bottom = 150.0
+offset_left = 1807.0
+offset_top = 103.0
+offset_right = 2018.0
+offset_bottom = 238.0
 scale = Vector2(0.39, 0.39)
 texture_normal = ExtResource("7_g2khs")
 texture_pressed = ExtResource("8_18855")

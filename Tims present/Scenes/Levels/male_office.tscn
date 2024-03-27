@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_3svbl"]
 [ext_resource type="Texture2D" uid="uid://ckhno2bb7hh8v" path="res://Assets/Texture assets/Chapter 1/BG_Office_Night.jpeg" id="3_j2gvj"]
 [ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_xu34y"]
-[ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_beln1"]
+[ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_htqh0"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="6_8gbpb"]
 [ext_resource type="Script" path="res://Scenes/Levels/dialogueChapterOne.gd" id="7_yq4eg"]
 [ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="8_72lac"]
@@ -129,21 +129,21 @@ metadata/_edit_use_anchors_ = true
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.058
-anchor_top = 0.215
-anchor_right = 0.446
-anchor_bottom = 0.999
-offset_left = 0.244034
-offset_top = -0.0700226
-offset_right = 2367.57
-offset_bottom = 2107.1
-grow_vertical = 2
-scale = Vector2(0.29, 0.29)
-texture = ExtResource("5_beln1")
+anchor_left = 0.747
+anchor_top = 0.342
+anchor_right = 1.003
+anchor_bottom = 1.0
+offset_left = -1559.75
+offset_top = -110.516
+offset_right = 4963.25
+offset_bottom = 5017.0
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("5_htqh0")
 
 [node name="Dialogue" type="Control" parent="CanvasLayer/Control"]
 layout_mode = 1
-anchor_right = 1.0
+anchor_left = -0.00103788
+anchor_right = 0.998962
 anchor_bottom = 0.979
 offset_right = -15.0
 offset_bottom = 0.0999756

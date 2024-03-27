@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_c5vks"]
 [ext_resource type="Texture2D" uid="uid://ckhno2bb7hh8v" path="res://Assets/Texture assets/Chapter 1/BG_Office_Night.jpeg" id="3_l1m8e"]
 [ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_usnb6"]
-[ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_uk422"]
+[ext_resource type="Texture2D" path="res://Assets/Serephina/Seraphina.png" id="5_jl6ka"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="6_3rnhl"]
 [ext_resource type="Script" path="res://dialogueChapter2.gd" id="8_d4qmg"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="8_p132d"]
@@ -138,7 +138,7 @@ offset_right = 2367.57
 offset_bottom = 2107.1
 grow_vertical = 2
 scale = Vector2(0.29, 0.29)
-texture = ExtResource("5_uk422")
+texture = ExtResource("5_jl6ka")
 
 [node name="Dialogue" type="Control" parent="CanvasLayer/Control"]
 layout_mode = 1
