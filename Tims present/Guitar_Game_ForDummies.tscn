@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dphyuf1oidmg3"]
+[gd_scene load_steps=37 format=3 uid="uid://bfnn6l8wa35ea"]
 
 [ext_resource type="Script" path="res://Guitar_Game_ForDummies.gd" id="1_ot8b0"]
 [ext_resource type="Texture2D" uid="uid://dati8v503uoaf" path="res://Assets/Texture assets/GuitarChordButtons/Layer 7.jpg" id="1_s08to"]
@@ -95,7 +95,6 @@ scale = Vector2(0.3, 0.3)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="C/Area2D" groups=["Not_D", "Not_G", "Not_e", "chord_tiles"]]
 z_index = 1
 position = Vector2(5.55664, -11.1104)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_lies8")
 debug_color = Color(0.921569, 0.176471, 0.54902, 0.419608)
 
@@ -366,7 +365,6 @@ scale = Vector2(0.3, 0.3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="A/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
 position = Vector2(-66.668, 11.1113)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8ci1y")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 

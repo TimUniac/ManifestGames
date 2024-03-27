@@ -15,8 +15,6 @@ func _ready():
 	set_process(true)
 
 
-
-
 func _process(delta):
 	if dragging == true:
 		position = get_global_mouse_position() + drag_offset
@@ -36,11 +34,11 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			print ("1")
 			dragging = true
 			print ("2")
-			drag_offset = global_position - get_global_mouse_position()
+			#drag_offset = global_position - get_global_mouse_position()
 			print ("3")
 			position = get_global_mouse_position() + drag_offset
 			print ("4")
-			#inDropZone = false  # Reset drop zone flag
+			#inDropZone = false 
 			print ("5")
 		else:
 			print ("6")
