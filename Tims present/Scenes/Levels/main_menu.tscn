@@ -88,7 +88,7 @@ script = ExtResource("1_fmsfi")
 
 [node name="MainMenuBg2" type="Sprite2D" parent="."]
 position = Vector2(578, 323)
-scale = Vector2(0.29, 0.29)
+scale = Vector2(0.295674, 0.295674)
 texture = ExtResource("2_6wvn1")
 
 [node name="AudioStreamPlayerA" type="AudioStreamPlayer" parent="."]
