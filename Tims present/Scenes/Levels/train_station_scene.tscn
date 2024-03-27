@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=33 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
@@ -3860,6 +3860,8 @@ size = Vector2(145, 57)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mk5e2"]
 size = Vector2(81, 1092)
 
+[sub_resource type="Theme" id="Theme_lqgy4"]
+
 [node name="Train_Station_Scene" type="Node2D"]
 script = ExtResource("1_nmqxj")
 
@@ -4156,6 +4158,17 @@ polygon = PackedVector2Array(3263, 230, 3250, 1, 1535, 6, 1532, 474, 1627, 561, 
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Gravel"]
 polygon = PackedVector2Array(3255, 893, 3260, 1083, 100, 1087, 96, -1, 144, 0, 141, 889, 1531, 887, 1541, 811, 1653, 807, 1659, 885)
+
+[node name="TextureRect" type="ColorRect" parent="."]
+show_behind_parent = true
+z_index = 1
+texture_filter = 1
+offset_left = 1961.0
+offset_top = 84.0
+offset_right = 2134.0
+offset_bottom = 245.0
+theme = SubResource("Theme_lqgy4")
+color = Color(0.941176, 0.984314, 0.694118, 1)
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_entered" from="Platform" to="Male Doctor Character" method="_on_platform_body_entered"]
