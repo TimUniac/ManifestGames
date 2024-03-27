@@ -30,7 +30,7 @@ func change_scene():
 	$"transitions/transition player".play("Fade_Out")
 	$Finish.queue_free()
 	await $"transitions/transition player".animation_finished
-	get_tree().change_scene_to_file("res://Scenes/Levels/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Levels/train_station_scene.tscn")
 	get_tree().queue_delete($root)
 	
 func _on_male_doctor_character_all_items_collected():

@@ -31,4 +31,8 @@ func hallwayJump():
 	if Input.is_action_pressed("hallJump"):
 		get_tree().change_scene_to_file("res://Scenes/highschool_hallway_scene.tscn")
 
+func trainJump():
+	if Input.is_action_just_pressed("trainJump"):
+		get_tree().change_scene_to_file("res://Scenes/Levels/train_station_scene.tscn")
+
 
