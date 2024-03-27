@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=38 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
@@ -13,6 +13,7 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="10_76lgp"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="11_w1bx0"]
 [ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="12_j2yq6"]
+[ext_resource type="Script" path="res://Scenes/Levels/ExitBlocker.gd" id="14_njdwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")
@@ -4001,6 +4002,12 @@ size = Vector2(81, 1092)
 
 [sub_resource type="Theme" id="Theme_lqgy4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvjpo"]
+size = Vector2(56, 179)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hmw0p"]
+radius = 180.469
+
 [node name="Train_Station_Scene" type="Node2D"]
 script = ExtResource("1_nmqxj")
 
@@ -4316,7 +4323,26 @@ offset_bottom = 245.0
 theme = SubResource("Theme_lqgy4")
 color = Color(0.941176, 0.984314, 0.694118, 1)
 
+[node name="ExitBlocker" type="StaticBody2D" parent="."]
+position = Vector2(139, 982)
+script = ExtResource("14_njdwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitBlocker"]
+position = Vector2(3, 19.5)
+shape = SubResource("RectangleShape2D_pvjpo")
+
+[node name="Area2D" type="Area2D" parent="ExitBlocker"]
+light_mask = 4
+visibility_layer = 4
+
+[node name="Speech bubble to collect" type="CollisionShape2D" parent="ExitBlocker/Area2D"]
+light_mask = 4
+visibility_layer = 4
+z_index = 3
+shape = SubResource("CircleShape2D_hmw0p")
+
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_entered" from="Platform" to="Male Doctor Character" method="_on_platform_body_entered"]
 [connection signal="body_entered" from="ParkingLot" to="Male Doctor Character" method="_on_parking_lot_body_entered"]
 [connection signal="body_entered" from="Gravel" to="Male Doctor Character" method="_on_gravel_body_entered"]
+[connection signal="body_entered" from="ExitBlocker/Area2D" to="ExitBlocker" method="_on_area_2d_body_entered"]

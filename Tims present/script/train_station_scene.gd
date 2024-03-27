@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var done = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CanvasLayer/Objectives/Label/Orbs.visible = false
@@ -32,3 +32,7 @@ func lightson():
 func hide_show_objectives():
 	if Input.is_action_just_pressed("Objective"):
 		$CanvasLayer/Objectives.visible = !$CanvasLayer/Objectives.visible
+
+func donegames():
+	if done == true:
+		$ExitBlocker.disabled = false
