@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bfnn6l8wa35ea"]
+[gd_scene load_steps=39 format=3 uid="uid://bfnn6l8wa35ea"]
 
 [ext_resource type="Script" path="res://Guitar_Game_ForDummies.gd" id="1_ot8b0"]
 [ext_resource type="Texture2D" uid="uid://dati8v503uoaf" path="res://Assets/Texture assets/GuitarChordButtons/Layer 7.jpg" id="1_s08to"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://ChordTile_C.gd" id="5_lnn0g"]
 [ext_resource type="Texture2D" uid="uid://l6gksxdp10uk" path="res://Assets/Texture assets/GuitarChordButtons/Layer 4.jpg" id="6_s5mns"]
 [ext_resource type="Texture2D" uid="uid://bd5wje3vixwwq" path="res://Assets/Texture assets/GuitarChordButtons/Layer 8.jpg" id="7_1s772"]
+[ext_resource type="Script" path="res://ChordTile_G.gd" id="7_a4vi5"]
 [ext_resource type="Script" path="res://ChordTile_Wrong.gd" id="8_8offt"]
 [ext_resource type="Texture2D" uid="uid://dev11pk4nc4e7" path="res://Assets/Texture assets/GuitarChordButtons/Layer 10.jpg" id="8_d22cf"]
 [ext_resource type="Texture2D" uid="uid://ctn1c0wcn0rm4" path="res://Assets/Texture assets/GuitarChordButtons/Layer 11.jpg" id="9_ae2wv"]
@@ -33,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://blftfcqqfy304" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_b.svg.svg" id="27_xwasj"]
 [ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="29_yei51"]
 [ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="30_yjnk3"]
+[ext_resource type="Texture2D" uid="uid://c1wkgashtlo6q" path="res://Assets/Texture assets/Chapter 1/UI_GuitarGame_TornLyrics.png" id="35_4i8a7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ci1y"]
 size = Vector2(600.002, 644.444)
@@ -104,7 +106,7 @@ y_sort_enabled = true
 position = Vector2(1332, 976)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_fg63e")
-script = ExtResource("3_clg7f")
+script = ExtResource("7_a4vi5")
 tile_id = "G"
 
 [node name="Area2D" type="Area2D" parent="G" groups=["Not_C", "Not_D", "Not_e", "chord_tiles"]]
@@ -560,6 +562,15 @@ offset_bottom = 638.0
 scale = Vector2(0.68, 1.72)
 mouse_filter = 2
 texture = ExtResource("30_yjnk3")
+
+[node name="Lyrics" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 101.149
+offset_top = 105.747
+offset_right = 1625.15
+offset_bottom = 396.747
+scale = Vector2(0.645, 0.645)
+texture = ExtResource("35_4i8a7")
 
 [connection signal="input_event" from="eMinor/Area2D" to="eMinor" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="C/Area2D" to="C" method="_on_area_2d_input_event"]

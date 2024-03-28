@@ -19,7 +19,7 @@ func _ready():
 
 func _process(delta):
 	if dragging == true:
-		position = get_global_mouse_position() + drag_offset
+		global_position = get_global_mouse_position() + drag_offset
 
 
 
@@ -34,7 +34,7 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			dragging = true
-			drag_offset = position - get_global_mouse_position()
+			drag_offset = global_position - get_global_mouse_position()
 			inDropZone = false  # Reset drop zone flag
 		elif event is InputEventMouseButton:
 			dragging = false

@@ -168,6 +168,7 @@ func _on_seraphinas_guitar_item_collected():
 	PickupsSoundPlayer.play()
 	guitar = true
 	print ("guitar")
+	talking = false
 	check_done()
 	
 func _on_novel_item_collected():
