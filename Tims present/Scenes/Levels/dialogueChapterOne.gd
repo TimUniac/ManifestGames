@@ -26,7 +26,7 @@ var is_line_complete = false
 
 func _ready():
 	update_dialogue()
-	$Advance.visible = false
+	$Advance/Advance.visible = false
 	
 
 func _process(_delta):
@@ -62,7 +62,7 @@ func complete_line():
 	visible_characters = total_characters
 	is_line_complete = true
 	update_visible_characters()
-	$Advance.visible = true
+	$Advance/Advance.visible = true
 
 func next_line():
 	current_line += 1
@@ -77,7 +77,8 @@ func update_dialogue():
 	visible_characters = 0
 	total_characters = current_dialogue["line"].length()
 	is_line_complete = false
-
+	play_dialogue_audio(current_dialogue["speaker"], current_line)
+	
 	if current_dialogue["speaker"] == "Doc":
 		$Doc.visible_characters = -1
 		$Text.set_text(current_dialogue["line"])
@@ -94,3 +95,12 @@ func update_visible_characters():
 
 func change_scene():
 	get_tree().change_scene_to_file("res://Scenes/Levels/seraphina_bedroom_male.tscn")
+	
+func play_dialogue_audio(speaker, line_):
+	var audio_file_name = "res://Assets/Sound/VO/VO_Office_1/" + speaker + "_" + "line_" + str(line_ + 1) + ".mp3"
+	var audio_stream = load(audio_file_name)
+	if audio_stream:
+		$VOPlayer.stream = audio_stream
+		$VOPlayer.play()
+	else:
+		print("Audio file not found: " + audio_file_name)

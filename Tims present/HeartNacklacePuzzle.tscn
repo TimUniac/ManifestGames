@@ -1,0 +1,205 @@
+[gd_scene load_steps=13 format=3 uid="uid://dmnaaq35sblq2"]
+
+[ext_resource type="Script" path="res://HeartNacklacePuzzle.gd" id="1_5kxnt"]
+[ext_resource type="Texture2D" uid="uid://cwhkbp4tp4mw7" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/BG_Gravel.png" id="1_tj2lx"]
+[ext_resource type="Texture2D" uid="uid://vbt0nucrlp6l" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_1.png" id="3_jbffo"]
+[ext_resource type="Script" path="res://PuzzlePiece.gd" id="4_xymqg"]
+[ext_resource type="Texture2D" uid="uid://cybknlv8pjdgn" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_2.png" id="5_kcmbh"]
+[ext_resource type="Texture2D" uid="uid://b34mpble7jxhs" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_3.png" id="6_q8dqf"]
+[ext_resource type="Texture2D" uid="uid://df3ru7e3sd36k" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_4.png" id="7_x7xkf"]
+[ext_resource type="Texture2D" uid="uid://dffj33vuxr17e" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_5.png" id="8_v1g43"]
+[ext_resource type="Texture2D" uid="uid://dlfjvvhfj2e6v" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_6.png" id="9_ad3sa"]
+[ext_resource type="Texture2D" uid="uid://dyiwwbluhjary" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/UI_BrokenheartNecklace.png" id="11_7hack"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="13_op68i"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="14_x4is8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5kxnt")
+
+[node name="Close" type="TextureButton" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 151.0
+offset_top = 83.0
+offset_right = 418.0
+offset_bottom = 226.0
+scale = Vector2(0.27, 0.445)
+texture_normal = ExtResource("13_op68i")
+texture_pressed = ExtResource("14_x4is8")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -849.0
+offset_top = -489.0
+offset_right = 1071.0
+offset_bottom = 591.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+mouse_filter = 2
+texture = ExtResource("1_tj2lx")
+
+[node name="PuzzlePiece_1" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1558, 306)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_jbffo")
+script = ExtResource("4_xymqg")
+target_position = Vector2(640, 344.2)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_1"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(126, -20)
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_1/Area2D"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-706, -540)
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(440.485, 83.2028, 498.238, -57.7526, 356.304, -226.116, 285.826, -271.143, 182.067, -312.255, 84.1816, -318.128, -21.535, -282.89, -105.717, -230.031, -167.385, -152.702, -208.497, -74.3931, -227.095, 4.89429, -225.137, 78.3085, -212.412, 157.596, -74.3932, 202.623, 6.85187, 169.342, 147.807, 241.778, 231.989, 209.475, 359.24, 302.467, 445.38, 192.835)
+
+[node name="PuzzlePiece_2" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1007, 304)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_kcmbh")
+script = ExtResource("4_xymqg")
+target_position = Vector2(648, 732.2)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_2"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_2/Area2D"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(-575.556, -360, -667.778, -327.778, -823.333, -363.333, -754.444, -205.556, -642.222, -51.1111, -455.556, 136.667, -265.556, 301.111, -93.3333, 453.333, -3.33334, 530, -26.6667, 467.778, -11.1111, 395.556, -77.7363, 283.888, -33.3333, 183.333, -86.6667, 86.6667, -73.3333, -332.222, -168.889, -210, -325.556, -317.778, -405.556, -265.556)
+
+[node name="PuzzlePiece_3" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(366, 457)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_q8dqf")
+script = ExtResource("4_xymqg")
+target_position = Vector2(903, 660.2)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_3"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_3/Area2D"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(-62.2223, 285.556, 8.88892, 401.111, -12.2223, 460, 5.55554, 532.222, 112.222, 441.111, 58.8889, -6.66669, -4.44446, -610, -73.3334, -484.444, -65.5555, -348.889, -77.7778, 87.7778, -20, 183.333)
+
+[node name="PuzzlePiece_4" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(602, 715)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_x7xkf")
+script = ExtResource("4_xymqg")
+target_position = Vector2(977, 632.2)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_4"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_4/Area2D"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(132.222, 437.778, 270, 315.556, 170, -208.889, 68.8889, -341.111, 81.1111, -466.667, 15.5555, -602.222, 72.2222, -55.5555)
+
+[node name="PuzzlePiece_5" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1559, 762)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_v1g43")
+script = ExtResource("4_xymqg")
+target_position = Vector2(1143, 340.2)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_5"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_5/Area2D"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(460, -664.444)
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(366.667, 287.778, 386.667, 167.778, 366.667, 14.4443, 270, -138.889, 116.667, -232.222, -40, -255.556, -172.222, -217.778, -253.333, -161.111, -454.444, 43.3333, -370, 187.778, -385.556, 322.222, -282.222, 442.222, -131.111, 335.555, -48.8889, 378.889, 116.667, 294.444, 203.333, 334.444)
+
+[node name="PuzzlePiece_6" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(302, 848)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_ad3sa")
+script = ExtResource("4_xymqg")
+target_position = Vector2(1191, 660.2)
+
+[node name="Area2D" type="Area2D" parent="PuzzlePiece_6"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PuzzlePiece_6/Area2D"]
+visible = false
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(791.111, -277.778, 823.333, -363.333, 663.333, -318.889, 577.778, -360, 417.778, -272.222, 316.667, -325.556, 185.556, -205.556, 278.889, 303.333, 433.333, 155.556, 568.889, 23.3333, 687.778, -112.222)
+
+[node name="PAD" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 147.0
+offset_top = -371.0
+offset_right = 2627.0
+offset_bottom = 3137.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_7hack")
+metadata/_edit_lock_ = true

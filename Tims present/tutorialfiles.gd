@@ -4,7 +4,7 @@ signal tutorial_interacted(tutorialDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-
+@onready var PickupSound = $"../../Pickups"
 
 @onready var sprite = $Sprite2D
 var player = null
@@ -21,11 +21,12 @@ var gameFiles = null
 var counted = false
 func _ready():
 	interaction_label.visible = false
-	
+	PickupsSoundPlayer.pickup()
 
 
 func _on_code_correct():
 	playercollect()
+	
 
 func _on_body_entered(body):
 	if body.has_method("player"):

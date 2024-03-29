@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bepo0m0r088a4"]
+[gd_scene load_steps=16 format=3 uid="uid://bepo0m0r088a4"]
 
 [ext_resource type="Script" path="res://BookGame.gd" id="1_nkguc"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_xic64"]
@@ -13,17 +13,31 @@
 [ext_resource type="Texture2D" uid="uid://bb3l2ujo5o14o" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_l.svg.svg" id="10_k072c"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="12_x04qv"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="13_f0aee"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Clicks.gd" id="14_6wwlw"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="14_gqvmr"]
 
 [node name="BookGame" type="Control"]
+z_index = 3
+y_sort_enabled = true
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1391.0
-offset_bottom = 550.0
+anchor_left = 0.956
+anchor_top = 0.93
+anchor_right = 1.007
+anchor_bottom = 1.0
+offset_left = -1835.52
+offset_top = -1004.4
+offset_right = -0.440186
 script = ExtResource("1_nkguc")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 0.994
+anchor_bottom = 1.0
+offset_right = -0.401978
+offset_bottom = 8.0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+layout_mode = 0
 offset_left = 778.0
 offset_top = 421.0
 offset_right = 2278.0
@@ -47,6 +61,7 @@ text = "What was the title of the book Seraphina found?"
 autowrap_mode = 2
 
 [node name="SequenceInput" type="LineEdit" parent="CanvasLayer"]
+layout_mode = 0
 offset_left = 907.0
 offset_top = 740.0
 offset_right = 1419.0
@@ -67,6 +82,7 @@ caret_force_displayed = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 visible = false
+layout_mode = 0
 offset_left = 502.0
 offset_top = 343.0
 offset_right = 683.0
@@ -126,14 +142,19 @@ texture_normal = ExtResource("10_k072c")
 script = ExtResource("6_lfb8h")
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 1364.0
-offset_top = 554.0
-offset_right = 1575.0
-offset_bottom = 689.0
-scale = Vector2(0.16963, 0.312977)
+layout_mode = 0
+offset_left = 1354.0
+offset_top = 551.0
+offset_right = 1565.0
+offset_bottom = 686.0
+scale = Vector2(0.21, 0.21)
 texture_normal = ExtResource("12_x04qv")
 texture_pressed = ExtResource("13_f0aee")
-stretch_mode = 1
+texture_hover = ExtResource("13_f0aee")
+
+[node name="Clicks" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_gqvmr")
+script = ExtResource("14_6wwlw")
 
 [connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_C" to="." method="_on_letter_c_button_down"]
 [connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]

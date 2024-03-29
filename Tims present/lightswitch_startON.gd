@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var root = $"../../.."
+@onready var root = $"../../../.."
 var switchON: Texture
 var switchOFF: Texture
 signal switch
@@ -15,6 +15,7 @@ func _ready():
 	switchOFF = preload("res://Assets/Texture assets/Chapter 2/LightSwitch_OFF_V2.png")
 	self.texture_normal = switchON
 	switchID = int(name.split("_")[1]) #Set the switches ID
+	
 func _pressed():
 	switcher()
 	print ("pressed ",switchID)

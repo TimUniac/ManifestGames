@@ -1,12 +1,12 @@
-[gd_scene load_steps=33 format=3 uid="uid://b3yp1wrwi042q"]
+[gd_scene load_steps=37 format=3 uid="uid://b3yp1wrwi042q"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/seraphina_bedroom_male.gd" id="1_ruhi7"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_31iq0"]
-[ext_resource type="PackedScene" uid="uid://00mqe2vdsyto" path="res://Scenes/Nodes/UI/PickupDisplay.tscn" id="2_mhoea"]
 [ext_resource type="Texture2D" uid="uid://b10mf6lp7ygdx" path="res://Assets/Texture assets/Chapter 1/Bedroom(WIP).svg" id="2_s8uak"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_5adpj"]
 [ext_resource type="Texture2D" uid="uid://wqug20yjxh0l" path="res://Assets/Texture assets/Furniture 2.svg" id="3_ui2dy"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="4_i1etj"]
+[ext_resource type="Script" path="res://script/global.gd" id="4_vqf5k"]
 [ext_resource type="PackedScene" uid="uid://84d0ghv75mkp" path="res://Scenes/Nodes/UI/Items/seraphina's_guitar.tscn" id="5_si8n0"]
 [ext_resource type="Texture2D" uid="uid://ejypncfnhp1m" path="res://Assets/Texture assets/Chapter 1/Furniture.svg" id="6_g7641"]
 [ext_resource type="PackedScene" uid="uid://p0gv74ti7sqp" path="res://Scenes/Nodes/UI/Items/yarn.tscn" id="6_saerf"]
@@ -17,14 +17,16 @@
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="12_mu1tk"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="13_o7pkr"]
 [ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="17_5c8an"]
+[ext_resource type="Script" path="res://Scenes/Levels/RoomSound.gd" id="17_nnesx"]
 [ext_resource type="Script" path="res://Scenes/Levels/ObjectivesBedroom.gd" id="18_rkoi0"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="18_t0f3l"]
+[ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="20_67ppl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twda4"]
 size = Vector2(225, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m45hp"]
-size = Vector2(670, 84)
+size = Vector2(668, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ps56l"]
 size = Vector2(240, 87)
@@ -42,7 +44,10 @@ size = Vector2(92, 67)
 size = Vector2(36, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tbj5"]
-size = Vector2(148.785, 156.675)
+size = Vector2(159, 113.338)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vw3l"]
+size = Vector2(61, 134)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h3d2"]
 texture = ExtResource("2_s8uak")
@@ -11666,6 +11671,9 @@ sources/1 = SubResource("TileSetAtlasSource_bwuyi")
 sources/2 = SubResource("TileSetAtlasSource_bu02x")
 sources/3 = SubResource("TileSetAtlasSource_ecml8")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3thre"]
+size = Vector2(1154, 649)
+
 [node name="Seraphina_Bedroom_Male" type="Node2D"]
 position = Vector2(0, -4)
 script = ExtResource("1_ruhi7")
@@ -11684,7 +11692,6 @@ limit_right = 1071
 limit_bottom = 802
 
 [node name="Finish" type="TextureRect" parent="."]
-visible = false
 z_index = 2
 offset_left = 185.0
 offset_top = 246.0
@@ -11693,9 +11700,9 @@ offset_bottom = 2736.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_31iq0")
 expand_mode = 1
+script = ExtResource("4_vqf5k")
 
 [node name="FinishText" type="RichTextLabel" parent="Finish"]
-visible = false
 z_index = 5
 layout_mode = 0
 offset_left = 950.0
@@ -11716,7 +11723,7 @@ fit_content = true
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(747, 640)
 
-[node name="Desk" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(102.5, 43.5)
 shape = SubResource("RectangleShape2D_twda4")
 
@@ -11725,7 +11732,7 @@ position = Vector2(-610, 166)
 shape = SubResource("RectangleShape2D_m45hp")
 
 [node name="USWall" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-253, -395)
+position = Vector2(-254, -404.5)
 shape = SubResource("RectangleShape2D_m45hp")
 
 [node name="Boxes" type="CollisionShape2D" parent="StaticBody2D"]
@@ -11748,13 +11755,13 @@ shape = SubResource("RectangleShape2D_as2yl")
 position = Vector2(276, -222.5)
 shape = SubResource("RectangleShape2D_snajd")
 
-[node name="Plant" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-41.5, -321)
+[node name="BookShelf" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-324.5, -407.337)
 shape = SubResource("RectangleShape2D_8tbj5")
 
-[node name="BookShelf" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-319.393, -407.337)
-shape = SubResource("RectangleShape2D_8tbj5")
+[node name="Plant2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-40.5, -347)
+shape = SubResource("RectangleShape2D_0vw3l")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(116, 325)
@@ -11787,14 +11794,17 @@ y_sort_enabled = true
 position = Vector2(475, 305)
 
 [node name="Guitar Poster" parent="." instance=ExtResource("8_cjstk")]
-offset_left = -113.0
-offset_top = -2.0
-offset_right = -113.0
-offset_bottom = -2.0
+z_as_relative = false
+offset_left = -132.0
+offset_top = -3.0
+offset_right = -132.0
+offset_bottom = -3.0
 rotation = -0.0030264
+scale = Vector2(1.01706, 1.00603)
 
 [node name="Seraphina\'s Guitar" parent="." instance=ExtResource("5_si8n0")]
-position = Vector2(320, 318)
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="Journal Read" parent="." instance=ExtResource("10_if3c2")]
 z_as_relative = false
@@ -11803,25 +11813,20 @@ offset_left = -18.0
 offset_top = 12.0
 offset_right = -18.0
 offset_bottom = 12.0
-mouse_filter = 2
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PickupDisplay" parent="CanvasLayer" instance=ExtResource("2_mhoea")]
-position = Vector2(10, 100)
-
-[node name="In_game_settings" parent="CanvasLayer" instance=ExtResource("12_mu1tk")]
-offset_left = -6.0
-offset_top = 39.0
-offset_right = -6.0
-offset_bottom = 39.0
-mouse_filter = 2
 
 [node name="transitions" parent="." instance=ExtResource("13_o7pkr")]
+
+[node name="In_game_settings" parent="." instance=ExtResource("12_mu1tk")]
+offset_left = -821.0
+offset_top = 75.0
+offset_right = -821.0
+offset_bottom = 75.0
+mouse_filter = 2
 
 [node name="Room" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.162
 bus = &"Music"
+script = ExtResource("17_nnesx")
 
 [node name="Objectives" type="TextureRect" parent="."]
 z_index = 2
@@ -11830,16 +11835,17 @@ offset_top = 101.0
 offset_right = 397.0
 offset_bottom = 413.0
 scale = Vector2(0.6, 0.6)
+mouse_filter = 2
 texture = ExtResource("17_5c8an")
 expand_mode = 1
 script = ExtResource("18_rkoi0")
 
 [node name="oTohide" type="RichTextLabel" parent="Objectives"]
 layout_mode = 0
-offset_left = 341.026
-offset_top = 253.846
-offset_right = 431.026
-offset_bottom = 276.846
+offset_left = 350.0
+offset_top = 285.0
+offset_right = 440.0
+offset_bottom = 308.0
 text = "[Q] to hide"
 
 [node name="Label" type="Label" parent="Objectives"]
@@ -11853,22 +11859,47 @@ theme_override_font_sizes/font_size = 25
 text = "Collect Seraphinas Book"
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label"]
-position = Vector2(-25.8976, -87.3077)
+z_index = 1
+position = Vector2(-24.2309, 52.6926)
+scale = Vector2(0.162, 0.162)
+texture = ExtResource("18_t0f3l")
+
+[node name="Label4" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 88.3333
+offset_top = 108.333
+offset_right = 406.334
+offset_bottom = 153.333
+theme_override_fonts/font = ExtResource("3_5adpj")
+theme_override_font_sizes/font_size = 25
+text = "Collect Seraphinas Journal"
+
+[node name="TextureRect" type="TextureRect" parent="Objectives/Label4"]
+layout_mode = 0
+offset_left = -36.6667
+offset_top = 143.333
+offset_right = 22.3333
+offset_bottom = 202.333
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("20_67ppl")
+
+[node name="Orbs" type="Sprite2D" parent="Objectives/Label4"]
+position = Vector2(-26.6667, 13.3333)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
 
 [node name="Label2" type="Label" parent="Objectives"]
 layout_mode = 0
-offset_left = 83.3333
-offset_top = 108.333
-offset_right = 225.333
-offset_bottom = 141.333
+offset_left = 85.0
+offset_top = 245.0
+offset_right = 377.0
+offset_bottom = 278.0
 theme_override_fonts/font = ExtResource("3_5adpj")
 theme_override_font_sizes/font_size = 25
 text = "Collect Seraphinas Guitar"
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label2"]
-position = Vector2(-21.6666, 63.3336)
+position = Vector2(-23.3333, -70)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
 
@@ -11884,12 +11915,20 @@ text = "Collect Seraphina's Friendship Necklace"
 autowrap_mode = 2
 
 [node name="Orbs" type="Sprite2D" parent="Objectives/Label3"]
-position = Vector2(-26.795, 79.7437)
+position = Vector2(-26.795, 78.0768)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("18_t0f3l")
+
+[node name="BedroomFloor" type="Area2D" parent="." groups=["bedroom"]]
+collision_layer = 4
+collision_mask = 4
+
+[node name="BedroomFloor" type="CollisionShape2D" parent="BedroomFloor"]
+position = Vector2(491, 427.5)
+shape = SubResource("RectangleShape2D_3thre")
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Novel" to="Male Doctor Character" method="_on_novel_item_collected"]
 [connection signal="item_collected" from="Friendship Necklace" to="Male Doctor Character" method="_on_friendship_necklace_item_collected"]
-[connection signal="body_exited" from="Seraphina's Guitar" to="Seraphina's Guitar" method="_on_body_exited"]
 [connection signal="item_collected" from="Seraphina's Guitar" to="Male Doctor Character" method="_on_seraphinas_guitar_item_collected"]
+[connection signal="finished" from="Room" to="Room" method="_on_finished"]

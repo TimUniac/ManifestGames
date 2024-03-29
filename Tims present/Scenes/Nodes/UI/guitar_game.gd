@@ -1,114 +1,50 @@
 extends Control
 
-var secret_code = "6415"
-var entered_code = ""
-signal changeSong
-@onready var clue = $Clue
-@onready var chords = $Clue2
-@onready var bigHint = $BigHint
-@onready var wrong_answer = preload("res://Assets/Sound/Music/WrongAnswerGuitar.mp3")
-@onready var audio_player = $Chords
-@onready var audio_files = {
-	KEY_1: preload("res://Assets/Sound/SFX/Sounds-Guitar/G.wav"),
-	KEY_2: preload("res://Assets/Sound/SFX/Sounds-Guitar/a min.wav"),
-	KEY_3: preload("res://Assets/Sound/SFX/Sounds-Guitar/b min.wav"),
-	KEY_4: preload("res://Assets/Sound/SFX/Sounds-Guitar/C.wav"),
-	KEY_5: preload("res://Assets/Sound/SFX/Sounds-Guitar/D.wav"),
-	KEY_6: preload("res://Assets/Sound/SFX/Sounds-Guitar/e min.wav"),
-	KEY_7: preload("res://Assets/Sound/SFX/Sounds-Guitar/F#.wav")
-}
+
+
+var total_pieces = 4  # Updated the total number of pieces to 4
+var pieces_snapped = 0
+@onready var root = $"."
+var correct_order = {"eMinor": 1, "C": 2, "G": 3, "D":4} 
 
 func _ready():
-	bigHint.visible = false
-	audio_player.stop()
-	clue.visible = true
-	chords.visible = false
-	if global.journalLyricsSeen == true:
-		displayChords()
-	if global.guitarPosterSeen:
-		bigHint.visible = true
-func _process(_delta):
-	if global.guitarPosterSeen == true:
-		bigHint.visible = true
-func _input(event):
-	if event is InputEventKey and event.pressed:
-		var audio_stream = audio_files.get(event.keycode)
-		print ("gotStream")
-		if audio_stream:
-			print ("stream")
-			if audio_player.is_playing:
-				print ("is it playing?")
-				audio_player.stop()
-				print ("Stop")
-				audio_player.stream = audio_stream
-				audio_player.play()
-				print("play")
-	if event is InputEventKey and event.pressed and !event.echo:
-		if event.keycode == KEY_1:
-			_append_number_to_code(1)
-			#PLAY G Chord
-		elif event.keycode == KEY_2:
-			_append_number_to_code(2)
-			#PLAY
-		elif event.keycode == KEY_3:
-			_append_number_to_code(3)
-		elif event.keycode == KEY_4:
-			_append_number_to_code(4)
-		elif event.keycode == KEY_5:
-			_append_number_to_code(5)
-		elif event.keycode == KEY_6:
-			_append_number_to_code(6)
-		elif event.keycode == KEY_7:
-			_append_number_to_code(7)
-			
-		elif event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
-			_on_EnterButton_pressed()
-		elif event.keycode == KEY_BACKSPACE and entered_code != "":
-			entered_code = entered_code.substr(0, entered_code.length() - 1)
-			$GuitarSequenceInput.text = entered_code
+	root.visible = true
+func snapped_pieces(piece_id):
+	pieces_snapped += 1
+	print(pieces_snapped)
+	if pieces_snapped == total_pieces:
+		if check_order():
+			winstate()
 
-
-func _append_number_to_code(number):
-	entered_code += str(number)
-	$GuitarSequenceInput.text = entered_code
-
-func _on_EnterButton_pressed():
-	if entered_code == secret_code:
-		print("Code Correct!")
-		emit_signal("changeSong") 
-		var parent = get_parent()
-		if parent and parent.has_method("playercollect"):
-			parent.playercollect()
-			parent.close()
-			
 
 		else:
-			print("Parent node doesn't have the 'playercollect' method.")
-		#PLAY SONG
-		# Add more feedback here
-	else:
-		print("Incorrect Code")
-		entered_code = ""
-		var audio_stream = wrong_answer
-		if audio_stream:
-			print ("stream")
-			if audio_player.is_playing:
-				print ("is it playing?")
-				audio_player.stop()
-				print ("Stop")
-				audio_player.stream = wrong_answer
-				audio_player.play()
-		
-		$GuitarSequenceInput.clear()
-
-func displayChords():
-	print ("Guitar Change")
-	chords.visible = true
-	clue.visible = false
+			print("Pieces are in the wrong order.")
+func unsnapped_pieces():
+	pieces_snapped -= 1
+	print(pieces_snapped)
 	
+func winstate():    
+	print("All pieces correctly placed in the right order!")
+	for child in get_children():
+		if child.has_method("winHide"):
+			child.winHide()
+	var timer = await get_tree().create_timer(3.0).timeout
+	var parent = get_parent()
+	parent.solvedpuzzle()
+	parent.close()
+	parent.playersolved_puzzle()
 
-
-
+func check_order():
+	var snapped_pieces_order = []
+	for child in get_children():
+		if "piece_id" in child and child.isSnapped:
+			snapped_pieces_order.append(correct_order[child.piece_id])
+	snapped_pieces_order.sort()
+	for i in range(len(snapped_pieces_order) - 1):
+		if snapped_pieces_order[i] + 1 != snapped_pieces_order[i + 1]:
+			return false
+	return true
+	
 func _on_close_pressed():
 	var parent = get_parent()
 	parent.close()

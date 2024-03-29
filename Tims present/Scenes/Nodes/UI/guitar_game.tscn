@@ -1,11 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://xox3s1h15gac"]
+[gd_scene load_steps=30 format=3 uid="uid://xox3s1h15gac"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/guitar_game.gd" id="1_qw654"]
 [ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="2_11gyi"]
-[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="2_o5paw"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="3_bcud7"]
-[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_bvjf5"]
-[ext_resource type="Texture2D" uid="uid://6okuon7k8ey8" path="res://Scenes/Nodes/UI/ChordChartBigHint.png" id="6_pjeq7"]
+[ext_resource type="Texture2D" uid="uid://dati8v503uoaf" path="res://Assets/Texture assets/GuitarChordButtons/Layer 7.jpg" id="5_4hnsv"]
+[ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="5_b40my"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_xlec7"]
+[ext_resource type="Script" path="res://PuzzlePiece.gd" id="6_nxlo0"]
+[ext_resource type="Texture2D" uid="uid://bpd02n4j4m5h0" path="res://Assets/Texture assets/GuitarChordButtons/Layer 5.jpg" id="7_vsqta"]
+[ext_resource type="Texture2D" uid="uid://bnywgt2mug8kq" path="res://Assets/Texture assets/GuitarChordButtons/Layer 2.png" id="8_py6rw"]
+[ext_resource type="Texture2D" uid="uid://xmxoxd014sh6" path="res://Assets/Texture assets/GuitarChordButtons/Layer 6.jpg" id="9_1rifw"]
+[ext_resource type="Texture2D" uid="uid://4u86h3nx0pgt" path="res://Assets/Texture assets/GuitarChordButtons/Layer 3.jpg" id="10_ftamy"]
+[ext_resource type="Texture2D" uid="uid://l6gksxdp10uk" path="res://Assets/Texture assets/GuitarChordButtons/Layer 4.jpg" id="11_vh5s8"]
+[ext_resource type="Texture2D" uid="uid://bd5wje3vixwwq" path="res://Assets/Texture assets/GuitarChordButtons/Layer 8.jpg" id="12_0bxfp"]
+[ext_resource type="Texture2D" uid="uid://dev11pk4nc4e7" path="res://Assets/Texture assets/GuitarChordButtons/Layer 10.jpg" id="13_pomky"]
+[ext_resource type="Texture2D" uid="uid://ctn1c0wcn0rm4" path="res://Assets/Texture assets/GuitarChordButtons/Layer 11.jpg" id="14_gkcsw"]
+[ext_resource type="Texture2D" uid="uid://c8dduah7250rx" path="res://Assets/Texture assets/GuitarChordButtons/Layer 12.jpg" id="15_1a1rh"]
+[ext_resource type="Texture2D" uid="uid://bqgiov83i1tik" path="res://Assets/Texture assets/GuitarChordButtons/Layer 13.jpg" id="16_1pway"]
+[ext_resource type="Texture2D" uid="uid://bt5ab7votca4w" path="res://Assets/Texture assets/GuitarChordButtons/Layer 14.jpg" id="17_vdk4i"]
+[ext_resource type="Texture2D" uid="uid://vdl73ym6413n" path="res://Assets/Texture assets/GuitarChordButtons/Layer 15.jpg" id="18_xgw6c"]
+[ext_resource type="Texture2D" uid="uid://psss5yummtki" path="res://Assets/Texture assets/GuitarChordButtons/Layer 16.jpg" id="19_nt0jc"]
+[ext_resource type="Texture2D" uid="uid://by6wkwqerlx7m" path="res://Assets/Texture assets/GuitarChordButtons/Layer 18.jpg" id="20_02y0t"]
+[ext_resource type="Texture2D" uid="uid://gfpu0q8t4ifd" path="res://Assets/Texture assets/GuitarChordButtons/Layer 19.jpg" id="21_sarrx"]
+[ext_resource type="Texture2D" uid="uid://boc62sp112h38" path="res://Assets/Texture assets/GuitarChordButtons/Layer 20.jpg" id="23_jpo8p"]
+[ext_resource type="Texture2D" uid="uid://b6m1ldi53fd6d" path="res://Assets/Texture assets/GuitarChordButtons/Layer 21.jpg" id="24_lboxv"]
+[ext_resource type="Texture2D" uid="uid://dtrb2qxiwbq66" path="res://Assets/Texture assets/GuitarChordButtons/Layer 22.jpg" id="25_nopvl"]
+[ext_resource type="Texture2D" uid="uid://dkcnhc2f3y7y6" path="res://Assets/Texture assets/GuitarChordButtons/Layer 23.jpg" id="26_m4e3w"]
+[ext_resource type="Texture2D" uid="uid://d22qng25na2pi" path="res://Scenes/Nodes/TicketPad.png" id="27_80xad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7wcp"]
+size = Vector2(267.893, 379.005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y15lx"]
+size = Vector2(280.845, 368.098)
 
 [node name="GuitarGame" type="Control"]
 z_index = 2
@@ -14,10 +41,10 @@ anchor_left = -0.412
 anchor_top = -0.256
 anchor_right = -0.412
 anchor_bottom = -0.256
-offset_left = -379.96
-offset_top = -227.52
-offset_right = 792.04
-offset_bottom = 275.48
+offset_left = -295.96
+offset_top = -82.52
+offset_right = 876.04
+offset_bottom = 420.48
 scale = Vector2(0.815, 0.815)
 mouse_filter = 2
 mouse_force_pass_scroll_events = false
@@ -27,130 +54,502 @@ script = ExtResource("1_qw654")
 z_index = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.109
+anchor_left = -0.053
+anchor_top = -0.05
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -61.825
-offset_top = -70.547
-offset_right = 266.175
-offset_bottom = 163.28
+anchor_bottom = 0.681
+offset_left = 0.116004
+offset_top = 0.150002
+offset_right = 266.0
+offset_bottom = 332.457
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.85, 0.85)
+scale = Vector2(0.525, 0.525)
 texture = ExtResource("2_11gyi")
 
-[node name="Clue" type="RichTextLabel" parent="."]
-z_index = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.185
-anchor_top = 0.105
-anchor_right = 0.976
-anchor_bottom = 0.487
-offset_left = 0.179993
-offset_top = 0.244999
-offset_right = 0.12793
-offset_bottom = 0.0989838
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("3_bvjf5")
-theme_override_font_sizes/normal_font_size = 37
-text = "Just a closeted soul, 
-locked away from your light;
-in the still of the night, 
-I cry, I fight."
-fit_content = true
-scroll_active = false
-
-[node name="Clue2" type="RichTextLabel" parent="."]
-z_index = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.185
-anchor_top = 0.105
-anchor_right = 0.976
-anchor_bottom = 0.487
-offset_left = 31.0327
-offset_top = -17.2322
-offset_right = 197.981
-offset_bottom = 79.6218
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("3_bvjf5")
-theme_override_font_sizes/normal_font_size = 37
-bbcode_enabled = true
-text = "[i]e min[/i]                                          [i]C[/i]
-Just a closeted soul, locked away from your light;
-[i]G[/i]                            [i]D[/i]
-in the still of the night, I cry, I fight."
-fit_content = true
-scroll_active = false
-
-[node name="GuitarSequenceInput" type="LineEdit" parent="."]
-z_index = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.155
-anchor_top = 0.91
-anchor_right = 0.592
-anchor_bottom = 1.0
-offset_left = 0.339996
-offset_top = 0.184998
-offset_right = 0.175964
-offset_bottom = 11.9149
-tooltip_text = "\"I need to find the password to open this memory\""
-theme_override_fonts/font = ExtResource("2_o5paw")
-theme_override_font_sizes/font_size = 41
-placeholder_text = "Input Seqence and Press Enter"
-alignment = 1
-max_length = 4
-virtual_keyboard_enabled = false
-shortcut_keys_enabled = false
-middle_mouse_paste_enabled = false
-selecting_enabled = false
-caret_mid_grapheme = false
+[node name="Label2" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 888.326
+offset_top = 605.048
+offset_right = 1095.33
+offset_bottom = 634.048
+theme_override_font_sizes/font_size = 18
+text = "Press [H] for assistence."
 
 [node name="Chords" type="AudioStreamPlayer2D" parent="."]
+max_polyphony = 4
 bus = &"SFX"
 
 [node name="Room" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.162
 bus = &"Music"
 
-[node name="Label" type="Label" parent="."]
+[node name="Close" type="TextureButton" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = -18.405
+offset_top = 18.4049
+offset_right = 200.595
+offset_bottom = 161.405
+scale = Vector2(0.245, 0.245)
+texture_normal = ExtResource("5_xlec7")
+texture_pressed = ExtResource("3_bcud7")
+texture_hover = ExtResource("3_bcud7")
+stretch_mode = 0
+
+[node name="Chart" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 716.565
+offset_top = -92.0245
+offset_right = 3272.57
+offset_bottom = 3255.98
+scale = Vector2(0.18, 0.18)
+mouse_filter = 2
+mouse_default_cursor_shape = 6
+texture = ExtResource("5_b40my")
+
+[node name="eMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2038.17, 3081.12)
+scale = Vector2(1, 1)
+texture = ExtResource("5_4hnsv")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(-2917.52, 1411.04)
+
+[node name="Area2D" type="Area2D" parent="Chart/eMinor"]
+y_sort_enabled = true
+position = Vector2(126, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/eMinor/Area2D"]
+visible = false
+position = Vector2(-124.596, 20.886)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="C" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1492.84, 3087.93)
+scale = Vector2(1, 1)
+texture = ExtResource("7_vsqta")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(-2590.32, 1411.04)
+
+[node name="Area2D" type="Area2D" parent="Chart/C"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/C/Area2D"]
+visible = false
+z_index = 1
+position = Vector2(1.71777, -1.75871)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_y15lx")
+debug_color = Color(0.921569, 0.176471, 0.54902, 0.419608)
+
+[node name="G" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(654.394, 3081.12)
+scale = Vector2(1, 1)
+texture = ExtResource("8_py6rw")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(-2276.76, 1411.04)
+
+[node name="Area2D" type="Area2D" parent="Chart/G"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/G/Area2D"]
+visible = false
+z_index = 1
+position = Vector2(-1.36328, -1.36331)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="aMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(940.692, 3081.12)
+scale = Vector2(1, 1)
+texture = ExtResource("10_ftamy")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/aMinor"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/aMinor/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="bMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1220.17, 3081.12)
+scale = Vector2(1, 1)
+texture = ExtResource("11_vh5s8")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/bMinor"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/bMinor/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="Fsharp" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2344.92, 3081.12)
+scale = Vector2(1, 1)
+texture = ExtResource("12_0bxfp")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/Fsharp"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/Fsharp/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="F" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(654.394, 2767.55)
+scale = Vector2(1, 1)
+texture = ExtResource("13_pomky")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/F"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/F/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="gMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(940.693, 2781.19)
+scale = Vector2(1, 1)
+texture = ExtResource("14_gkcsw")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/gMinor"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/gMinor/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="aMinorDark" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1220.17, 2760.74)
+scale = Vector2(1, 1)
+texture = ExtResource("15_1a1rh")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/aMinorDark"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/aMinorDark/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="Asharp" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1492.84, 2740.29)
+scale = Vector2(1, 1)
+texture = ExtResource("16_1pway")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/Asharp"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/Asharp/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="CDark" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1765.5, 2740.29)
+scale = Vector2(1, 1)
+texture = ExtResource("17_vdk4i")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(-2590.32, 1411.04)
+
+[node name="Area2D" type="Area2D" parent="Chart/CDark"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/CDark/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="dMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2038.17, 2726.65)
+scale = Vector2(1, 1)
+texture = ExtResource("18_xgw6c")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/dMinor"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/dMinor/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="E" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2344.92, 2740.29)
+scale = Vector2(1, 1)
+texture = ExtResource("19_nt0jc")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/E"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/E/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="fSharpMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(940.693, 2419.9)
+scale = Vector2(1, 1)
+texture = ExtResource("20_02y0t")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/fSharpMinor"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/fSharpMinor/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="gSharpMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1220.17, 2419.9)
+scale = Vector2(1, 1)
+texture = ExtResource("21_sarrx")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/gSharpMinor"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/gSharpMinor/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="D" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1765.5, 3081.12)
+scale = Vector2(1, 1)
+texture = ExtResource("9_1rifw")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(-1956.38, 1411.04)
+
+[node name="Area2D" type="Area2D" parent="Chart/D"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/D/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="A" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1499.66, 2419.9)
+scale = Vector2(1, 1)
+texture = ExtResource("23_jpo8p")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/A"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/A/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="B" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1765.5, 2406.27)
+scale = Vector2(1, 1)
+texture = ExtResource("24_lboxv")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/B"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/B/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="cSharpMinor" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2038.17, 2426.72)
+scale = Vector2(1, 1)
+texture = ExtResource("25_nopvl")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/cSharpMinor"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/cSharpMinor/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="Dsharp" type="Sprite2D" parent="Chart"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2351.74, 2419.9)
+scale = Vector2(1, 1)
+texture = ExtResource("26_m4e3w")
+script = ExtResource("6_nxlo0")
+target_position = Vector2(689.571, 276.073)
+
+[node name="Area2D" type="Area2D" parent="Chart/Dsharp"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/Dsharp/Area2D"]
+visible = false
+position = Vector2(3.74927, 1.36322)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_r7wcp")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="eMinorPad" type="TextureRect" parent="Chart"]
+z_index = 2
+layout_mode = 0
+offset_left = -3265.17
+offset_top = 702.113
+offset_right = 5164.25
+offset_bottom = 5603.11
+scale = Vector2(0.075, 0.31)
+texture = ExtResource("27_80xad")
+
+[node name="CPad" type="TextureRect" parent="Chart"]
 z_index = 2
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.59
-anchor_top = 0.934
-anchor_right = 0.866
-anchor_bottom = 0.986
-offset_left = 0.519958
-offset_top = 0.197968
-offset_right = 0.0483398
-offset_bottom = 0.0421448
-grow_horizontal = 2
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -5480.33
+offset_top = -937.805
+offset_right = 2949.09
+offset_bottom = 3736.2
+grow_horizontal = 0
 grow_vertical = 2
-text = "Use Numbers 1-7/ Bksp in case of mistake"
+scale = Vector2(0.075, 0.31)
+texture = ExtResource("27_80xad")
 
-[node name="Close" type="Button" parent="."]
+[node name="GPad" type="TextureRect" parent="Chart"]
 z_index = 2
-layout_mode = 0
-offset_left = 8.0
-offset_top = 46.0
-offset_right = 227.0
-offset_bottom = 189.0
-scale = Vector2(0.245, 0.245)
-icon = ExtResource("3_bcud7")
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -5159.95
+offset_top = -937.805
+offset_right = 3269.47
+offset_bottom = 3736.2
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.075, 0.31)
+texture = ExtResource("27_80xad")
 
-[node name="BigHint" type="TextureRect" parent="."]
+[node name="DPad" type="TextureRect" parent="Chart"]
 z_index = 2
-layout_mode = 0
-offset_left = 900.0
-offset_top = 236.935
-offset_right = 3456.0
-offset_bottom = 3584.94
-scale = Vector2(0.065, 0.065)
-texture = ExtResource("6_pjeq7")
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -4832.75
+offset_top = -937.805
+offset_right = 3596.67
+offset_bottom = 3736.2
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.075, 0.31)
+texture = ExtResource("27_80xad")
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

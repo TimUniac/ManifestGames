@@ -3,20 +3,24 @@ extends Node2D
 var offLights = 0
 
 
-
+func _ready():
+	$".".visible = true
 func lightOn():
+	$SwitchSound.play()
 	offLights -= 1
 	print (offLights)
 	
 
 
 func lightOff():
+	$SwitchSound.play()
 	offLights += 1
 	print (offLights)
 	if offLights == 25:
 		winstate()
 
 func winstate():
+	
 	var parent = get_parent()
 	parent.close()
 	parent.playerturnedofflights()
@@ -27,4 +31,9 @@ func winstate():
 
 
 func _on_reset_pressed():
-	offLights = 13
+	offLights = 16
+
+
+func _on_texture_button_pressed():
+	$".".visible = false
+	

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx2w0dr21syr8"]
+
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/journal_read_3.gd" id="1_jjy4i"]
+[ext_resource type="Texture2D" uid="uid://dqvgegajo36xi" path="res://Assets/Journal 2.png" id="2_um03l"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="3_3ku8m"]
+[ext_resource type="PackedScene" uid="uid://be8l8eqaeg78e" path="res://new_journal_3.tscn" id="4_tvytg"]
+
+[node name="Journal Read" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjy4i")
+
+[node name="TextureButton" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(159, 779)
+texture = ExtResource("2_um03l")
+
+[node name="Label" type="Label" parent="TextureButton"]
+offset_left = -53.0
+offset_top = 36.0
+offset_right = 72.0004
+offset_bottom = 62.0
+text = "Press J to read "
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Sprite2D" parent="TextureButton"]
+z_index = -1
+position = Vector2(3.5, 7.49999)
+scale = Vector2(0.307506, 0.535545)
+texture = ExtResource("3_3ku8m")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 331)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NewJournal2" parent="CanvasLayer" instance=ExtResource("4_tvytg")]

@@ -4,7 +4,7 @@ var Speed: float = 300.0
 var current_dir = "none"
 
 
-
+@onready var footfalls = $Footsteps
 @onready var anim = $Sprite2D
 var pen = false
 var glasses = false
@@ -15,6 +15,9 @@ var book = false
 var locker = false
 var puzzle = false
 var lights = false
+var trainlights = false
+var trainpuzzle = false
+var trainmap = false
 
 @onready var SpeechBubble = $SpeechBubble
 
@@ -24,10 +27,11 @@ signal all_items_collected
 
 
 func _ready():
-	
 	$Sprite2D.play("front_idle")
 
+
 	
+
 func _physics_process(_delta):
 	
 
@@ -89,6 +93,9 @@ func check_done():
 	elif locker and puzzle and lights:
 		emit_signal("all_items_collected")
 		
+	elif trainlights and trainpuzzle and trainmap:
+		emit_signal("all_items_collected")
+		
 func play_anim(movement):
 	var dir = current_dir
 	if dir == "right":
@@ -124,7 +131,7 @@ func player():
 func speak(text):
 	SpeechBubble.show_bubble(text)
 	SpeechBubble.position = Vector2(-150, -250)
-	talking = true
+	
 	
 
 func _on_guitar_interacted(guitarDialogue):
@@ -144,7 +151,7 @@ func _on_tutorial_interacted(tutorialDialogue):
 
 
 func _on_pen_item_collected():
-	
+	PickupsSoundPlayer.play()
 	pen = true
 	print ("Pen")
 	
@@ -152,42 +159,80 @@ func _on_pen_item_collected():
 
 
 func _on_glasses_item_collected():
+	PickupsSoundPlayer.play()
 	glasses = true
 	print ("glasses")
 	check_done()
 	
 func _on_files_item_collected():
+	PickupsSoundPlayer.play()
 	files = true
 	print ("files")
 	check_done()
 
 func _on_seraphinas_guitar_item_collected():
+	PickupsSoundPlayer.play()
 	guitar = true
 	print ("guitar")
+	talking = false
 	check_done()
 	
 func _on_novel_item_collected():
+	PickupsSoundPlayer.play()
 	book = true
 	print ("book")
 	check_done()
 
 func _on_friendship_necklace_item_collected():
+	PickupsSoundPlayer.play()
 	necklace = true
 	print ("necklace")
 	check_done()
 
 
 func _on_locker_node_item_collected():
+	PickupsSoundPlayer.play()
 	locker = true
 	print("locker")
 	check_done()
 
 
 func _on_image_puzzle_node_item_collected():
+	PickupsSoundPlayer.play()
 	puzzle = true
 	check_done()
 	print ("puzzle")
 func _on_light_poster_item_collected():
 	lights = true
+	PickupsSoundPlayer.play()
 	check_done()
 	print ("lights")
+
+func _on_trainstation_light_game_node_on_item_collect():
+	PickupsSoundPlayer.play()
+	trainlights = true
+	print("trainlights")
+	check_done()
+
+func _on_train_puzzle_game_node_on_item_collect():
+	PickupsSoundPlayer.play()
+	trainmap = true
+	print("trainlights")
+	check_done()
+	
+func _on_train_necklace_puzzle_game_node_on_item_collect():
+	PickupsSoundPlayer.play()
+	trainpuzzle = true
+	print("trainlights")
+	check_done()
+
+func _on_platform_body_entered(body):
+	footfalls.currentGround = "platform"
+
+
+func _on_parking_lot_body_entered(body):
+	footfalls.currentGround = "parking"
+
+
+func _on_gravel_body_entered(body):
+	footfalls.currentGround = "gravel"

@@ -1,4 +1,11 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://w0ly12ee6vpe"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://w0ly12ee6vpe"]
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_y8f14"]
+resource_name = "Compressor"
+threshold = -37.1
+ratio = 48.0
+release_ms = 123.0
+sidechain = &"Dialogue"
 
 [sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_3p3pq"]
 resource_name = "Compressor"
@@ -14,6 +21,8 @@ bus/1/mute = false
 bus/1/bypass_fx = false
 bus/1/volume_db = -8.79367
 bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectCompressor_y8f14")
+bus/1/effect/0/enabled = true
 bus/2/name = &"SFX"
 bus/2/solo = false
 bus/2/mute = false
@@ -28,3 +37,9 @@ bus/3/volume_db = 6.02
 bus/3/send = &""
 bus/3/effect/0/effect = SubResource("AudioEffectCompressor_3p3pq")
 bus/3/effect/0/enabled = true
+bus/4/name = &"InputSounds"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -80.0
+bus/4/send = &"Master"

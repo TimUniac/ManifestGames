@@ -32,6 +32,7 @@ func _on_body_entered(body):
 func _on_body_exited(_body):
 	interaction_label.visible = false
 	inrange = false
+	
 
 func _process(_delta):
 	if inrange and Input.is_action_just_pressed("Interact"):

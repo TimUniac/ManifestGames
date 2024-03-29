@@ -64,7 +64,6 @@ func close():
 	is_opened = false
 	
 func open_locker():
-	openedlocker.visible = true
 	playerunlockedlocker()
 	closedlocker.visible = false
 	$OpenedLocker/StaticBody2D/CollisionShape2D.disabled = false
@@ -72,20 +71,20 @@ func open_locker():
 	$Interactionarea.visible = false
 	objlist.openlocker()
 	puzzlenode.locker_open()
-	$Interactionarea/CollisionShape2D.queue_free()
-	
+	openedlocker.visible = true
+	if openedlocker.visible == true:
+		print("openeing locker")
+	$LockerDoorSound.play()
 
 
-		
 
 signal item_collected()
 
 func playerunlockedlocker():
 	emit_signal("item_collected")
-	visible = false
 	$Interactionarea.queue_free()
 	print ("player opened locker")
-
+	
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
@@ -99,4 +98,5 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_body_exited(body):
 	interaction_label.visible = false
 	inrange = false
+	
 

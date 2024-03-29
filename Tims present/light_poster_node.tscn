@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy50vp0ngetqt"]
+[gd_scene load_steps=6 format=3 uid="uid://dy50vp0ngetqt"]
 
 [ext_resource type="Script" path="res://LightPoster.gd" id="1_y0bxy"]
 [ext_resource type="Texture2D" uid="uid://b3vhshj6tvc4f" path="res://Assets/Texture assets/Chapter 2/UI_LightGameInstructionsPoster.png" id="2_t7ppv"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="3_6ns3q"]
+[ext_resource type="AudioStream" uid="uid://bmurb21bwnrse" path="res://Assets/Sound/SFX/HallwaySounds/PowerDown.mp3" id="4_8dkvc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0s7ys"]
 radius = 142.372
@@ -15,6 +16,11 @@ script = ExtResource("1_y0bxy")
 position = Vector2(346.4, 351.39)
 scale = Vector2(0.035, 0.035)
 texture = ExtResource("2_t7ppv")
+
+[node name="Polygon2D" type="Polygon2D" parent="UiLightGameInstructionsPoster"]
+show_behind_parent = true
+color = Color(0.941176, 0.984314, 0.694118, 1)
+polygon = PackedVector2Array(1360, 1788.86, 1274.29, 1931.71, -1211.43, 1931.71, -1382.86, 1760.29, -1411.43, -1725.43, -1211.43, -1896.86, 1188.57, -1896.86, 1445.71, -1782.57)
 
 [node name="Interactionarea" type="Area2D" parent="."]
 position = Vector2(346.401, 351.39)
@@ -47,6 +53,10 @@ text = "[E] to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="PowerDown" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_8dkvc")
+volume_db = -15.0
 
 [connection signal="body_entered" from="Interactionarea" to="." method="_on_interactionarea_body_entered"]
 [connection signal="body_exited" from="Interactionarea" to="." method="_on_interactionarea_body_exited"]

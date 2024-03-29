@@ -1,13 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkq7anlswuk6p"]
+[gd_scene load_steps=9 format=3 uid="uid://bkq7anlswuk6p"]
 
 [ext_resource type="Script" path="res://Guitar Poster.gd" id="1_1lx0p"]
 [ext_resource type="Texture2D" uid="uid://bp5yjpxju6s8k" path="res://Assets/spr_guitar_chord.svg.svg" id="2_jj7qr"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="4_5ly5t"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_k08dy"]
 [ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="4_kuew2"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="5_7yatp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5k18p"]
 radius = 86.0
 height = 340.0
+
+[sub_resource type="Theme" id="Theme_u64n6"]
 
 [node name="Guitar Poster" type="Control"]
 layout_mode = 3
@@ -27,20 +31,43 @@ position = Vector2(726, 216)
 texture = ExtResource("2_jj7qr")
 
 [node name="Area2D" type="Area2D" parent="SprGuitarChord_svg"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="SprGuitarChord_svg/Area2D"]
 position = Vector2(0, 1)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_5k18p")
 
-[node name="ChordChart" type="Sprite2D" parent="."]
+[node name="TextureRect" type="ColorRect" parent="SprGuitarChord_svg"]
+show_behind_parent = true
+texture_filter = 1
+offset_left = -78.0
+offset_top = -74.0
+offset_right = 73.0
+offset_bottom = 83.0
+mouse_filter = 2
+theme = SubResource("Theme_u64n6")
+color = Color(0.941176, 0.984314, 0.694118, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ChordChart" type="Sprite2D" parent="CanvasLayer"]
 z_index = 2
-position = Vector2(766, 459)
+position = Vector2(765, 280.86)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("4_kuew2")
 
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/ChordChart"]
+offset_left = 1043.75
+offset_top = -1661.63
+offset_right = 1254.75
+offset_bottom = -1526.63
+texture_normal = ExtResource("4_5ly5t")
+texture_pressed = ExtResource("5_7yatp")
+
 [node name="Panel" type="Panel" parent="."]
-y_sort_enabled = true
+z_as_relative = false
 layout_mode = 0
 offset_left = 663.0
 offset_top = 167.0
@@ -48,6 +75,7 @@ offset_right = 789.0
 offset_bottom = 207.0
 
 [node name="interaction_label" type="Label" parent="Panel"]
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -66,3 +94,4 @@ vertical_alignment = 1
 [connection signal="area_exited" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="SprGuitarChord_svg/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/ChordChart/TextureButton" to="." method="_on_texture_button_pressed"]

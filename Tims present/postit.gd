@@ -3,11 +3,12 @@ extends Control
 var is_opened = false
 @onready var areaLabel = $"Interaction Area/Panel"
 @onready var in_range = false
-@onready var doctor = get_parent().get_node("Male Doctor Character")
+@onready var doctor = $"../Control/Male Doctor Character"
 
 func _ready():
 	$BigPostit.visible = false
 	areaLabel.visible = false
+	$Close2.visible = false
 func _process(_delta):
 	if areaLabel.visible == true:
 		in_range = true
@@ -24,14 +25,15 @@ func _process(_delta):
 	
 func close():
 	$BigPostit.visible = false
-	doctor.talking = false
+
 	is_opened = false
+	$Close2.visible = false
 	
 func open():
 	$BigPostit.visible = true
-	doctor.talking = true
-	is_opened = true
 
+	is_opened = true
+	$Close2.visible = true
 
 
 
@@ -45,3 +47,8 @@ func _on_interaction_area_body_entered(body):
 
 func _on_interaction_area_body_exited(body):
 	areaLabel.visible = false
+
+
+func _on_close_2_pressed():
+	close()
+	print ("Pushed")

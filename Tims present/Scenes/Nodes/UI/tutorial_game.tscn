@@ -1,51 +1,70 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6brfnn42kqe6"]
+[gd_scene load_steps=9 format=3 uid="uid://b6brfnn42kqe6"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/TutorialGame.gd" id="1_sdyng"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_0lgi0"]
-[ext_resource type="FontFile" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_i2l02"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_i2l02"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_ufs11"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="5_7ja8i"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="6_31e6p"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="7_rmrne"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Clicks.gd" id="8_ryfn7"]
 
 [node name="TutorialGame" type="Control"]
 z_index = 2
 layout_mode = 3
-anchor_left = -0.274
-anchor_top = -0.143
-anchor_right = -0.274
-anchor_bottom = -0.143
-offset_left = -1407.92
-offset_top = -637.56
-offset_right = 535.08
-offset_bottom = 435.44
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -12.7
+offset_bottom = 12.7
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_sdyng")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+[node name="CanvasLayer" type="Control" parent="."]
+z_index = 3
+layout_mode = 1
+anchor_top = -22.047
+anchor_bottom = 22.323
+offset_left = -1288.0
+offset_top = -102.306
+offset_right = 312.0
+offset_bottom = -250.305
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 
 [node name="Panel" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(2010, 916)
-scale = Vector2(5.57869, 3.38389)
+position = Vector2(900, 478)
+scale = Vector2(2.11, 2.11)
 texture = ExtResource("2_0lgi0")
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel"]
-offset_left = -177.102
-offset_top = -69.4468
-offset_right = 190.898
-offset_bottom = 390.553
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.13
+anchor_right = 0.958
+anchor_bottom = 0.889
+offset_left = -206.65
+offset_top = -105.43
+offset_right = -206.654
+offset_bottom = -105.579
 theme_override_fonts/font = ExtResource("3_i2l02")
 theme_override_font_sizes/font_size = 25
-text = "This file is retricted. The password should be on a post-it somewhere in here."
+text = "This file is restricted. The password should be on a post-it somewhere in here."
 autowrap_mode = 2
 
 [node name="SequenceInput" type="LineEdit" parent="CanvasLayer"]
 z_index = 2
-offset_left = 1200.0
-offset_top = 1310.0
-offset_right = 1830.0
-offset_bottom = 1446.0
-scale = Vector2(2.5, 2)
+layout_mode = 0
+offset_left = 630.0
+offset_top = 698.0
+offset_right = 1260.0
+offset_bottom = 834.0
 tooltip_text = "\"I need to find the password to open this memory\""
+mouse_filter = 2
 theme_override_fonts/font = ExtResource("3_ufs11")
 theme_override_font_sizes/font_size = 41
 placeholder_text = "Input Seqence and Press Enter"
@@ -61,26 +80,37 @@ draw_control_chars = true
 caret_mid_grapheme = false
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 2002.0
-offset_top = 1076.0
-offset_right = 2432.0
-offset_bottom = 1160.0
-scale = Vector2(2.5, 2)
+layout_mode = 0
+offset_left = 804.348
+offset_top = 572.5
+offset_right = 1234.35
+offset_bottom = 656.5
 theme_override_fonts/font = ExtResource("3_i2l02")
 theme_override_font_sizes/font_size = 40
 text = "Bksp in case of mistake"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Close" type="Button" parent="CanvasLayer"]
+[node name="Close" type="TextureButton" parent="CanvasLayer"]
+layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.033
-anchor_bottom = 0.062
-offset_left = 2836.0
-offset_top = 634.0
-offset_right = 2991.64
-offset_bottom = 710.04
-scale = Vector2(1.115, 0.892)
-icon = ExtResource("6_31e6p")
+anchor_left = 0.75
+anchor_top = 0.302
+anchor_right = 0.816
+anchor_bottom = 0.372
+offset_left = -0.00012207
+offset_top = -0.65802
+offset_right = 113.4
+offset_bottom = 73.812
+scale = Vector2(0.485, 0.485)
+texture_normal = ExtResource("5_7ja8i")
+texture_pressed = ExtResource("6_31e6p")
+texture_hover = ExtResource("6_31e6p")
+stretch_mode = 0
+
+[node name="Clicks" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_rmrne")
+pitch_scale = 0.5
+script = ExtResource("8_ryfn7")
 
 [connection signal="pressed" from="CanvasLayer/Close" to="." method="_on_close_pressed"]

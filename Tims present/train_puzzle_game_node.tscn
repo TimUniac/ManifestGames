@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bogxv8sa7iq2u"]
+
+[ext_resource type="Script" path="res://Train_puzzle_game_node.gd" id="1_muslt"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_5r2ab"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pxoh7"]
+radius = 78.1601
+
+[node name="Train_puzzle_game_node" type="Area2D"]
+script = ExtResource("1_muslt")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 6
+z_as_relative = false
+offset_left = -102.0
+offset_top = -64.0
+offset_right = 105.0
+offset_bottom = -24.0
+metadata/_edit_use_anchors_ = true
+
+[node name="interaction_label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_top = -1.0
+offset_right = 81.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_5r2ab")
+theme_override_font_sizes/font_size = 25
+text = "[E] to Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pxoh7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

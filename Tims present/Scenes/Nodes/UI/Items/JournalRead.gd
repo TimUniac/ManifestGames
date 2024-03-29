@@ -5,6 +5,7 @@ signal journal_interacted(journalDialogue)
 @onready var journalDialogue: String = "This must be her journal, it'll have clues.([J] to read)"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 @onready var doctor = get_parent().get_node("Male Doctor Character")
+@onready var objlist = $"../Objectives"
 
 var is_opened = false
 var inRange = false
@@ -47,5 +48,6 @@ func _on_journal_2_body_entered(body):
 		await get_tree().create_timer(0.3).timeout
 		$Journal2.queue_free()
 		$TextureButton.visible = true
+		objlist.foundjournal()
 		inRange = true
 	

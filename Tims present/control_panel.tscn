@@ -1,0 +1,128 @@
+[gd_scene load_steps=17 format=3 uid="uid://bmqsvdnl72105"]
+
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_cvge8"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_c6gj7"]
+[ext_resource type="Texture2D" uid="uid://b7d7gws7oxjex" path="res://Scenes/Ui controls/text4.png" id="3_vs06t"]
+[ext_resource type="Texture2D" uid="uid://7rp8hjic8cr" path="res://Scenes/Ui controls/J button.png" id="4_yescf"]
+[ext_resource type="Texture2D" uid="uid://ttqcpoth0smq" path="res://Scenes/Nodes/UI/E button.png" id="5_6e2ph"]
+[ext_resource type="Texture2D" uid="uid://t3qf1hygm0ah" path="res://Scenes/Ui controls/a button.png" id="6_hjt47"]
+[ext_resource type="Texture2D" uid="uid://bjb7v1hl3riw6" path="res://Scenes/Ui controls/D button.png" id="7_ni40e"]
+[ext_resource type="Texture2D" uid="uid://m8yfwn2wu4j4" path="res://Scenes/Ui controls/Q button.png" id="8_h3xv8"]
+[ext_resource type="Texture2D" uid="uid://b56aercvmaba" path="res://Scenes/Ui controls/s button.png" id="9_phqpw"]
+[ext_resource type="Texture2D" uid="uid://dw6o050dw11mc" path="res://Scenes/Ui controls/text1.png" id="10_i58e3"]
+[ext_resource type="Texture2D" uid="uid://ecpf1wfi4cn3" path="res://Scenes/Ui controls/W button.png" id="11_bc2do"]
+[ext_resource type="Texture2D" uid="uid://dgun3kfacjnj5" path="res://Scenes/Ui controls/text3.png" id="12_1btyk"]
+[ext_resource type="Texture2D" uid="uid://djli0akguolfm" path="res://Scenes/Nodes/UI/Journal Read indicator.png" id="13_dk6vt"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="14_n7065"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="15_juc7j"]
+
+[sub_resource type="GDScript" id="GDScript_u1ttl"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$CanvasLayer.visible = true
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_texture_button_pressed():
+	$CanvasLayer.visible = false
+"
+
+[node name="Control Panel" type="Node2D"]
+script = SubResource("GDScript_u1ttl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UiDialogueboxV2" type="Sprite2D" parent="CanvasLayer"]
+self_modulate = Color(0.392157, 0.290196, 0.443137, 1)
+position = Vector2(963, 534)
+scale = Vector2(4.37997, 4.37997)
+texture = ExtResource("2_cvge8")
+
+[node name="UiDialogueboxV3" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(1, -65)
+scale = Vector2(0.478208, 0.206161)
+texture = ExtResource("2_cvge8")
+
+[node name="Label" type="Label" parent="CanvasLayer/UiDialogueboxV2/UiDialogueboxV3"]
+offset_left = -158.689
+offset_top = -111.079
+offset_right = 248.311
+offset_bottom = 28.9215
+scale = Vector2(0.811758, 1.7304)
+theme_override_fonts/font = ExtResource("3_c6gj7")
+theme_override_font_sizes/font_size = 100
+text = "Controls"
+
+[node name="Text4" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(103.197, 65.7538)
+scale = Vector2(0.245, 0.245)
+texture = ExtResource("3_vs06t")
+
+[node name="JButton" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(23.2877, -14.1554)
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("4_yescf")
+
+[node name="EButton" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(22.1465, 65.9822)
+scale = Vector2(0.045, 0.045)
+texture = ExtResource("5_6e2ph")
+
+[node name="AButton" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(-156.394, 65.0689)
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("6_hjt47")
+
+[node name="DButton" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(-67.8087, 64.1556)
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("7_ni40e")
+
+[node name="QButton" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(22.8312, 26.0276)
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("8_h3xv8")
+
+[node name="SButton" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(-113.243, 65.5255)
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("9_phqpw")
+
+[node name="Text1" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(-62.5574, 29.4522)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("10_i58e3")
+
+[node name="WButton" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(-113.471, 26.2559)
+scale = Vector2(0.195, 0.195)
+texture = ExtResource("11_bc2do")
+
+[node name="Text3" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(99.5438, 28.0824)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("12_1btyk")
+
+[node name="JournalReadIndicator" type="Sprite2D" parent="CanvasLayer/UiDialogueboxV2"]
+position = Vector2(95.2061, -15.0686)
+scale = Vector2(0.135, 0.135)
+texture = ExtResource("13_dk6vt")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/UiDialogueboxV2"]
+offset_left = -185.161
+offset_top = -87.2151
+offset_right = 25.8391
+offset_bottom = 47.7849
+scale = Vector2(0.165, 0.165)
+texture_normal = ExtResource("14_n7065")
+texture_pressed = ExtResource("15_juc7j")
+texture_hover = ExtResource("15_juc7j")
+
+[connection signal="pressed" from="CanvasLayer/UiDialogueboxV2/TextureButton" to="." method="_on_texture_button_pressed"]

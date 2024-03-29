@@ -1,4 +1,4 @@
-[gd_scene load_steps=153 format=3 uid="uid://bxfhlc0c2pgt6"]
+[gd_scene load_steps=164 format=3 uid="uid://bxfhlc0c2pgt6"]
 
 [ext_resource type="Script" path="res://script/Loading Scene.gd" id="1_sy5j0"]
 [ext_resource type="Texture2D" uid="uid://qe4q34goeulc" path="res://Loading Bar Assets/jiazaitiao_00000.png" id="2_cjnuj"]
@@ -151,6 +151,17 @@
 [ext_resource type="Texture2D" uid="uid://dj4jgdth0jnyt" path="res://Loading Bar Assets/jiazaitiao_00147.png" id="149_il2yw"]
 [ext_resource type="Texture2D" uid="uid://drpr1h3m0q477" path="res://Loading Bar Assets/jiazaitiao_00148.png" id="150_h01nc"]
 [ext_resource type="Texture2D" uid="uid://sebssb8q610y" path="res://Loading Bar Assets/jiazaitiao_00149.png" id="151_me18w"]
+[ext_resource type="Texture2D" uid="uid://t3qf1hygm0ah" path="res://Scenes/Ui controls/a button.png" id="152_gvuw5"]
+[ext_resource type="Texture2D" uid="uid://b7d7gws7oxjex" path="res://Scenes/Ui controls/text4.png" id="152_hkp7v"]
+[ext_resource type="Texture2D" uid="uid://7rp8hjic8cr" path="res://Scenes/Ui controls/J button.png" id="153_1s650"]
+[ext_resource type="Texture2D" uid="uid://bjb7v1hl3riw6" path="res://Scenes/Ui controls/D button.png" id="153_nq7vj"]
+[ext_resource type="Texture2D" uid="uid://ttqcpoth0smq" path="res://Scenes/Nodes/UI/E button.png" id="154_fg1kd"]
+[ext_resource type="Texture2D" uid="uid://m8yfwn2wu4j4" path="res://Scenes/Ui controls/Q button.png" id="154_u5p0r"]
+[ext_resource type="Texture2D" uid="uid://b56aercvmaba" path="res://Scenes/Ui controls/s button.png" id="155_majfg"]
+[ext_resource type="Texture2D" uid="uid://dw6o050dw11mc" path="res://Scenes/Ui controls/text1.png" id="156_88xr5"]
+[ext_resource type="Texture2D" uid="uid://ecpf1wfi4cn3" path="res://Scenes/Ui controls/W button.png" id="157_dh4ng"]
+[ext_resource type="Texture2D" uid="uid://dgun3kfacjnj5" path="res://Scenes/Ui controls/text3.png" id="158_33feo"]
+[ext_resource type="Texture2D" uid="uid://djli0akguolfm" path="res://Scenes/Nodes/UI/Journal Read indicator.png" id="162_8ra1c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ay1m2"]
 animations = [{
@@ -619,7 +630,7 @@ scale = Vector2(0.599479, 0.634259)
 sprite_frames = SubResource("SpriteFrames_ay1m2")
 animation = &"Loading"
 autoplay = "Loading"
-speed_scale = 5.0
+speed_scale = 3.0
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 z_index = 8
@@ -629,5 +640,62 @@ limit_left = -91
 limit_top = 107
 limit_right = 1071
 limit_bottom = 802
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Text4" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(462, 841)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("152_hkp7v")
+
+[node name="JButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1505, 876)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("153_1s650")
+
+[node name="EButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(320, 889)
+scale = Vector2(0.101631, 0.104524)
+texture = ExtResource("154_fg1kd")
+
+[node name="AButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(118.85, 191.415)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("152_gvuw5")
+
+[node name="DButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(308.85, 193.415)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("153_nq7vj")
+
+[node name="QButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1532.6, 177.68)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("154_u5p0r")
+
+[node name="SButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(212.85, 190.415)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("155_majfg")
+
+[node name="Text1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(339.85, 93.415)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("156_88xr5")
+
+[node name="WButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(214.7, 101.915)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("157_dh4ng")
+
+[node name="Text3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1681.6, 89.68)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("158_33feo")
+
+[node name="JournalReadIndicator" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1688, 811)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("162_8ra1c")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

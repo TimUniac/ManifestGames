@@ -10,3 +10,4 @@ func _on_reset_pressed():
 		print (child)
 		if child:
 			child.reset_state() 
+			
