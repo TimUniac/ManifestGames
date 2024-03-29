@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=27 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="9_3xv8w"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="11_jjmvn"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="13_owwma"]
+[ext_resource type="PackedScene" uid="uid://dyx552xqh782b" path="res://Scenes/Nodes/UI/Items/journal_read_2.tscn" id="17_vtnoi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wncn3"]
 texture = ExtResource("1_8peia")
@@ -285,6 +286,8 @@ offset_bottom = 1217.0
 scale = Vector2(1, 0.995649)
 mouse_filter = 2
 texture = SubResource("GradientTexture2D_k2nhn")
+
+[node name="Journal Read 2" parent="." instance=ExtResource("17_vtnoi")]
 
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Locker_Node" to="Male Doctor Character" method="_on_locker_node_item_collected"]

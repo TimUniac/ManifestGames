@@ -1,11 +1,12 @@
 extends Area2D
 
+
+
 signal locker_interacted(lockerDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-
 
 
 
@@ -20,8 +21,8 @@ var collect = false
 var is_opened = false
 
 
-var gametrainlight = null
-@onready var trainlightDialogue: String = "The trainstation is dark, we should turn on the lights!"
+var gametrainNackPuzz = null
+@onready var trainNackPuzzDialogue: String = "This must be the other half of the necklace, lets see if the piece fits"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 
@@ -41,45 +42,38 @@ func _process(delta):
 
 func open():
 	
-	if gametrainlight == null:
-		var trainlight_game_scene = preload("res://Scenes/game_trainstation_light.tscn").instantiate()
+	if gametrainNackPuzz == null:
+		var trainNackPuzz_game_scene = preload("res://Scenes/Nodes/UI/nacklace_game.tscn").instantiate()
 		
-		gametrainlight = trainlight_game_scene
-		add_child(gametrainlight)
+		gametrainNackPuzz = trainNackPuzz_game_scene
+		add_child(gametrainNackPuzz)
 		print_tree()
 	doctor.talking = true
 	is_opened = true	
 func close():
 	
-	if gametrainlight != null:
-		remove_child(gametrainlight)
-		gametrainlight.queue_free()
-		gametrainlight = null
+	if gametrainNackPuzz != null:
+		remove_child(gametrainNackPuzz)
+		gametrainNackPuzz.queue_free()
+		gametrainNackPuzz = null
 	doctor.talking = false
 	is_opened = false
 	
-func lightsturnedon():
+func mapcompleted():
 	doctor.talking = false
 	interaction_label.visible = false
 	$ColorRect.visible = false
 	$CollisionShape2D.queue_free()
 	var parent = get_parent()
-	parent.lightson()
+	parent.puzzlecomplete()
 
 
-		
 
 signal item_collected()
 
-
 func playercollect():
 	emit_signal("item_collected")
-	print("ahhhhhhhhh")
-
-	
-	
-
-
+	print("ahhhhhhh")
 
 func _on_body_entered(body):
 	if body.has_method("player"):
@@ -87,7 +81,7 @@ func _on_body_entered(body):
 		inrange = true
 		player = body
 		print("hi there")
-		doctor.speak(trainlightDialogue)
+		doctor.speak(trainNackPuzzDialogue)
 
 
 func _on_body_exited(body):

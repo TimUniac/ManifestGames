@@ -18,6 +18,10 @@ func _input(_event):
 func _process(delta):
 	pass
 
+func _on_male_doctor_character_all_items_collected():
+	$ExitBlocker.disabled = true
+	print ("bedroom clear")
+	done = true
 
 func _on_teleport_area_body_entered(body):
 	$"transitions/transition player".play("Fade_Out")
@@ -28,6 +32,12 @@ func _on_teleport_area_body_entered(body):
 func lightson():
 	$lightgroup.visible = false
 	$CanvasLayer/Objectives/Label/Orbs.visible = true
+	
+func mapcompleted():
+	$CanvasLayer/Objectives/Label2/Orbs.visible = true
+	
+func puzzlecomplete():
+	$CanvasLayer/Objectives/Label3/Orbs.visible = true
 
 func hide_show_objectives():
 	if Input.is_action_just_pressed("Objective"):
