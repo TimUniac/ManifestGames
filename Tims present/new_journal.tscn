@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://drb6ny7iq5wwi"]
+[gd_scene load_steps=6 format=3 uid="uid://drb6ny7iq5wwi"]
 
 [ext_resource type="Script" path="res://NewJournal.gd" id="1_bere3"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="4_garip"]
+[ext_resource type="Texture2D" uid="uid://bsqmpug5y0s8t" path="res://Scenes/Nodes/UI/UI_forward_button.png" id="4_owd8n"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="4_xpm16"]
+[ext_resource type="Texture2D" uid="uid://cvfv0eqtecm5f" path="res://Scenes/Nodes/UI/UI_backward_button.png" id="5_auhhh"]
 
 [node name="NewJournal" type="Control"]
 layout_mode = 3
@@ -45,4 +47,24 @@ offset_bottom = 52.085
 theme_override_font_sizes/font_size = 24
 text = "Press [J] to close the Journal"
 
+[node name="Forward" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1812.0
+offset_top = 956.0
+offset_right = 3956.0
+offset_bottom = 2891.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("4_owd8n")
+
+[node name="Backward" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 963.0
+offset_right = 2158.0
+offset_bottom = 2898.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("5_auhhh")
+
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Forward" to="." method="_on_forward_pressed"]
+[connection signal="pressed" from="Backward" to="." method="_on_backward_pressed"]

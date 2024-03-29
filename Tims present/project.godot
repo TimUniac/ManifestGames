@@ -30,8 +30,6 @@ PickupsSoundPlayer="*res://pickupsSound.tscn"
 Clicks="*res://Scenes/Nodes/Audio/clicks.tscn"
 TransitionIn="*res://transition_in.tscn"
 
-
-
 [display]
 
 window/size/viewport_width=1920
