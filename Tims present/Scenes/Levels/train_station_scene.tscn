@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="11_w1bx0"]
 [ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="12_j2yq6"]
 [ext_resource type="Script" path="res://Scenes/Levels/ExitBlocker.gd" id="14_njdwj"]
-[ext_resource type="PackedScene" uid="uid://d3e3bkqwi6xyx" path="res://train_puzzle_game_node.tscn" id="15_jpgao"]
-[ext_resource type="PackedScene" uid="uid://bbwlgi31j44ip" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
-[ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
+[ext_resource type="PackedScene" uid="uid://bogxv8sa7iq2u" path="res://train_puzzle_game_node.tscn" id="15_jpgao"]
+[ext_resource type="PackedScene" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
+[ext_resource type="PackedScene" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/journal_read_2.gd" id="18_4epvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]

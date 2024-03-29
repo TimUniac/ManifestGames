@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dtf8kabkuktlf" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_6.png" id="9_gqd0e"]
 [ext_resource type="Texture2D" uid="uid://cv82ma5td1r3w" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_7.png" id="10_xy77r"]
 [ext_resource type="Texture2D" uid="uid://1nu5nvn3rosm" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_8.png" id="11_cwmlh"]
-[ext_resource type="Texture2D" uid="uid://jh0fc0dqvccl" path="res://Scenes/Ui controls/UI_TrainTicketGameInstructions_V3.png" id="13_xed24"]
+[ext_resource type="Texture2D" path="res://Scenes/Ui controls/UI_TrainTicketGameInstructions_V3.png" id="13_xed24"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="15_7hdam"]
 
 [node name="Node2D" type="Node2D"]

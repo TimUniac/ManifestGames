@@ -43,7 +43,7 @@ func _process(delta):
 func open():
 	
 	if gametrainNackPuzz == null:
-		var trainNackPuzz_game_scene = preload("res://Scenes/Nodes/UI/nacklace_game.tscn").instantiate()
+		var trainNackPuzz_game_scene = preload("res://HeartNacklacePuzzle.tscn").instantiate()
 		
 		gametrainNackPuzz = trainNackPuzz_game_scene
 		add_child(gametrainNackPuzz)
