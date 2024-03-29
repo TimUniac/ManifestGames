@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bfnn6l8wa35ea"]
+[gd_scene load_steps=39 format=3 uid="uid://b3v3y5ys4shwq"]
 
 [ext_resource type="Script" path="res://Guitar_Game_ForDummies.gd" id="1_ot8b0"]
 [ext_resource type="Texture2D" uid="uid://dati8v503uoaf" path="res://Assets/Texture assets/GuitarChordButtons/Layer 7.jpg" id="1_s08to"]
