@@ -4203,6 +4203,7 @@ scale = Vector2(1.02381, 1.00394)
 texture = ExtResource("7_xqh6i")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Objectives" type="TextureRect" parent="CanvasLayer"]
 offset_left = 34.0

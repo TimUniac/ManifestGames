@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmnaaq35sblq2"]
+[gd_scene load_steps=14 format=3 uid="uid://dmnaaq35sblq2"]
 
 [ext_resource type="Script" path="res://HeartNacklacePuzzle.gd" id="1_5kxnt"]
 [ext_resource type="Texture2D" uid="uid://cwhkbp4tp4mw7" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/BG_Gravel.png" id="1_tj2lx"]
@@ -11,21 +11,24 @@
 [ext_resource type="Texture2D" uid="uid://dlfjvvhfj2e6v" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_6.png" id="9_ad3sa"]
 [ext_resource type="Texture2D" uid="uid://dyiwwbluhjary" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/UI_BrokenheartNecklace.png" id="11_7hack"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="13_op68i"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="14_8v68n"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="14_x4is8"]
 
 [node name="Control" type="Control"]
+z_index = 4
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -960.0
-offset_top = -540.0
-offset_right = 960.0
-offset_bottom = 540.0
+offset_left = -518.0
+offset_top = -559.0
+offset_right = 1402.0
+offset_bottom = 521.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_5kxnt")
 
 [node name="Close" type="TextureButton" parent="."]
@@ -203,3 +206,7 @@ offset_bottom = 3137.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("11_7hack")
 metadata/_edit_lock_ = true
+
+[node name="Clicks" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_8v68n")
+volume_db = -10.0
