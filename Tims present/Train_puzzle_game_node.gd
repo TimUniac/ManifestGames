@@ -1,11 +1,12 @@
 extends Area2D
 
+
+
 signal locker_interacted(lockerDialogue)
 @export var action_name: String = "interact"
 @onready var interaction_label = $Panel
 
 @onready var doctor = get_parent().get_node("Male Doctor Character")
-
 
 
 
@@ -20,8 +21,8 @@ var collect = false
 var is_opened = false
 
 
-var gametrainlight = null
-@onready var trainlightDialogue: String = "The trainstation is dark, we should turn on the lights!"
+var gametrainMap = null
+@onready var trainMapDialogue: String = "Solve the route Seraphina was taking!"
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 
@@ -41,44 +42,38 @@ func _process(delta):
 
 func open():
 	
-	if gametrainlight == null:
-		var trainlight_game_scene = preload("res://Scenes/game_trainstation_light.tscn").instantiate()
+	if gametrainMap == null:
+		var trainMap_game_scene = preload("res://Scenes/Nodes/UI/nacklace_game.tscn").instantiate()
 		
-		gametrainlight = trainlight_game_scene
-		add_child(gametrainlight)
+		gametrainMap = trainMap_game_scene
+		add_child(gametrainMap)
 		print_tree()
 	doctor.talking = true
 	is_opened = true	
 func close():
 	
-	if gametrainlight != null:
-		remove_child(gametrainlight)
-		gametrainlight.queue_free()
-		gametrainlight = null
+	if gametrainMap != null:
+		remove_child(gametrainMap)
+		gametrainMap.queue_free()
+		gametrainMap = null
 	doctor.talking = false
 	is_opened = false
 	
-func lightsturnedon():
+func mapcompleted():
 	doctor.talking = false
 	interaction_label.visible = false
 	$ColorRect.visible = false
 	$CollisionShape2D.queue_free()
 	var parent = get_parent()
-	parent.lightson()
+	parent.mapcomplete()
 
 
-		
 
 signal item_collected()
-
 
 func playercollect():
 	emit_signal("item_collected")
 	print("ahhhhhhhhh")
-
-	
-	
-
 
 
 func _on_body_entered(body):
@@ -87,7 +82,7 @@ func _on_body_entered(body):
 		inrange = true
 		player = body
 		print("hi there")
-		doctor.speak(trainlightDialogue)
+		doctor.speak(trainMapDialogue)
 
 
 func _on_body_exited(body):

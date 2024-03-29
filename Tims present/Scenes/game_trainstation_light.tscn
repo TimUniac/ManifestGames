@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://SwitchPanel.gd" id="2_4gyts"]
 [ext_resource type="Script" path="res://lightswitch_startON.gd" id="3_4gfbx"]
 [ext_resource type="Script" path="res://lightswitch_startOFF.gd" id="4_5v56v"]
-[ext_resource type="Texture2D" uid="uid://r0mclcoqsfc2" path="res://UI_LightGameInstructionsPoster_V2 1.png" id="5_ch2qb"]
+[ext_resource type="Texture2D" uid="uid://cshjyi7tkvrct" path="res://Scenes/Ui controls/UI_TrainCompartmentPoster_V2.png" id="5_i4i75"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="6_o5li7"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="7_g2khs"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="8_18855"]
@@ -102,7 +102,7 @@ script = ExtResource("4_5v56v")
 
 [node name="Switch_16" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_4gfbx")
+script = ExtResource("4_5v56v")
 
 [node name="Switch_17" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
@@ -122,11 +122,11 @@ script = ExtResource("4_5v56v")
 
 [node name="Switch_21" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_4gfbx")
+script = ExtResource("4_5v56v")
 
 [node name="Switch_22" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
-script = ExtResource("3_4gfbx")
+script = ExtResource("4_5v56v")
 
 [node name="Switch_23" type="TextureButton" parent="CanvasLayer/Control/GridContainer"]
 layout_mode = 2
@@ -142,19 +142,19 @@ script = ExtResource("3_4gfbx")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 1049.0
-offset_top = 38.0
-offset_right = 3529.0
-offset_bottom = 3546.0
-scale = Vector2(0.29, 0.29)
-texture = ExtResource("5_ch2qb")
+offset_left = 839.0
+offset_top = 128.0
+offset_right = 5952.0
+offset_bottom = 4334.0
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("5_i4i75")
 
 [node name="Reset" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 1048.0
-offset_top = 977.0
-offset_right = 1366.0
-offset_bottom = 1056.0
+offset_left = 832.0
+offset_top = 914.0
+offset_right = 1150.0
+offset_bottom = 993.0
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 0.596078, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -165,10 +165,10 @@ theme_override_font_sizes/font_size = 48
 text = "Reset Lights"
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
-offset_left = 1690.0
-offset_top = 15.0
-offset_right = 1901.0
-offset_bottom = 150.0
+offset_left = 1807.0
+offset_top = 103.0
+offset_right = 2018.0
+offset_bottom = 238.0
 scale = Vector2(0.39, 0.39)
 texture_normal = ExtResource("7_g2khs")
 texture_pressed = ExtResource("8_18855")

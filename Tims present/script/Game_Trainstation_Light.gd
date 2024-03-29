@@ -25,13 +25,13 @@ func winstate():
 	var parent = get_parent()
 	parent.close()
 	parent.lightsturnedon()
+	parent.playercollect()
 
-	
-	
+
 
 
 func _on_reset_pressed():
-	offLights = 16
+	offLights = 13
 
 
 func _on_texture_button_pressed():

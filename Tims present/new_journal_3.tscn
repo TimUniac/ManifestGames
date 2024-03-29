@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://be8l8eqaeg78e"]
+
+[ext_resource type="Script" path="res://new_journal_3.gd" id="1_8na25"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="4_sdp3u"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="5_igxiq"]
+
+[node name="NewJournal 3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8na25")
+
+[node name="Page" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 201.0
+offset_top = -594.0
+offset_right = 3192.0
+offset_bottom = 1573.0
+scale = Vector2(0.8, 0.8)
+expand_mode = 5
+
+[node name="Close" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 40.0
+offset_right = 742.0
+offset_bottom = 183.0
+scale = Vector2(0.405, 0.405)
+texture_normal = ExtResource("4_sdp3u")
+texture_pressed = ExtResource("5_igxiq")
+texture_hover = ExtResource("5_igxiq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(973, 526)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1076.0
+offset_top = 28.085
+offset_right = 1397.0
+offset_bottom = 65.085
+theme_override_font_sizes/font_size = 24
+text = "Press [J] to close the Journal"
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=42 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
 [ext_resource type="Texture2D" uid="uid://caplpe2ma3pjs" path="res://bg_train_station.svg.svg" id="1_qs83u"]
 [ext_resource type="Texture2D" uid="uid://1dcdpuqtqdba" path="res://bg_train_station.svg 1.svg" id="3_bntpw"]
+[ext_resource type="Texture2D" uid="uid://dwcwybwvpc5te" path="res://spr_ava_rekt.svg.svg" id="4_t0le3"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="4_txkr3"]
 [ext_resource type="PackedScene" uid="uid://blp0ee2kt5j0a" path="res://trainstation_light_game_node.tscn" id="6_y3hfb"]
 [ext_resource type="Texture2D" uid="uid://6jr7bja2ousp" path="res://Darken Lamp post.png" id="7_xqh6i"]
@@ -12,6 +13,11 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="10_76lgp"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="11_w1bx0"]
 [ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="12_j2yq6"]
+[ext_resource type="Script" path="res://Scenes/Levels/ExitBlocker.gd" id="14_njdwj"]
+[ext_resource type="PackedScene" uid="uid://d3e3bkqwi6xyx" path="res://train_puzzle_game_node.tscn" id="15_jpgao"]
+[ext_resource type="PackedScene" uid="uid://bbwlgi31j44ip" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
+[ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/journal_read_2.gd" id="18_4epvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")
@@ -3803,10 +3809,148 @@ texture = ExtResource("3_bntpw")
 58:69/0 = 0
 59:69/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spqhd"]
+texture = ExtResource("4_t0le3")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+21:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+9:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+15:22/0 = 0
+16:22/0 = 0
+17:22/0 = 0
+18:22/0 = 0
+19:22/0 = 0
+20:22/0 = 0
+21:22/0 = 0
+22:22/0 = 0
+23:22/0 = 0
+24:22/0 = 0
+21:23/0 = 0
+22:23/0 = 0
+23:23/0 = 0
+24:23/0 = 0
+23:24/0 = 0
+24:24/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_u8usw"]
 sources/0 = SubResource("TileSetAtlasSource_ou237")
 sources/1 = SubResource("TileSetAtlasSource_661kw")
 sources/2 = SubResource("TileSetAtlasSource_toquk")
+sources/3 = SubResource("TileSetAtlasSource_spqhd")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w34mq"]
 size = Vector2(228, 122)
@@ -3860,6 +4004,14 @@ size = Vector2(145, 57)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mk5e2"]
 size = Vector2(81, 1092)
 
+[sub_resource type="Theme" id="Theme_lqgy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvjpo"]
+size = Vector2(56, 179)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hmw0p"]
+radius = 180.469
+
 [node name="Train_Station_Scene" type="Node2D"]
 script = ExtResource("1_nmqxj")
 
@@ -3890,6 +4042,13 @@ layer_3/y_sort_enabled = false
 layer_3/y_sort_origin = 0
 layer_3/z_index = 4
 layer_3/tile_data = PackedInt32Array(84, 6881280, 40, 196692, 6881280, 45, 524372, 6881280, 45, 852052, 6881280, 45, 1179732, 6881280, 55, 11, 4653056, 40, 196619, 4653056, 45, 524299, 4653056, 45, 851979, 4653056, 45, 1179659, 4653056, 55, 852055, 4587521, 21, 917591, 4587521, 22, 983127, 4587521, 23, 1048663, 4587521, 24, 1114199, 4587521, 25, 786520, 4653057, 20, 852056, 4653057, 21, 917592, 4653057, 22, 983128, 4653057, 23, 1048664, 4653057, 24, 1114200, 4653057, 25, 1179736, 4653057, 26, 1245272, 4653057, 27, 1310808, 4653057, 28, 786521, 4718593, 20, 852057, 4718593, 21, 917593, 4718593, 22, 983129, 4718593, 23, 1048665, 4718593, 24, 1114201, 4718593, 25, 1179737, 4718593, 26, 1245273, 4718593, 27, 1310809, 4718593, 28, 786522, 4784129, 20, 852058, 4784129, 21, 917594, 4784129, 22, 983130, 4784129, 23, 1048666, 4784129, 24, 1114202, 4784129, 25, 1179738, 4784129, 26, 1245274, 4784129, 27, 1310810, 4784129, 28, 852059, 4849665, 21, 917595, 4849665, 22, 983131, 4849665, 23, 1048667, 4849665, 24, 1114203, 4849665, 25, 15, 6225920, 40, 196623, 5242880, 45, 524303, 5242880, 45, 851983, 5242880, 45, 1179663, 5242880, 55, 20, 6225920, 40, 196628, 6225920, 45, 524308, 6225920, 45, 851988, 6225920, 45, 1179668, 6225920, 55, 75, 6225920, 40, 196683, 5242880, 45, 524363, 5242880, 45, 852043, 5242880, 45, 1179723, 5242880, 55, 80, 6225920, 40, 196688, 6225920, 45, 524368, 6225920, 45, 852048, 6225920, 45, 1179728, 6225920, 55, 65680, 4587521, 21, 131216, 4587521, 22, 196752, 4587521, 23, 262288, 4587521, 24, 327824, 4587521, 25, 145, 4653057, 20, 65681, 4653057, 21, 131217, 4653057, 22, 196753, 4653057, 23, 262289, 4653057, 24, 327825, 4653057, 25, 393361, 4653057, 26, 458897, 4653057, 27, 524433, 4653057, 28, 146, 4718593, 20, 65682, 4718593, 21, 131218, 4718593, 22, 196754, 4718593, 23, 262290, 4718593, 24, 327826, 4718593, 25, 393362, 4718593, 26, 458898, 4718593, 27, 524434, 4718593, 28, 147, 4784129, 20, 65683, 4784129, 21, 131219, 4784129, 22, 196755, 4784129, 23, 262291, 4784129, 24, 327827, 4784129, 25, 393363, 4784129, 26, 458899, 4784129, 27, 524435, 4784129, 28, 65684, 4849665, 21, 131220, 4849665, 22, 196756, 4849665, 23, 262292, 4849665, 24, 327828, 4849665, 25, 65709, 4587521, 21, 131245, 4587521, 22, 196781, 4587521, 23, 262317, 4587521, 24, 327853, 4587521, 25, 174, 4653057, 20, 65710, 4653057, 21, 131246, 4653057, 22, 196782, 4653057, 23, 262318, 4653057, 24, 327854, 4653057, 25, 393390, 4653057, 26, 458926, 4653057, 27, 524462, 4653057, 28, 175, 4718593, 20, 65711, 4718593, 21, 131247, 4718593, 22, 196783, 4718593, 23, 262319, 4718593, 24, 327855, 4718593, 25, 393391, 4718593, 26, 458927, 4718593, 27, 524463, 4718593, 28, 176, 4784129, 20, 65712, 4784129, 21, 131248, 4784129, 22, 196784, 4784129, 23, 262320, 4784129, 24, 327856, 4784129, 25, 393392, 4784129, 26, 458928, 4784129, 27, 524464, 4784129, 28, 65713, 4849665, 21, 131249, 4849665, 22, 196785, 4849665, 23, 262321, 4849665, 24, 327857, 4849665, 25, 65736, 4587521, 21, 131272, 4587521, 22, 196808, 4587521, 23, 262344, 4587521, 24, 327880, 4587521, 25, 201, 4653057, 20, 65737, 4653057, 21, 131273, 4653057, 22, 196809, 4653057, 23, 262345, 4653057, 24, 327881, 4653057, 25, 393417, 4653057, 26, 458953, 4653057, 27, 524489, 4653057, 28, 202, 4718593, 20, 65738, 4718593, 21, 131274, 4718593, 22, 196810, 4718593, 23, 262346, 4718593, 24, 327882, 4718593, 25, 393418, 4718593, 26, 458954, 4718593, 27, 524490, 4718593, 28, 203, 4784129, 20, 65739, 4784129, 21, 131275, 4784129, 22, 196811, 4784129, 23, 262347, 4784129, 24, 327883, 4784129, 25, 393419, 4784129, 26, 458955, 4784129, 27, 524491, 4784129, 28, 65740, 4849665, 21, 131276, 4849665, 22, 196812, 4849665, 23, 262348, 4849665, 24, 327884, 4849665, 25)
+layer_4/name = ""
+layer_4/enabled = true
+layer_4/modulate = Color(1, 1, 1, 1)
+layer_4/y_sort_enabled = false
+layer_4/y_sort_origin = 0
+layer_4/z_index = 2
+layer_4/tile_data = PackedInt32Array(3932162, 983043, 22, 3932163, 1048579, 22, 3932164, 1114115, 22, 3932165, 1179651, 22, 3932166, 1245187, 22, 3932167, 1310723, 22, 3932168, 1376259, 22, 3997704, 1376259, 23, 3932169, 1441795, 22, 3997705, 1441795, 23, 3932170, 1507331, 22, 3997706, 1507331, 23, 3932171, 1572867, 22, 3997707, 1572867, 23, 4128778, 983043, 12, 4194314, 983043, 13, 4128779, 1048579, 12, 4194315, 1048579, 13, 4128780, 1114115, 12, 4194316, 1114115, 13, 4128781, 1179651, 12, 4194317, 1179651, 13, 4128782, 1245187, 12, 4194318, 1245187, 13, 4128783, 1310723, 12, 4194319, 1310723, 13, 4128784, 1376259, 12, 4194320, 1376259, 13, 4128785, 1441795, 12, 4194321, 1441795, 13, 4128786, 1507331, 12, 4194322, 1507331, 13, 4128787, 1572867, 12, 4194323, 1572867, 13, 4259839, 65539, 12, 4325375, 65539, 13, 4194304, 131075, 12, 4259840, 131075, 13, 4194305, 196611, 12, 4259841, 196611, 13, 4194306, 262147, 12, 4259842, 262147, 13, 4194307, 327683, 12, 4259843, 327683, 13, 4194308, 393219, 12, 4259844, 393219, 13, 4194309, 458755, 12, 4259845, 458755, 13, 4194310, 524291, 12, 4194311, 589827, 12, 4259847, 589827, 13, 3801082, 65539, 21, 3866618, 65539, 22, 3801083, 131075, 21, 3866619, 131075, 22, 3801084, 196611, 21, 3866620, 196611, 22, 3801085, 262147, 21, 3866621, 262147, 22, 3801086, 327683, 21, 3866622, 327683, 22, 3801087, 393219, 21, 3866623, 393219, 22, 3735552, 458755, 21, 3801088, 458755, 22)
 
 [node name="Male Doctor Character" parent="." instance=ExtResource("1_i6qtd")]
 top_level = true
@@ -4073,7 +4232,7 @@ offset_right = 403.898
 offset_bottom = 253.974
 theme_override_fonts/font = ExtResource("10_76lgp")
 theme_override_font_sizes/font_size = 25
-text = "Place H	older"
+text = "Rebuild the Necklace"
 
 [node name="Orbs" type="Sprite2D" parent="CanvasLayer/Objectives/Label"]
 position = Vector2(-25.8976, -87.3077)
@@ -4081,6 +4240,7 @@ scale = Vector2(0.162, 0.162)
 texture = ExtResource("11_w1bx0")
 
 [node name="Label4" type="Label" parent="CanvasLayer/Objectives"]
+visible = false
 layout_mode = 0
 offset_left = 86.6667
 offset_top = 245.0
@@ -4135,6 +4295,10 @@ position = Vector2(-25.6983, 67.0391)
 scale = Vector2(0.162, 0.162)
 texture = ExtResource("11_w1bx0")
 
+[node name="Journal Read" parent="CanvasLayer" instance=ExtResource("17_7ig4k")]
+z_index = 1
+script = ExtResource("18_4epvd")
+
 [node name="Platform" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 4
@@ -4157,7 +4321,45 @@ polygon = PackedVector2Array(3263, 230, 3250, 1, 1535, 6, 1532, 474, 1627, 561, 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Gravel"]
 polygon = PackedVector2Array(3255, 893, 3260, 1083, 100, 1087, 96, -1, 144, 0, 141, 889, 1531, 887, 1541, 811, 1653, 807, 1659, 885)
 
+[node name="TextureRect" type="ColorRect" parent="."]
+show_behind_parent = true
+z_index = 1
+texture_filter = 1
+offset_left = 1961.0
+offset_top = 84.0
+offset_right = 2134.0
+offset_bottom = 245.0
+theme = SubResource("Theme_lqgy4")
+color = Color(0.941176, 0.984314, 0.694118, 1)
+
+[node name="ExitBlocker" type="StaticBody2D" parent="."]
+position = Vector2(139, 982)
+script = ExtResource("14_njdwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitBlocker"]
+position = Vector2(3, 19.5)
+shape = SubResource("RectangleShape2D_pvjpo")
+
+[node name="Area2D" type="Area2D" parent="ExitBlocker"]
+light_mask = 4
+visibility_layer = 4
+
+[node name="Speech bubble to collect" type="CollisionShape2D" parent="ExitBlocker/Area2D"]
+light_mask = 4
+visibility_layer = 4
+z_index = 3
+shape = SubResource("CircleShape2D_hmw0p")
+
+[node name="Train_puzzle_game_node" parent="." instance=ExtResource("15_jpgao")]
+z_index = 4
+position = Vector2(1082, 515)
+
+[node name="train_necklace_puzzle_game_node" parent="." instance=ExtResource("16_hoyov")]
+z_index = 4
+position = Vector2(689, 704)
+
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_entered" from="Platform" to="Male Doctor Character" method="_on_platform_body_entered"]
 [connection signal="body_entered" from="ParkingLot" to="Male Doctor Character" method="_on_parking_lot_body_entered"]
 [connection signal="body_entered" from="Gravel" to="Male Doctor Character" method="_on_gravel_body_entered"]
+[connection signal="body_entered" from="ExitBlocker/Area2D" to="ExitBlocker" method="_on_area_2d_body_entered"]

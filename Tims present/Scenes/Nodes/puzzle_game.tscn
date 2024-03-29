@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dtf8kabkuktlf" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_6.png" id="9_gqd0e"]
 [ext_resource type="Texture2D" uid="uid://cv82ma5td1r3w" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_7.png" id="10_xy77r"]
 [ext_resource type="Texture2D" uid="uid://1nu5nvn3rosm" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_8.png" id="11_cwmlh"]
-[ext_resource type="Texture2D" uid="uid://coihlj24c0o4l" path="res://Assets/Texture assets/Chapter 2/UI_TrainTicketGameInstructions.png" id="13_oari1"]
+[ext_resource type="Texture2D" uid="uid://jh0fc0dqvccl" path="res://Scenes/Ui controls/UI_TrainTicketGameInstructions_V3.png" id="13_xed24"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="15_7hdam"]
 
 [node name="Node2D" type="Node2D"]
@@ -105,7 +105,7 @@ polygon = PackedVector2Array(166.102, -127.119, 82.2034, -157.627, -138.983, -15
 
 [node name="PuzzlePiece_3" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(921, 391)
+position = Vector2(835, -337)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("6_6iokd")
 script = ExtResource("2_hlqwy")
@@ -120,7 +120,7 @@ polygon = PackedVector2Array(59.322, 98.3051, 108.475, -17.7966, -47.4576, -94.0
 
 [node name="PuzzlePiece_4" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(927, 89)
+position = Vector2(65, -365)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("7_tgqd5")
 script = ExtResource("2_hlqwy")
@@ -211,12 +211,13 @@ offset_bottom = 502.0
 color = Color(0.47451, 0.592157, 0.52549, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 425.0
-offset_top = -932.6
-offset_right = 2905.0
-offset_bottom = 2575.4
+offset_left = 591.0
+offset_top = 133.0
+offset_right = 2075.0
+offset_bottom = 1312.0
 scale = Vector2(0.335, 0.335)
-texture = ExtResource("13_oari1")
+texture = ExtResource("13_xed24")
+expand_mode = 1
 
 [node name="Close" type="TextureButton" parent="."]
 z_index = 2

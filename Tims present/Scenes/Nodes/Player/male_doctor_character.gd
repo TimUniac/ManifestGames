@@ -15,6 +15,9 @@ var book = false
 var locker = false
 var puzzle = false
 var lights = false
+var trainlights = false
+var trainpuzzle = false
+var trainmap = false
 
 @onready var SpeechBubble = $SpeechBubble
 
@@ -88,6 +91,9 @@ func check_done():
 		emit_signal("all_items_collected")
 	
 	elif locker and puzzle and lights:
+		emit_signal("all_items_collected")
+		
+	elif trainlights and trainpuzzle and trainmap:
 		emit_signal("all_items_collected")
 		
 func play_anim(movement):
@@ -202,9 +208,23 @@ func _on_light_poster_item_collected():
 	check_done()
 	print ("lights")
 
+func _on_trainstation_light_game_node_on_item_collect():
+	PickupsSoundPlayer.play()
+	trainlights = true
+	print("trainlights")
+	check_done()
 
-
-
+func _on_train_puzzle_game_node_on_item_collect():
+	PickupsSoundPlayer.play()
+	trainmap = true
+	print("trainlights")
+	check_done()
+	
+func _on_train_necklace_puzzle_game_node_on_item_collect():
+	PickupsSoundPlayer.play()
+	trainpuzzle = true
+	print("trainlights")
+	check_done()
 
 func _on_platform_body_entered(body):
 	footfalls.currentGround = "platform"
