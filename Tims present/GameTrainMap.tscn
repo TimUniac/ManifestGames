@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfqxn320jxlcb"]
+
+[ext_resource type="Script" path="res://Game_TrainMap.gd" id="1_ftk1m"]
+[ext_resource type="Texture2D" uid="uid://de265dvnl4xtw" path="res://Assets/Texture assets/Chapter 3/UI_MapGame.png" id="1_t8dk3"]
+[ext_resource type="Texture2D" uid="uid://da2l0gkaprggc" path="res://Assets/Texture assets/Chapter 3/UI_SchedulePopup.png" id="2_yhy36"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="3_gficl"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="4_34g4i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8c23n"]
+size = Vector2(511, 583)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_ftk1m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.341176, 0.235294, 0.235294, 1)
+
+[node name="Map" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_t8dk3")
+
+[node name="Area2D" type="Area2D" parent="Map"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Area2D"]
+position = Vector2(1271.5, 779.5)
+shape = SubResource("RectangleShape2D_8c23n")
+
+[node name="Schedule" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 894.0
+offset_top = -74.0
+offset_right = 1410.0
+offset_bottom = 524.0
+scale = Vector2(1.99, 1.99)
+texture = ExtResource("2_yhy36")
+
+[node name="Close" type="TextureButton" parent="Schedule"]
+layout_mode = 0
+offset_left = 59.799
+offset_top = 41.7085
+offset_right = 270.799
+offset_bottom = 176.709
+scale = Vector2(0.175, 0.175)
+texture_normal = ExtResource("3_gficl")
+texture_pressed = ExtResource("4_34g4i")
+
+[connection signal="input_event" from="Map/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="pressed" from="Schedule/Close" to="." method="_on_close_pressed"]
