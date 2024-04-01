@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cl1x252lu8u31" path="res://Scenes/Nodes/UI/ui_objective_menu_v2.png" id="12_j2yq6"]
 [ext_resource type="Script" path="res://Scenes/Levels/ExitBlocker.gd" id="14_njdwj"]
 [ext_resource type="PackedScene" uid="uid://bogxv8sa7iq2u" path="res://train_puzzle_game_node.tscn" id="15_jpgao"]
-[ext_resource type="PackedScene" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
-[ext_resource type="PackedScene" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
+[ext_resource type="PackedScene" uid="uid://bbwlgi31j44ip" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
+[ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/journal_read_2.gd" id="18_4epvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
@@ -4205,7 +4205,6 @@ texture = ExtResource("7_xqh6i")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Objectives" type="TextureRect" parent="CanvasLayer"]
-z_index = 2
 offset_left = 34.0
 offset_top = 28.0
 offset_right = 505.0
@@ -4351,11 +4350,12 @@ z_index = 3
 shape = SubResource("CircleShape2D_hmw0p")
 
 [node name="Train_puzzle_game_node" parent="." instance=ExtResource("15_jpgao")]
-z_index = 4
+top_level = true
+z_index = 27
 position = Vector2(1082, 515)
 
 [node name="train_necklace_puzzle_game_node" parent="." instance=ExtResource("16_hoyov")]
-z_index = 4
+z_index = 2
 position = Vector2(689, 704)
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]

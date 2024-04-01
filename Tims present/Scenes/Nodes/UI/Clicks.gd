@@ -1,4 +1,4 @@
-extends AudioStreamPlayer2D
+extends AudioStreamPlayer
 
 func play_random_pitch():
 	var random_pitch_scale = randf_range(0.5, 2.0)

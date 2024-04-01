@@ -9,6 +9,7 @@ func _ready():
 	root.visible = true
 func snapped_pieces():
 	pieces_snapped += 1
+	$Clicks.play()
 	print(pieces_snapped)
 	if pieces_snapped == total_pieces:
 		winstate()

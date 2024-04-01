@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbwlgi31j44ip"]
+[gd_scene load_steps=5 format=3 uid="uid://bbwlgi31j44ip"]
 
 [ext_resource type="Script" path="res://train_necklace_puzzle_game_node.gd" id="1_i750e"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_cqeik"]
+[ext_resource type="Texture2D" uid="uid://dyiwwbluhjary" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/UI_BrokenheartNecklace.png" id="2_dpjlm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wrutm"]
 radius = 78.1601
 
 [node name="train_necklace_puzzle_game_node" type="Area2D"]
 script = ExtResource("1_i750e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.045, 0.045)
+texture = ExtResource("2_dpjlm")
 
 [node name="Panel" type="Panel" parent="."]
 z_index = 6

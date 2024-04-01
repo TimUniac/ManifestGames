@@ -1,33 +1,34 @@
 extends Area2D
 
 
-
-signal locker_interacted(lockerDialogue)
+signal picturegame_interacted(picturegameDialogue)
 @export var action_name: String = "interact"
-@onready var interaction_label = $Panel
 
+@onready var interactionlabel = $Panel
 @onready var doctor = get_parent().get_node("Male Doctor Character")
 
 
 
-@onready var objlist = $"../Objectives"
-@onready var sprite = $Sprite2D
-@onready var talking = false
 
+@onready var talking = false
+@onready var objlist = $"../CanvasLayer/Objectives"
 
 var player = null
 var inrange = false
 var collect = false
 var is_opened = false
+var opened = false
 
 
-var gametrainNackPuzz = null
-@onready var trainNackPuzzDialogue: String = "This must be the other half of the necklace, lets see if the piece fits"
+var picturegame = null
+@onready var heartNecklaceGameDialogue: String = "Wow, she through this necklace down hard for it to break like this."
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
 
 
+	
+	
 func _ready():
-	interaction_label.visible = false
+	interactionlabel.visible = false
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,54 +39,52 @@ func _process(delta):
 			else:
 				open()
 	
-	
 
+	
+	
 func open():
-	
-	if gametrainNackPuzz == null:
-		var trainNackPuzz_game_scene = preload("res://HeartNacklacePuzzle.tscn").instantiate()
+		if picturegame == null:
+			var picturegame_game_scene = preload("res://HeartNacklacePuzzle.tscn").instantiate()
 		
-		gametrainNackPuzz = trainNackPuzz_game_scene
-		add_child(gametrainNackPuzz)
-		print_tree()
-	doctor.talking = true
-	is_opened = true	
+			picturegame = picturegame_game_scene
+			add_child(picturegame)
+			print_tree()
+		doctor.talking = true
+		is_opened = true	
 func close():
-	
-	if gametrainNackPuzz != null:
-		remove_child(gametrainNackPuzz)
-		gametrainNackPuzz.queue_free()
-		gametrainNackPuzz = null
+	if picturegame != null:
+		remove_child(picturegame)
+		picturegame.queue_free()
+		picturegame = null
 	doctor.talking = false
 	is_opened = false
 	
-func mapcompleted():
+func solvedpuzzle():
 	doctor.talking = false
-	interaction_label.visible = false
-	$ColorRect.visible = false
+	interactionlabel.visible = false
 	$CollisionShape2D.queue_free()
-	var parent = get_parent()
-	parent.puzzlecomplete()
-
-
+	objlist.foundbook()
+	
+		
 
 signal item_collected()
 
-func playercollect():
+func playersolved_puzzle():
 	emit_signal("item_collected")
-	print("ahhhhhhh")
-
-func _on_body_entered(body):
-	if body.has_method("player"):
-		interaction_label.visible = true
-		inrange = true
-		player = body
-		print("hi there")
-		doctor.speak(trainNackPuzzDialogue)
+	visible = false
+	interactionlabel.queue_free()
+	print ("player solved puzzle")
 
 
 func _on_body_exited(body):
-	interaction_label.visible = false
-	inrange = false
+		inrange = false
+		
 
 
+func _on_body_entered(body):
+	if body.has_method("player"):
+			interactionlabel.visible = true
+			inrange = true
+			player = body
+			print("hi there")
+			doctor.speak(heartNecklaceGameDialogue)

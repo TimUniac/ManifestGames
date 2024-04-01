@@ -10,18 +10,18 @@ var is_opened = false
 var inRange = false
 
 func _ready():
-	$"CanvasLayer/NewJournal 2".visible = false
+	$"CanvasLayer/NewJournal2".visible = false
 
 
 
 
 func close():
-	$"CanvasLayer/NewJournal 2".visible = false
+	$"CanvasLayer/NewJournal2".visible = false
 	doctor.talking = false
 	is_opened = false
 	
 func open():
-	$"CanvasLayer/NewJournal 2".visible = true
+	$"CanvasLayer/NewJournal2".visible = true
 	doctor.talking = true
 	is_opened = true
 
