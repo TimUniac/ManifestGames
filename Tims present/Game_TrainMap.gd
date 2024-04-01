@@ -7,7 +7,7 @@ var points_selected = 0
 func _ready():
 	set_process_input(true)
 	print_points_global_position()
-
+	$Schedule.visible = false
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -72,3 +72,17 @@ func reset_game():
 func winstate():
 	print("Solved")
 	$'.'.visible = false
+
+
+func _on_close_pressed():
+	var parent = $".".get_parent()
+	parent.close()
+
+
+func _on_close_sched_pressed():
+	$Schedule.visible = false
+
+
+func _on_schedule_toggle_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		$Schedule.visible = !$Schedule.visible 

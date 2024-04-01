@@ -32,6 +32,7 @@ scale = Vector2(0.305, 0.305)
 texture = ExtResource("1_t8dk3")
 
 [node name="ScheduleToggle" type="Area2D" parent="Map"]
+z_index = 3
 position = Vector2(3736.65, 2616.39)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/ScheduleToggle"]
@@ -39,17 +40,16 @@ position = Vector2(-103.277, -39.3447)
 shape = SubResource("RectangleShape2D_8c23n")
 
 [node name="Schedule" type="TextureRect" parent="."]
-visible = false
 z_index = 1
-offset_left = 894.0
-offset_top = -74.0
-offset_right = 1410.0
-offset_bottom = 524.0
-scale = Vector2(1.99, 1.99)
+offset_left = 57.0
+offset_top = -351.0
+offset_right = 573.0
+offset_bottom = 247.0
+scale = Vector2(1.435, 1.435)
 mouse_filter = 2
 texture = ExtResource("2_yhy36")
 
-[node name="Close" type="TextureButton" parent="Schedule"]
+[node name="CloseSched" type="TextureButton" parent="Schedule"]
 layout_mode = 0
 offset_left = 59.799
 offset_top = 41.7085
@@ -268,7 +268,17 @@ position = Vector2(-844, -521)
 width_curve = SubResource("Curve_bi7km")
 default_color = Color(0.352941, 0.156863, 1, 1)
 
-[connection signal="input_event" from="Map/ScheduleToggle" to="." method="_on_area_2d_input_event"]
+[node name="Close" type="TextureButton" parent="."]
+offset_left = -684.0
+offset_top = -511.0
+offset_right = -473.0
+offset_bottom = -375.999
+scale = Vector2(0.175, 0.175)
+texture_normal = ExtResource("3_gficl")
+texture_pressed = ExtResource("4_34g4i")
+
+[connection signal="input_event" from="Map/ScheduleToggle" to="." method="_on_schedule_toggle_input_event"]
+[connection signal="pressed" from="Schedule/CloseSched" to="." method="_on_close_sched_pressed"]
 [connection signal="input_event" from="Point_1" to="." method="_on_point_1_input_event"]
 [connection signal="input_event" from="Point_2" to="." method="_on_point_2_input_event"]
 [connection signal="input_event" from="Point_3" to="." method="_on_point_3_input_event"]
@@ -285,3 +295,4 @@ default_color = Color(0.352941, 0.156863, 1, 1)
 [connection signal="input_event" from="Point_14" to="." method="_on_point_14_input_event"]
 [connection signal="input_event" from="Point_15" to="." method="_on_point_15_input_event"]
 [connection signal="input_event" from="Point_16" to="." method="_on_point_16_input_event"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
