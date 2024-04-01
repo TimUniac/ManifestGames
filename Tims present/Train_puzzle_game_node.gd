@@ -43,7 +43,7 @@ func _process(delta):
 func open():
 	
 	if gametrainMap == null:
-		var trainMap_game_scene = preload("res://Scenes/Nodes/UI/nacklace_game.tscn").instantiate()
+		var trainMap_game_scene = preload("res://GameTrainMap.tscn").instantiate()
 		
 		gametrainMap = trainMap_game_scene
 		add_child(gametrainMap)
