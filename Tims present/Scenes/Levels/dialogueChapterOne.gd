@@ -14,7 +14,7 @@ var dialogue = [
 	{"speaker": "Sera", "line": "I am fighting these animalistic urges to feed because I couldn't live with myself if I turned into a bloodthirsty monster."},
 	{"speaker": "Doc", "line": "You may have heard that my methods are a bit unorthodox, but if you are willing to trust me and embark on this healing journey,"}, 
 	{"speaker": "Doc", "line": "I can assure you that we can solve your problem."},
-	{"speaker": "Sera", "line": "Yes, I am open to anything. I just don’t want to feel like this anymore."},
+	{"speaker": "Sera", "line": "Yes, I am open to anything. I just don’t want to feel like this\n anymore."},
 	{"speaker": "Doc", "line": "Okay, Seraphina, I would like you to get into a position you are most comfortable in, whether that is lying down or simply lying back."}, 
 	{"speaker": "Doc", "line": "I need you to close your eyes and imagine a place where you feel the most comfortable. Really focus on this place and your feelings. Remember, remember,"}]
 

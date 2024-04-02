@@ -4020,6 +4020,7 @@ script = ExtResource("1_nmqxj")
 stream = ExtResource("19_3dkmo")
 volume_db = -11.111
 autoplay = true
+max_distance = 27370.0
 bus = &"Music"
 
 [node name="TileMap" type="TileMap" parent="."]
