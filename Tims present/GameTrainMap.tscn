@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bfqxn320jxlcb"]
+[gd_scene load_steps=10 format=3 uid="uid://36pbvvj54wpu"]
 
 [ext_resource type="Script" path="res://Game_TrainMap.gd" id="1_ftk1m"]
 [ext_resource type="Texture2D" uid="uid://de265dvnl4xtw" path="res://Assets/Texture assets/Chapter 3/UI_MapGame.png" id="1_t8dk3"]

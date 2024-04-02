@@ -7,7 +7,6 @@ extends Node2D
 
 func _ready():
 	$Control/Finish.visible = false
-	music.stream.loop = true
 	$Control/Objectives/Label/Orbs.visible = false
 	$Control/Objectives/Label2/Orbs2.visible = false
 	$Control/Objectives/Label3/Orbs3.visible = false

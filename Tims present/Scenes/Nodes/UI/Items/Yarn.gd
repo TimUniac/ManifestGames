@@ -47,7 +47,7 @@ func _process(_delta):
 func open():
 	
 	if gameBook == null:
-		var book_game_scene = preload("res://Scenes/Nodes/UI/book_game.tscn").instantiate()
+		var book_game_scene = preload("res://book_game.tscn").instantiate()
 		
 		gameBook = book_game_scene
 		add_child(gameBook)
