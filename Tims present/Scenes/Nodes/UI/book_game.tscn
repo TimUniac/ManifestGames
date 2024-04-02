@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=16 format=3 uid="uid://bepo0m0r088a4"]
 
 [ext_resource type="Script" path="res://BookGame.gd" id="1_nkguc"]
@@ -163,3 +164,5 @@ script = ExtResource("14_6wwlw")
 [connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_I" to="." method="_on_letter_i_button_down"]
 [connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_L" to="." method="_on_letter_l_button_down"]
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
+=======
+>>>>>>> Stashed changes

@@ -1,0 +1,621 @@
+[gd_scene load_steps=39 format=3 uid="uid://b3v3y5ys4shwq"]
+
+[ext_resource type="Script" path="res://Guitar_Game_ForDummies.gd" id="1_ot8b0"]
+[ext_resource type="Texture2D" uid="uid://dati8v503uoaf" path="res://Assets/Texture assets/GuitarChordButtons/Layer 7.jpg" id="1_s08to"]
+[ext_resource type="Script" path="res://ChordTile.gd" id="3_clg7f"]
+[ext_resource type="Texture2D" uid="uid://bpd02n4j4m5h0" path="res://Assets/Texture assets/GuitarChordButtons/Layer 5.jpg" id="3_lyxh0"]
+[ext_resource type="Texture2D" uid="uid://bnywgt2mug8kq" path="res://Assets/Texture assets/GuitarChordButtons/Layer 2.png" id="4_fg63e"]
+[ext_resource type="Texture2D" uid="uid://4u86h3nx0pgt" path="res://Assets/Texture assets/GuitarChordButtons/Layer 3.jpg" id="5_07an8"]
+[ext_resource type="Script" path="res://ChordTile_C.gd" id="5_lnn0g"]
+[ext_resource type="Texture2D" uid="uid://l6gksxdp10uk" path="res://Assets/Texture assets/GuitarChordButtons/Layer 4.jpg" id="6_s5mns"]
+[ext_resource type="Texture2D" uid="uid://bd5wje3vixwwq" path="res://Assets/Texture assets/GuitarChordButtons/Layer 8.jpg" id="7_1s772"]
+[ext_resource type="Script" path="res://ChordTile_G.gd" id="7_a4vi5"]
+[ext_resource type="Script" path="res://ChordTile_Wrong.gd" id="8_8offt"]
+[ext_resource type="Texture2D" uid="uid://dev11pk4nc4e7" path="res://Assets/Texture assets/GuitarChordButtons/Layer 10.jpg" id="8_d22cf"]
+[ext_resource type="Texture2D" uid="uid://ctn1c0wcn0rm4" path="res://Assets/Texture assets/GuitarChordButtons/Layer 11.jpg" id="9_ae2wv"]
+[ext_resource type="Texture2D" uid="uid://c8dduah7250rx" path="res://Assets/Texture assets/GuitarChordButtons/Layer 12.jpg" id="10_jybod"]
+[ext_resource type="Texture2D" uid="uid://bqgiov83i1tik" path="res://Assets/Texture assets/GuitarChordButtons/Layer 13.jpg" id="11_avool"]
+[ext_resource type="Texture2D" uid="uid://bt5ab7votca4w" path="res://Assets/Texture assets/GuitarChordButtons/Layer 14.jpg" id="12_5wkr3"]
+[ext_resource type="Texture2D" uid="uid://vdl73ym6413n" path="res://Assets/Texture assets/GuitarChordButtons/Layer 15.jpg" id="13_bew5p"]
+[ext_resource type="Texture2D" uid="uid://psss5yummtki" path="res://Assets/Texture assets/GuitarChordButtons/Layer 16.jpg" id="14_c2olo"]
+[ext_resource type="Texture2D" uid="uid://by6wkwqerlx7m" path="res://Assets/Texture assets/GuitarChordButtons/Layer 18.jpg" id="15_4uu5k"]
+[ext_resource type="Texture2D" uid="uid://gfpu0q8t4ifd" path="res://Assets/Texture assets/GuitarChordButtons/Layer 19.jpg" id="16_o5lw6"]
+[ext_resource type="Texture2D" uid="uid://xmxoxd014sh6" path="res://Assets/Texture assets/GuitarChordButtons/Layer 6.jpg" id="17_r3olc"]
+[ext_resource type="Texture2D" uid="uid://boc62sp112h38" path="res://Assets/Texture assets/GuitarChordButtons/Layer 20.jpg" id="18_f4aqm"]
+[ext_resource type="Texture2D" uid="uid://b6m1ldi53fd6d" path="res://Assets/Texture assets/GuitarChordButtons/Layer 21.jpg" id="19_tluch"]
+[ext_resource type="Texture2D" uid="uid://dtrb2qxiwbq66" path="res://Assets/Texture assets/GuitarChordButtons/Layer 22.jpg" id="20_h4iyj"]
+[ext_resource type="Script" path="res://ChordTile_D.gd" id="20_hrn36"]
+[ext_resource type="Texture2D" uid="uid://dkcnhc2f3y7y6" path="res://Assets/Texture assets/GuitarChordButtons/Layer 23.jpg" id="21_4oxr8"]
+[ext_resource type="Texture2D" uid="uid://d22qng25na2pi" path="res://Scenes/Nodes/TicketPad.png" id="22_uca00"]
+[ext_resource type="Script" path="res://DropZone.gd" id="24_rqp7r"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="25_xqjcv"]
+[ext_resource type="Texture2D" uid="uid://kc0qlwahu5nr" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_a.svg.svg" id="26_co7ph"]
+[ext_resource type="AudioStream" uid="uid://dddhppxhg1chr" path="res://Assets/Sound/Music/WrongAnswerGuitar.mp3" id="26_lk1qv"]
+[ext_resource type="Texture2D" uid="uid://blftfcqqfy304" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_b.svg.svg" id="27_xwasj"]
+[ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="29_yei51"]
+[ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="30_yjnk3"]
+[ext_resource type="Texture2D" uid="uid://c1wkgashtlo6q" path="res://Assets/Texture assets/Chapter 1/UI_GuitarGame_TornLyrics.png" id="35_4i8a7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ci1y"]
+size = Vector2(600.002, 644.444)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lies8"]
+size = Vector2(611.112, 666.668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8v5t"]
+size = Vector2(3880, 1245.16)
+
+[node name="Control" type="Control"]
+z_index = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -139.0
+offset_right = -220.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.435, 0.435)
+mouse_filter = 2
+script = ExtResource("1_ot8b0")
+
+[node name="eMinor" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1755.23, 970.51)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_s08to")
+script = ExtResource("3_clg7f")
+tile_id = "eMinor"
+
+[node name="Area2D" type="Area2D" parent="eMinor" groups=["Not_C", "Not_D", "Not_G", "chord_tiles"]]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="eMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "chord_tiles"]]
+z_index = 1
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="C" type="Sprite2D" parent="." groups=["Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1586, 974)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_lyxh0")
+script = ExtResource("5_lnn0g")
+tile_id = "C"
+
+[node name="Area2D" type="Area2D" parent="C" groups=["Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="C/Area2D" groups=["Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 1
+position = Vector2(5.55664, -11.1104)
+shape = SubResource("RectangleShape2D_lies8")
+debug_color = Color(0.921569, 0.176471, 0.54902, 0.419608)
+
+[node name="G" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1332, 976)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_fg63e")
+script = ExtResource("7_a4vi5")
+tile_id = "G"
+
+[node name="Area2D" type="Area2D" parent="G" groups=["Not_C", "Not_D", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="G/Area2D" groups=["Not_C", "Not_D", "Not_e", "chord_tiles"]]
+z_index = 1
+position = Vector2(-1.36328, -1.36331)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="aMinor" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1417, 980)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_07an8")
+script = ExtResource("8_8offt")
+
+[node name="Area2D" type="Area2D" parent="aMinor" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="bMinor" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1498, 978)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_s5mns")
+script = ExtResource("8_8offt")
+tile_id = "bMinor"
+
+[node name="Area2D" type="Area2D" parent="bMinor" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="Fsharp" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1853, 978)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_1s772")
+script = ExtResource("8_8offt")
+tile_id = "Fsharp"
+
+[node name="Area2D" type="Area2D" parent="Fsharp" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fsharp/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="F" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1336, 872)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_d22cf")
+script = ExtResource("8_8offt")
+tile_id = "F"
+
+[node name="Area2D" type="Area2D" parent="F" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="F/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="gMinor" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1417, 875)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_ae2wv")
+script = ExtResource("8_8offt")
+tile_id = "gMinor"
+
+[node name="Area2D" type="Area2D" parent="gMinor" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="aMinorDark" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1502, 868)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_jybod")
+script = ExtResource("8_8offt")
+tile_id = "aMinor"
+
+[node name="Area2D" type="Area2D" parent="aMinorDark" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aMinorDark/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="Asharp" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1587, 863)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_avool")
+script = ExtResource("8_8offt")
+tile_id = "Asharp"
+
+[node name="Area2D" type="Area2D" parent="Asharp" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Asharp/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="CDark" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1673, 871)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_5wkr3")
+script = ExtResource("5_lnn0g")
+tile_id = "C"
+
+[node name="Area2D" type="Area2D" parent="CDark" groups=["Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CDark/Area2D" groups=["Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="dMinor" type="Sprite2D" parent="." groups=["Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1759, 866)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_bew5p")
+script = ExtResource("8_8offt")
+tile_id = "dMinor"
+
+[node name="Area2D" type="Area2D" parent="dMinor" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="E" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1849, 874)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_c2olo")
+script = ExtResource("8_8offt")
+tile_id = "E"
+
+[node name="Area2D" type="Area2D" parent="E" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="E/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="fSharpMinor" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1418, 774)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_4uu5k")
+script = ExtResource("8_8offt")
+tile_id = "fSharpMinor"
+
+[node name="Area2D" type="Area2D" parent="fSharpMinor" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fSharpMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="gSharpMinor" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1504, 774)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("16_o5lw6")
+script = ExtResource("8_8offt")
+tile_id = "gSharpMinor"
+
+[node name="Area2D" type="Area2D" parent="gSharpMinor" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gSharpMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="D" type="Sprite2D" parent="." groups=["Not_C", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1670, 976)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_r3olc")
+script = ExtResource("20_hrn36")
+tile_id = "D"
+
+[node name="Area2D" type="Area2D" parent="D" groups=["Not_C", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="D/Area2D" groups=["Not_C", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="A" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1591, 774)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("18_f4aqm")
+script = ExtResource("8_8offt")
+tile_id = "A"
+
+[node name="Area2D" type="Area2D" parent="A" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="A/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(-66.668, 11.1113)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="B" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1671, 778)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("19_tluch")
+script = ExtResource("8_8offt")
+tile_id = "B"
+
+[node name="Area2D" type="Area2D" parent="B" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="B/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="cSharpMinor" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1757, 779)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("20_h4iyj")
+script = ExtResource("8_8offt")
+tile_id = "cSharpMinor"
+
+[node name="Area2D" type="Area2D" parent="cSharpMinor" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cSharpMinor/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="Dsharp" type="Sprite2D" parent="." groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(1851, 774)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("21_4oxr8")
+script = ExtResource("8_8offt")
+tile_id = "Dsharp"
+
+[node name="Area2D" type="Area2D" parent="Dsharp" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dsharp/Area2D" groups=["Not_C", "Not_D", "Not_G", "Not_e", "chord_tiles"]]
+position = Vector2(3.74927, 1.36322)
+shape = SubResource("RectangleShape2D_8ci1y")
+debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
+
+[node name="eMinorPad" type="TextureRect" parent="." groups=["drop_zones"]]
+z_index = 2
+layout_mode = 0
+offset_left = 212.0
+offset_top = 405.0
+offset_right = 8641.42
+offset_bottom = 5079.0
+scale = Vector2(0.015, 0.062)
+texture = ExtResource("22_uca00")
+
+[node name="Area2D" type="Area2D" parent="eMinorPad" groups=["drop_zones"]]
+position = Vector2(4586.67, 2300)
+script = ExtResource("24_rqp7r")
+correct_tile = "eMinor"
+exclusionGroup = "Not_eMin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="eMinorPad/Area2D" groups=["drop_zones"]]
+position = Vector2(-166.672, -19.3549)
+shape = SubResource("RectangleShape2D_e8v5t")
+
+[node name="CPad" type="TextureRect" parent="." groups=["drop_zones"]]
+z_index = 2
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 362.0
+offset_top = 405.0
+offset_right = 8791.42
+offset_bottom = 5079.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.015, 0.062)
+texture = ExtResource("22_uca00")
+
+[node name="Area2D" type="Area2D" parent="CPad" groups=["drop_zones"]]
+position = Vector2(4333.31, 2177.42)
+script = ExtResource("24_rqp7r")
+correct_tile = "C"
+exclusionGroup = "Not_C"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CPad/Area2D" groups=["drop_zones"]]
+position = Vector2(-168.957, -116.129)
+shape = SubResource("RectangleShape2D_e8v5t")
+
+[node name="GPad" type="TextureRect" parent="." groups=["drop_zones"]]
+z_index = 2
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 512.0
+offset_top = 405.0
+offset_right = 8941.42
+offset_bottom = 5079.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.015, 0.062)
+texture = ExtResource("22_uca00")
+
+[node name="Area2D" type="Area2D" parent="GPad" groups=["drop_zones"]]
+position = Vector2(4333.34, 2177.42)
+script = ExtResource("24_rqp7r")
+correct_tile = "G"
+exclusionGroup = "Not_G"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GPad/Area2D" groups=["drop_zones"]]
+position = Vector2(-168.957, -116.129)
+shape = SubResource("RectangleShape2D_e8v5t")
+
+[node name="DPad" type="TextureRect" parent="." groups=["drop_zones"]]
+z_index = 2
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 662.0
+offset_top = 405.0
+offset_right = 9091.42
+offset_bottom = 5079.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.015, 0.062)
+texture = ExtResource("22_uca00")
+
+[node name="Area2D" type="Area2D" parent="DPad" groups=["drop_zones"]]
+position = Vector2(4333.31, 2177.42)
+script = ExtResource("24_rqp7r")
+correct_tile = "D"
+exclusionGroup = "Not_D"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DPad/Area2D" groups=["drop_zones"]]
+position = Vector2(-168.957, -116.129)
+shape = SubResource("RectangleShape2D_e8v5t")
+
+[node name="SnapSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_xqjcv")
+volume_db = -10.0
+
+[node name="Strum" type="TextureButton" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 454.0
+offset_right = 164.0
+offset_bottom = 614.0
+texture_normal = ExtResource("26_co7ph")
+texture_pressed = ExtResource("27_xwasj")
+
+[node name="WrongChords" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_lk1qv")
+volume_db = -10.0
+
+[node name="Chart" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1134.0
+offset_top = 35.0
+offset_right = 3690.0
+offset_bottom = 3383.0
+scale = Vector2(0.305, 0.305)
+mouse_filter = 2
+texture = ExtResource("29_yei51")
+
+[node name="Guitar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -65.0
+offset_top = -163.0
+offset_right = 1760.0
+offset_bottom = 638.0
+scale = Vector2(0.68, 1.72)
+mouse_filter = 2
+texture = ExtResource("30_yjnk3")
+
+[node name="Lyrics" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 101.149
+offset_top = 105.747
+offset_right = 1625.15
+offset_bottom = 396.747
+scale = Vector2(0.645, 0.645)
+texture = ExtResource("35_4i8a7")
+
+[connection signal="input_event" from="eMinor/Area2D" to="eMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="C/Area2D" to="C" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="G/Area2D" to="G" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="aMinor/Area2D" to="aMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="bMinor/Area2D" to="bMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Fsharp/Area2D" to="Fsharp" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="F/Area2D" to="F" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="gMinor/Area2D" to="gMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="aMinorDark/Area2D" to="aMinorDark" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Asharp/Area2D" to="Asharp" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="CDark/Area2D" to="CDark" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="dMinor/Area2D" to="dMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="E/Area2D" to="E" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="fSharpMinor/Area2D" to="fSharpMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="gSharpMinor/Area2D" to="gSharpMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="D/Area2D" to="D" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="A/Area2D" to="A" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="B/Area2D" to="B" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="cSharpMinor/Area2D" to="cSharpMinor" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Dsharp/Area2D" to="Dsharp" method="_on_area_2d_input_event"]
+[connection signal="area_entered" from="eMinorPad/Area2D" to="eMinorPad/Area2D" method="_on_area_entered"]
+[connection signal="correctTile" from="eMinorPad/Area2D" to="eMinor" method="_on_area_2d_correct_tile"]
+[connection signal="wrongTile" from="eMinorPad/Area2D" to="eMinor" method="_on_area_2d_wrong_tile"]
+[connection signal="correctTile" from="CPad/Area2D" to="C" method="_on_area_2d_correct_tile"]
+[connection signal="correctTile" from="CPad/Area2D" to="CDark" method="_on_area_2d_correct_tile"]
+[connection signal="correctTile" from="GPad/Area2D" to="G" method="_on_area_2d_correct_tile"]
+[connection signal="correctTile" from="DPad/Area2D" to="D" method="_on_area_2d_correct_tile"]
+[connection signal="pressed" from="Strum" to="eMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="C" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="G" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="aMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="bMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="Fsharp" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="F" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="gMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="aMinorDark" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="Asharp" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="CDark" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="dMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="E" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="fSharpMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="gSharpMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="D" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="A" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="B" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="cSharpMinor" method="_on_strum_pressed"]
+[connection signal="pressed" from="Strum" to="Dsharp" method="_on_strum_pressed"]
