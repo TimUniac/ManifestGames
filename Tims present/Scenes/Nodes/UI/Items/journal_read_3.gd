@@ -5,7 +5,7 @@ var player = null
 
 
 @onready var SpeechBubble = $"Male Doctor Character/SpeechBubble"
-@onready var doctor = get_parent().get_parent().get_node("Male Doctor Character")
+@onready var doctor = $"../../Male Doctor Character"
 
 
 var is_opened = false

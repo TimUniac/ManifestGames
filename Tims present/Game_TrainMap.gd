@@ -72,6 +72,8 @@ func reset_game():
 func winstate():
 	print("Solved")
 	$'.'.visible = false
+	var parent = get_parent()
+	parent.mapcompleted()
 
 
 func _on_close_pressed():

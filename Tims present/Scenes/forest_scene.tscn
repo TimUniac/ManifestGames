@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://303hiqn4chb2"]
 
 [ext_resource type="Texture2D" uid="uid://c5b0ylkii5cq5" path="res://bg_forest.svg.svg" id="1_dbiwo"]
-[ext_resource type="Texture2D" uid="uid://dwcwybwvpc5te" path="res://spr_ava_rekt.svg.svg" id="2_0byqo"]
+[ext_resource type="Texture2D" path="res://spr_ava_rekt.svg.svg" id="2_0byqo"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="2_ua6bt"]
 [ext_resource type="VideoStream" path="res://Assets/video/prologuev1.ogv" id="4_mamn0"]
 [ext_resource type="Script" path="res://prologue.gd" id="5_3k0fj"]

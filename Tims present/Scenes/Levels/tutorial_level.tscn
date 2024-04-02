@@ -1,11 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://dutq5ntye7wf5"]
+[gd_scene load_steps=33 format=3 uid="uid://dutq5ntye7wf5"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/tutorial_level.gd" id="1_ye8l3"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="3_05p0w"]
 [ext_resource type="Texture2D" uid="uid://borjm68pbxy5l" path="res://Assets/Texture assets/bg_doctor_office.svg" id="3_ew1j3"]
 [ext_resource type="Texture2D" uid="uid://6yacjqx8tvjk" path="res://Assets/Texture assets/spr_doctor_office_furniture.svg.svg" id="4_2gwkq"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="7_r3vgi"]
-[ext_resource type="AudioStream" uid="uid://cq7yjwdx2gisb" path="res://Assets/Sound/Music/ThemeJazzDigital.mp3" id="10_cviwq"]
 [ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="10_tj4jr"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="11_7x82w"]
 [ext_resource type="Script" path="res://Scenes/Levels/TutorialMusic.gd" id="12_pcd4s"]
@@ -3534,7 +3533,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-589770, 4587521, 55, -589780, 4587521, 55, -589790, 4587521, 55, -589800, 4587521, 55, -589810, 4587521, 55, -589820, 4587521, 55, -524294, 4587521, 55, -524304, 4587521, 55, 65591, 3604481, 55, 131062, 655361, 55, 65582, 2621441, 55, 65536, 2621441, 55, 65572, 1638401, 55, 65546, 1638401, 55, 65556, 2621441, 55, 65564, 2621441, 55, 720951, 3276801, 70, 1376311, 3276801, 70, 1376301, 1310721, 70, 720941, 2293761, 70, 1376291, 2293761, 85, 720931, 1310721, 70, 720921, 327681, 70, 1376281, 327681, 70, 1376271, 2293761, 70, 720911, 2293761, 70, 1376261, 327681, 70, 720901, 327681, 70, 786426, 2293761, 85, 1441786, 2293761, 85, 786416, 3276801, 70, 1441775, 3276801, 70, 2097140, 2293761, 70, 2097150, 1310721, 70, 2031625, 327681, 70, 2031671, 1310721, 85, 2031661, 2293761, 70, 2031651, 2293761, 85, 2031641, 1310721, 70, 2031633, 3276801, 70)
 
 [node name="TutorialMusic" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("10_cviwq")
 volume_db = -23.424
 autoplay = true
 bus = &"Music"

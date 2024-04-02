@@ -62,10 +62,9 @@ func close():
 func mapcompleted():
 	doctor.talking = false
 	interaction_label.visible = false
-	$ColorRect.visible = false
 	$CollisionShape2D.queue_free()
 	var parent = get_parent()
-	parent.mapcomplete()
+	parent.mapcompleted()
 
 
 

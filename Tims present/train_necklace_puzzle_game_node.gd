@@ -63,9 +63,10 @@ func solvedpuzzle():
 	doctor.talking = false
 	interactionlabel.visible = false
 	$CollisionShape2D.queue_free()
-	objlist.foundbook()
+	var parent = get_parent()
+	parent.puzzlecomplete()
 	
-		
+
 
 signal item_collected()
 
