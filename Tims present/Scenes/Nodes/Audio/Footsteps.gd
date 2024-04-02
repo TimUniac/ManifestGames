@@ -135,8 +135,7 @@ var groundSounds ={
 var currentGround = "office"
 var activeGround = "office"
 func groundMaterial():
-	
-	var activeGround = groundSounds[currentGround] if currentGround in groundSounds else []
+	activeGround = groundSounds[currentGround] if currentGround in groundSounds else []
 	if activeGround:
 		var random_sound = activeGround[randi() % activeGround.size()]
 		return random_sound

@@ -1,16 +1,29 @@
 extends Node2D
 
+
+@onready var doctor = $"Male Doctor Character"
+
 var done = false
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
+	music()
+	var steps = doctor.get_node("Footsteps")
+
+	steps.activeGround = "parking"
+	steps.groundMaterial()
+
+
 	$CanvasLayer/Objectives/Label/Orbs.visible = false
 	$CanvasLayer/Objectives/Label4/Orbs.visible = false
 	$CanvasLayer/Objectives/Label2/Orbs.visible = false
 	$CanvasLayer/Objectives/Label3/Orbs.visible = false
 	
 	
-	$"Male Doctor Character/Footsteps".activeGround = "parking"
 
+func music():
+	var music = $Music
+	music.stream = load("res://Assets/Sound/Music/Music_TrainStation.mp3")
+	music.play()
 
 func _input(_event):
 		hide_show_objectives() 

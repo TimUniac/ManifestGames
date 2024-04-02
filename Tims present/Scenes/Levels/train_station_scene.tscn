@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=43 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bbwlgi31j44ip" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
 [ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/journal_read_2.gd" id="18_4epvd"]
+[ext_resource type="AudioStream" uid="uid://8n4ml81qpj30" path="res://Assets/Sound/Music/Music_TrainStation.mp3" id="19_3dkmo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")
@@ -4014,6 +4015,12 @@ radius = 180.469
 
 [node name="Train_Station_Scene" type="Node2D"]
 script = ExtResource("1_nmqxj")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_3dkmo")
+volume_db = -11.111
+autoplay = true
+bus = &"Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(33, 1)
