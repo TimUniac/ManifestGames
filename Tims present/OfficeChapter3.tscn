@@ -1,40 +1,40 @@
-[gd_scene load_steps=20 format=3 uid="uid://eivkmmsqddcq"]
+[gd_scene load_steps=20 format=3 uid="uid://bpjkqs3turhtt"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/male_office.gd" id="1_31a6l"]
-[ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_c5vks"]
-[ext_resource type="Texture2D" uid="uid://ckhno2bb7hh8v" path="res://Assets/Texture assets/Chapter 1/BG_Office_Night.jpeg" id="3_l1m8e"]
-[ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_usnb6"]
-[ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_fh3kt"]
-[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="6_3rnhl"]
-[ext_resource type="Script" path="res://dialogueChapter2.gd" id="8_d4qmg"]
-[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="8_p132d"]
-[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="9_jejsm"]
-[ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="10_ihl6b"]
-[ext_resource type="AudioStream" uid="uid://c3vbt5l6h7xbt" path="res://Assets/Sound/SFX/TypeSounds/Type__4.wav" id="11_p3qwu"]
-[ext_resource type="AudioStream" uid="uid://bhpolyfk86rqm" path="res://Assets/Sound/Music/serawin.mp3" id="12_y2mri"]
+[ext_resource type="Script" path="res://Scenes/Levels/male_office.gd" id="1_ht7j2"]
+[ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_mlxkc"]
+[ext_resource type="Texture2D" uid="uid://ckhno2bb7hh8v" path="res://Assets/Texture assets/Chapter 1/BG_Office_Night.jpeg" id="3_qhenr"]
+[ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_idemo"]
+[ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_atooh"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="6_p7oae"]
+[ext_resource type="Script" path="res://dialogueChapter3.gd" id="7_kwd22"]
+[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="8_u7gif"]
+[ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="9_lqqa6"]
+[ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="10_vk3hb"]
+[ext_resource type="AudioStream" uid="uid://c3vbt5l6h7xbt" path="res://Assets/Sound/SFX/TypeSounds/Type__4.wav" id="11_hb804"]
+[ext_resource type="AudioStream" uid="uid://bhpolyfk86rqm" path="res://Assets/Sound/Music/serawin.mp3" id="12_xyjcc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m81f"]
-atlas = ExtResource("10_ihl6b")
+atlas = ExtResource("10_vk3hb")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1r00y"]
-atlas = ExtResource("10_ihl6b")
+atlas = ExtResource("10_vk3hb")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_48uc2"]
-atlas = ExtResource("10_ihl6b")
+atlas = ExtResource("10_vk3hb")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ptra"]
-atlas = ExtResource("10_ihl6b")
+atlas = ExtResource("10_vk3hb")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cs2ok"]
-atlas = ExtResource("10_ihl6b")
+atlas = ExtResource("10_vk3hb")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7s5nw"]
-atlas = ExtResource("10_ihl6b")
+atlas = ExtResource("10_vk3hb")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a8mi8"]
@@ -64,9 +64,9 @@ animations = [{
 }]
 
 [node name="Male Office" type="Node2D"]
-script = ExtResource("1_31a6l")
+script = ExtResource("1_ht7j2")
 
-[node name="OfficeTheme" parent="." instance=ExtResource("2_c5vks")]
+[node name="OfficeTheme" parent="." instance=ExtResource("2_mlxkc")]
 volume_db = -20.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -94,7 +94,7 @@ anchor_right = 0.021
 anchor_bottom = 0.037
 offset_right = -16.3462
 offset_bottom = 6.22253
-texture = ExtResource("3_l1m8e")
+texture = ExtResource("3_qhenr")
 metadata/_edit_use_anchors_ = true
 
 [node name="DP" type="Control" parent="CanvasLayer/Control"]
@@ -118,7 +118,7 @@ offset_top = -0.516022
 offset_right = 3009.25
 offset_bottom = 4527.0
 scale = Vector2(0.14, 0.14)
-texture = ExtResource("4_usnb6")
+texture = ExtResource("4_idemo")
 metadata/_edit_use_anchors_ = true
 
 [node name="SP" type="Control" parent="CanvasLayer/Control"]
@@ -143,7 +143,7 @@ offset_right = 2367.57
 offset_bottom = 2107.1
 grow_vertical = 2
 scale = Vector2(0.29, 0.29)
-texture = ExtResource("5_fh3kt")
+texture = ExtResource("5_atooh")
 metadata/_edit_use_anchors_ = true
 
 [node name="Dialogue" type="Control" parent="CanvasLayer/Control"]
@@ -169,8 +169,8 @@ offset_bottom = -210.995
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2, 2)
-texture = ExtResource("6_3rnhl")
-script = ExtResource("8_d4qmg")
+texture = ExtResource("6_p7oae")
+script = ExtResource("7_kwd22")
 metadata/_edit_use_anchors_ = true
 
 [node name="Doc" type="RichTextLabel" parent="CanvasLayer/Control/Dialogue/TextureRect"]
@@ -187,7 +187,7 @@ offset_bottom = 0.0649681
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("8_p132d")
+theme_override_fonts/normal_font = ExtResource("8_u7gif")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "
@@ -210,7 +210,7 @@ offset_right = -0.223938
 offset_bottom = -0.0393524
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("9_jejsm")
+theme_override_fonts/normal_font = ExtResource("9_lqqa6")
 theme_override_font_sizes/normal_font_size = 21
 bbcode_enabled = true
 visible_characters = 0
@@ -234,7 +234,7 @@ offset_bottom = 0.0609455
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("8_p132d")
+theme_override_fonts/normal_font = ExtResource("8_u7gif")
 theme_override_font_sizes/normal_font_size = 35
 text = "
 
@@ -266,12 +266,12 @@ autoplay = "advance"
 [node name="Type" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/Dialogue/TextureRect"]
 position = Vector2(-311.5, -292.5)
 scale = Vector2(0.5, 0.5)
-stream = ExtResource("11_p3qwu")
+stream = ExtResource("11_hb804")
 volume_db = -9.785
 pitch_scale = 0.47
 
 [node name="Guitar" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/Dialogue/TextureRect"]
-stream = ExtResource("12_y2mri")
+stream = ExtResource("12_xyjcc")
 bus = &"Music"
 
-[connection signal="finished" from="OfficeTheme" to="OfficeTheme" method="_on_finished"]
+[connection signal="finished" from="OfficeTheme" to="OfficeTheme" method="_on_finished" flags=18]

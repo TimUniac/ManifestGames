@@ -9,6 +9,7 @@ func _ready():
 	answer.visible = false
 	root.visible = true
 func snapped_pieces():
+	$Click.play()
 	pieces_snapped += 1
 	print(pieces_snapped)
 	if pieces_snapped == total_pieces:

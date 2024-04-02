@@ -296,7 +296,7 @@ texture = SubResource("GradientTexture2D_k2nhn")
 
 [node name="HallwayMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_bnf7f")
-volume_db = -20.8
+volume_db = -10.4
 bus = &"Music"
 script = ExtResource("19_vb460")
 

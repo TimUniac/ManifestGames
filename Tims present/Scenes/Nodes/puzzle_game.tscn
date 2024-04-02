@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c47h75b0a84qf"]
+[gd_scene load_steps=17 format=3 uid="uid://c47h75b0a84qf"]
 
 [ext_resource type="Script" path="res://Scenes/Nodes/puzzle_game.gd" id="1_h6jmb"]
 [ext_resource type="Texture2D" uid="uid://dnjr2kapuveak" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/TrainTicket.png" id="2_0h8gd"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://1nu5nvn3rosm" path="res://Assets/Texture assets/Chapter 2/TicketPuzzle/PuzzlePiece_8.png" id="11_cwmlh"]
 [ext_resource type="Texture2D" uid="uid://jh0fc0dqvccl" path="res://Scenes/Ui controls/UI_TrainTicketGameInstructions_V3.png" id="13_xed24"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="15_7hdam"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="16_wjwk0"]
 
 [node name="Node2D" type="Node2D"]
 top_level = true
@@ -229,5 +230,11 @@ scale = Vector2(0.27, 0.445)
 texture_normal = ExtResource("15_7hdam")
 texture_pressed = ExtResource("2_42vcc")
 stretch_mode = 0
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_wjwk0")
+volume_db = -5.095
+pitch_scale = 0.34
+bus = &"SFX"
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

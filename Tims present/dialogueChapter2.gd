@@ -32,11 +32,19 @@ var total_characters = 0
 var visible_characters = 0
 var is_line_complete = false
 
+@onready var audio_stream_player_office = $"../../../../OfficeTheme"
+@onready var audio_stream_player_guitar = $Guitar
+var fade_out_target_db: float = -80.0
+var fade_in_initial_db: float = -80.0
+var fade_duration: float = 3.0
+var fade_timer: float = 0.0
+var fading_out: bool = false
+var fading_in: bool = false
 
 func _ready():
 	update_dialogue()
 	$Advance/Advance.visible = false
-	
+	audio_stream_player_guitar.volume_db = fade_in_initial_db
 
 func _process(delta):
 	if (Input.is_action_just_released("Interact")):
@@ -56,6 +64,23 @@ func _process(delta):
 	if visible_characters == total_characters:
 		complete_line()
 	
+	if fading_out:
+		fade_timer += delta
+		var progress = fade_timer / fade_duration
+		audio_stream_player_office.volume_db = lerp(audio_stream_player_office.volume_db, fade_out_target_db, progress)
+		if progress >= 1.0:
+			fading_out = false
+			fade_timer = 0.0
+
+	if fading_in:
+		audio_stream_player_guitar.play()
+		fade_timer += delta
+		var progress = fade_timer / fade_duration
+		audio_stream_player_guitar.volume_db = lerp(fade_in_initial_db, -20.0, progress)
+		if progress >= 1.0:
+			fading_in = false
+			fade_timer = 0.0
+
 func handle_interact():
 	if not is_line_complete:
 		complete_line()
@@ -84,6 +109,11 @@ func next_line():
 	
 func update_dialogue():
 	var current_dialogue = dialogue[current_line]
+	if current_dialogue["speaker"] == "Sera" and current_dialogue["line"] == "I don’t know how to play it.":
+		triggerOut()
+	elif current_dialogue["speaker"] == "Doc" and current_dialogue["line"].ends_with("muscle memory."):
+		triggerIn()
+	
 	visible_characters = 0
 	total_characters = current_dialogue["line"].length()
 	is_line_complete = false
@@ -101,6 +131,16 @@ func update_dialogue():
 
 func update_visible_characters():
 	$Text.visible_characters = visible_characters
+
+func triggerOut():
+	fading_out = true
+	fading_in = false
+	fade_timer = 0.0
+
+func triggerIn():
+	fading_in = true
+	fading_out = false
+	fade_timer = 0.0
 
 func change_scene():
 	get_tree().change_scene_to_file("res://Scenes/highschool_hallway_scene.tscn")
