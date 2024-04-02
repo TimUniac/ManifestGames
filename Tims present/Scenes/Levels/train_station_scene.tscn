@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=41 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dwcwybwvpc5te" path="res://spr_ava_rekt.svg.svg" id="4_t0le3"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="4_txkr3"]
 [ext_resource type="PackedScene" uid="uid://blp0ee2kt5j0a" path="res://trainstation_light_game_node.tscn" id="6_y3hfb"]
-[ext_resource type="Texture2D" uid="uid://6jr7bja2ousp" path="res://Darken Lamp post.png" id="7_xqh6i"]
 [ext_resource type="Texture2D" uid="uid://bicyq62pdwqva" path="res://Assets/Ui_recent_feb1/ui_objective_menu_v2.png" id="8_ln6jp"]
+[ext_resource type="Texture2D" uid="uid://cuatn0kw3dfpm" path="res://Darken Lamp post (1).png" id="9_6pvav"]
 [ext_resource type="Script" path="res://Scenes/Levels/ObjectivesBedroom.gd" id="9_hcecc"]
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="10_76lgp"]
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="11_w1bx0"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://bogxv8sa7iq2u" path="res://train_puzzle_game_node.tscn" id="15_jpgao"]
 [ext_resource type="PackedScene" uid="uid://bbwlgi31j44ip" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
 [ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
-[ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/journal_read_2.gd" id="18_4epvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")
@@ -3956,8 +3955,8 @@ sources/3 = SubResource("TileSetAtlasSource_spqhd")
 size = Vector2(228, 122)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dl6s4"]
-radius = 37.7158
-height = 116.892
+radius = 43.8347
+height = 87.6694
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2dds"]
 size = Vector2(57, 34)
@@ -3999,7 +3998,7 @@ size = Vector2(4063.75, 74)
 size = Vector2(140, 1221)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dp3sj"]
-size = Vector2(145, 57)
+size = Vector2(145, 105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mk5e2"]
 size = Vector2(81, 1092)
@@ -4075,6 +4074,22 @@ position = Vector2(1803, 165)
 shape = SubResource("RectangleShape2D_w34mq")
 
 [node name="lamp post collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="lamp post collision"]
+position = Vector2(3272, 146)
+scale = Vector2(0.66042, 0.321206)
+shape = SubResource("CapsuleShape2D_dl6s4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="lamp post collision"]
+position = Vector2(2839, 157)
+rotation = 3.14159
+scale = Vector2(0.732597, -0.426665)
+shape = SubResource("CapsuleShape2D_dl6s4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="lamp post collision"]
+position = Vector2(2376, 156)
+scale = Vector2(0.812663, 0.56675)
+shape = SubResource("CapsuleShape2D_dl6s4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lamp post collision"]
 position = Vector2(1490, 358)
@@ -4162,7 +4177,7 @@ shape = SubResource("RectangleShape2D_5jjs7")
 position = Vector2(2045, 120)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Electrical Box Collison"]
-position = Vector2(7.5, 18.5)
+position = Vector2(7.5, 42.5)
 shape = SubResource("RectangleShape2D_dp3sj")
 
 [node name="Teleport Area" type="Area2D" parent="."]
@@ -4176,33 +4191,52 @@ shape = SubResource("RectangleShape2D_mk5e2")
 
 [node name="TrainstationLightGame Area" parent="." instance=ExtResource("6_y3hfb")]
 z_index = 1
-position = Vector2(2046, 221)
+position = Vector2(2038, 119)
 
 [node name="lightgroup" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(1463, 317)
+position = Vector2(1462, 264)
 scale = Vector2(1.02381, 1.00394)
-texture = ExtResource("7_xqh6i")
+texture = ExtResource("9_6pvav")
 
 [node name="lightgroup" type="Sprite2D" parent="lightgroup"]
 z_index = 4
-position = Vector2(888.837, -190.251)
+position = Vector2(891.767, -194.235)
 scale = Vector2(1.02381, 1.00394)
-texture = ExtResource("7_xqh6i")
+texture = ExtResource("9_6pvav")
+
+[node name="ColorRect" type="Polygon2D" parent="lightgroup/lightgroup"]
+z_index = 4
+position = Vector2(852.901, 2.97651)
+color = Color(0.0470588, 0.0470588, 0.0470588, 0.482353)
+polygon = PackedVector2Array(-839.545, 23.812, -839.545, 72.4281, -857.671, 72.4281, -861.488, 70.4438, -859.579, 27.7806, -879.614, 12.8981, -877.706, -16.8668, -889.154, -25.7963, -889.154, -38.6945, -855.763, -63.4987, -846.223, -63.4987, -812.832, -41.671, -810.924, -27.7807, -822.372, -15.8747, -822.372, 14.8825)
 
 [node name="lightgroup2" type="Sprite2D" parent="lightgroup"]
 z_index = 4
-position = Vector2(1342.05, -191.247)
+position = Vector2(1344.98, -194.235)
 scale = Vector2(1.02381, 1.00394)
-texture = ExtResource("7_xqh6i")
+texture = ExtResource("9_6pvav")
+
+[node name="ColorRect" type="Polygon2D" parent="lightgroup/lightgroup2"]
+z_index = 4
+position = Vector2(851.947, 2.97652)
+color = Color(0.0470588, 0.0470588, 0.0470588, 0.482353)
+polygon = PackedVector2Array(-839.545, 23.812, -839.545, 72.4281, -857.671, 72.4281, -861.488, 70.4438, -859.579, 27.7806, -879.614, 12.8981, -877.706, -16.8668, -889.154, -25.7963, -889.154, -38.6945, -855.763, -63.4987, -846.223, -63.4987, -812.832, -41.671, -810.924, -27.7807, -822.372, -15.8747, -822.372, 14.8825)
 
 [node name="lightgroup3" type="Sprite2D" parent="lightgroup"]
 z_index = 4
-position = Vector2(1764, -191.247)
+position = Vector2(1766.93, -194.235)
 scale = Vector2(1.02381, 1.00394)
-texture = ExtResource("7_xqh6i")
+texture = ExtResource("9_6pvav")
+
+[node name="ColorRect" type="Polygon2D" parent="lightgroup/lightgroup3"]
+z_index = 4
+position = Vector2(851.948, 1.98433)
+color = Color(0.0470588, 0.0470588, 0.0470588, 0.482353)
+polygon = PackedVector2Array(-839.545, 23.812, -839.545, 72.4281, -857.671, 72.4281, -861.488, 70.4438, -859.579, 27.7806, -879.614, 12.8981, -877.706, -16.8668, -889.154, -25.7963, -889.154, -38.6945, -855.763, -63.4987, -846.223, -63.4987, -812.832, -41.671, -810.924, -27.7807, -822.372, -15.8747, -822.372, 14.8825)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Objectives" type="TextureRect" parent="CanvasLayer"]
 offset_left = 34.0
@@ -4296,7 +4330,11 @@ texture = ExtResource("11_w1bx0")
 
 [node name="Journal Read" parent="CanvasLayer" instance=ExtResource("17_7ig4k")]
 z_index = 1
-script = ExtResource("18_4epvd")
+offset_left = -36.0
+offset_top = 112.0
+offset_right = -36.0
+offset_bottom = 112.0
+mouse_filter = 2
 
 [node name="Platform" type="Area2D" parent="."]
 collision_layer = 4
@@ -4356,7 +4394,14 @@ position = Vector2(1082, 515)
 
 [node name="train_necklace_puzzle_game_node" parent="." instance=ExtResource("16_hoyov")]
 z_index = 2
-position = Vector2(689, 704)
+position = Vector2(603, 1004)
+
+[node name="TextureRect2" type="Polygon2D" parent="."]
+show_behind_parent = true
+z_index = 1
+texture_filter = 1
+color = Color(0.941176, 0.984314, 0.694118, 1)
+polygon = PackedVector2Array(1028, 559, 1028, 579, 1028, 595, 1027, 604, 997, 604, 997, 438, 1164, 438, 1164, 604, 1134, 605, 1133, 560)
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_entered" from="Platform" to="Male Doctor Character" method="_on_platform_body_entered"]

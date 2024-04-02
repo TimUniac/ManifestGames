@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_qhjy8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jwj6s"]
-radius = 78.1601
+radius = 144.014
 
 [node name="TrainstationLightGame Area" type="Area2D"]
 script = ExtResource("1_epy3j")
