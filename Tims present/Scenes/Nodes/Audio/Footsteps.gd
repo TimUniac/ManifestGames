@@ -150,8 +150,6 @@ func _process(_delta):
 	if $"..".talking == true:
 		return
 	if Input.is_action_pressed("right") or Input.is_action_pressed("left") or Input.is_action_pressed("up") or Input.is_action_pressed("down"):
-		print("stepping")
-		print (activeGround)
 		var audio_stream = groundMaterial()
 
 		if audio_stream and not self.playing:

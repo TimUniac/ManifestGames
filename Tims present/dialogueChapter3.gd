@@ -1,18 +1,18 @@
 extends TextureRect
 var dialogue = [
 {"speaker": "Sera", "line": " I'm never going to get used to that."},
-{"speaker": "Doc", "line": "I know it's not the most comfortable feeling, but I found some interesting stuff! It seems like you were going somewhere."},
-{"speaker": "Doc", "line": "I want us to start with the journal; it seems to be a significant part of your past life. What memories come to mind when you think of journaling?"},
-{"speaker": "Sera", "line": "I haven't journaled much recently, but I could imagine it would be a great way to let off some steam and express yourself freely."},
-{"speaker": "Doc", "line": "Your last three journal entries have been paragraphs describing your day or week in a negative way your last entry is different."},
-{"speaker": "Sera", "line": "I haven't felt like that since I was human. I feel this sharp pain where the memory of my friends used to be."},
-{"speaker": "Doc", "line": "Excellent. I want you to immerse yourself in that feeling while I reread the passage to you. And this time, please hold onto the best friend necklace."},
-{"speaker": "Sera", "line": "I see them, I see her. The day she gave me this necklace means everything to me; she means everything to me. Where is she? Where did she go? What happened?"},
-{"speaker": "Doc", "line": "Are you okay, Seraphina? Take a deep breath."},
-{"speaker": "Sera", "line": "No, something isn't right. She is not okay. I need to find her. What did you do to her?"},
-{"speaker": "Doc", "line": "I don't know what you're talking about, Seraphina. I don’t understand."},
+{"speaker": "Doc", "line": "I know it's not the most\n comfortable feeling, but I found\n some interesting stuff! It seems like\n you were going somewhere."},
+{"speaker": "Doc", "line": "I want us to start with the journal;\n it seems to be a significant part of\n your past life. What memories\n come to mind when you think of\n journaling?"},
+{"speaker": "Sera", "line": "I haven't journaled much recently,\n but I could imagine it would be a\n great way to let off some steam and\n express yourself freely."},
+{"speaker": "Doc", "line": "Your last three journal entries have\n been paragraphs describing your\n day or week in a negative way your\n last entry is different."},
+{"speaker": "Sera", "line": "I haven't felt like that since I was\n human. I feel this sharp pain where\n the memory of my friends used to\n be."},
+{"speaker": "Doc", "line": "Excellent. I want you to immerse\n yourself in that feeling while I\n reread the passage to you. And this\n time, please hold onto the best\n friend necklace."},
+{"speaker": "Sera", "line": "I see them, I see her. The day she\n gave me this necklace means\n everything to me; she means\n everything to me. Where is she?\n Where did she go? What happened?"},
+{"speaker": "Doc", "line": "Are you okay, Seraphina? Take a\n deep breath."},
+{"speaker": "Sera", "line": "No, something isn't right. She is\n not okay. I need to find her. What\n did you do to her?"},
+{"speaker": "Doc", "line": "I don't know what you're talking\n about, Seraphina. I don’t\n understand."},
 {"speaker": "Sera", "line": "Go back and find her. I need her."},
-{"speaker": "Doc", "line": "Okay, I need you to focus on the place you are thinking of. Focus on the memory."}
+{"speaker": "Doc", "line": "Okay, I need you to focus on the\n place you are thinking of. Focus on\n the memory."}
 ]
 var current_line = 0
 var total_characters = 0

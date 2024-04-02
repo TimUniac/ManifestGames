@@ -1,22 +1,22 @@
 extends TextureRect
 
 var dialogue = [
-	{"speaker": "Doc", "line": "Hi Seraphina, thank you so much for coming in today. What brings you here?"},
-	{"speaker": "Sera", "line": "Thank you for meeting me at night; I really appreciate it. Umm, I'm not quite sure where to start."},
-	{"speaker": "Doc", "line": "Of course, I understand being vulnerable is scary, but I want you to be as open as you can in know this is a safe space."},
-	{"speaker": "Doc", "line": "What would you like me to know about you?"},
-	{"speaker": "Sera", "line":"Hmm, well, that's kind of a tricky question to answer and one of the main reasons I'm here."}, 
-	{"speaker": "Sera", "line": "I want to get to know my human self. I know I didn't choose this life"},
-	{"speaker": "Sera", "line": "I can feel in my cold-blooded veins that I was not meant to be a monster. But I don't remember the human I used to be."},
-	{"speaker": "Doc", "line": "What does that feeling feel like in your body?"},
-	{"speaker": "Sera", "line": "It feels like there is a rope attached to my heart, and it's being pulled in this unknown direction."},
-	{"speaker": "Sera", "line": "I am constantly feeling a loss of connection or that it's on the tip of my mind, but I just can’t seem to remember."},
-	{"speaker": "Sera", "line": "I am fighting these animalistic urges to feed because I couldn't live with myself if I turned into a bloodthirsty monster."},
-	{"speaker": "Doc", "line": "You may have heard that my methods are a bit unorthodox, but if you are willing to trust me and embark on this healing journey,"}, 
-	{"speaker": "Doc", "line": "I can assure you that we can solve your problem."},
-	{"speaker": "Sera", "line": "Yes, I am open to anything. I just don’t want to feel like this\n anymore."},
-	{"speaker": "Doc", "line": "Okay, Seraphina, I would like you to get into a position you are most comfortable in, whether that is lying down or simply lying back."}, 
-	{"speaker": "Doc", "line": "I need you to close your eyes and imagine a place where you feel the most comfortable. Really focus on this place and your feelings. Remember, remember,"}]
+	{"speaker": "Doc", "line": "Hi Seraphina, thank you so much\n for coming in today. What brings\n you here?"},
+	{"speaker": "Sera", "line": "Thank you for meeting me at\n night; I really appreciate it. Umm,\n I'm not quite sure where to start."},
+	{"speaker": "Doc", "line": "Of course, I understand being\n vulnerable is scary, but I want you\n to be as open as you can and\n know this is a safe space."},
+	{"speaker": "Doc", "line": "What would you like me to know\n about you?"},
+	{"speaker": "Sera", "line":"Hmm, well, that's kind of a tricky\n question to answer and one of\n the main reasons I'm here."}, 
+	{"speaker": "Sera", "line": "I want to get to know my human\n self. I know I didn't choose this\n life"},
+	{"speaker": "Sera", "line": "I can feel in my cold-blooded\n veins that I was not meant to be a\n monster. But I don't remember\n the human I used to be."},
+	{"speaker": "Doc", "line": "What does that feeling feel like in\n your body?"},
+	{"speaker": "Sera", "line": "It feels like there is a rope\n attached to my heart, and it's\n being pulled in this unknown\n direction."},
+	{"speaker": "Sera", "line": "I am constantly feeling a loss of\n connection or that it's on the tip\n of my mind, but I just can’t seem\n to remember."},
+	{"speaker": "Sera", "line": "I am fighting these animalistic\n urges to feed because I couldn't\n live with myself if I turned into a\n bloodthirsty monster."},
+	{"speaker": "Doc", "line": "You may have heard that my\n methods are a bit unorthodox,\n but if you are willing to trust me\n and embark on this healing\n journey,"}, 
+	{"speaker": "Doc", "line": "I can assure you that we can solve\n your problem."},
+	{"speaker": "Sera", "line": "Yes, I am open to anything. I just\n don’t want to feel like this\n anymore."},
+	{"speaker": "Doc", "line": "Okay, Seraphina, I would like you\n to get into a position you are\n most comfortable in, whether\n that is lying down or simply lying\n back."}, 
+	{"speaker": "Doc", "line": "I need you to close your eyes\n and imagine a place where you\n feel the most comfortable. Really\n focus on this place and your\n feelings. Remember, remember,"}]
 
 var current_line = 0
 var total_characters = 0

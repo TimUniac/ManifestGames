@@ -38,7 +38,7 @@ func _process(delta):
 
 func _on_male_doctor_character_all_items_collected():
 	$ExitBlocker.disabled = true
-	print ("bedroom clear")
+
 	done = true
 
 func _on_teleport_area_body_entered(body):
