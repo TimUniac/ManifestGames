@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbrh3x5de73s8"
+path="res://.godot/imported/SFX_TransitionSwell_IN 4.mp3-f1a3aeb89fef5a8ca18148b6db0cf59a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/SFX_TransitionSwell_IN 4.mp3"
+dest_files=["res://.godot/imported/SFX_TransitionSwell_IN 4.mp3-f1a3aeb89fef5a8ca18148b6db0cf59a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

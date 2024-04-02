@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dah10hkcfok6m"
+path="res://.godot/imported/Pickup 2.mp3-31eb400dec3721a81f12467649e5482b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Pickup 2.mp3"
+dest_files=["res://.godot/imported/Pickup 2.mp3-31eb400dec3721a81f12467649e5482b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

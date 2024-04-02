@@ -42,6 +42,7 @@ func _process(_delta):
 	if visible_characters < total_characters:
 		visible_characters += 1
 		is_line_complete = false
+		$Type.play()
 		update_visible_characters()
 	if visible_characters == total_characters:
 		complete_line()

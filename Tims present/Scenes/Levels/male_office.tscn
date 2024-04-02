@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://beilwc5msif53"]
+[gd_scene load_steps=19 format=3 uid="uid://beilwc5msif53"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/male_office.gd" id="1_dfxg7"]
 [ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_3svbl"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/Levels/dialogueChapterOne.gd" id="7_yq4eg"]
 [ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="8_72lac"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="8_80x6v"]
+[ext_resource type="AudioStream" uid="uid://d01itxundoih0" path="res://Assets/Sound/SFX/TypeSounds/Type__2.wav" id="8_soxat"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="9_jqkgw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m81f"]
@@ -168,6 +169,13 @@ texture = ExtResource("6_8gbpb")
 script = ExtResource("7_yq4eg")
 metadata/_edit_use_anchors_ = true
 
+[node name="Type" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/Dialogue/TextureRect"]
+position = Vector2(-310.5, -292.5)
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("8_soxat")
+volume_db = -5.778
+pitch_scale = 0.78
+
 [node name="Doc" type="RichTextLabel" parent="CanvasLayer/Control/Dialogue/TextureRect"]
 layout_mode = 1
 anchors_preset = -1
@@ -259,7 +267,7 @@ animation = &"advance"
 autoplay = "advance"
 
 [node name="VOPlayer" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/Dialogue/TextureRect"]
-volume_db = -24.184
+volume_db = -80.0
 bus = &"Dialogue"
 
 [connection signal="finished" from="OfficeTheme" to="OfficeTheme" method="_on_finished"]

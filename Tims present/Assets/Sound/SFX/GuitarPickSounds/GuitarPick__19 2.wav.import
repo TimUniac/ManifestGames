@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dr41tq7rm4x7v"
+path="res://.godot/imported/GuitarPick__19 2.wav-715212800895faab5591812840c6908c.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/GuitarPickSounds/GuitarPick__19 2.wav"
+dest_files=["res://.godot/imported/GuitarPick__19 2.wav-715212800895faab5591812840c6908c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

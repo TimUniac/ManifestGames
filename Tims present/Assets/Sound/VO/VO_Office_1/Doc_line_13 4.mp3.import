@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnufvbtnk21a0"
+path="res://.godot/imported/Doc_line_13 4.mp3-5fccb9872de571320d4c3d257737617b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/VO/VO_Office_1/Doc_line_13 4.mp3"
+dest_files=["res://.godot/imported/Doc_line_13 4.mp3-5fccb9872de571320d4c3d257737617b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

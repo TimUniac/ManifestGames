@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://drajjwyj33rfq"]
+[gd_scene load_steps=14 format=3 uid="uid://drajjwyj33rfq"]
 
 [ext_resource type="Texture2D" uid="uid://8wl2v5yik66h" path="res://Assets/textbox/text box 1.png" id="1_4mqr7"]
 [ext_resource type="Script" path="res://dialogueChapter2.gd" id="2_e1axe"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_njm0r"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="4_fqhvu"]
 [ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="5_nv68t"]
+[ext_resource type="AudioStream" uid="uid://dcf205g4tlhae" path="res://Assets/Sound/SFX/TypeSounds/Type__5.wav" id="6_qneao"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m81f"]
 atlas = ExtResource("5_nv68t")
@@ -122,14 +123,19 @@ Seraphina"
 fit_content = true
 scroll_active = false
 
-[node name="Control" type="Control" parent="."]
+[node name="Advance" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Advance" type="AnimatedSprite2D" parent="Control"]
+[node name="Advance" type="AnimatedSprite2D" parent="Advance"]
 position = Vector2(535, 174)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_uqm3g")
 animation = &"advance"
 autoplay = "advance"
+
+[node name="Type" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_qneao")
+volume_db = -11.143
+bus = &"SFX"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dwso0fqegu2uo"]
+[gd_scene load_steps=29 format=3 uid="uid://dwso0fqegu2uo"]
 
 [ext_resource type="Texture2D" uid="uid://chfo5ahh20ibn" path="res://Assets/Texture assets/Chapter 2/SVG/bg_school_hall.svg.svg" id="1_8peia"]
 [ext_resource type="Script" path="res://Scenes/highschool_hallway_scene.gd" id="1_n677l"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="11_jjmvn"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="13_owwma"]
 [ext_resource type="PackedScene" uid="uid://dyx552xqh782b" path="res://Scenes/Nodes/UI/Items/journal_read_2.tscn" id="17_vtnoi"]
+[ext_resource type="AudioStream" uid="uid://ccshcil2fek0g" path="res://Assets/Sound/Music/HallwayTrack.mp3" id="18_bnf7f"]
+[ext_resource type="Script" path="res://Scenes/HallwayMusic.gd" id="19_vb460"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wncn3"]
 texture = ExtResource("1_8peia")
@@ -88,11 +90,11 @@ scale = Vector2(1.565, 1.565)
 
 [node name="Finish" type="TextureRect" parent="."]
 z_index = 10
-offset_left = 184.0
-offset_top = 92.0
-offset_right = 4592.0
-offset_bottom = 2582.0
-scale = Vector2(0.35, 0.35)
+offset_left = 496.215
+offset_top = 263.96
+offset_right = 4904.21
+offset_bottom = 2753.96
+scale = Vector2(0.195, 0.195)
 texture = ExtResource("3_um788")
 expand_mode = 1
 
@@ -100,9 +102,9 @@ expand_mode = 1
 z_index = 5
 layout_mode = 0
 offset_left = 135.0
-offset_top = 574.0
+offset_top = 298.0
 offset_right = 4213.0
-offset_bottom = 2059.0
+offset_bottom = 2389.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("7_3lthy")
@@ -110,7 +112,10 @@ theme_override_fonts/bold_font = ExtResource("7_3lthy")
 theme_override_font_sizes/normal_font_size = 250
 theme_override_font_sizes/bold_font_size = 260
 bbcode_enabled = true
-text = "Thanks for Playing our game, don't forget to fill out the questionaire to help us improve! Press 'R' to go back to the main menu. "
+text = "What could all of this mean?
+I need to get back to Seraphina and see if she can remember anything.  
+
+Press [b]'R'[/b] to return to the concious world."
 fit_content = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -289,7 +294,14 @@ texture = SubResource("GradientTexture2D_k2nhn")
 
 [node name="Journal Read 2" parent="." instance=ExtResource("17_vtnoi")]
 
+[node name="HallwayMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_bnf7f")
+volume_db = -20.8
+bus = &"Music"
+script = ExtResource("19_vb460")
+
 [connection signal="all_items_collected" from="Male Doctor Character" to="." method="_on_male_doctor_character_all_items_collected"]
 [connection signal="item_collected" from="Locker_Node" to="Male Doctor Character" method="_on_locker_node_item_collected"]
 [connection signal="item_collected" from="Image_Puzzle_Node" to="Male Doctor Character" method="_on_image_puzzle_node_item_collected"]
 [connection signal="item_collected" from="LightPoster" to="Male Doctor Character" method="_on_light_poster_item_collected"]
+[connection signal="finished" from="HallwayMusic" to="HallwayMusic" method="_on_finished"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cghwexqsj47mv"
+path="res://.godot/imported/PowerDown 6.mp3-aff2566aa82899ff8d88baf637077f84.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/HallwaySounds/PowerDown 6.mp3"
+dest_files=["res://.godot/imported/PowerDown 6.mp3-aff2566aa82899ff8d88baf637077f84.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

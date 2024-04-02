@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u7bhey23ccan"
+path="res://.godot/imported/GuitarPick__17 2.wav-25b5d7fa4ccfa95ec7088f21ce0c248d.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/GuitarPickSounds/GuitarPick__17 2.wav"
+dest_files=["res://.godot/imported/GuitarPick__17 2.wav-25b5d7fa4ccfa95ec7088f21ce0c248d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

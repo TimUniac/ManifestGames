@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvk3i8ynw2dsx"
+path="res://.godot/imported/Platform_5 2.mp3-c5797d7d6a93471103d558d5c377fd6f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Footfalls/Platform/Platform_5 2.mp3"
+dest_files=["res://.godot/imported/Platform_5 2.mp3-c5797d7d6a93471103d558d5c377fd6f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
