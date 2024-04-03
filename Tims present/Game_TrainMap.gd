@@ -25,6 +25,7 @@ func _input(event):
 			_on_point_selected(closest_point_name)
 
 func _on_point_selected(point_name: String):
+	$Clicks.play
 	print("Selected: " + point_name)
 	if not current_route.has(point_name):
 		current_route.append(point_name) 

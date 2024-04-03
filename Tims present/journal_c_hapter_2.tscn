@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1k40x1ahj24m"]
+
+[ext_resource type="Script" path="res://new_journal_2.gd" id="1_0yetg"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="2_lckor"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="3_lb81t"]
+[ext_resource type="Texture2D" uid="uid://bsqmpug5y0s8t" path="res://Scenes/Nodes/UI/UI_forward_button.png" id="4_u1xv4"]
+[ext_resource type="Texture2D" uid="uid://cvfv0eqtecm5f" path="res://Scenes/Nodes/UI/UI_backward_button.png" id="5_x76ch"]
+
+[node name="Journal CHapter 2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0yetg")
+
+[node name="Page" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 12.0
+offset_right = 1656.0
+offset_bottom = 1037.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+expand_mode = 5
+
+[node name="Close" type="TextureButton" parent="."]
+offset_left = 80.0
+offset_top = 32.0
+offset_right = 299.0
+offset_bottom = 175.0
+scale = Vector2(0.405, 0.405)
+texture_normal = ExtResource("2_lckor")
+texture_pressed = ExtResource("3_lb81t")
+texture_hover = ExtResource("3_lb81t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(973, 526)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 974.0
+offset_top = 15.085
+offset_right = 1295.0
+offset_bottom = 52.085
+theme_override_font_sizes/font_size = 24
+text = "Press [J] to close the Journal"
+
+[node name="Forward" type="TextureButton" parent="."]
+offset_left = 1245.0
+offset_top = 758.0
+offset_right = 3389.0
+offset_bottom = 2693.0
+scale = Vector2(0.055, 0.055)
+texture_normal = ExtResource("4_u1xv4")
+
+[node name="Backward" type="TextureButton" parent="."]
+offset_left = -24.53
+offset_top = 758.0
+offset_right = 2119.47
+offset_bottom = 2693.0
+scale = Vector2(0.055, 0.055)
+texture_normal = ExtResource("5_x76ch")

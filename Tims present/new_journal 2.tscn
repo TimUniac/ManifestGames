@@ -12,10 +12,10 @@ script = ExtResource("1_l5cyp")
 
 [node name="Page" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -21.0
-offset_top = -208.0
-offset_right = 1891.0
-offset_bottom = 889.0
+offset_left = 6.0
+offset_top = -253.0
+offset_right = 1918.0
+offset_bottom = 844.0
 expand_mode = 5
 
 [node name="Close" type="Button" parent="."]
@@ -26,5 +26,13 @@ offset_right = 448.0
 offset_bottom = 229.0
 scale = Vector2(0.285, 0.47)
 icon = ExtResource("4_garip")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 974.0
+offset_top = 15.085
+offset_right = 1295.0
+offset_bottom = 52.085
+theme_override_font_sizes/font_size = 24
+text = "Press [J] to close the Journal"
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

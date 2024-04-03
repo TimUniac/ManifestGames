@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b3v3y5ys4shwq"]
+[gd_scene load_steps=42 format=3 uid="uid://b3v3y5ys4shwq"]
 
 [ext_resource type="Script" path="res://Guitar_Game_ForDummies.gd" id="1_ot8b0"]
 [ext_resource type="Texture2D" uid="uid://dati8v503uoaf" path="res://Assets/Texture assets/GuitarChordButtons/Layer 7.jpg" id="1_s08to"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://c5f4icou6ccmp" path="res://Assets/Fonts/ui_strum_button (1).png" id="32_7u56a"]
 [ext_resource type="Texture2D" uid="uid://c1wkgashtlo6q" path="res://Assets/Texture assets/Chapter 1/UI_GuitarGame_TornLyrics.png" id="35_4i8a7"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="37_7a3sp"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="38_6tv6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ci1y"]
 size = Vector2(600.002, 644.444)
@@ -587,6 +588,7 @@ offset_top = -68.9656
 offset_right = 830.834
 offset_bottom = 21.0344
 scale = Vector2(0.380644, 1.29027)
+theme_override_fonts/font = ExtResource("38_6tv6u")
 theme_override_font_sizes/font_size = 30
 text = "Drag and Drop the Chords from Gmaj to the guitar neck to play the song's chord progression. Then click the pick to check your work."
 autowrap_mode = 2
