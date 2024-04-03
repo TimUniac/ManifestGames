@@ -11,6 +11,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1914.0
 offset_bottom = 1079.0
+metadata/_edit_use_anchors_ = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
 layout_mode = 1
@@ -26,6 +27,7 @@ stream = ExtResource("1_6qya6")
 autoplay = true
 bus = &"Music"
 script = ExtResource("2_gl44p")
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource("2_x581x")
