@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Nodes/UI/Items/journal_read_2.gd" id="1_vgklh"]
 [ext_resource type="Texture2D" uid="uid://dqvgegajo36xi" path="res://Assets/Journal 2.png" id="2_pjpsd"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="3_bi5cl"]
-[ext_resource type="PackedScene" uid="uid://drb6ny7iq5wwi" path="res://new_journal.tscn" id="5_p7obx"]
+[ext_resource type="PackedScene" uid="uid://b1k40x1ahj24m" path="res://journal_c_hapter_2.tscn" id="4_tuiyx"]
 
 [node name="Journal Read 2" type="Control"]
 layout_mode = 3
@@ -41,4 +41,4 @@ position = Vector2(578, 331)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="NewJournal2" parent="CanvasLayer" instance=ExtResource("5_p7obx")]
+[node name="Journal CHapter 2" parent="CanvasLayer" instance=ExtResource("4_tuiyx")]

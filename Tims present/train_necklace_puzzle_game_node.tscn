@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbwlgi31j44ip"]
 
 [ext_resource type="Script" path="res://train_necklace_puzzle_game_node.gd" id="1_i750e"]
+[ext_resource type="Texture2D" uid="uid://d2fpk13nqen33" path="res://Assets/Fonts/spr_broken_necklace.svg" id="2_7y571"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="2_cqeik"]
-[ext_resource type="Texture2D" uid="uid://dyiwwbluhjary" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/UI_BrokenheartNecklace.png" id="2_dpjlm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wrutm"]
 radius = 78.1601
@@ -12,11 +12,11 @@ script = ExtResource("1_i750e")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.941176, 0.984314, 0.694118, 1)
-polygon = PackedVector2Array(0, -34, 9, -40, 15, -43, 21, -43, 29, -42, 34, -37, 39, -31, 40, -25, 40, -18, 38, -12, 34, -6, 28, 2, 21, 9, 14, 15, 8, 20, 0, 27, -6, 22, -12, 17, -19, 11, -27, 3, -34, -5, -38, -13, -40, -19, -39, -28, -36, -35, -31, -40, -25, -43, -18, -43, -12, -41, -7, -38)
+polygon = PackedVector2Array(2, -11, 7, -7, 11, -6, 17, -5, 21, -3, 24, -1, 24, 2, 22, 6, 19, 11, 14, 15, 7, 18, -2, 18, -11, 15, -18, 8, -23, 0, -22, -6, -16, -11, -10, -13, -6, -15, -1, -14)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.045, 0.045)
-texture = ExtResource("2_dpjlm")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7y571")
 
 [node name="Panel" type="Panel" parent="."]
 z_index = 6

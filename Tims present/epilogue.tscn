@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh1534kv2ifgb"]
+
+[ext_resource type="VideoStream" path="res://Assets/video/Epilogue.ogv" id="1_31buf"]
+[ext_resource type="Script" path="res://epilogue.gd" id="2_lmv4k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1914.0
+offset_bottom = 1079.0
+metadata/_edit_use_anchors_ = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00132, 0.997995)
+stream = ExtResource("1_31buf")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_lmv4k")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="finished" from="Control/VideoStreamPlayer" to="Control/VideoStreamPlayer" method="_on_finished" flags=18]

@@ -1,6 +1,6 @@
 extends Control
 
-var pages = ["res://UI_JournalPage5.png" ]  
+var pages = ["res://UI_JournalPage4_V2 1.png" , "res://UI_JournalPage3_V2 1.png"]  
 var current_page = 0  # Start with the first page
 
 func _ready():
@@ -29,7 +29,19 @@ func _input(event):
 					current_page -= 1
 					update_page()
 
+func _on_forward_pressed():
+	if current_page < pages.size() - 1:
+					current_page += 1
+					update_page()
+					global.journalLyricsSeen = true
+					print ("forward pressed")
 
+
+
+func _on_backward_pressed():
+	if current_page > 0:
+					current_page -= 1
+					update_page()
 
 
 

@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c2t3qqjyvo062" path="res://Assets/Texture assets/Orbs.png" id="9_3xv8w"]
 [ext_resource type="PackedScene" uid="uid://cjvfwa28vwnu1" path="res://Scenes/Nodes/UI/transitions.tscn" id="11_jjmvn"]
 [ext_resource type="PackedScene" uid="uid://cvtnbtwsk1ecd" path="res://Scenes/Nodes/UI/in_game_settings.tscn" id="13_owwma"]
-[ext_resource type="PackedScene" uid="uid://dyx552xqh782b" path="res://Scenes/Nodes/UI/Items/journal_read_2.tscn" id="17_vtnoi"]
+[ext_resource type="PackedScene" uid="uid://dyx552xqh782b" path="res://Scenes/Nodes/UI/Items/journal_read_2 2.tscn" id="17_vtnoi"]
 [ext_resource type="AudioStream" uid="uid://ccshcil2fek0g" path="res://Assets/Sound/Music/HallwayTrack.mp3" id="18_bnf7f"]
 [ext_resource type="Script" path="res://Scenes/HallwayMusic.gd" id="19_vb460"]
 

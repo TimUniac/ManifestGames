@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dmnaaq35sblq2"]
+[gd_scene load_steps=16 format=3 uid="uid://dmnaaq35sblq2"]
 
 [ext_resource type="Script" path="res://HeartNacklacePuzzle.gd" id="1_5kxnt"]
 [ext_resource type="Texture2D" uid="uid://cwhkbp4tp4mw7" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/BG_Gravel.png" id="1_tj2lx"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dlfjvvhfj2e6v" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/Heart_Piece_6.png" id="9_ad3sa"]
 [ext_resource type="Texture2D" uid="uid://dyiwwbluhjary" path="res://Assets/Texture assets/PuzzlePieces/HeartPuzzlePieces/UI_BrokenheartNecklace.png" id="11_7hack"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="13_op68i"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="14_0canh"]
 [ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="14_8v68n"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="14_x4is8"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="15_rfpgm"]
 
 [node name="Control" type="Control"]
 z_index = 4
@@ -33,6 +35,7 @@ script = ExtResource("1_5kxnt")
 
 [node name="Close" type="TextureButton" parent="."]
 z_index = 2
+layout_mode = 0
 offset_left = 151.0
 offset_top = 83.0
 offset_right = 418.0
@@ -197,6 +200,7 @@ polygon = PackedVector2Array(791.111, -277.778, 823.333, -363.333, 663.333, -318
 [node name="PAD" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.509804)
 y_sort_enabled = true
+layout_mode = 0
 offset_left = 147.0
 offset_top = -371.0
 offset_right = 2627.0
@@ -209,6 +213,23 @@ metadata/_edit_lock_ = true
 stream = ExtResource("14_8v68n")
 volume_db = -10.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UiDialogueboxV2" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(498.75, 138.75)
+scale = Vector2(1.30163, 0.713823)
+texture = ExtResource("14_0canh")
+
+[node name="Label" type="Label" parent="UiDialogueboxV2"]
+layout_direction = 2
+offset_left = -183.424
+offset_top = -63.0409
+offset_right = 241.576
+offset_bottom = -28.0409
+scale = Vector2(0.849144, 3.7265)
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("15_rfpgm")
+theme_override_font_sizes/font_size = 26
+text = "Rearrange the Friendship Necklace!"
+visible_characters_behavior = 1
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
