@@ -38,6 +38,9 @@ func _on_texture_button_pressed():
 script = SubResource("GDScript_u1ttl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(300, 137.35)
+scale = Vector2(0.7, 0.7)
+transform = Transform2D(0.7, 0, 0, 0.7, 300, 137.35)
 
 [node name="UiDialogueboxV2" type="Sprite2D" parent="CanvasLayer"]
 self_modulate = Color(0.392157, 0.290196, 0.443137, 1)

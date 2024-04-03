@@ -12,7 +12,7 @@ var done = false
 
 func _ready():
 	music_player.stream = music_start
-	music_player.play()
+	music_player.play(1.65)
 	show_initial_speech_bubble()
 	var guitar = $"Seraphina's Guitar"
 	var doctor = $"Male Doctor Character"

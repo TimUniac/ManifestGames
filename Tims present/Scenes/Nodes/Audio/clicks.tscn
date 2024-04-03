@@ -4,6 +4,6 @@
 
 [node name="Clicks" type="AudioStreamPlayer"]
 stream = ExtResource("1_c43tk")
-volume_db = -7.429
+volume_db = -16.673
 pitch_scale = 0.61
 bus = &"SFX"

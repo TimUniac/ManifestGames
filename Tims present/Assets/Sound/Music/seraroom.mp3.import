@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/seraroom.mp3-518f73c87aa7f8c345e26a2e6adf5648
 [params]
 
 loop=true
-loop_offset=0.0
+loop_offset=1.65
 bpm=0.0
 beat_count=0
 bar_beats=4

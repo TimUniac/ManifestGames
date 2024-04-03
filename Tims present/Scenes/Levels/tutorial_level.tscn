@@ -3535,7 +3535,7 @@ layer_0/tile_data = PackedInt32Array(-589770, 4587521, 55, -589780, 4587521, 55,
 
 [node name="TutorialMusic" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("8_p0b01")
-volume_db = -23.424
+volume_db = -25.0
 autoplay = true
 bus = &"Music"
 script = ExtResource("12_pcd4s")
