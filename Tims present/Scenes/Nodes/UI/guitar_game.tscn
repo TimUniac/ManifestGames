@@ -112,7 +112,6 @@ texture = ExtResource("5_b40my")
 z_index = 2
 y_sort_enabled = true
 position = Vector2(2038.17, 3081.12)
-scale = Vector2(1, 1)
 texture = ExtResource("5_4hnsv")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(-2917.52, 1411.04)
@@ -124,7 +123,6 @@ position = Vector2(126, -20)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/eMinor/Area2D"]
 visible = false
 position = Vector2(-124.596, 20.886)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -132,7 +130,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1492.84, 3087.93)
-scale = Vector2(1, 1)
 texture = ExtResource("7_vsqta")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(-2590.32, 1411.04)
@@ -144,7 +141,6 @@ y_sort_enabled = true
 visible = false
 z_index = 1
 position = Vector2(1.71777, -1.75871)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y15lx")
 debug_color = Color(0.921569, 0.176471, 0.54902, 0.419608)
 
@@ -152,7 +148,6 @@ debug_color = Color(0.921569, 0.176471, 0.54902, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(654.394, 3081.12)
-scale = Vector2(1, 1)
 texture = ExtResource("8_py6rw")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(-2276.76, 1411.04)
@@ -164,7 +159,6 @@ y_sort_enabled = true
 visible = false
 z_index = 1
 position = Vector2(-1.36328, -1.36331)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -172,7 +166,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(940.692, 3081.12)
-scale = Vector2(1, 1)
 texture = ExtResource("10_ftamy")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -183,7 +176,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/aMinor/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -191,7 +183,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1220.17, 3081.12)
-scale = Vector2(1, 1)
 texture = ExtResource("11_vh5s8")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -202,7 +193,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/bMinor/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -210,7 +200,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(2344.92, 3081.12)
-scale = Vector2(1, 1)
 texture = ExtResource("12_0bxfp")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -221,7 +210,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/Fsharp/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -229,7 +217,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(654.394, 2767.55)
-scale = Vector2(1, 1)
 texture = ExtResource("13_pomky")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -240,7 +227,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/F/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -248,7 +234,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(940.693, 2781.19)
-scale = Vector2(1, 1)
 texture = ExtResource("14_gkcsw")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -259,7 +244,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/gMinor/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -267,7 +251,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1220.17, 2760.74)
-scale = Vector2(1, 1)
 texture = ExtResource("15_1a1rh")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -278,7 +261,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/aMinorDark/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -286,7 +268,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1492.84, 2740.29)
-scale = Vector2(1, 1)
 texture = ExtResource("16_1pway")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -297,7 +278,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/Asharp/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -305,7 +285,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1765.5, 2740.29)
-scale = Vector2(1, 1)
 texture = ExtResource("17_vdk4i")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(-2590.32, 1411.04)
@@ -316,7 +295,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/CDark/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -324,7 +302,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(2038.17, 2726.65)
-scale = Vector2(1, 1)
 texture = ExtResource("18_xgw6c")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -335,7 +312,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/dMinor/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -343,7 +319,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(2344.92, 2740.29)
-scale = Vector2(1, 1)
 texture = ExtResource("19_nt0jc")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -354,7 +329,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/E/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -362,7 +336,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(940.693, 2419.9)
-scale = Vector2(1, 1)
 texture = ExtResource("20_02y0t")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -373,7 +346,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/fSharpMinor/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -381,7 +353,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1220.17, 2419.9)
-scale = Vector2(1, 1)
 texture = ExtResource("21_sarrx")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -392,7 +363,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/gSharpMinor/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -400,7 +370,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1765.5, 3081.12)
-scale = Vector2(1, 1)
 texture = ExtResource("9_1rifw")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(-1956.38, 1411.04)
@@ -411,7 +380,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/D/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -419,7 +387,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1499.66, 2419.9)
-scale = Vector2(1, 1)
 texture = ExtResource("23_jpo8p")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -430,7 +397,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/A/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -438,7 +404,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(1765.5, 2406.27)
-scale = Vector2(1, 1)
 texture = ExtResource("24_lboxv")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -449,7 +414,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/B/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -457,7 +421,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(2038.17, 2426.72)
-scale = Vector2(1, 1)
 texture = ExtResource("25_nopvl")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -468,7 +431,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/cSharpMinor/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 
@@ -476,7 +438,6 @@ debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 z_index = 2
 y_sort_enabled = true
 position = Vector2(2351.74, 2419.9)
-scale = Vector2(1, 1)
 texture = ExtResource("26_m4e3w")
 script = ExtResource("6_nxlo0")
 target_position = Vector2(689.571, 276.073)
@@ -487,7 +448,6 @@ y_sort_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chart/Dsharp/Area2D"]
 visible = false
 position = Vector2(3.74927, 1.36322)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r7wcp")
 debug_color = Color(0.945098, 0.0862745, 0.545098, 0.419608)
 

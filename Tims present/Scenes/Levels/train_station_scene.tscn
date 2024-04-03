@@ -16,7 +16,7 @@
 [ext_resource type="Script" path="res://Scenes/Levels/ExitBlocker.gd" id="14_njdwj"]
 [ext_resource type="PackedScene" uid="uid://cf7p12adill1q" path="res://train_puzzle_game_node.tscn" id="15_jpgao"]
 [ext_resource type="PackedScene" uid="uid://bbwlgi31j44ip" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
-[ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
+[ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3 2.tscn" id="17_7ig4k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")

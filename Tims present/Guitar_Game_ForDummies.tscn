@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b3v3y5ys4shwq"]
+[gd_scene load_steps=41 format=3 uid="uid://b3v3y5ys4shwq"]
 
 [ext_resource type="Script" path="res://Guitar_Game_ForDummies.gd" id="1_ot8b0"]
 [ext_resource type="Texture2D" uid="uid://dati8v503uoaf" path="res://Assets/Texture assets/GuitarChordButtons/Layer 7.jpg" id="1_s08to"]
@@ -29,12 +29,14 @@
 [ext_resource type="Texture2D" uid="uid://d22qng25na2pi" path="res://Scenes/Nodes/TicketPad.png" id="22_uca00"]
 [ext_resource type="Script" path="res://DropZone.gd" id="24_rqp7r"]
 [ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="25_xqjcv"]
-[ext_resource type="Texture2D" uid="uid://kc0qlwahu5nr" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_a.svg.svg" id="26_co7ph"]
 [ext_resource type="AudioStream" uid="uid://dddhppxhg1chr" path="res://Assets/Sound/Music/WrongAnswerGuitar.mp3" id="26_lk1qv"]
-[ext_resource type="Texture2D" uid="uid://blftfcqqfy304" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_b.svg.svg" id="27_xwasj"]
 [ext_resource type="Texture2D" uid="uid://bvnf7m8ka6rsm" path="res://Assets/ChordChart.png" id="29_yei51"]
+[ext_resource type="Texture2D" uid="uid://bjx71p83040ga" path="res://Assets/Fonts/ui_strum_button.png" id="30_lnu28"]
 [ext_resource type="Texture2D" uid="uid://bxl0lsikb6nqi" path="res://Assets/Texture assets/ui_guitar_game.svg" id="30_yjnk3"]
+[ext_resource type="Texture2D" uid="uid://balajasi6erlw" path="res://Assets/Fonts/ui_strum_button (2).png" id="31_kfl6w"]
+[ext_resource type="Texture2D" uid="uid://c5f4icou6ccmp" path="res://Assets/Fonts/ui_strum_button (1).png" id="32_7u56a"]
 [ext_resource type="Texture2D" uid="uid://c1wkgashtlo6q" path="res://Assets/Texture assets/Chapter 1/UI_GuitarGame_TornLyrics.png" id="35_4i8a7"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="37_7a3sp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ci1y"]
 size = Vector2(600.002, 644.444)
@@ -532,12 +534,14 @@ volume_db = -10.0
 [node name="Strum" type="TextureButton" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 4.0
-offset_top = 454.0
-offset_right = 164.0
-offset_bottom = 614.0
-texture_normal = ExtResource("26_co7ph")
-texture_pressed = ExtResource("27_xwasj")
+offset_left = 29.885
+offset_top = 459.77
+offset_right = 292.885
+offset_bottom = 722.77
+scale = Vector2(0.702468, 0.633694)
+texture_normal = ExtResource("30_lnu28")
+texture_pressed = ExtResource("31_kfl6w")
+texture_hover = ExtResource("32_7u56a")
 
 [node name="WrongChords" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_lk1qv")
@@ -571,6 +575,21 @@ offset_right = 1625.15
 offset_bottom = 396.747
 scale = Vector2(0.645, 0.645)
 texture = ExtResource("35_4i8a7")
+
+[node name="UiDialogueboxV2" type="Sprite2D" parent="."]
+position = Vector2(535.632, 905.747)
+scale = Vector2(1.8715, 1)
+texture = ExtResource("37_7a3sp")
+
+[node name="Label" type="Label" parent="UiDialogueboxV2"]
+offset_left = -189.166
+offset_top = -68.9656
+offset_right = 830.834
+offset_bottom = 21.0344
+scale = Vector2(0.380644, 1.29027)
+theme_override_font_sizes/font_size = 30
+text = "Drag and Drop the Chords from Gmaj to the guitar neck to play the song's chord progression. Then click the pick to check your work."
+autowrap_mode = 2
 
 [connection signal="input_event" from="eMinor/Area2D" to="eMinor" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="C/Area2D" to="C" method="_on_area_2d_input_event"]
