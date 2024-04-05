@@ -1,0 +1,168 @@
+<<<<<<< Updated upstream
+[gd_scene load_steps=16 format=3 uid="uid://bepo0m0r088a4"]
+
+[ext_resource type="Script" path="res://BookGame.gd" id="1_nkguc"]
+[ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="2_xic64"]
+[ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="3_2kxd3"]
+[ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="3_3iupo"]
+[ext_resource type="Texture2D" uid="uid://bit1gym186poi" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_c.svg.svg" id="5_wv1va"]
+[ext_resource type="Script" path="res://button_Scaling.gd" id="6_lfb8h"]
+[ext_resource type="Texture2D" uid="uid://kc0qlwahu5nr" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_a.svg.svg" id="6_x1o4t"]
+[ext_resource type="Texture2D" uid="uid://3ilu14f7ymfg" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_r.svg.svg" id="7_ps0fq"]
+[ext_resource type="Texture2D" uid="uid://bacvimbe6cjb7" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_m.svg.svg" id="8_djtej"]
+[ext_resource type="Texture2D" uid="uid://c5yp3yqvws3x1" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_i.svg.svg" id="9_5qmyj"]
+[ext_resource type="Texture2D" uid="uid://bb3l2ujo5o14o" path="res://Assets/Texture assets/Letter folder/spr_guitar_picks_l.svg.svg" id="10_k072c"]
+[ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="12_x04qv"]
+[ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="13_f0aee"]
+[ext_resource type="Script" path="res://Scenes/Nodes/UI/Clicks.gd" id="14_6wwlw"]
+[ext_resource type="AudioStream" uid="uid://crsjvbdxyplqb" path="res://Assets/Sound/SFX/Click.wav" id="14_gqvmr"]
+
+[node name="BookGame" type="Control"]
+z_index = 3
+y_sort_enabled = true
+layout_mode = 3
+anchor_left = 0.956
+anchor_top = 0.93
+anchor_right = 1.007
+anchor_bottom = 1.0
+offset_left = -1835.52
+offset_top = -1004.4
+offset_right = -0.440186
+script = ExtResource("1_nkguc")
+
+[node name="CanvasLayer" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 0.994
+anchor_bottom = 1.0
+offset_right = -0.401978
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 421.0
+offset_right = 2278.0
+offset_bottom = 1121.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Panel" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1164, 618)
+scale = Vector2(1.24334, 0.78436)
+texture = ExtResource("2_xic64")
+
+[node name="Clue" type="Label" parent="CanvasLayer/Panel"]
+offset_left = -180.16
+offset_top = -54.8217
+offset_right = 183.84
+offset_bottom = 61.1783
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_2kxd3")
+theme_override_font_sizes/font_size = 30
+text = "What was the title of the book Seraphina found?"
+autowrap_mode = 2
+
+[node name="SequenceInput" type="LineEdit" parent="CanvasLayer"]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 740.0
+offset_right = 1419.0
+offset_bottom = 797.0
+tooltip_text = "\"I need to find the password to open this memory\""
+theme_override_fonts/font = ExtResource("3_3iupo")
+theme_override_font_sizes/font_size = 41
+alignment = 1
+max_length = 9
+editable = false
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+layout_mode = 0
+offset_left = 502.0
+offset_top = 343.0
+offset_right = 683.0
+offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("3_2kxd3")
+text = "Bksp in case of mistake"
+
+[node name="CanvasGroup" type="CanvasGroup" parent="CanvasLayer"]
+position = Vector2(725, 362)
+
+[node name="letter_C" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
+offset_left = 397.0
+offset_top = 436.0
+offset_right = 557.0
+offset_bottom = 596.0
+texture_normal = ExtResource("5_wv1va")
+script = ExtResource("6_lfb8h")
+
+[node name="letter_A" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
+offset_left = 17.0
+offset_top = 203.0
+offset_right = 177.0
+offset_bottom = 363.0
+texture_normal = ExtResource("6_x1o4t")
+script = ExtResource("6_lfb8h")
+
+[node name="letter_R" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
+offset_left = 394.0
+offset_top = 20.0
+offset_right = 554.0
+offset_bottom = 180.0
+texture_normal = ExtResource("7_ps0fq")
+script = ExtResource("6_lfb8h")
+
+[node name="letter_M" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
+offset_left = 783.0
+offset_top = 369.0
+offset_right = 943.0
+offset_bottom = 529.0
+texture_normal = ExtResource("8_djtej")
+script = ExtResource("6_lfb8h")
+
+[node name="letter_I" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
+offset_left = 796.0
+offset_top = 129.0
+offset_right = 956.0
+offset_bottom = 289.0
+texture_normal = ExtResource("9_5qmyj")
+script = ExtResource("6_lfb8h")
+
+[node name="letter_L" type="TextureButton" parent="CanvasLayer/CanvasGroup"]
+offset_left = 36.0
+offset_top = 408.0
+offset_right = 196.0
+offset_bottom = 568.0
+texture_normal = ExtResource("10_k072c")
+script = ExtResource("6_lfb8h")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+layout_mode = 0
+offset_left = 1354.0
+offset_top = 551.0
+offset_right = 1565.0
+offset_bottom = 686.0
+scale = Vector2(0.21, 0.21)
+texture_normal = ExtResource("12_x04qv")
+texture_pressed = ExtResource("13_f0aee")
+texture_hover = ExtResource("13_f0aee")
+
+[node name="Clicks" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_gqvmr")
+script = ExtResource("14_6wwlw")
+
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_C" to="." method="_on_letter_c_button_down"]
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_A" to="." method="_on_letter_a_button_down"]
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_R" to="." method="_on_letter_r_button_down"]
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_M" to="." method="_on_letter_m_button_down"]
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_I" to="." method="_on_letter_i_button_down"]
+[connection signal="button_down" from="CanvasLayer/CanvasGroup/letter_L" to="." method="_on_letter_l_button_down"]
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
+=======
+>>>>>>> Stashed changes

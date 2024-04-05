@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8ckme64o7d3l"
+path="res://.godot/imported/prologueTemp 01_1.wav-99164dec4726d4756d51158ebef7a932.sample"
+
+[deps]
+
+source_file="res://Assets/video/prologueTemp 01_1.wav"
+dest_files=["res://.godot/imported/prologueTemp 01_1.wav-99164dec4726d4756d51158ebef7a932.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
