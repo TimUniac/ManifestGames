@@ -14,10 +14,10 @@ script = ExtResource("1_8na25")
 [node name="Page" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 201.0
-offset_top = -594.0
-offset_right = 3192.0
-offset_bottom = 1573.0
+offset_left = 479.0
+offset_top = 4.0
+offset_right = 2619.0
+offset_bottom = 1554.0
 scale = Vector2(0.8, 0.8)
 expand_mode = 5
 

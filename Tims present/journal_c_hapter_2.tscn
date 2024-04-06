@@ -18,14 +18,16 @@ script = ExtResource("1_0yetg")
 [node name="Page" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 12.0
-offset_right = 1656.0
-offset_bottom = 1037.0
+offset_left = -7.0
+offset_top = -17.0
+offset_right = 1743.0
+offset_bottom = 1087.0
 scale = Vector2(0.8, 0.8)
 mouse_filter = 2
 expand_mode = 5
 
 [node name="Close" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 80.0
 offset_top = 32.0
 offset_right = 299.0
@@ -39,6 +41,7 @@ texture_hover = ExtResource("3_lb81t")
 position = Vector2(973, 526)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 974.0
 offset_top = 15.085
 offset_right = 1295.0
@@ -47,6 +50,7 @@ theme_override_font_sizes/font_size = 24
 text = "Press [J] to close the Journal"
 
 [node name="Forward" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1245.0
 offset_top = 758.0
 offset_right = 3389.0
@@ -55,6 +59,7 @@ scale = Vector2(0.055, 0.055)
 texture_normal = ExtResource("4_u1xv4")
 
 [node name="Backward" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = -24.53
 offset_top = 758.0
 offset_right = 2119.47

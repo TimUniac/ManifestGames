@@ -1,6 +1,6 @@
 extends Control
 
-var pages = ["res://UI_JournalPage1_V2 1.png","res://UI_JournalPage2_V2 1.png" , "res://UI_JournalPageSong_V2 1.png" ]  
+var pages = ["res://Scenes/Levels/UI_JournalEntry1_V3.png","res://Scenes/Levels/UI_JournalEntry2_V3.png" , "res://Scenes/Levels/UI_JournalEntrySong_V3.png" ]  
 var current_page = 0  # Start with the first page
 
 func _ready():
