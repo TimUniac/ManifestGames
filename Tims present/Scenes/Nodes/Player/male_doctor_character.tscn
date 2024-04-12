@@ -258,6 +258,8 @@ collision_layer = 7
 script = ExtResource("1_ic5fy")
 
 [node name="Footsteps" parent="." instance=ExtResource("8_p7t5t")]
+unique_name_in_owner = true
+volume_db = 1.66533e-15
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.499998, -1.07288e-06)

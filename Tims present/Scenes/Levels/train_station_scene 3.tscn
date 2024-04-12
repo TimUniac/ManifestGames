@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://u8m1u6a76uc8"]
+[gd_scene load_steps=41 format=3 uid="uid://u8m1u6a76uc8"]
 
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="1_i6qtd"]
 [ext_resource type="Script" path="res://script/train_station_scene.gd" id="1_nmqxj"]
@@ -16,8 +16,7 @@
 [ext_resource type="Script" path="res://Scenes/Levels/ExitBlocker.gd" id="14_njdwj"]
 [ext_resource type="PackedScene" uid="uid://cf7p12adill1q" path="res://train_puzzle_game_node.tscn" id="15_jpgao"]
 [ext_resource type="PackedScene" uid="uid://bbwlgi31j44ip" path="res://train_necklace_puzzle_game_node.tscn" id="16_hoyov"]
-[ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3.tscn" id="17_7ig4k"]
-[ext_resource type="AudioStream" uid="uid://8n4ml81qpj30" path="res://Assets/Sound/Music/Music_TrainStation.mp3" id="18_wv51f"]
+[ext_resource type="PackedScene" uid="uid://cx2w0dr21syr8" path="res://Scenes/Nodes/UI/Items/journal_read_3 2.tscn" id="17_7ig4k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ou237"]
 texture = ExtResource("1_qs83u")
@@ -4403,11 +4402,6 @@ z_index = 1
 texture_filter = 1
 color = Color(0.941176, 0.984314, 0.694118, 1)
 polygon = PackedVector2Array(1028, 559, 1028, 579, 1028, 595, 1027, 604, 997, 604, 997, 438, 1164, 438, 1164, 604, 1134, 605, 1133, 560)
-
-[node name="$Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("18_wv51f")
-volume_db = -17.802
-autoplay = true
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_entered" from="Platform" to="Male Doctor Character" method="_on_platform_body_entered"]

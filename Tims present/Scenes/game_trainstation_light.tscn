@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c50px5lhkc1g7"]
+[gd_scene load_steps=10 format=3 uid="uid://c50px5lhkc1g7"]
 
 [ext_resource type="Script" path="res://script/Game_Trainstation_Light.gd" id="1_4aarw"]
 [ext_resource type="Script" path="res://SwitchPanel.gd" id="2_4gyts"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://ce2sbtbwixo1v" path="res://Assets/Fonts/IrishGrover-Regular.ttf" id="6_o5li7"]
 [ext_resource type="Texture2D" uid="uid://dm5kxrlfjm1mf" path="res://Assets/Ui_recent_feb1/ui_x_button.png" id="7_g2khs"]
 [ext_resource type="Texture2D" uid="uid://cg51ccdl7irnu" path="res://Assets/Ui_recent_feb1/ui_x_button_reverse.png" id="8_18855"]
+[ext_resource type="AudioStream" uid="uid://d261xk7laoxo1" path="res://Assets/Sound/SFX/HallwaySounds/Lightswitch.mp3" id="9_dr8m0"]
 
 [node name="Game_Trainstation_Light" type="Control"]
 layout_mode = 3
@@ -172,6 +173,9 @@ offset_bottom = 238.0
 scale = Vector2(0.39, 0.39)
 texture_normal = ExtResource("7_g2khs")
 texture_pressed = ExtResource("8_18855")
+
+[node name="SwitchSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_dr8m0")
 
 [connection signal="pressed" from="CanvasLayer/Control/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Reset" to="CanvasLayer/Control/GridContainer" method="_on_reset_pressed"]

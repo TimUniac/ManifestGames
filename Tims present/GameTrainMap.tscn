@@ -299,6 +299,7 @@ text = "Using the other routes, solve the path of the Route Seraphina was taking
 autowrap_mode = 2
 
 [node name="Clicks" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1, 1)
 stream = ExtResource("9_kn2wf")
 
 [connection signal="input_event" from="Map/ScheduleToggle" to="." method="_on_schedule_toggle_input_event"]

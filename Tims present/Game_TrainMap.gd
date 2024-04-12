@@ -4,6 +4,10 @@ var correct_route = ["Point_1", "Point_15", "Point_5", "Point_14", "Point_2"]
 var current_route = []
 var points_selected = 0
 
+var green_ring = preload("res://Assets/Texture assets/Chapter 3/GreenRing.png")
+var black_ring = preload("res://Assets/Texture assets/Chapter 3/BlackRing.png")
+var red_ring = preload("res://Assets/Texture assets/Chapter 3/RedRing.png")
+
 func _ready():
 	set_process_input(true)
 	print_points_global_position()
@@ -32,6 +36,7 @@ func _on_point_selected(point_name: String):
 		points_selected += 1
 		print(current_route, points_selected)
 		_update_line()
+		_place_ring_on_point(point_name, points_selected)
 		if points_selected == 5:
 			_check_route()
 
@@ -68,6 +73,8 @@ func reset_game():
 	current_route.clear()
 	points_selected = 0
 	$Line2D.points = []
+	for ring in get_tree().get_nodes_in_group("rings"):
+		ring.queue_free()
 
 
 func winstate():
@@ -89,3 +96,21 @@ func _on_close_sched_pressed():
 func _on_schedule_toggle_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		$Schedule.visible = !$Schedule.visible 
+		
+func _place_ring_on_point(point_name: String, click_number: int):
+	var texture
+	match click_number:
+		1:
+			texture = green_ring
+		5:
+			texture = red_ring
+		_:
+			texture = black_ring
+			
+	var sprite = Sprite2D.new()
+	sprite.texture = texture
+	var point = get_node(point_name)
+	sprite.position = point.position
+	sprite.scale = Vector2(0.05, 0.05)
+	add_child(sprite)
+	sprite.add_to_group("rings")

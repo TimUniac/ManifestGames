@@ -59,6 +59,7 @@ func close():
 	is_opened = false
 	
 func lightsturnedon():
+	$LightsUp.play()
 	doctor.talking = false
 	interaction_label.visible = false
 	$ColorRect.visible = false

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c5b0ylkii5cq5" path="res://bg_forest.svg.svg" id="1_dbiwo"]
 [ext_resource type="Texture2D" uid="uid://dwcwybwvpc5te" path="res://spr_ava_rekt.svg.svg" id="2_0byqo"]
 [ext_resource type="PackedScene" uid="uid://dq3bajgkuxyh1" path="res://Scenes/Nodes/Player/male_doctor_character.tscn" id="2_ua6bt"]
-[ext_resource type="VideoStream" path="res://Assets/Fonts/Epilogue.ogv" id="4_20t4f"]
+[ext_resource type="VideoStream" path="res://Assets/video/Epilogue.ogv" id="4_20t4f"]
 [ext_resource type="Script" path="res://prologue.gd" id="5_3k0fj"]
 
 [sub_resource type="GDScript" id="GDScript_n8xjl"]
@@ -12,7 +12,7 @@ script/source = "extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$\"Male Doctor Character/Footsteps\".currentGround = 'gravel'
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

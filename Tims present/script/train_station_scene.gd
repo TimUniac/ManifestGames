@@ -9,7 +9,7 @@ var mapdone = false
 var necklacebuilt = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	music()
+
 	var steps = doctor.get_node("Footsteps")
 
 	steps.activeGround = "parking"
@@ -25,10 +25,6 @@ func _ready():
 	
 	
 
-func music():
-	var music = $Music
-	music.stream = load("res://Assets/Sound/Music/Music_TrainStation.mp3")
-	music.play()
 
 func _input(_event):
 		hide_show_objectives() 
@@ -50,14 +46,17 @@ func _on_teleport_area_body_entered(body):
 func lightson():
 	$lightgroup.visible = false
 	$CanvasLayer/Objectives/Label/Orbs.visible = true
+	$"/root/PickupsSoundPlayer".play()
 	lightsturnt = true
 	
 func mapcompleted():
 	$CanvasLayer/Objectives/Label2/Orbs.visible = true
+	$"/root/PickupsSoundPlayer".play()
 	mapdone = true
 	
 func puzzlecomplete():
 	$CanvasLayer/Objectives/Label3/Orbs.visible = true
+	$"/root/PickupsSoundPlayer".play()
 	necklacebuilt = true
 
 func hide_show_objectives():
