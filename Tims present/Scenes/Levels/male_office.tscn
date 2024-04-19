@@ -4,13 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://buwug316abpic" path="res://Scenes/Nodes/UI/office_theme.tscn" id="2_3svbl"]
 [ext_resource type="Texture2D" uid="uid://ckhno2bb7hh8v" path="res://Assets/Texture assets/Chapter 1/BG_Office_Night.jpeg" id="3_j2gvj"]
 [ext_resource type="Texture2D" uid="uid://uyixj5xyvko" path="res://Assets/Doctor Graphics/Male Doctor/male_doc_ptrait.png" id="4_xu34y"]
-[ext_resource type="Texture2D" uid="uid://uqbjl1ikin3c" path="res://Assets/Seraphina/Seraphina.png" id="5_htqh0"]
 [ext_resource type="Texture2D" uid="uid://cl7ihsur2tvij" path="res://Assets/Ui_recent_feb1/ui_dialoguebox_v2.png" id="6_8gbpb"]
 [ext_resource type="Script" path="res://Scenes/Levels/dialogueChapterOne.gd" id="7_yq4eg"]
 [ext_resource type="Texture2D" uid="uid://dp548xjiyvbjd" path="res://Assets/Texture assets/TextAdvance.PNG" id="8_72lac"]
 [ext_resource type="FontFile" uid="uid://da7urrqwpibb2" path="res://Assets/Fonts/HARRINGT.TTF" id="8_80x6v"]
 [ext_resource type="AudioStream" uid="uid://d01itxundoih0" path="res://Assets/Sound/SFX/TypeSounds/Type__2.wav" id="8_soxat"]
 [ext_resource type="FontFile" uid="uid://dd7wuh3vhdjhu" path="res://Assets/Fonts/Rosarivo/Rosarivo-Regular.ttf" id="9_jqkgw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q7ibe"]
+load_path = "res://.godot/imported/Seraphina.png-d25e6d1fdd134620cba765b85ed756fe.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m81f"]
 atlas = ExtResource("8_72lac")
@@ -66,7 +68,7 @@ animations = [{
 script = ExtResource("1_dfxg7")
 
 [node name="OfficeTheme" parent="." instance=ExtResource("2_3svbl")]
-volume_db = -29.558
+volume_db = -10.891
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -139,7 +141,7 @@ offset_top = -110.516
 offset_right = 4963.25
 offset_bottom = 5017.0
 scale = Vector2(0.14, 0.14)
-texture = ExtResource("5_htqh0")
+texture = SubResource("CompressedTexture2D_q7ibe")
 
 [node name="Dialogue" type="Control" parent="CanvasLayer/Control"]
 layout_mode = 1
